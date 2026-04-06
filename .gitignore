@@ -1,0 +1,21 @@
+# Manuscript (private - do not publish)
+*.docx
+
+# Original unprocessed photos (already copied to images/)
+Mikael Chew.jpeg
+Mikael Chew 2.jpeg
+Profile_Grayscale.jpg
+Gemini_Generated_Image_*.png
+photo_*.jpeg
+
+# System files
+.DS_Store
+*.swp
+*.swo
+*~
+
+# Server script
+server.py
+
+# Claude project files
+.claude/
