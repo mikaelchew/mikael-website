@@ -43,11 +43,11 @@
     <div class="container">
       <a href="index.html" class="nav-logo">MIKAEL<span>CHEW</span></a>
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="work-with-me.html">Work With Me</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="index.html" data-en="Home" data-zh="首頁">Home</a></li>
+        <li><a href="about.html" data-en="About" data-zh="關於">About</a></li>
+        <li><a href="blog.html" data-en="Blog" data-zh="部落格">Blog</a></li>
+        <li><a href="work-with-me.html" data-en="Work With Me" data-zh="與我合作">Work With Me</a></li>
+        <li><a href="contact.html" class="active" data-en="Contact" data-zh="聯繫">Contact</a></li>
       </ul>
       <div class="nav-toggle" aria-label="Toggle navigation">
         <span></span>
@@ -60,44 +60,44 @@
   <!-- ========== PAGE HERO ========== -->
   <section class="page-hero">
     <div class="container">
-      <span class="section-label">CONTACT</span>
-      <h1>Get In Touch</h1>
-      <p>Have a question or want to connect? I would love to hear from you.</p>
+      <span class="section-label" data-en="CONTACT" data-zh="聯繫">CONTACT</span>
+      <h1 data-en="Get In Touch" data-zh="與我聯繫">Get In Touch</h1>
+      <p data-en="Have a question or want to connect? I would love to hear from you." data-zh="有問題或想聯繫？我很樂意聽取您的意見。">Have a question or want to connect? I would love to hear from you.</p>
     </div>
   </section>
 
   <!-- ========== CONTACT SECTION ========== -->
   <section class="section section-beige">
     <div class="container">
-      <a href="index.html" class="back-home"><i class="fas fa-arrow-left"></i> Home</a>
+      <a href="index.html" class="back-home"><i class="fas fa-arrow-left"></i><span data-en=" Home" data-zh=" 首頁"> Home</span></a>
       <div class="contact-grid">
 
         <!-- Contact Form -->
         <form class="contact-form">
           <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Your full name" required>
+            <label for="name" data-en="Name" data-zh="姓名">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your full name" data-en="Your full name" data-zh="您的全名" required>
           </div>
           <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="Your email address" required>
+            <label for="email" data-en="Email" data-zh="電子郵件">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your email address" data-en="Your email address" data-zh="您的電子郵件地址" required>
           </div>
           <div class="form-group">
-            <label for="subject">Subject</label>
+            <label for="subject" data-en="Subject" data-zh="主題">Subject</label>
             <select id="subject" name="subject" required>
-              <option value="" disabled selected>Select a subject</option>
-              <option value="General Inquiry">General Inquiry</option>
-              <option value="Speaking Engagement">Speaking Engagement</option>
-              <option value="Mentorship Inquiry">Mentorship Inquiry</option>
-              <option value="Media & Press">Media &amp; Press</option>
-              <option value="Other">Other</option>
+              <option value="" disabled selected data-en="Select a subject" data-zh="選擇主題">Select a subject</option>
+              <option value="General Inquiry" data-en="General Inquiry" data-zh="一般諮詢">General Inquiry</option>
+              <option value="Speaking Engagement" data-en="Speaking Engagement" data-zh="演講邀約">Speaking Engagement</option>
+              <option value="Mentorship Inquiry" data-en="Mentorship Inquiry" data-zh="指導諮詢">Mentorship Inquiry</option>
+              <option value="Media & Press" data-en="Media &amp; Press" data-zh="媒體與新聞">Media &amp; Press</option>
+              <option value="Other" data-en="Other" data-zh="其他">Other</option>
             </select>
           </div>
           <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="Tell me how I can help..." required></textarea>
+            <label for="message" data-en="Message" data-zh="訊息">Message</label>
+            <textarea id="message" name="message" placeholder="Tell me how I can help..." data-en="Tell me how I can help..." data-zh="告訴我如何能幫助您..." required></textarea>
           </div>
-          <button type="submit" class="btn btn-primary">Send Message</button>
+          <button type="submit" class="btn btn-primary" data-en="Send Message" data-zh="發送訊息">Send Message</button>
         </form>
 
         <!-- Contact Info -->
@@ -107,7 +107,7 @@
               <i class="fas fa-envelope"></i>
             </div>
             <div>
-              <p class="contact-info-label">Email</p>
+              <p class="contact-info-label" data-en="Email" data-zh="電子郵件">Email</p>
               <p class="contact-info-value">mikaelchew@gmail.com</p>
             </div>
           </div>
@@ -116,8 +116,8 @@
               <i class="fas fa-location-dot"></i>
             </div>
             <div>
-              <p class="contact-info-label">Based In</p>
-              <p class="contact-info-value">Kuala Lumpur, Malaysia</p>
+              <p class="contact-info-label" data-en="Based In" data-zh="所在地">Based In</p>
+              <p class="contact-info-value" data-en="Kuala Lumpur, Malaysia" data-zh="馬來西亞，吉隆坡">Kuala Lumpur, Malaysia</p>
             </div>
           </div>
           <div class="contact-info-item">
@@ -125,8 +125,8 @@
               <i class="fas fa-globe"></i>
             </div>
             <div>
-              <p class="contact-info-label">Social</p>
-              <p class="contact-info-value">Connect with me on LinkedIn, Facebook, or Instagram</p>
+              <p class="contact-info-label" data-en="Social" data-zh="社交媒體">Social</p>
+              <p class="contact-info-value" data-en="Connect with me on LinkedIn, Facebook, or Instagram" data-zh="在LinkedIn、Facebook或Instagram上與我聯繫">Connect with me on LinkedIn, Facebook, or Instagram</p>
             </div>
           </div>
           <div class="footer-social" style="margin-top: 0.5rem;">
@@ -143,11 +143,11 @@
   <!-- ========== CTA BANNER ========== -->
   <section class="cta-banner" style="text-align: center;">
     <div class="container">
-      <h2>Prefer a Direct Conversation?</h2>
-      <p>Send me a message on WhatsApp for a quicker response.</p>
+      <h2 data-en="Prefer a Direct Conversation?" data-zh="更喜歡直接對話？">Prefer a Direct Conversation?</h2>
+      <p data-en="Send me a message on WhatsApp for a quicker response." data-zh="在WhatsApp上發訊息給我以獲得更快的回覆。">Send me a message on WhatsApp for a quicker response.</p>
       <a href="https://wa.me/60195513038?text=Hi%20Mikael%2C%20I%20came%20across%20your%20website%20and%20would%20love%20to%20learn%20more%20about%20your%20strategic%20mentorship." class="whatsapp-cta">
         <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        Message Me on WhatsApp
+        <span data-en="Message Me on WhatsApp" data-zh="透過WhatsApp聯繫我">Message Me on WhatsApp</span>
       </a>
     </div>
   </section>
@@ -158,11 +158,11 @@
       <div class="footer-content">
         <a href="index.html" class="footer-logo">MIKAEL<span>CHEW</span></a>
         <ul class="footer-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="work-with-me.html">Work With Me</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html" data-en="Home" data-zh="首頁">Home</a></li>
+          <li><a href="about.html" data-en="About" data-zh="關於">About</a></li>
+          <li><a href="blog.html" data-en="Blog" data-zh="部落格">Blog</a></li>
+          <li><a href="work-with-me.html" data-en="Work With Me" data-zh="與我合作">Work With Me</a></li>
+          <li><a href="contact.html" data-en="Contact" data-zh="聯繫">Contact</a></li>
         </ul>
         <div class="footer-social">
           <a href="https://www.linkedin.com/in/mikael-chew-07487551/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
@@ -171,12 +171,17 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 Mikael Chew. All rights reserved.</p>
+        <p data-en="&copy; 2026 Mikael Chew. All rights reserved." data-zh="&copy; 2026 周俊德 (Mikael Chew). 版權所有。">&copy; 2026 Mikael Chew. All rights reserved.</p>
       </div>
     </div>
   </footer>
 
   <!-- JavaScript -->
   <script src="js/main.js"></script>
+  <!-- Toggle Controls (fixed bottom-right) -->
+  <div class="site-toggles">
+    <button class="toggle-btn theme-btn" aria-label="Toggle theme"><i class="fas fa-sun"></i></button>
+    <button class="toggle-btn lang-btn" aria-label="Switch language">中文</button>
+  </div>
 </body>
 </html>
