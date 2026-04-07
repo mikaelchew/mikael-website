@@ -2195,12 +2195,9 @@ p {
     margin: 1rem 0 0.25rem;
   }
 
-  /* WhatsApp CTA spans full width */
+  /* WhatsApp CTA — same size as other links on desktop */
   .lt-link-whatsapp {
-    grid-column: 1 / -1;
-    justify-content: center;
-    font-size: 1.05rem;
-    padding: 1.25rem 2rem;
+    font-size: 1rem;
   }
 
   /* Book link spans full width */
@@ -2230,10 +2227,6 @@ p {
 @media (min-width: 1100px) {
   .lt-links {
     grid-template-columns: 1fr 1fr 1fr;
-  }
-
-  .lt-link-whatsapp {
-    grid-column: 1 / -1;
   }
 
   .lt-divider {
