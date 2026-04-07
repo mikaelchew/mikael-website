@@ -8,13 +8,13 @@
 :root {
   --black: #1A1A1A;
   --black-light: #2A2A2A;
-  --beige: #F5F0E8;
-  --beige-dark: #E8E0D0;
+  --beige: #2A2A2A;
+  --beige-dark: #363636;
   --red: #C41E3A;
   --red-hover: #A01830;
   --white: #FAFAFA;
-  --charcoal: #333333;
-  --gray: #888888;
+  --charcoal: #D0D0D0;
+  --gray: #999999;
   --gray-light: #CCCCCC;
 
   --font-serif: 'Playfair Display', Georgia, serif;
@@ -29,10 +29,10 @@
 [data-theme="light"] {
   --black: #FAF8F5;
   --black-light: #F2EDE7;
-  --beige: #FFFFFF;
+  --beige: #F5F0E8;
   --beige-dark: #E8E2D9;
   --white: #1A1A1A;
-  --charcoal: #2A2A2A;
+  --charcoal: #333333;
   --gray: #5A5A5A;
   --gray-light: #4A4A4A;
 }
@@ -1283,8 +1283,8 @@ p {
   max-width: none;
   margin: 0;
   padding: 4rem 2rem;
-  background: #2A2A2A;
-  color: #E0E0E0;
+  background: var(--beige);
+  color: var(--charcoal);
 }
 
 /* Constrain all child elements to readable width */
@@ -1353,8 +1353,8 @@ p {
 
 /* Light mode: beige background, dark text */
 [data-theme="light"] .post-content {
-  background: #FFFFFF;
-  color: #333;
+  background: var(--beige);
+  color: var(--charcoal);
 }
 
 [data-theme="light"] .post-content h2,
@@ -1365,7 +1365,7 @@ p {
 [data-theme="light"] .post-content p,
 [data-theme="light"] .post-content blockquote,
 [data-theme="light"] .post-content li {
-  color: #333;
+  color: var(--charcoal);
 }
 
 [data-theme="light"] .post-content strong {
