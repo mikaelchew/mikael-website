@@ -172,12 +172,13 @@ document.addEventListener('DOMContentLoaded', () => {
         headers: { 'Accept': 'application/json' }
       }).then(function(response) {
         if (response.ok) {
-          contactForm.innerHTML = '<div style="text-align:center;padding:3rem 1rem;">'
-            + '<i class="fas fa-check-circle" style="font-size:3rem;color:var(--red);margin-bottom:1rem;display:block;"></i>'
-            + '<h3 style="margin-bottom:0.75rem;">' + (lang === 'en' ? 'Message Sent' : '訊息已發送') + '</h3>'
-            + '<p style="color:var(--gray);">' + (lang === 'en'
+          contactForm.innerHTML = '<div class="form-success">'
+            + '<i class="fas fa-check-circle"></i>'
+            + '<h3>' + (lang === 'en' ? 'Message Sent' : '訊息已發送') + '</h3>'
+            + '<p>' + (lang === 'en'
               ? 'Thank you for reaching out. I will get back to you soon.'
               : '感謝您的來信。我會盡快回覆您。') + '</p>'
+            + '<a href="index.html" class="btn btn-primary">' + (lang === 'en' ? 'Back to Home' : '返回首頁') + '</a>'
             + '</div>';
         } else {
           alert(lang === 'en'

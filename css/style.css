@@ -2253,3 +2253,299 @@ p {
 [data-theme="light"] .navbar-home .nav-links a.active::after {
   width: 100%;
 }
+
+/* ============================================
+   FORM SUCCESS ANIMATION
+   ============================================ */
+@keyframes formFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.form-success {
+  text-align: center;
+  padding: 3rem 1rem;
+  animation: formFadeIn 0.6s ease forwards;
+}
+
+.form-success i {
+  font-size: 3rem;
+  color: var(--red);
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.form-success h3 {
+  margin-bottom: 0.75rem;
+}
+
+.form-success p {
+  color: var(--gray);
+}
+
+.form-success .btn {
+  margin-top: 1.5rem;
+}
+
+/* ============================================
+   NEWSLETTER SIGNUP
+   ============================================ */
+.newsletter-form {
+  display: flex;
+  gap: 0.75rem;
+  max-width: 500px;
+  margin: 1.5rem auto 0;
+}
+
+.newsletter-form input[type="email"] {
+  flex: 1;
+  padding: 0.85rem 1.25rem;
+  border: 2px solid var(--beige-dark);
+  border-radius: 4px;
+  background: var(--white);
+  color: var(--charcoal);
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  transition: border-color var(--transition);
+}
+
+.newsletter-form input[type="email"]:focus {
+  outline: none;
+  border-color: var(--red);
+}
+
+.newsletter-form button {
+  padding: 0.85rem 1.5rem;
+  background: var(--red);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background var(--transition);
+  white-space: nowrap;
+}
+
+.newsletter-form button:hover {
+  background: var(--red-hover);
+}
+
+@media (max-width: 480px) {
+  .newsletter-form {
+    flex-direction: column;
+  }
+}
+
+/* ============================================
+   BOOK PAGE STYLES
+   ============================================ */
+.book-cover-placeholder {
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 2/3;
+  background: linear-gradient(160deg, #1A1A1A 0%, #2A2A2A 100%);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem;
+  text-align: center;
+  box-shadow: 8px 8px 30px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.book-cover-placeholder::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--red);
+}
+
+.book-cover-placeholder .book-cover-label {
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 0.7rem;
+  color: var(--red);
+  margin-bottom: 1.5rem;
+}
+
+.book-cover-placeholder .book-cover-title {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  color: #fff;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+}
+
+.book-cover-placeholder .book-cover-subtitle {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+.book-cover-placeholder .book-cover-author {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.book-cover-placeholder .book-cover-divider {
+  width: 40px;
+  height: 1px;
+  background: var(--red);
+  margin: 0 auto 1.5rem;
+}
+
+[data-theme="light"] .book-cover-placeholder {
+  box-shadow: 8px 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Book page chapter grid */
+.chapter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.chapter-card {
+  background: var(--black-light);
+  padding: 2rem;
+  border-radius: 4px;
+  border-left: 3px solid var(--red);
+}
+
+.chapter-card h3 {
+  color: var(--white);
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+}
+
+.chapter-card p {
+  color: var(--gray-light);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ============================================
+   DESKTOP POLISH: ABOUT & WORK-WITH-ME
+   ============================================ */
+@media (min-width: 769px) {
+  /* About page: larger image, better proportions */
+  .about-preview {
+    grid-template-columns: 1fr 1.5fr;
+    gap: 5rem;
+  }
+
+  .about-preview-image img {
+    border-radius: 8px;
+  }
+
+  /* Philosophy cards - ensure 3 columns on desktop */
+  .philosophy-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Work with me: better image proportions */
+  .wwm-intro {
+    gap: 5rem;
+  }
+
+  /* Testimonials: always 3 columns on desktop */
+  .testimonials-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Blog grid: consistent 3 columns */
+  .blog-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Contact grid: better proportions */
+  .contact-grid {
+    grid-template-columns: 1.2fr 1fr;
+  }
+}
+
+/* Featured blog post hero on blog listing */
+.blog-featured {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  margin-bottom: 4rem;
+  padding: 2.5rem;
+  background: var(--black-light);
+  border-radius: 8px;
+  border-left: 4px solid var(--red);
+}
+
+.blog-featured img {
+  width: 100%;
+  aspect-ratio: 16/10;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.blog-featured-body .blog-card-category {
+  margin-bottom: 0.75rem;
+}
+
+.blog-featured-body h2 {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.blog-featured-body h2 a {
+  color: var(--white);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+.blog-featured-body h2 a:hover {
+  color: var(--red);
+}
+
+.blog-featured-body .blog-card-excerpt {
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .blog-featured {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+  }
+
+  .blog-featured-body h2 {
+    font-size: 1.4rem;
+  }
+}
+
+[data-theme="light"] .blog-featured {
+  background: var(--beige-dark);
+  border-left-color: var(--red);
+}
+
+[data-theme="light"] .blog-featured-body h2 a {
+  color: #1A1A1A;
+}
