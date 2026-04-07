@@ -31,6 +31,24 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.mikaelchew.com/blog/five-battles.html</loc>
+    <lastmod>2026-04-07</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mikaelchew.com/blog/team-keeps-quitting.html</loc>
+    <lastmod>2026-04-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mikaelchew.com/blog/generals-dilemma.html</loc>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.mikaelchew.com/blog/dual-perspective.html</loc>
     <lastmod>2026-04-02</lastmod>
     <changefreq>yearly</changefreq>
