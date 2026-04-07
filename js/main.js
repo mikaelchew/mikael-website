@@ -152,8 +152,47 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ============================
-  // CONTACT FORM (basic)
+  // CONTACT FORM (AJAX via Formspree)
   // ============================
-  // Contact form submits natively to Formspree (action + method on <form>).
-  // No JS interception needed — Formspree handles the submission and redirect.
+  const contactForm = document.querySelector('.contact-form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const lang = localStorage.getItem('mc-lang') || 'en';
+      const btn = contactForm.querySelector('button[type="submit"]');
+      const origText = btn.textContent;
+      btn.disabled = true;
+      btn.textContent = lang === 'en' ? 'Sending...' : '發送中...';
+
+      const data = new FormData(contactForm);
+
+      fetch('https://formspree.io/f/xreojdqa', {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      }).then(function(response) {
+        if (response.ok) {
+          contactForm.innerHTML = '<div style="text-align:center;padding:3rem 1rem;">'
+            + '<i class="fas fa-check-circle" style="font-size:3rem;color:var(--red);margin-bottom:1rem;display:block;"></i>'
+            + '<h3 style="margin-bottom:0.75rem;">' + (lang === 'en' ? 'Message Sent' : '訊息已發送') + '</h3>'
+            + '<p style="color:var(--gray);">' + (lang === 'en'
+              ? 'Thank you for reaching out. I will get back to you soon.'
+              : '感謝您的來信。我會盡快回覆您。') + '</p>'
+            + '</div>';
+        } else {
+          alert(lang === 'en'
+            ? 'Something went wrong. Please try again or email me directly.'
+            : '出了點問題。請重試或直接發送電子郵件給我。');
+          btn.disabled = false;
+          btn.textContent = origText;
+        }
+      }).catch(function() {
+        alert(lang === 'en'
+          ? 'Something went wrong. Please try again or email me directly.'
+          : '出了點問題。請重試或直接發送電子郵件給我。');
+        btn.disabled = false;
+        btn.textContent = origText;
+      });
+    });
+  }
 });
