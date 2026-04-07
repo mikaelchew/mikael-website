@@ -2082,3 +2082,181 @@ p {
     padding: 2rem;
   }
 }
+
+/* ============================================
+   RESPONSIVE DESKTOP — Homepage Transformation
+   Linktree on mobile → Full website on desktop
+   ============================================ */
+
+/* Hide home navbar on mobile */
+.navbar-home {
+  display: none;
+}
+
+@media (min-width: 769px) {
+
+  /* Show navbar on desktop homepage */
+  .navbar-home {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--nav-height);
+    z-index: 1000;
+    background: var(--black);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .navbar-home .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .navbar-home .nav-links {
+    position: static;
+    width: auto;
+    height: auto;
+    background: transparent;
+    flex-direction: row;
+    justify-content: flex-end;
+    box-shadow: none;
+  }
+
+  /* --- Linktree → Full website layout --- */
+  .linktree {
+    padding-top: calc(var(--nav-height) + 4rem);
+    padding-bottom: 0;
+    max-width: 100%;
+    align-items: stretch;
+  }
+
+  /* Hero-style profile section */
+  .lt-profile {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 0 3rem;
+    text-align: left;
+    max-width: var(--max-width);
+    width: 100%;
+    margin: 0 auto 3rem;
+    padding: 0 2rem;
+    align-items: center;
+  }
+
+  .lt-avatar {
+    width: 180px;
+    height: 180px;
+    margin: 0;
+    grid-row: 1 / 4;
+  }
+
+  .lt-name {
+    font-size: 3rem;
+    margin-bottom: 0.25rem;
+    align-self: end;
+  }
+
+  .lt-title {
+    margin-bottom: 0.5rem;
+    align-self: start;
+  }
+
+  .lt-bio {
+    max-width: 560px;
+    margin: 0;
+    font-size: 1.1rem;
+    align-self: start;
+  }
+
+  /* Links section — wider, two-column grid */
+  .lt-links {
+    max-width: var(--max-width);
+    width: 100%;
+    padding: 0 2rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .lt-link {
+    border-radius: 8px;
+    padding: 1.25rem 1.75rem;
+    font-size: 1rem;
+  }
+
+  /* Dividers span full width */
+  .lt-divider {
+    grid-column: 1 / -1;
+    margin: 1rem 0 0.25rem;
+  }
+
+  /* WhatsApp CTA spans full width */
+  .lt-link-whatsapp {
+    grid-column: 1 / -1;
+    justify-content: center;
+    font-size: 1.05rem;
+    padding: 1.25rem 2rem;
+  }
+
+  /* Book link spans full width */
+  .lt-link-book {
+    grid-column: 1 / -1;
+  }
+
+  /* Social section — footer-like on desktop */
+  .lt-social {
+    max-width: var(--max-width);
+    width: 100%;
+    margin: 4rem auto 0;
+    padding: 3rem 2rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    justify-content: center;
+  }
+
+  .lt-footer {
+    max-width: var(--max-width);
+    width: 100%;
+    margin: 1.5rem auto 0;
+    padding: 0 2rem 2rem;
+  }
+}
+
+/* Even wider screens — 3-column blog links */
+@media (min-width: 1100px) {
+  .lt-links {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .lt-link-whatsapp {
+    grid-column: 1 / -1;
+  }
+
+  .lt-divider {
+    grid-column: 1 / -1;
+  }
+
+  .lt-link-book {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Light theme adjustments for desktop navbar */
+[data-theme="light"] .navbar-home {
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(10px);
+}
+
+[data-theme="light"] .navbar-home .nav-logo,
+[data-theme="light"] .navbar-home .nav-links a {
+  color: #1A1A1A;
+}
+
+[data-theme="light"] .navbar-home .nav-links a.active::after {
+  width: 100%;
+}
