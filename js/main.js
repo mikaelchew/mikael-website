@@ -154,42 +154,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // ============================
   // CONTACT FORM (basic)
   // ============================
-  const contactForm = document.querySelector('.contact-form');
-  if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const lang = localStorage.getItem('mc-lang') || 'en';
-      const btn = contactForm.querySelector('button[type="submit"]');
-      const origText = btn.textContent;
-      btn.disabled = true;
-      btn.textContent = lang === 'en' ? 'Sending...' : '發送中...';
-
-      fetch(contactForm.action, {
-        method: 'POST',
-        body: new FormData(contactForm),
-        headers: { 'Accept': 'application/json' }
-      }).then(response => {
-        if (response.ok) {
-          const msg = lang === 'en'
-            ? 'Thank you for your message! I will get back to you soon.'
-            : '感謝您的留言！我會盡快回覆您。';
-          alert(msg);
-          contactForm.reset();
-        } else {
-          const msg = lang === 'en'
-            ? 'Something went wrong. Please try again or email me directly.'
-            : '出了點問題。請重試或直接發送電子郵件給我。';
-          alert(msg);
-        }
-      }).catch(() => {
-        const msg = lang === 'en'
-          ? 'Something went wrong. Please try again or email me directly.'
-          : '出了點問題。請重試或直接發送電子郵件給我。';
-        alert(msg);
-      }).finally(() => {
-        btn.disabled = false;
-        btn.textContent = origText;
-      });
-    });
-  }
+  // Contact form submits natively to Formspree (action + method on <form>).
+  // No JS interception needed — Formspree handles the submission and redirect.
 });
