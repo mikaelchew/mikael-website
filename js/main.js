@@ -200,19 +200,32 @@ document.addEventListener('DOMContentLoaded', () => {
   // ============================
   // SCROLL TO TOP BUTTON
   // ============================
-  const scrollBtn = document.createElement('button');
-  scrollBtn.className = 'scroll-top';
-  scrollBtn.setAttribute('aria-label', 'Scroll to top');
-  scrollBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
-  document.body.appendChild(scrollBtn);
+  // Create button if not already in HTML
+  var scrollBtn = document.querySelector('.scroll-top');
+  if (!scrollBtn) {
+    scrollBtn = document.createElement('button');
+    scrollBtn.className = 'scroll-top';
+    scrollBtn.setAttribute('aria-label', 'Scroll to top');
+    scrollBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
+    // Insert before site-toggles so they don't overlap
+    var toggles = document.querySelector('.site-toggles');
+    if (toggles) {
+      toggles.parentNode.insertBefore(scrollBtn, toggles);
+    } else {
+      document.body.appendChild(scrollBtn);
+    }
+  }
 
-  window.addEventListener('scroll', function() {
-    if (window.scrollY > 400) {
+  function checkScroll() {
+    if (window.scrollY > 300) {
       scrollBtn.classList.add('visible');
     } else {
       scrollBtn.classList.remove('visible');
     }
-  });
+  }
+
+  window.addEventListener('scroll', checkScroll);
+  checkScroll(); // Check on page load in case already scrolled
 
   scrollBtn.addEventListener('click', function() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
