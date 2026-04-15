@@ -43,6 +43,24 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://www.mikaelchew.com/blog/mentor-trap.html</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mikaelchew.com/blog/saying-no-prospect.html</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mikaelchew.com/blog/smaller-market-advantage.html</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.mikaelchew.com/blog/not-a-salesman.html</loc>
     <lastmod>2026-04-14</lastmod>
     <changefreq>yearly</changefreq>
