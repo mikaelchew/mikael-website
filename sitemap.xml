@@ -49,6 +49,30 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://www.mikaelchew.com/blog/comeback.html</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mikaelchew.com/blog/sun-tzu-wrong.html</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mikaelchew.com/blog/two-year-wall.html</loc>
+    <lastmod>2026-05-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mikaelchew.com/blog/leadership-transitions.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.mikaelchew.com/blog/mentor-trap.html</loc>
     <lastmod>2026-04-29</lastmod>
     <changefreq>yearly</changefreq>
