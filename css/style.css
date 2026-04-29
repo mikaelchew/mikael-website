@@ -4387,6 +4387,202 @@ ul.footer-links {
   color: var(--red);
 }
 
+/* ============================================
+   SPEAKING PAGE
+   ============================================ */
+.speaking-intro {
+  max-width: 780px;
+  margin: 0 auto 3rem;
+}
+
+.speaking-lead {
+  font-size: 1.1rem;
+  line-height: 1.75;
+  color: var(--charcoal);
+  text-align: center;
+}
+
+.speaking-stats {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.speaking-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-width: 180px;
+}
+
+.speaking-stat-number {
+  font-family: var(--font-serif);
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--red);
+  line-height: 1;
+  margin-bottom: 0.4rem;
+}
+
+.speaking-stat-label {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--charcoal);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.speaking-stat-divider {
+  width: 1px;
+  height: 60px;
+  background: var(--gray);
+  opacity: 0.3;
+}
+
+/* Signature talks grid */
+.speaking-talks-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.speaking-talk-card {
+  background: var(--black-light);
+  padding: 36px 32px;
+  border-radius: 12px;
+  border: 1px solid #2a2a2a;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.speaking-talk-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--red);
+}
+
+.speaking-talk-icon {
+  font-size: 1.8rem;
+  color: var(--red);
+  margin-bottom: 1rem;
+}
+
+.speaking-talk-format {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  color: var(--gray);
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+}
+
+.speaking-talk-card h3 {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  color: var(--white);
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+}
+
+.speaking-talk-card p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--gray-light);
+}
+
+/* Audiences grid */
+.speaking-audiences-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.speaking-audience-card {
+  background: var(--black-light);
+  padding: 28px 24px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.speaking-audience-card i {
+  font-size: 1.8rem;
+  color: var(--red);
+  margin-bottom: 0.75rem;
+}
+
+.speaking-audience-card h3 {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  color: var(--white);
+  margin-bottom: 0.6rem;
+}
+
+.speaking-audience-card p {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--gray-light);
+}
+
+/* Stage gallery */
+.speaking-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.speaking-gallery-item {
+  margin: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+}
+
+.speaking-gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.speaking-gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Speaking page responsive */
+@media (max-width: 900px) {
+  .speaking-talks-grid {
+    grid-template-columns: 1fr;
+  }
+  .speaking-audiences-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .speaking-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .speaking-stat-divider {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .speaking-audiences-grid {
+    grid-template-columns: 1fr;
+  }
+  .speaking-stats {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
 /* ---- Blog Post Newsletter CTA ---- */
 .post-newsletter-cta {
   background: var(--beige);

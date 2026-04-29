@@ -278,4 +278,126 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  // ============================
+  // GA4 EVENT TRACKING
+  // ============================
+  function trackEvent(eventName, params) {
+    if (typeof gtag === 'function') {
+      gtag('event', eventName, params || {});
+    }
+  }
+
+  // WhatsApp clicks (capture source page + button class for context)
+  document.querySelectorAll('a[href^="https://wa.me/"]').forEach(function(link) {
+    link.addEventListener('click', function() {
+      trackEvent('whatsapp_click', {
+        source_page: window.location.pathname,
+        link_class: link.className.replace(/\s+/g, ' ').trim().slice(0, 80)
+      });
+    });
+  });
+
+  // Outbound social clicks (LinkedIn, Facebook, Instagram)
+  document.querySelectorAll('a[href*="linkedin.com"], a[href*="facebook.com"], a[href*="instagram.com"]').forEach(function(link) {
+    link.addEventListener('click', function() {
+      var href = link.href;
+      var platform = 'unknown';
+      if (href.indexOf('linkedin.com') > -1) platform = 'linkedin';
+      else if (href.indexOf('facebook.com') > -1) platform = 'facebook';
+      else if (href.indexOf('instagram.com') > -1) platform = 'instagram';
+      var isShare = href.indexOf('/sharing/') > -1 || href.indexOf('/sharer/') > -1;
+      trackEvent(isShare ? 'social_share' : 'social_click', {
+        platform: platform,
+        source_page: window.location.pathname
+      });
+    });
+  });
+
+  // PDF / Chapter downloads
+  document.querySelectorAll('a[href$=".pdf"]').forEach(function(link) {
+    link.addEventListener('click', function() {
+      var fileName = link.href.split('/').pop();
+      trackEvent('file_download', {
+        file_name: fileName,
+        source_page: window.location.pathname
+      });
+    });
+  });
+
+  // Newsletter form submissions (uses hidden 'tags' input to differentiate)
+  document.querySelectorAll('form.newsletter-form, form.lt-newsletter-form').forEach(function(form) {
+    form.addEventListener('submit', function() {
+      var tagInput = form.querySelector('input[name="tags"]');
+      var tag = tagInput ? tagInput.value : 'unknown';
+      var eventName = 'newsletter_subscribe';
+      if (tag === 'long-game-launch') eventName = 'long_game_waitlist';
+      else if (tag === 'book-chapter') eventName = 'book_waitlist';
+      trackEvent(eventName, {
+        list_tag: tag,
+        source_page: window.location.pathname
+      });
+    });
+  });
+
+  // Blog post scroll depth (only on blog post pages)
+  if (document.querySelector('.post-content') && document.querySelector('.post-hero')) {
+    var scrollDepthsTracked = {};
+    var scrollHandler = function() {
+      var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      if (docHeight <= 0) return;
+      var pct = Math.round((window.scrollY / docHeight) * 100);
+      [25, 50, 75, 100].forEach(function(threshold) {
+        if (pct >= threshold && !scrollDepthsTracked[threshold]) {
+          scrollDepthsTracked[threshold] = true;
+          trackEvent('scroll_depth', {
+            depth: threshold,
+            page_path: window.location.pathname
+          });
+        }
+      });
+    };
+    window.addEventListener('scroll', scrollHandler, { passive: true });
+  }
+
+  // Blog category filter clicks
+  document.querySelectorAll('.blog-filter').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      trackEvent('blog_filter_click', {
+        filter: btn.dataset.filter || 'unknown'
+      });
+    });
+  });
+
+  // Show All Posts button
+  if (showMoreWrap) {
+    var smb = showMoreWrap.querySelector('button');
+    if (smb) {
+      smb.addEventListener('click', function() {
+        trackEvent('blog_show_more_click', { page_path: window.location.pathname });
+      });
+    }
+  }
+
+  // Language toggle tracking
+  if (langBtn) {
+    langBtn.addEventListener('click', function() {
+      var newLang = (localStorage.getItem('mc-lang') || 'en') === 'en' ? 'zh' : 'en';
+      trackEvent('language_toggle', {
+        new_language: newLang,
+        page_path: window.location.pathname
+      });
+    });
+  }
+
+  // Theme toggle tracking
+  if (themeBtn) {
+    themeBtn.addEventListener('click', function() {
+      var newTheme = (document.documentElement.getAttribute('data-theme') || 'dark') === 'dark' ? 'light' : 'dark';
+      trackEvent('theme_toggle', {
+        new_theme: newTheme,
+        page_path: window.location.pathname
+      });
+    });
+  }
+
 });
