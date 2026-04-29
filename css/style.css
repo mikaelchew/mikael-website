@@ -356,14 +356,80 @@
   color: var(--red);
 }
 
-/* Section dark becomes warm in light mode */
+/* Section dark stays dark in light mode — ensure ALL text remains light */
 [data-theme="light"] .section-dark {
   background: #1A1A1A;
+  color: #FAFAFA;
 }
 
 [data-theme="light"] .section-dark h2,
+[data-theme="light"] .section-dark h3,
 [data-theme="light"] .section-dark .section-label {
   color: #FFFFFF;
+}
+
+[data-theme="light"] .section-dark p,
+[data-theme="light"] .section-dark li,
+[data-theme="light"] .section-dark .section-header p {
+  color: #C8C8C8;
+}
+
+[data-theme="light"] .section-dark .check-list li {
+  color: #D5D5D5;
+}
+
+/* Home Long Game stays dark in light mode */
+[data-theme="light"] .home-long-game {
+  background: linear-gradient(135deg, #1A1A1A 0%, #1f1f1f 100%);
+  border-top-color: #2a2a2a;
+  border-bottom-color: #2a2a2a;
+}
+
+[data-theme="light"] .home-long-game-title {
+  color: #FFFFFF;
+}
+
+[data-theme="light"] .home-long-game-tagline {
+  color: #D5D5D5;
+}
+
+[data-theme="light"] .home-long-game-meta {
+  color: #999999;
+}
+
+/* Speaking page section-dark refinements */
+[data-theme="light"] .speaking-talk-card,
+[data-theme="light"] .speaking-audience-card {
+  background: #2A2A2A;
+  border-color: #3a3a3a;
+}
+
+[data-theme="light"] .speaking-talk-card h3,
+[data-theme="light"] .speaking-audience-card h3 {
+  color: #FFFFFF;
+}
+
+[data-theme="light"] .speaking-talk-card p,
+[data-theme="light"] .speaking-audience-card p {
+  color: #C8C8C8;
+}
+
+[data-theme="light"] .speaking-talk-format {
+  color: #999999;
+}
+
+/* Speaking FAQ on section-dark stays dark */
+[data-theme="light"] .speaking-faq-item {
+  background: #2A2A2A;
+  border-color: #3a3a3a;
+}
+
+[data-theme="light"] .speaking-faq-item summary {
+  color: #FFFFFF;
+}
+
+[data-theme="light"] .speaking-faq-item p {
+  color: #C8C8C8;
 }
 
 /* Blog cards light */
@@ -4555,6 +4621,78 @@ ul.footer-links {
 
 .speaking-gallery-item:hover img {
   transform: scale(1.05);
+}
+
+/* About page speaking callout */
+.about-speaking-callout {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-speaking-callout h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+  margin-bottom: 1rem;
+}
+
+.about-speaking-callout p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--charcoal);
+  margin-bottom: 1.5rem;
+}
+
+/* Speaking regions bar */
+.speaking-regions {
+  max-width: 900px;
+  margin: 3rem auto 0;
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .speaking-regions {
+  border-top-color: rgba(0, 0, 0, 0.12);
+}
+
+.speaking-regions-label {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  color: var(--gray);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.speaking-regions-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.25rem 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.speaking-region {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--charcoal);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.speaking-region i {
+  color: var(--red);
+  font-size: 0.85rem;
+}
+
+.speaking-regions-note {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--gray);
+  font-style: italic;
 }
 
 /* Speaking testimonials */
