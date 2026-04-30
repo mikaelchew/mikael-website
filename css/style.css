@@ -605,6 +605,7 @@ body {
   font-family: var(--font-sans);
   color: var(--charcoal);
   background-color: var(--beige);
+  overflow-x: clip;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
 }
@@ -1026,7 +1027,7 @@ p {
    ============================================ */
 .blog-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(340px, 100%), 1fr));
   gap: 2.5rem;
 }
 
@@ -1291,7 +1292,7 @@ p {
 /* Philosophy Cards */
 .philosophy-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
   gap: 2rem;
 }
 
@@ -1805,7 +1806,7 @@ p {
 /* Testimonials */
 .testimonials-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(340px, 100%), 1fr));
   gap: 2rem;
 }
 
@@ -2819,7 +2820,7 @@ p {
 /* Book page chapter grid */
 .chapter-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
   gap: 2rem;
 }
 
