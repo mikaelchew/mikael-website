@@ -143,6 +143,33 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   })();
 
+  // ============================
+  // HOMEPAGE: show only the latest N PUBLISHED posts
+  // Hides future-dated entries and trims overflow so the homepage
+  // always reflects published content (Latest Insights + mobile linktree).
+  // ============================
+  (function gateHomepagePosts() {
+    var today = new Date();
+    today.setHours(0, 0, 0, 0);
+    function isFuture(s) {
+      if (!s) return false;
+      var d = new Date(s + 'T00:00:00');
+      return d.getTime() > today.getTime();
+    }
+    function limit(selector, max) {
+      var items = document.querySelectorAll(selector);
+      if (!items.length) return;
+      var shown = 0;
+      Array.prototype.forEach.call(items, function(el) {
+        if (isFuture(el.getAttribute('data-pubdate'))) { el.style.display = 'none'; return; }
+        if (shown < max) { shown++; el.style.display = ''; }
+        else { el.style.display = 'none'; }
+      });
+    }
+    limit('.home-blog-grid .home-blog-card', 3);
+    limit('.lt-links a.lt-link[href^="blog/"]', 5);
+  })();
+
   setLang(savedLang);
 
   if (langBtn) {
