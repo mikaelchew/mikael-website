@@ -66,6 +66,83 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // ============================
+  // BLOG DATE GATING
+  // Hide posts dated in the future until their publish date arrives.
+  // Runs BEFORE setLang so any promoted featured content gets translated.
+  // ============================
+  (function gateBlogDates() {
+    var grid = document.querySelector('.blog-grid');
+    var today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    function isFuture(s) {
+      if (!s) return false;
+      var d = new Date(s + 'T00:00:00');
+      return d.getTime() > today.getTime();
+    }
+
+    // Hide future-dated grid cards
+    if (grid) {
+      grid.querySelectorAll('.blog-card[data-pubdate]').forEach(function(c) {
+        if (isFuture(c.getAttribute('data-pubdate'))) {
+          c.classList.add('post-scheduled');
+          c.style.display = 'none';
+        }
+      });
+    }
+
+    // If the featured post is future-dated, promote the newest published card into it
+    var feat = document.querySelector('.blog-featured[data-pubdate]');
+    if (feat && grid && isFuture(feat.getAttribute('data-pubdate'))) {
+      var src = grid.querySelector('.blog-card:not(.post-scheduled)');
+      if (!src) {
+        feat.style.display = 'none';
+        return;
+      }
+
+      var sImg   = src.querySelector('.blog-card-image');
+      var sCat   = src.querySelector('.blog-card-category');
+      var sTitle = src.querySelector('.blog-card-title a');
+      var sExc   = src.querySelector('.blog-card-excerpt');
+      var sMeta  = src.querySelector('.blog-card-meta');
+
+      var fImg   = feat.querySelector('img');
+      var fCat   = feat.querySelector('.blog-card-category');
+      var fTitle = feat.querySelector('h2 a');
+      var fExc   = feat.querySelector('.blog-card-excerpt');
+      var fMeta  = feat.querySelector('.blog-card-meta');
+
+      function copyBilingual(from, to) {
+        if (!from || !to) return;
+        to.setAttribute('data-en', from.getAttribute('data-en') || '');
+        to.setAttribute('data-zh', from.getAttribute('data-zh') || '');
+        to.innerHTML = from.innerHTML;
+      }
+
+      if (fImg && sImg) {
+        fImg.setAttribute('src', sImg.getAttribute('src'));
+        fImg.setAttribute('alt', sImg.getAttribute('alt') || '');
+      }
+      copyBilingual(sCat, fCat);
+      if (fTitle && sTitle) {
+        fTitle.setAttribute('href', sTitle.getAttribute('href'));
+        fTitle.setAttribute('data-en', sTitle.getAttribute('data-en') || '');
+        fTitle.setAttribute('data-zh', sTitle.getAttribute('data-zh') || '');
+        fTitle.innerHTML = sTitle.innerHTML;
+      }
+      copyBilingual(sExc, fExc);
+      if (fMeta && sMeta) { fMeta.innerHTML = sMeta.innerHTML; }
+
+      feat.setAttribute('data-pubdate', src.getAttribute('data-pubdate') || '');
+      feat.style.display = '';
+
+      // Hide the promoted card from the grid to avoid duplication
+      src.classList.add('post-scheduled');
+      src.style.display = 'none';
+    }
+  })();
+
   setLang(savedLang);
 
   if (langBtn) {
@@ -258,6 +335,7 @@ document.addEventListener('DOMContentLoaded', () => {
         var filter = btn.dataset.filter;
 
         blogCards.forEach(function(card) {
+          if (card.classList.contains('post-scheduled')) { card.style.display = 'none'; return; }
           card.classList.remove('blog-card-hidden');
           card.style.display = (filter === 'all' || card.dataset.category === filter) ? '' : 'none';
         });

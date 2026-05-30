@@ -4271,6 +4271,12 @@ ul.footer-links {
   display: none;
 }
 
+/* Scheduled (future-dated) posts hidden until their publish date */
+.blog-card.post-scheduled,
+.blog-featured.post-scheduled {
+  display: none !important;
+}
+
 /* ---- Homepage Newsletter ---- */
 .home-newsletter {
   background: var(--beige);
