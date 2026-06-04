@@ -1311,10 +1311,11 @@ p {
 .philosophy-card h3 {
   margin-bottom: 1rem;
   font-size: 1.2rem;
+  color: #1A1A1A;
 }
 
 .philosophy-card p {
-  color: var(--gray);
+  color: #555555;
   font-size: 0.95rem;
 }
 
