@@ -1069,12 +1069,17 @@ p {
   line-height: 1.35;
 }
 
+.blog-card-title a {
+  color: #1A1A1A;
+  transition: color var(--transition);
+}
+
 .blog-card-title a:hover {
   color: var(--red);
 }
 
 .blog-card-excerpt {
-  color: var(--gray);
+  color: #555555;
   font-size: 0.95rem;
   margin-bottom: 1.25rem;
   line-height: 1.6;
@@ -4737,19 +4742,15 @@ ul.footer-links {
 .concept-term {
   font-family: var(--font-serif);
   font-size: 1.3rem;
-  color: var(--white);
+  color: #1A1A1A;
   margin-bottom: 0.6rem;
   line-height: 1.25;
-}
-
-[data-theme="light"] .concept-term {
-  color: #1A1A1A;
 }
 
 .concept-def {
   font-size: 0.95rem;
   line-height: 1.65;
-  color: var(--charcoal);
+  color: #4A4540;
   margin-bottom: 1rem;
 }
 
@@ -5029,4 +5030,22 @@ ul.footer-links {
 .post-newsletter-box .newsletter-form {
   max-width: 440px;
   margin: 0 auto;
+}
+
+/* ============================================
+   ACCESSIBILITY: respect reduced-motion
+   Also a safety net — content stays visible if
+   motion is reduced (fade-ins never start hidden).
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .fade-in, .lt-fade {
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }
