@@ -437,6 +437,7 @@ document.addEventListener('DOMContentLoaded', () => {
       var eventName = 'newsletter_subscribe';
       if (tag === 'long-game-launch') eventName = 'long_game_waitlist';
       else if (tag === 'book-chapter') eventName = 'book_waitlist';
+      else if (tag === 'book-launch') eventName = 'book_launch_waitlist';
       trackEvent(eventName, {
         list_tag: tag,
         source_page: window.location.pathname
