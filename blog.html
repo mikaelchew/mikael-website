@@ -85,9 +85,12 @@
   <!-- ========== BLOG LISTING ========== -->
   <section class="section section-beige">
     <div class="container">
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; gap: 1rem; flex-wrap: wrap;">
         <a href="index.html" class="back-home" data-en=" Home" data-zh=" 首頁"><i class="fas fa-arrow-left"></i> Home</a>
-        <a href="feed.xml" class="rss-link" target="_blank" rel="noopener" title="RSS Feed" style="display: inline-flex; align-items: center; gap: 0.4rem; font-family: var(--font-sans); font-size: 0.85rem; color: var(--gray); text-decoration: none; transition: color 0.3s;"><i class="fas fa-rss"></i> <span data-en="RSS Feed" data-zh="RSS 訂閱">RSS Feed</span></a>
+        <div style="display: inline-flex; align-items: center; gap: 1.25rem;">
+          <a href="concepts.html" title="Key Concepts" style="display: inline-flex; align-items: center; gap: 0.4rem; font-family: var(--font-sans); font-size: 0.85rem; font-weight: 600; color: var(--red); text-decoration: none;"><i class="fas fa-sitemap"></i> <span data-en="Key Concepts" data-zh="核心概念">Key Concepts</span></a>
+          <a href="feed.xml" class="rss-link" target="_blank" rel="noopener" title="RSS Feed" style="display: inline-flex; align-items: center; gap: 0.4rem; font-family: var(--font-sans); font-size: 0.85rem; color: var(--gray); text-decoration: none; transition: color 0.3s;"><i class="fas fa-rss"></i> <span data-en="RSS Feed" data-zh="RSS 訂閱">RSS Feed</span></a>
+        </div>
       </div>
       <!-- Featured Post -->
       <article class="blog-featured fade-in" data-pubdate="2026-06-24">
@@ -510,6 +513,7 @@
           <li><a href="index.html" data-en="Home" data-zh="首頁">Home</a></li>
           <li><a href="about.html" data-en="About" data-zh="關於">About</a></li>
           <li><a href="blog.html" data-en="Blog" data-zh="部落格">Blog</a></li>
+          <li><a href="concepts.html" data-en="Key Concepts" data-zh="核心概念">Key Concepts</a></li>
           <li><a href="book.html" data-en="Book" data-zh="著作">Book</a></li>
           <li><a href="speaking.html" data-en="Speaking" data-zh="演講">Speaking</a></li>
           <li><a href="work-with-me.html" data-en="Work With Me" data-zh="與我合作">Work With Me</a></li>
