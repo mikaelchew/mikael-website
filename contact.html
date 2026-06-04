@@ -52,8 +52,10 @@
   gtag('js', new Date());
   gtag('config', 'G-ENGNTZ3PPC');
 </script>
+  <noscript><style>.fade-in,.lt-fade{opacity:1!important;transform:none!important}</style></noscript>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
   <!-- ========== NAVBAR ========== -->
   <nav class="navbar">
@@ -77,7 +79,7 @@
   </nav>
 
   <!-- ========== PAGE HERO ========== -->
-  <section class="page-hero">
+  <section class="page-hero" id="main">
     <div class="container">
       <span class="section-label" data-en="CONTACT" data-zh="聯繫">CONTACT</span>
       <h1 data-en="Get In Touch" data-zh="與我聯繫">Get In Touch</h1>
@@ -97,7 +99,7 @@
       <div class="contact-grid">
 
         <!-- Contact Form -->
-        <form class="contact-form" id="contact-form">
+        <form class="contact-form" id="contact-form" action="https://formspree.io/f/xreojdqa" method="POST">
           <div class="form-group">
             <label for="name" data-en="Name" data-zh="姓名">Name</label>
             <input type="text" id="name" name="name" placeholder="Your full name" data-en="Your full name" data-zh="你的全名" required>

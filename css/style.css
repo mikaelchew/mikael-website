@@ -3721,7 +3721,7 @@ p {
 }
 
 .home-card {
-  background: #333333;
+  background: #3A3A3A;
   padding: 40px 32px;
   border-radius: 12px;
   text-decoration: none;
@@ -3730,8 +3730,8 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.28);
 }
 
 .home-card:hover {
@@ -3831,13 +3831,13 @@ p {
 }
 
 .home-blog-card {
-  background: #2D2D2D;
+  background: #353535;
   border-radius: 12px;
   padding: 32px 28px;
   display: flex;
   flex-direction: column;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
 
@@ -5048,4 +5048,43 @@ ul.footer-links {
     opacity: 1 !important;
     transform: none !important;
   }
+}
+
+/* ============================================
+   ACCESSIBILITY: skip link + focus states
+   ============================================ */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 2000;
+  background: var(--red);
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: 0 0 6px 0;
+  text-decoration: none;
+}
+.skip-link:focus {
+  left: 0;
+}
+
+/* Visible keyboard focus on all interactive elements */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+summary:focus-visible,
+.lt-link:focus-visible,
+.toggle-btn:focus-visible {
+  outline: 3px solid var(--red);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+[data-theme="light"] a:focus-visible,
+[data-theme="light"] button:focus-visible {
+  outline-color: var(--red);
 }
