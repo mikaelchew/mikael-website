@@ -23,6 +23,7 @@
 - [Book](https://www.mikaelchew.com/book.html): "The Art of War for Direct Selling" — strategic playbook launching September 2026.
 - [Speaking](https://www.mikaelchew.com/speaking.html): Keynotes and workshops for direct selling companies and leadership events; delivered in English, Mandarin, or Bahasa Malaysia.
 - [Contact](https://www.mikaelchew.com/contact.html): How to reach Mikael for speaking, media, or mentorship inquiries.
+- [中文網站 / Traditional Chinese site](https://www.mikaelchew.com/zh/): Full Traditional-Chinese (zh-Hant) version of every page, including all articles, the book page, and speaking info. Each English page has a Chinese equivalent at the same path under /zh/ (e.g. /zh/about.html, /zh/blog/…).
 
 ## Signature frameworks and concepts (citable)
 

@@ -1,206 +1,614 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.mikaelchew.com/</loc>
-    <lastmod>2026-04-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/"/>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.mikaelchew.com/zh/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/"/>
+    <lastmod>2026-06-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.mikaelchew.com/about.html</loc>
-    <lastmod>2026-04-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/about.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/about.html"/>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mikaelchew.com/zh/about.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/about.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/about.html"/>
+    <lastmod>2026-06-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.mikaelchew.com/blog.html</loc>
-    <lastmod>2026-04-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog.html"/>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mikaelchew.com/zh/blog.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog.html"/>
+    <lastmod>2026-06-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.mikaelchew.com/speaking.html</loc>
-    <lastmod>2026-04-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/speaking.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/speaking.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/speaking.html"/>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.mikaelchew.com/zh/speaking.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/speaking.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/speaking.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/speaking.html"/>
+    <lastmod>2026-06-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.mikaelchew.com/concepts.html</loc>
-    <lastmod>2026-05-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/concepts.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/concepts.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/concepts.html"/>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.mikaelchew.com/zh/concepts.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/concepts.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/concepts.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/concepts.html"/>
+    <lastmod>2026-06-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.mikaelchew.com/work-with-me.html</loc>
-    <lastmod>2026-04-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/work-with-me.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/work-with-me.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/work-with-me.html"/>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.mikaelchew.com/zh/work-with-me.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/work-with-me.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/work-with-me.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/work-with-me.html"/>
+    <lastmod>2026-06-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.mikaelchew.com/contact.html</loc>
-    <lastmod>2026-04-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/contact.html"/>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.mikaelchew.com/zh/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/contact.html"/>
+    <lastmod>2026-06-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.mikaelchew.com/book.html</loc>
-    <lastmod>2026-05-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/book.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/book.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/book.html"/>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mikaelchew.com/zh/book.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/book.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/book.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/book.html"/>
+    <lastmod>2026-06-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.mikaelchew.com/privacy.html</loc>
-    <lastmod>2026-04-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/privacy.html"/>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.mikaelchew.com/zh/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/privacy.html"/>
+    <lastmod>2026-06-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://www.mikaelchew.com/blog/winning-gen-z.html</loc>
-    <lastmod>2026-06-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/winning-gen-z.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/winning-gen-z.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/winning-gen-z.html"/>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mikaelchew.com/zh/blog/winning-gen-z.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/winning-gen-z.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/winning-gen-z.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/winning-gen-z.html"/>
+    <lastmod>2026-06-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.mikaelchew.com/blog/recognition-that-works.html</loc>
-    <lastmod>2026-06-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/recognition-that-works.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/recognition-that-works.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/recognition-that-works.html"/>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mikaelchew.com/zh/blog/recognition-that-works.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/recognition-that-works.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/recognition-that-works.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/recognition-that-works.html"/>
+    <lastmod>2026-06-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.mikaelchew.com/blog/income-plateau.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/income-plateau.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/income-plateau.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/income-plateau.html"/>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mikaelchew.com/zh/blog/income-plateau.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/income-plateau.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/income-plateau.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/income-plateau.html"/>
+    <lastmod>2026-06-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.mikaelchew.com/blog/ai-disruption.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/ai-disruption.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/ai-disruption.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/ai-disruption.html"/>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mikaelchew.com/zh/blog/ai-disruption.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/ai-disruption.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/ai-disruption.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/ai-disruption.html"/>
+    <lastmod>2026-06-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.mikaelchew.com/blog/comeback.html</loc>
-    <lastmod>2026-05-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/comeback.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/comeback.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/comeback.html"/>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mikaelchew.com/zh/blog/comeback.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/comeback.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/comeback.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/comeback.html"/>
+    <lastmod>2026-06-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.mikaelchew.com/blog/sun-tzu-wrong.html</loc>
-    <lastmod>2026-05-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/sun-tzu-wrong.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/sun-tzu-wrong.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/sun-tzu-wrong.html"/>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mikaelchew.com/zh/blog/sun-tzu-wrong.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/sun-tzu-wrong.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/sun-tzu-wrong.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/sun-tzu-wrong.html"/>
+    <lastmod>2026-06-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.mikaelchew.com/blog/two-year-wall.html</loc>
-    <lastmod>2026-05-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/two-year-wall.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/two-year-wall.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/two-year-wall.html"/>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mikaelchew.com/zh/blog/two-year-wall.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/two-year-wall.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/two-year-wall.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/two-year-wall.html"/>
+    <lastmod>2026-06-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.mikaelchew.com/blog/leadership-transitions.html</loc>
-    <lastmod>2026-05-06</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/leadership-transitions.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/leadership-transitions.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/leadership-transitions.html"/>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mikaelchew.com/zh/blog/leadership-transitions.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/leadership-transitions.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/leadership-transitions.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/leadership-transitions.html"/>
+    <lastmod>2026-06-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.mikaelchew.com/blog/mentor-trap.html</loc>
-    <lastmod>2026-04-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/mentor-trap.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/mentor-trap.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/mentor-trap.html"/>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mikaelchew.com/zh/blog/mentor-trap.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/mentor-trap.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/mentor-trap.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/mentor-trap.html"/>
+    <lastmod>2026-06-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.mikaelchew.com/blog/saying-no-prospect.html</loc>
-    <lastmod>2026-04-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/saying-no-prospect.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/saying-no-prospect.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/saying-no-prospect.html"/>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mikaelchew.com/zh/blog/saying-no-prospect.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/saying-no-prospect.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/saying-no-prospect.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/saying-no-prospect.html"/>
+    <lastmod>2026-06-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.mikaelchew.com/blog/smaller-market-advantage.html</loc>
-    <lastmod>2026-04-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/smaller-market-advantage.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/smaller-market-advantage.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/smaller-market-advantage.html"/>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mikaelchew.com/zh/blog/smaller-market-advantage.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/smaller-market-advantage.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/smaller-market-advantage.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/smaller-market-advantage.html"/>
+    <lastmod>2026-06-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.mikaelchew.com/blog/not-a-salesman.html</loc>
-    <lastmod>2026-04-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/not-a-salesman.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/not-a-salesman.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/not-a-salesman.html"/>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mikaelchew.com/zh/blog/not-a-salesman.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/not-a-salesman.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/not-a-salesman.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/not-a-salesman.html"/>
+    <lastmod>2026-06-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.mikaelchew.com/blog/stop-pitching.html</loc>
-    <lastmod>2026-04-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/stop-pitching.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/stop-pitching.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/stop-pitching.html"/>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mikaelchew.com/zh/blog/stop-pitching.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/stop-pitching.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/stop-pitching.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/stop-pitching.html"/>
+    <lastmod>2026-06-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.mikaelchew.com/blog/golden-72-hours.html</loc>
-    <lastmod>2026-04-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/golden-72-hours.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/golden-72-hours.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/golden-72-hours.html"/>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mikaelchew.com/zh/blog/golden-72-hours.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/golden-72-hours.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/golden-72-hours.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/golden-72-hours.html"/>
+    <lastmod>2026-06-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.mikaelchew.com/blog/alliance-problem.html</loc>
-    <lastmod>2026-04-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/alliance-problem.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/alliance-problem.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/alliance-problem.html"/>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mikaelchew.com/zh/blog/alliance-problem.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/alliance-problem.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/alliance-problem.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/alliance-problem.html"/>
+    <lastmod>2026-06-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.mikaelchew.com/blog/terrain-has-changed.html</loc>
-    <lastmod>2026-04-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/terrain-has-changed.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/terrain-has-changed.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/terrain-has-changed.html"/>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mikaelchew.com/zh/blog/terrain-has-changed.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/terrain-has-changed.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/terrain-has-changed.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/terrain-has-changed.html"/>
+    <lastmod>2026-06-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.mikaelchew.com/blog/passive-income-myth.html</loc>
-    <lastmod>2026-04-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/passive-income-myth.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/passive-income-myth.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/passive-income-myth.html"/>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mikaelchew.com/zh/blog/passive-income-myth.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/passive-income-myth.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/passive-income-myth.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/passive-income-myth.html"/>
+    <lastmod>2026-06-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.mikaelchew.com/blog/ten-year-test.html</loc>
-    <lastmod>2026-04-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/ten-year-test.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/ten-year-test.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/ten-year-test.html"/>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mikaelchew.com/zh/blog/ten-year-test.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/ten-year-test.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/ten-year-test.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/ten-year-test.html"/>
+    <lastmod>2026-06-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.mikaelchew.com/blog/stop-copying-upline.html</loc>
-    <lastmod>2026-04-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/stop-copying-upline.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/stop-copying-upline.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/stop-copying-upline.html"/>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mikaelchew.com/zh/blog/stop-copying-upline.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/stop-copying-upline.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/stop-copying-upline.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/stop-copying-upline.html"/>
+    <lastmod>2026-06-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.mikaelchew.com/blog/five-battles.html</loc>
-    <lastmod>2026-04-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/five-battles.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/five-battles.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/five-battles.html"/>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mikaelchew.com/zh/blog/five-battles.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/five-battles.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/five-battles.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/five-battles.html"/>
+    <lastmod>2026-06-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.mikaelchew.com/blog/team-keeps-quitting.html</loc>
-    <lastmod>2026-04-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/team-keeps-quitting.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/team-keeps-quitting.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/team-keeps-quitting.html"/>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mikaelchew.com/zh/blog/team-keeps-quitting.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/team-keeps-quitting.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/team-keeps-quitting.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/team-keeps-quitting.html"/>
+    <lastmod>2026-06-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.mikaelchew.com/blog/generals-dilemma.html</loc>
-    <lastmod>2026-04-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/generals-dilemma.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/generals-dilemma.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/generals-dilemma.html"/>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mikaelchew.com/zh/blog/generals-dilemma.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/generals-dilemma.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/generals-dilemma.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/generals-dilemma.html"/>
+    <lastmod>2026-06-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.mikaelchew.com/blog/dual-perspective.html</loc>
-    <lastmod>2026-04-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/dual-perspective.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/dual-perspective.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/dual-perspective.html"/>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mikaelchew.com/zh/blog/dual-perspective.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/dual-perspective.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/dual-perspective.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/dual-perspective.html"/>
+    <lastmod>2026-06-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.mikaelchew.com/blog/busy-not-strategic.html</loc>
-    <lastmod>2026-04-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/busy-not-strategic.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/busy-not-strategic.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/busy-not-strategic.html"/>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mikaelchew.com/zh/blog/busy-not-strategic.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/busy-not-strategic.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/busy-not-strategic.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/busy-not-strategic.html"/>
+    <lastmod>2026-06-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.mikaelchew.com/blog/win-the-right-way.html</loc>
-    <lastmod>2026-04-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/win-the-right-way.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/win-the-right-way.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/win-the-right-way.html"/>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mikaelchew.com/zh/blog/win-the-right-way.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/win-the-right-way.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/win-the-right-way.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/win-the-right-way.html"/>
+    <lastmod>2026-06-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>

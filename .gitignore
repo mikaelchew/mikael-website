@@ -19,3 +19,4 @@ server.py
 
 # Claude project files
 .claude/
+__pycache__/

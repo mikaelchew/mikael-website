@@ -33,37 +33,24 @@ document.addEventListener('DOMContentLoaded', () => {
   // ============================
   // LANGUAGE TOGGLE (EN / 中文)
   // ============================
+  // Language is determined by URL: English pages at the root, Traditional
+  // Chinese pages baked under /zh/ (indexable for SEO). The toggle navigates
+  // between the two equivalents rather than swapping text in place.
   const langBtn = document.querySelector('.lang-btn');
-  const savedLang = localStorage.getItem('mc-lang') || 'en';
+  const onZh = /(^|\/)zh\//.test(location.pathname);
 
-  function setLang(lang) {
-    document.documentElement.setAttribute('lang', lang === 'zh' ? 'zh-Hant' : 'en');
-    localStorage.setItem('mc-lang', lang);
+  document.documentElement.setAttribute('lang', onZh ? 'zh-Hant' : 'en');
+  if (langBtn) {
+    langBtn.textContent = onZh ? 'EN' : '中文';
+    langBtn.setAttribute('aria-label', onZh ? 'Switch to English' : '切換到中文');
+  }
 
-    // Update button text
-    if (langBtn) {
-      langBtn.textContent = lang === 'en' ? '中文' : 'EN';
-      langBtn.setAttribute('aria-label', lang === 'en' ? 'Switch to Chinese' : 'Switch to English');
-    }
-
-    // Swap all translatable elements
-    document.querySelectorAll('[data-en]').forEach(el => {
-      const text = lang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-zh');
-      if (text) {
-        if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
-          el.placeholder = text;
-        } else if (el.tagName === 'OPTION') {
-          el.textContent = text;
-        } else {
-          el.innerHTML = text;
-        }
-      }
-    });
-
-    // Swap alt text on images
-    document.querySelectorAll('[data-alt-en]').forEach(el => {
-      el.alt = lang === 'en' ? el.getAttribute('data-alt-en') : el.getAttribute('data-alt-zh');
-    });
+  function counterpartPath() {
+    var p = location.pathname;
+    if (onZh) return p.replace(/(^|\/)zh\//, '$1');
+    if (p === '' || p === '/') return '/zh/';
+    if (p.charAt(p.length - 1) === '/') return '/zh' + p;
+    return p.replace(/^\//, '/zh/');
   }
 
   // ============================
@@ -170,12 +157,10 @@ document.addEventListener('DOMContentLoaded', () => {
     limit('.lt-links a.lt-link[href^="blog/"]', 5);
   })();
 
-  setLang(savedLang);
-
   if (langBtn) {
     langBtn.addEventListener('click', () => {
-      const current = localStorage.getItem('mc-lang') || 'en';
-      setLang(current === 'en' ? 'zh' : 'en');
+      localStorage.setItem('mc-lang', onZh ? 'en' : 'zh');
+      window.location.href = counterpartPath() + window.location.search + window.location.hash;
     });
   }
 
@@ -262,7 +247,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      const lang = localStorage.getItem('mc-lang') || 'en';
+      const lang = document.documentElement.lang.indexOf('zh') === 0 ? 'zh' : 'en';
       const btn = contactForm.querySelector('button[type="submit"]');
       const origText = btn.textContent;
       btn.disabled = true;
@@ -487,7 +472,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Language toggle tracking
   if (langBtn) {
     langBtn.addEventListener('click', function() {
-      var newLang = (localStorage.getItem('mc-lang') || 'en') === 'en' ? 'zh' : 'en';
+      var newLang = onZh ? 'en' : 'zh';
       trackEvent('language_toggle', {
         new_language: newLang,
         page_path: window.location.pathname
