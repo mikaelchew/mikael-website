@@ -126,6 +126,8 @@ def transform(relpath):
         if asset_link(u): el.set('src', bump(u))
     for el in doc.xpath('//*[@srcset]'):
         el.set('srcset', rewrite_srcset(el.get('srcset')))
+    for el in doc.xpath('//*[@imagesrcset]'):
+        el.set('imagesrcset', rewrite_srcset(el.get('imagesrcset')))
 
     # 7. canonical -> zh + hreflang alternates
     for c in doc.xpath('//link[@rel="canonical"]'):
