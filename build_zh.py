@@ -138,6 +138,17 @@ def transform(relpath):
         link = lxml.html.Element('link'); link.set('rel','alternate'); link.set('hreflang', hl); link.set('href', href)
         head.append(link)
 
+    # 7b. inject Traditional-Chinese webfonts — only zh pages render Chinese, so
+    # Noto TC is loaded here (async, from Google) rather than on the EN pages.
+    GF_TC = ("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700"
+             "&family=Noto+Serif+TC:wght@400;700;900&display=swap")
+    pre1 = lxml.html.Element('link'); pre1.set('rel','preconnect'); pre1.set('href','https://fonts.googleapis.com')
+    pre2 = lxml.html.Element('link'); pre2.set('rel','preconnect'); pre2.set('href','https://fonts.gstatic.com'); pre2.set('crossorigin','')
+    pl = lxml.html.Element('link'); pl.set('rel','preload'); pl.set('as','style'); pl.set('href', GF_TC); pl.set('onload',"this.onload=null;this.rel='stylesheet'")
+    ns = lxml.html.fragment_fromstring('<noscript><link rel="stylesheet" href="%s"></noscript>' % GF_TC)
+    for el in (pre1, pre2, pl, ns):
+        head.append(el)
+
     # 8. JSON-LD: point page's own url to zh + inLanguage
     e_url = en_url(relpath); z_url = zh_url(relpath)
     for s in doc.xpath('//script[@type="application/ld+json"]'):
