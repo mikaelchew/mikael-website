@@ -166,7 +166,11 @@ def transform(relpath):
     return out_path
 
 def main():
-    pages = [os.path.relpath(p, ROOT) for p in glob.glob(os.path.join(ROOT,'*.html'))]
+    # scorecard.html has no data-zh translations yet — skip it so we don't
+    # publish an English page labeled zh-Hant. Remove from SKIP once translated.
+    SKIP = {'scorecard.html'}
+    pages = [os.path.relpath(p, ROOT) for p in glob.glob(os.path.join(ROOT,'*.html'))
+             if os.path.basename(p) not in SKIP]
     pages += [os.path.relpath(p, ROOT) for p in glob.glob(os.path.join(ROOT,'blog','*.html'))]
     pages = sorted(pages)
     n=0
