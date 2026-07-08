@@ -13,6 +13,7 @@ Personal brand and book-launch site for Mikael Chew at mikaelchew.com. Static HT
 - **After editing any EN page with a Chinese equivalent, regenerate `zh/`** via `build_zh.py` before considering the change done.
 - **Don't touch `scorecard-setup/apps-script.gs` deployment or Telegram bot config** without confirming with Mikael — it's a live cloud deployment outside this repo, changes there aren't visible in git history.
 - **`.claude/` is gitignored** (settings, launch config, auto-commit hook) — it does not travel with `git clone` or `git pull`. Treat it as machine-local state; see PROJECT_HANDOFF.md migration checklist before assuming it exists on a new machine.
+- **A local Stop hook auto-commits every working-tree change** after each session turn (see `.claude/settings.local.json`, timestamped messages). It's a safety net, not curated history — before pushing or considering a body of work "done," make one clean, descriptively-messaged commit (squash the auto-commits into it) rather than leaving a string of timestamp-only commits as the record. The hook hardcodes an absolute path — see PROJECT_HANDOFF.md migration checklist if it silently stops firing after a machine or folder move.
 - Standing global rules (ask before expensive multi-agent operations, Karpathy coding principles) are inherited from `~/.claude/CLAUDE.md` and `Desktop/CLAUDE.md` — not repeated here.
 
 ## Key paths
@@ -24,3 +25,5 @@ Personal brand and book-launch site for Mikael Chew at mikaelchew.com. Static HT
 | Local dev server | `server.py` (gitignored, already present) via `.claude/launch.json` → `python3 server.py` on port 8080 |
 | Chinese page generator | `build_zh.py` — regenerates `zh/` from EN pages |
 | Brand voice source of truth | `MARBLISM_INSTRUCTIONS.md` |
+| Lead-magnet scorecard (unwired, unlinked) | `scorecard.html` + `scorecard-setup/SETUP.md` |
+| AI content-channel feasibility study | `AI_DS_CHANNEL_FEASIBILITY.md` (research only, no build yet) |

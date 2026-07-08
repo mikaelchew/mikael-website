@@ -2,7 +2,7 @@
 
 Canonical state document for this repo. Read this before doing anything else in a new session or on a new machine. See [CLAUDE.md](CLAUDE.md) for the short entry point and standing rules.
 
-Last updated: 2026-07-08 (documentation pass, no code/deploy changes made).
+Last updated: 2026-07-08 (documentation pass, no code/deploy changes made — one prior fix from earlier the same day is noted in the Decisions Log: excluding the untranslated scorecard from `build_zh.py`).
 
 ---
 
@@ -24,7 +24,7 @@ Brand voice, visual identity (black #1a1a1a / beige #f5f0e8 / red #c0392b), and 
 | Main site | https://www.mikaelchew.com | root, `main` branch | GitHub Pages (`mikaelchew.github.io`) | **LIVE** |
 | Apex domain | https://mikaelchew.com | same (CNAME file + DNS A records → GitHub Pages IPs) | same | **LIVE**, redirects to www |
 | Chinese mirror | https://www.mikaelchew.com/zh/ | `zh/` — generated, do not hand-edit | same | **LIVE**, regenerate via `build_zh.py` after EN edits |
-| Blog (39 posts) | /blog/ | `blog/` | same | **LIVE** |
+| Blog (25 posts) | /blog/ | `blog/` | same | **LIVE** |
 | Book landing page | /book.html | root | same | **LIVE but "Coming Soon"** — not yet the purchase page |
 | Strategic Leader Scorecard | /scorecard.html | root | same | **LIVE page, backend NOT connected** — `ENDPOINT` is empty (`""`), so submissions currently only log to console (demo mode), nothing is captured |
 | Scorecard backend (when connected) | Google Sheet + Apps Script Web App | `scorecard-setup/apps-script.gs` (source copy only — the deployed script lives in Google's cloud) | Google Cloud, tied to Mikael's Google account — **not this repo, not this machine** | Per `scorecard-setup/SETUP.md`, appears **not yet deployed** — confirm with Mikael before assuming it's live |
@@ -55,24 +55,32 @@ Brand voice, visual identity (black #1a1a1a / beige #f5f0e8 / red #c0392b), and 
 4. **Baked, indexable `/zh/` pages rather than client-side translation** (commit `dba9311`). Reasoning: a JS-only language toggle wouldn't be crawlable/indexable by search engines; SEO requires real server-rendered HTML per locale.
 5. **SEO + GEO (generative-engine optimization) foundation, in two phases** (commits `1af590a`, `fdf20fd`). Reasoning: visibility in both classic search and AI-answer engines — `llms.txt` at the repo root exists specifically to support the GEO side of this.
 6. **A full audit pass for brand/a11y/robustness was run and remediated** (commits `708d3cb`, `bdfbaa4` — the latter explicitly mentions "expose-private cleanup"). The commit message implies something was previously exposed that shouldn't have been and was cleaned up; no further detail is in the commit body. **Worth a fresh spot-check after migration** to confirm nothing regressed — I have not re-audited this myself in this pass (docs-only).
-7. **Strategic Leader Scorecard added as a lead magnet** (commit `192149b`), deliberately reusing the existing Sheet + Apps Script + Telegram pattern rather than building new backend infrastructure. Reasoning per `scorecard-setup/SETUP.md`: fast to stand up, no server to host or maintain, consistent with automations Mikael already runs elsewhere.
-8. **A Stop-hook auto-commits any dirty working tree** at the end of every Claude Code session (see `.claude/settings.local.json`, gitignored). Explains the "Auto-commit: <timestamp>" commits scattered through `git log`. Reasoning inferred: checkpoints in-progress work even if a session ends without an explicit commit.
+7. **Strategic Leader Scorecard added as a lead magnet** (commit `192149b`), deliberately reusing the existing Sheet + Apps Script + Telegram pattern rather than building new backend infrastructure or Mailchimp. Reasoning is explicit, from Mikael directly: he prefers high-touch personal follow-up ("I personally read every message") over automated email nurture — a Sheet + instant Telegram ping matches that operating style and mirrors his existing Zinzino-Day registration site and his omegahealth-project Telegram automation, rather than introducing a new tool.
+8. **`zh/scorecard.html` excluded from `build_zh.py`** (fixed same day as this handoff doc, `SKIP` set in `build_zh.py`). The scorecard has no `data-zh` translations yet; letting the build run on it produced an English page mislabeled `lang="zh-Hant"`, which the auto-commit hook would have silently pushed live. Remove it from `SKIP` once real Chinese copy is written.
+9. **Work With Me testimonials swapped from anonymous to named** (commit `2229b0d`). The page's highest-intent testimonials read as unverifiable ("Senior Team Leader, 8 years"). Replaced with three real, named quotes already published — and checked word-for-word against the homepage — with no new claims written or fabricated.
+10. **A Stop-hook auto-commits any dirty working tree** at the end of every Claude Code session (see `.claude/settings.local.json`, gitignored). Explains the "Auto-commit: <timestamp>" commits scattered through `git log`. Explicit request from Mikael ("every time we make changes, we need to auto commit it"); kept local-only since it's a personal workflow preference, not a team/repo standard.
 
 ---
 
 ## 5. Open Threads
 
 **Waiting on Mikael:**
-- Scorecard backend isn't connected yet — `scorecard.html`'s `ENDPOINT` is empty. If live lead capture is wanted, the 3-step process in `scorecard-setup/SETUP.md` (create Sheet → deploy Apps Script → paste `/exec` URL into `scorecard.html`) still needs to be done.
-- `book.html` stays "Coming Soon" until the book is actually ready to sell — tied to the `BOOK_LAUNCH_PLAN.md` timeline, not a technical blocker.
-- 2 commits exist locally that haven't been pushed to `origin/main` (both auto-commits, `2026-07-03` and `2026-07-07`, plus the two new handoff docs from this session). **This report did not push them** — confirm and run `git push` when ready.
+- Scorecard backend isn't connected yet — `scorecard.html`'s `ENDPOINT` is empty. If live lead capture is wanted, the 3-step process in `scorecard-setup/SETUP.md` (create Sheet → deploy Apps Script → paste `/exec` URL into `scorecard.html`) still needs to be done. Every completed scorecard is currently lost.
+- `book.html` stays "Coming Soon" until the book is actually ready to sell — tied to the `BOOK_LAUNCH_PLAN.md` timeline. The purchase mechanism itself (Gumroad / Shopify / direct checkout) hasn't been decided yet, and that decision is on the launch critical path, not just a "flip the switch" task.
+- Supply 2–3 real mentee case studies (situation → what we did → result, anonymized is fine) for Work With Me — the page's biggest remaining credibility gap. Every current testimonial praises character, not outcomes.
+- Decide on the "AI for Direct Selling Leaders" content-channel idea (`AI_DS_CHANNEL_FEASIBILITY.md`, research-only, dated 2026-07-03). Verdict: a real but unevenly-held gap — Frazer Brookes and Donna Valdes are the closest existing occupants, but none of the industry's biggest NM YouTubers (Eric Worre, Tanya Aliza, Sarah Robbins) have claimed the AI angle. No content, branding, or infrastructure has been built against this yet — it's a decision, not a task.
+- Greenlight a video shoot (homepage introduction + a speaking sizzle reel) — zero video exists anywhere on the site, for a speaker whose strongest proof is the stage. Flagged as the single highest-leverage missing asset in the last full site audit.
+- 3 commits exist locally that haven't been pushed to `origin/main` (two prior auto-commits from `2026-07-03`/`2026-07-07`, plus the newest one from this handoff-doc session). **This pass did not push them** — confirm and run `git push` when ready.
 
-**Ready to execute (no blocker, just not done):**
+**Ready to execute (once the above are answered):**
 - Delete the `perf/async-font-loading` branch — confirmed fully merged into `main` (`git merge-base --is-ancestor` returns true), both local and remote copies are safe to delete as routine cleanup.
-- Decide whether `scorecard.html` needs a `/zh/` mirror — it was added after the last visible `build_zh.py` run pattern and isn't yet confirmed to have Chinese parity.
+- Translate `scorecard.html` into 繁中 and remove it from `build_zh.py`'s `SKIP` set (see Decisions Log #8) — it currently has no Chinese parity by design, not oversight.
+- Link the scorecard into nav / homepage / `sitemap.xml` once it's wired and tested end-to-end — it's deliberately unlisted for now.
+- Rewrite two lines flagged as off-voice in the last audit: the Work With Me hero ("Let's Build Something Extraordinary" — fails Mikael's own "could anyone have written this" test) and the "Results Speak Louder Than Promises" header, which currently sits above testimonials that don't show results.
 
 **Blocked:**
-- None visible from repo state alone. If there's something blocking on Mikael's side (editor feedback on the manuscript, endorsement replies, etc.) that isn't reflected here, it lives outside this repo — add it here once known.
+- Any Zinzino-branded "build with me" partner funnel — deliberately not built while the 6-month non-compete on partner solicitation (from Mikael's transition contract) is active. Design can start once the timeline clears (independent-growth phase, ~November 2026 onward per current plan), so it's ready to switch on rather than built from scratch. This context lives outside this repo (Mikael's personal Vault/identity notes) — flagging here so it isn't lost on a fresh machine that doesn't have that context loaded.
+- Speaker one-sheet PDF and the speaking reel — blocked on the same video shoot above.
 
 ---
 
@@ -119,7 +127,7 @@ Searched all tracked file types (`.html .js .css .py .md .json .gs`) — **zero 
 ## 8. MIGRATION CHECKLIST
 
 ### On the old Mac, before migrating
-1. `git push origin main` — clear the 2 outstanding local-only commits (see Section 5) so the new Mac's clone is current.
+1. `git push origin main` — clear the 3 outstanding local-only commits (see Section 5) so the new Mac's clone is current.
 2. Decide whether to delete the merged `perf/async-font-loading` branch now or later (`git push origin --delete perf/async-font-loading && git branch -d perf/async-font-loading`) — safe either way, confirmed merged.
 3. **Copy the gitignored files that only exist on disk** — a `git clone` will NOT bring these over:
    - The manuscript: `《直銷孫子兵法之不戰而勝》完整修訂版_v2.docx`
