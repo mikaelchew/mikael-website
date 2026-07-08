@@ -114,7 +114,7 @@ Brand voice, visual identity (black #1a1a1a / beige #f5f0e8 / red #c0392b), and 
 - **No database.** No crontab entries reference this project (`crontab -l` → none). No `launchd` agents reference it (`launchctl list` → none). The only local automation is the Claude Code Stop-hook in `.claude/settings.local.json` (gitignored — see below).
 - **`.claude/` directory (gitignored, machine-local):**
   - `launch.json` — the Claude Preview dev-server launch config. **Hardcodes the full current absolute path** to `server.py`.
-  - `settings.local.json` — permission allowlist plus the auto-commit Stop-hook, whose shell command also **hardcodes the current absolute project path** in a `cd` statement. The permission list additionally contains several *stale* references to an even older path (`/Users/zinzinomalaysia/Desktop/Claude_Mikael_Website`) from before this project moved to its current location — these are dead entries, harmless, but a sign this file has accumulated cruft over past migrations too.
+  - `settings.local.json` — permission allowlist plus the auto-commit Stop-hook, whose shell command also **hardcodes the current absolute project path** in a `cd` statement. The permission list additionally contains several *stale* references to an even older path (`/Users/mikael/Desktop/Claude_Mikael_Website`) from before this project moved to its current location — these are dead entries, harmless, but a sign this file has accumulated cruft over past migrations too.
   - Neither file is in git. Copying only via `git clone` loses both; a plain Finder/`cp -R` copy of the visible folder also loses them unless hidden files are included.
 - **Installed tooling this project depends on:** `lxml` for system Python (`/usr/bin/python3`, currently 3.9.6 on this Mac), installed via `pip3 install --user lxml` into `~/Library/Python/3.9/lib/python/site-packages` — also shared by `python-pptx` and `python-docx` on this machine, so it's not exclusively this project's dependency. Homebrew's `python3` (currently 3.14 on this Mac) does **not** have `lxml` installed and will fail `build_zh.py` if used by mistake.
 - **Brew packages present that relate to this project:** `gh`. (`python@3.12`, `python@3.14` are also brew-installed but are not what `build_zh.py` actually uses — see above.)
@@ -157,11 +157,11 @@ Searched all tracked file types (`.html .js .css .py .md .json .gs`) — **zero 
    /usr/bin/python3 -m pip install --user lxml
    ```
    If the new Mac's system Python blocks user-installs (PEP 668, common on newer macOS), add `--break-system-packages`, or install into a venv and update the `build_zh.py` invocation accordingly.
-8. If `.claude/` was carried over, fix the two hardcoded absolute paths to match the new Mac's actual project path (only needed if the username or folder location differs from `/Users/zinzinomalaysia/Desktop/Work/Projects/zinzino/Mikael Chew Website`):
+8. If `.claude/` was carried over, fix the two hardcoded absolute paths to match the new Mac's actual project path (only needed if the username or folder location differs from `/Users/mikael/Work/Projects/zinzino/Mikael Chew Website`):
    - `.claude/launch.json` → `configurations[0].runtimeArgs[0]`
    - `.claude/settings.local.json` → the `cd "..."` at the start of the Stop-hook command
    - (Optional cleanup, not required for function) prune the stale `/Users/.../Claude_Mikael_Website` entries from the permissions `allow` list — they no longer match anything.
-9. If the project folder was placed anywhere other than `~/Desktop/Work/Projects/zinzino/Mikael Chew Website`, update the `@AGENTS.md`-style references in the parent `Desktop/CLAUDE.md` and `Work/CLAUDE.md` (outside this repo) so the global session-start docs still resolve correctly.
+9. If the project folder was placed anywhere other than `~/Work/Projects/zinzino/Mikael Chew Website`, update the `@AGENTS.md`-style references in the parent `Desktop/CLAUDE.md` and `Work/CLAUDE.md` (outside this repo) so the global session-start docs still resolve correctly.
 
 ### Verify it works
 10. **Build/generate step:**
