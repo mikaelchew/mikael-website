@@ -80,12 +80,15 @@ The book launch is a 12-week campaign in three phases:
 
 ## Open tasks / next steps
 
-- Upgrade `book.html` from "Coming Soon" to a full pre-order / sales page (Phase 1, Weeks 1–2)
-- Set up email list landing page for book launch subscribers
+*(Synced against the live site 2026-07-09 — see `BOOK_LAUNCH_PLAN.md` for the full checklist.)*
+
+- **Done:** `book.html` upgraded from "Coming Soon" to a full pre-launch page — September 2026 launch badge, 13-chapter list, prominent free Chapter 1 section, FAQ, launch-notify form. It becomes the purchase page on launch day.
+- **Done:** Email list capture — Mailchimp signup forms embedded on `book.html` and the homepage (tags `book-chapter` / `book-launch`). Still verify in Mailchimp that the `book-chapter` automation actually sends the Chapter 1 PDF.
+- **Done:** Chapter 1 preview promoted prominently ("Download Free Chapter" is book.html's primary CTA).
+- Review the drafted launch copy in `BOOK_LAUNCH_COPY.md` (descriptions, bios, press release, email sequences, launch-week captions) and fill its `[PLACEHOLDERS]`
+- Decide and set up the purchase mechanism (Gumroad, Shopify, or WooCommerce) — **still open, on the launch critical path**
 - Design and add book launch visual assets (social graphics, email banners, web hero banner)
-- Release Chapter 1 preview PDF more prominently (already exists in `downloads/`)
-- Set up purchase mechanism (Gumroad, Shopify, or WooCommerce) integrated with site
-- Build out `zh/` versions of any new pages added during campaign
+- Build out `zh/` versions of any new pages added during campaign (mirror current as of 2026-07-09)
 
 ## Notes for agents
 

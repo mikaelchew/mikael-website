@@ -2,7 +2,7 @@
 
 Canonical state document for this repo. Read this before doing anything else in a new session or on a new machine. See [CLAUDE.md](CLAUDE.md) for the short entry point and standing rules.
 
-Last updated: 2026-07-08 (documentation pass, no code/deploy changes made — one prior fix from earlier the same day is noted in the Decisions Log: excluding the untranslated scorecard from `build_zh.py`).
+Last updated: 2026-07-09 (campaign-doc sync pass: book.html row and open threads updated to reflect the live pre-launch page and Mailchimp capture; launch copy drafted in `BOOK_LAUNCH_COPY.md`. Prior pass 2026-07-08 was documentation-only).
 
 ---
 
@@ -25,7 +25,7 @@ Brand voice, visual identity (black #1a1a1a / beige #f5f0e8 / red #c0392b), and 
 | Apex domain | https://mikaelchew.com | same (CNAME file + DNS A records → GitHub Pages IPs) | same | **LIVE**, redirects to www |
 | Chinese mirror | https://www.mikaelchew.com/zh/ | `zh/` — generated, do not hand-edit | same | **LIVE**, regenerate via `build_zh.py` after EN edits |
 | Blog (25 posts) | /blog/ | `blog/` | same | **LIVE** |
-| Book landing page | /book.html | root | same | **LIVE but "Coming Soon"** — not yet the purchase page |
+| Book landing page | /book.html | root | same | **LIVE pre-launch page** (as of 2026-07-09 sync) — September 2026 launch date published, Mailchimp email capture wired (tags `book-chapter` / `book-launch`); becomes the purchase page on launch day |
 | Strategic Leader Scorecard | /scorecard.html | root | same | **LIVE page, backend NOT connected** — `ENDPOINT` is empty (`""`), so submissions currently only log to console (demo mode), nothing is captured |
 | Scorecard backend (when connected) | Google Sheet + Apps Script Web App | `scorecard-setup/apps-script.gs` (source copy only — the deployed script lives in Google's cloud) | Google Cloud, tied to Mikael's Google account — **not this repo, not this machine** | Per `scorecard-setup/SETUP.md`, appears **not yet deployed** — confirm with Mikael before assuming it's live |
 | Chapter 1 preview PDF | /downloads/chapter1-sample.pdf | `downloads/` | same | **LIVE** |
@@ -66,7 +66,9 @@ Brand voice, visual identity (black #1a1a1a / beige #f5f0e8 / red #c0392b), and 
 
 **Waiting on Mikael:**
 - Scorecard backend isn't connected yet — `scorecard.html`'s `ENDPOINT` is empty. If live lead capture is wanted, the 3-step process in `scorecard-setup/SETUP.md` (create Sheet → deploy Apps Script → paste `/exec` URL into `scorecard.html`) still needs to be done. Every completed scorecard is currently lost.
-- `book.html` stays "Coming Soon" until the book is actually ready to sell — tied to the `BOOK_LAUNCH_PLAN.md` timeline. The purchase mechanism itself (Gumroad / Shopify / direct checkout) hasn't been decided yet, and that decision is on the launch critical path, not just a "flip the switch" task.
+- `book.html` is now a full pre-launch page (September 2026 launch date published, Mailchimp signup forms live) — no longer "Coming Soon". What remains for launch day: purchase links. The purchase mechanism itself (Gumroad / Shopify / direct checkout) hasn't been decided yet, and that decision is on the launch critical path, not just a "flip the switch" task.
+- Verify in Mailchimp that the `book-chapter` automation actually delivers the Chapter 1 PDF — the book.html form promises "I'll send Chapter 1 directly to your inbox," and that automation lives in Mailchimp's cloud, not in this repo.
+- Review the launch copy drafted 2026-07-09 in `BOOK_LAUNCH_COPY.md` (book descriptions EN/繁中, author bios, press release, email sequences, launch-week captions) and fill its `[PLACEHOLDERS]` before anything is sent or published.
 - Supply 2–3 real mentee case studies (situation → what we did → result, anonymized is fine) for Work With Me — the page's biggest remaining credibility gap. Every current testimonial praises character, not outcomes.
 - Decide on the "AI for Direct Selling Leaders" content-channel idea (`AI_DS_CHANNEL_FEASIBILITY.md`, research-only, dated 2026-07-03). Verdict: a real but unevenly-held gap — Frazer Brookes and Donna Valdes are the closest existing occupants, but none of the industry's biggest NM YouTubers (Eric Worre, Tanya Aliza, Sarah Robbins) have claimed the AI angle. No content, branding, or infrastructure has been built against this yet — it's a decision, not a task.
 - Greenlight a video shoot (homepage introduction + a speaking sizzle reel) — zero video exists anywhere on the site, for a speaker whose strongest proof is the stage. Flagged as the single highest-leverage missing asset in the last full site audit.

@@ -1,6 +1,8 @@
 # Book Launch Campaign Plan
 ## 《直銷孫子兵法之不戰而勝》 — "The Art of War for Direct Selling"
-## Target Launch: July-August 2026 (3-4 months from now)
+## Target Launch: September 2026
+
+> **Status sync 2026-07-09:** Launch target updated from "July-August 2026" to **September 2026** to match what's already published on the live book page (`book.html` hero badge and schema.org `datePublished: 2026-09`). Checkboxes below updated to reflect verified site state. Working backward from a September launch week, pre-launch Weeks 1–6 run mid-July through August — the Teaser Campaign (Weeks 3–4) should start around late July.
 
 ---
 
@@ -20,9 +22,9 @@ The book launch is not a single event — it's a 12-week campaign divided into t
 - [ ] Finalize manuscript and submit to publisher/printer
 - [ ] Get ISBN number assigned
 - [ ] Commission professional book cover design (if not done)
-- [ ] Set up book sales page on mikaelchew.com (upgrade from current "Coming Soon")
-- [ ] Set up pre-order mechanism (if self-publishing: Gumroad, Shopify, or direct order form)
-- [ ] Create a dedicated landing page for book launch email list
+- [x] Set up book sales page on mikaelchew.com (upgrade from current "Coming Soon") — *done as a full pre-launch page (launch badge, 13-chapter list, free Chapter 1 section, FAQ, launch-notify form). Purchase links get added on launch day, pending the mechanism decision below.*
+- [ ] Set up pre-order mechanism (if self-publishing: Gumroad, Shopify, or direct order form) — **decision still open, on the launch critical path**
+- [x] Create a dedicated landing page for book launch email list — *done via Mailchimp signup forms embedded on book.html and the homepage (tags: `book-chapter`, `book-launch`). ⚠️ Still verify in Mailchimp that the `book-chapter` automation actually delivers the Chapter 1 PDF — the form promises "I'll send Chapter 1 directly to your inbox" and that automation can't be verified from the repo.*
 - [ ] Design book launch visual assets (social media graphics, email headers, web banners)
 
 ### Week 3-4: Teaser Campaign
@@ -37,7 +39,7 @@ The book launch is not a single event — it's a 12-week campaign divided into t
 ### Week 5-6: Momentum Building
 - [ ] Increase book-related social content to 3-4 posts per week
 - [ ] Share endorsement quotes as they come in (design as quote graphics)
-- [ ] Release Chapter 1 preview (already have PDF — promote it more aggressively)
+- [x] Release Chapter 1 preview (already have PDF — promote it more aggressively) — *done: "Download Free Chapter" is now the primary CTA on book.html, with a dedicated free-chapter section and email-gated delivery*
 - [ ] Host a live session (IG Live, Facebook Live, or LinkedIn Live) discussing one key concept from the book
 - [ ] Create a "Book Launch Team" — recruit 20-30 supporters who will buy, review, and share on launch day
 - [ ] Send advance review copies (ARCs) to key influencers and reviewers
@@ -107,12 +109,12 @@ The book launch is not a single event — it's a 12-week campaign divided into t
 - [ ] Author photo for media kit (professional, high-resolution)
 
 ### Written Assets
-- [ ] Book description (short: 50 words, medium: 150 words, long: 300 words)
-- [ ] Author bio (short and long versions)
-- [ ] Press release
-- [ ] Email sequences: pre-launch (3 emails), launch day, launch week follow-up, post-launch
-- [ ] Social media captions for each day of launch week (pre-written)
-- [ ] FAQ page for the book
+- [ ] Book description (short: 50 words, medium: 150 words, long: 300 words) — *drafted in `BOOK_LAUNCH_COPY.md` (2026-07-09), pending Mikael's review*
+- [ ] Author bio (short and long versions) — *drafted in `BOOK_LAUNCH_COPY.md`, pending review*
+- [ ] Press release — *drafted in `BOOK_LAUNCH_COPY.md`, pending review*
+- [ ] Email sequences: pre-launch (3 emails), launch day, launch week follow-up, post-launch — *drafted in `BOOK_LAUNCH_COPY.md`, pending review*
+- [ ] Social media captions for each day of launch week (pre-written) — *drafted in `BOOK_LAUNCH_COPY.md`, pending review*
+- [x] FAQ page for the book — *live as an FAQ section on book.html, with FAQPage schema markup*
 
 ### Video Assets
 - [ ] Book announcement video (2-3 minutes)
