@@ -2,6 +2,8 @@
 
 # Mikael Chew Website
 
+*(Local folder renamed from `Mikael Chew Website` to `mikaelchew-dot-com` on 2026-07-09 — `.claude/launch.json` and the Stop-hook auto-commit path in `settings.local.json` were both updated to match.)*
+
 Personal brand and book-launch site for Mikael Chew at mikaelchew.com. Static HTML/CSS/JS, hosted on **GitHub Pages** (not Vercel/Netlify — no build step in CI, `build_zh.py` is run manually/locally).
 
 @AGENTS.md
