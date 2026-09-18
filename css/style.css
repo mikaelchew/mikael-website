@@ -5218,3 +5218,68 @@ summary:focus-visible,
     display: block !important;
   }
 }
+
+/* ========== BOOK BUY SECTION ========== */
+.book-buy-head { text-align: center; max-width: 640px; margin: 0 auto 3rem; }
+.book-buy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  align-items: stretch;
+}
+.book-buy-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem 2rem;
+  border: 1px solid var(--beige-dark);
+  border-radius: 4px;
+  background: var(--black-light);
+}
+.book-buy-card-primary { border-color: var(--red); }
+.book-buy-tag {
+  position: absolute;
+  top: -0.75rem;
+  left: 2rem;
+  background: var(--red);
+  color: #fff;
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  padding: 0.3rem 0.8rem;
+  border-radius: 2rem;
+}
+.book-buy-card h3 { margin: 0 0 0.5rem; }
+.book-buy-price {
+  font-family: var(--font-serif);
+  font-size: 2.25rem;
+  line-height: 1.1;
+  color: var(--white);
+  margin-bottom: 1.5rem;
+}
+.book-buy-features { list-style: none; padding: 0; margin: 0 0 2rem; }
+.book-buy-features li {
+  display: flex;
+  gap: 0.6rem;
+  align-items: flex-start;
+  margin-bottom: 0.7rem;
+  font-size: 0.95rem;
+  color: var(--charcoal);
+}
+.book-buy-features i { color: var(--red); margin-top: 0.3rem; font-size: 0.8rem; }
+.book-buy-btn { width: 100%; text-align: center; margin-top: auto; }
+.book-buy-note {
+  display: block;
+  margin-top: 0.9rem;
+  font-size: 0.8rem;
+  color: var(--gray);
+  line-height: 1.5;
+}
+.book-buy-team { text-align: center; margin: 2.5rem auto 0; max-width: 640px; color: var(--charcoal); }
+@media (max-width: 600px) {
+  .book-buy-card { padding: 2rem 1.5rem; }
+  .book-buy-price { font-size: 1.9rem; }
+}
