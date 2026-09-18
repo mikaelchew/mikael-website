@@ -6,9 +6,9 @@
 Covers the "Written Assets" checklist in `BOOK_LAUNCH_PLAN.md`: book descriptions, author bios, press release, email sequences, and launch-week social captions. Every factual claim is limited to what is already published on mikaelchew.com (book.html, blog, about). No new numbers or stories were invented.
 
 **Fill these placeholders before anything goes out:**
-- `[LAUNCH DATE]` — the exact launch day in September 2026
+- `[LAUNCH DATE]` — **Tuesday 20 October 2026**
 - `[PURCHASE LINK]` — depends on the purchase-mechanism decision (Gumroad / Shopify / direct), still open
-- `[PRICE]` — planned range is RM 79–99 physical, RM 39–49 digital (internal, from BOOK_LAUNCH_PLAN.md — confirm before publishing)
+- `[PRICE]` — **ebook RM 29.90 direct (EPUB + PDF), Kindle USD 7.99** (confirmed 2026-09-18). Print price not yet set
 - `[LAUNCH BONUS]` — the launch-week special (book.html already promises "launch-week bonuses reserved for early readers", so this must be defined)
 - `[ISBN]` — not yet assigned
 
@@ -52,7 +52,7 @@ The Art of War for Direct Selling is the book he wishes someone had handed him a
 
 Inside the 13 chapters:
 
-- **Foundations** — finding your "Dao" (the why that survives rejection), knowing yourself and your market, and the Daily Method of Operation that took one partner from zero clients to RM 5,000 a month in 90 days.
+- **Foundations** — finding your "Dao" (the why that survives rejection), knowing yourself and your market, and the Daily Method of Operation that took one partner from zero clients to a real breakthrough in monthly income in 90 days.
 - **The Battlefield** — the FORMHD prospecting framework that lifted success rates from 5% to 70%, the invitation technique that raised acceptance from 15% to 80%, and the 1-4-7 follow-up method born from three months of fruit deliveries to an aunty who once threw the author out of her house.
 - **Building Your Army** — the golden 72 hours that decide whether a new partner becomes a diamond or a shooting star, and why training is activation, not education.
 - **The General's Path** — leading with Dao, strategic expansion, crisis management when 60% of a team walks out, and the art of letting go.
@@ -65,7 +65,7 @@ The book is deliberately company-agnostic. Whether you are building your first t
 
 ### Short — EN (~60 words)
 
-Mikael Chew has spent 23 years in direct selling: 8 years building teams in the field and 15 years in senior corporate management across three multinational companies. He has personally mentored over 450 professionals. His first book, *The Art of War for Direct Selling* (《直銷孫子兵法之不戰而勝》), launches in September 2026. He writes at mikaelchew.com.
+Mikael Chew has spent 23 years in direct selling: 8 years building teams in the field and 15 years in senior corporate management across three multinational companies. He has personally mentored over 450 professionals. His first book, *The Art of War for Direct Selling* (《直銷孫子兵法之不戰而勝》), launches on 20 October 2026. He writes at mikaelchew.com.
 
 ### Short — 繁中 (約60字)
 
@@ -77,7 +77,7 @@ Mikael Chew is a direct selling strategist with a perspective few in the industr
 
 His philosophy rests on three convictions: win the right way (ethics is a competitive advantage, not a constraint), strategy beats hustle, and real success is measured by how many people no longer need you.
 
-His first book, *The Art of War for Direct Selling* (《直銷孫子兵法之不戰而勝》), applies Sun Tzu's strategic principles to modern network leadership across 13 chapters of real stories, specific numbers, and practical frameworks. It launches in September 2026. He is based in Malaysia and writes at mikaelchew.com.
+His first book, *The Art of War for Direct Selling* (《直銷孫子兵法之不戰而勝》), applies Sun Tzu's strategic principles to modern network leadership across 13 chapters of real stories, specific numbers, and practical frameworks. It launches on 20 October 2026. He is based in Malaysia and writes at mikaelchew.com.
 
 ---
 

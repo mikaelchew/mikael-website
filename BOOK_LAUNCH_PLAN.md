@@ -1,8 +1,10 @@
 # Book Launch Campaign Plan
 ## 《直銷孫子兵法之不戰而勝》 — "The Art of War for Direct Selling"
-## Target Launch: September 2026
+## Target Launch: 20 October 2026 (ebook)
 
-> **Status sync 2026-07-09:** Launch target updated from "July-August 2026" to **September 2026** to match what's already published on the live book page (`book.html` hero badge and schema.org `datePublished: 2026-09`). Checkboxes below updated to reflect verified site state. Working backward from a September launch week, pre-launch Weeks 1–6 run mid-July through August — the Teaser Campaign (Weeks 3–4) should start around late July.
+> **Status sync 2026-09-18:** Ebook launch fixed at **Tuesday 20 October 2026**; site badges, FAQ and schema updated to match. eISBN applied for 18/09/2026 (publisher of record: Chew Choon Teik). Print edition follows 4–8 weeks after the ebook. Purchase mechanism decided — see Distribution Strategy.
+>
+> *(Superseded: the 2026-07-09 sync targeting September 2026.)*
 
 ---
 
@@ -128,7 +130,7 @@ The book launch is not a single event — it's a 12-week campaign divided into t
 
 ### Primary Sales Channel
 - Direct sales via mikaelchew.com (highest margin, captures customer data)
-- Set up with Gumroad, Shopify, or WooCommerce for digital/physical orders
+- **Mechanism decided 2026-09-18: Billplz (Ignite Ventures) + Google Apps Script delivery.** Billplz collection link handles FPX/e-wallets/cards; its callback hits an Apps Script web app that logs the order to a Sheet and emails the buyer the EPUB + PDF as attachments (~1.2 MB total, well inside Gmail limits). No store platform, no monthly fee, keeps FPX — which is how Malaysian buyers actually pay. Rejected: Gumroad/Payhip/Lemon Squeezy (5–10% cut, no FPX) and WooCommerce/Shopify (abandons GitHub Pages to sell one file)
 
 ### Secondary Channels
 - Amazon (KDP for print-on-demand, or direct upload)
@@ -137,9 +139,9 @@ The book launch is not a single event — it's a 12-week campaign divided into t
 - Speaking events (sell at back of room)
 
 ### Pricing Strategy
-- Physical book: RM 79-99 (premium positioning — this is a strategic guide, not a pamphlet)
-- Digital/eBook: RM 39-49
-- Bundle (physical + digital): RM 99-119
+- **Digital/eBook: RM 29.90 direct (EPUB + PDF) — confirmed 2026-09-18.** Kindle USD 7.99 (≈ RM 35), so direct is both the better price for the reader and the better margin for us
+- Physical book: RM 79–99 indicative, **not yet confirmed** — settle when the printer quotes
+- Bundle (physical + digital): decide when the print edition exists
 - Launch week special: 10-15% discount or bonus content
 
 ---

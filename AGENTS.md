@@ -4,7 +4,7 @@
 
 ## What this is
 
-Static HTML/CSS/JS site serving as Mikael Chew's personal brand hub for his Zinzino business and thought-leadership content. It is live at mikaelchew.com. The site is currently running a 12-week book-launch campaign for 《直銷孫子兵法之不戰而勝》 ("The Art of War for Direct Selling"), with a target launch window of July–August 2026.
+Static HTML/CSS/JS site serving as Mikael Chew's personal brand hub for his Zinzino business and thought-leadership content. It is live at mikaelchew.com. The site is currently running a 12-week book-launch campaign for 《直銷孫子兵法之不戰而勝》 ("The Art of War for Direct Selling"), with the ebook launching 20 October 2026 (print 4–8 weeks later).
 
 ## Tech stack
 
@@ -74,7 +74,7 @@ The book launch is a 12-week campaign in three phases:
 - The site has both English pages at root and a Chinese mirror under `zh/` — always run `build_zh.py` after editing any page that has a Chinese equivalent
 - `book.html` is the critical page to keep updated throughout the campaign; it starts as "Coming Soon" and goes live on launch day
 - Distribution is primarily via mikaelchew.com direct sales (highest margin, captures customer data); secondary channels are Amazon, Malaysian bookstores (MPH, Kinokuniya, Popular), bulk orders, and speaking events
-- Pricing: Physical RM 79–99, Digital/eBook RM 39–49
+- Pricing: **eBook RM 29.90 direct / USD 7.99 Kindle (confirmed 2026-09-18)**; physical RM 79–99 indicative, not yet confirmed
 - Book is in Traditional Chinese; English translation is a post-launch consideration
 - All campaign tracking checklists live in `BOOK_LAUNCH_PLAN.md` — update checkboxes there as tasks complete
 
@@ -82,7 +82,7 @@ The book launch is a 12-week campaign in three phases:
 
 *(Synced against the live site 2026-07-09 — see `BOOK_LAUNCH_PLAN.md` for the full checklist.)*
 
-- **Done:** `book.html` upgraded from "Coming Soon" to a full pre-launch page — September 2026 launch badge, 13-chapter list, prominent free Chapter 1 section, FAQ, launch-notify form. It becomes the purchase page on launch day.
+- **Done:** `book.html` upgraded from "Coming Soon" to a full pre-launch page — **20 October 2026** launch badge, 13-chapter list, prominent free Chapter 1 section, FAQ, launch-notify form. It becomes the purchase page on launch day.
 - **Done:** Email list capture — Mailchimp signup forms embedded on `book.html` and the homepage (tags `book-chapter` / `book-launch`). Still verify in Mailchimp that the `book-chapter` automation actually sends the Chapter 1 PDF.
 - **Done:** Chapter 1 preview promoted prominently ("Download Free Chapter" is book.html's primary CTA).
 - Review the drafted launch copy in `BOOK_LAUNCH_COPY.md` (descriptions, bios, press release, email sequences, launch-week captions) and fill its `[PLACEHOLDERS]`

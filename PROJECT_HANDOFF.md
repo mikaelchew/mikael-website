@@ -10,7 +10,7 @@ Last updated: 2026-07-09 (campaign-doc sync pass: book.html row and open threads
 
 Personal brand and book-launch hub for Mikael Chew at **mikaelchew.com**. Two jobs at once:
 
-1. **Book launch** — 12-week campaign for 《直銷孫子兵法之不戰而勝》 ("The Art of War for Direct Selling"), target launch window July–August 2026. `book.html` is currently a "Coming Soon" page that upgrades to a live purchase page at launch. Full campaign detail in `BOOK_LAUNCH_PLAN.md`.
+1. **Book launch** — 12-week campaign for 《直銷孫子兵法之不戰而勝》 ("The Art of War for Direct Selling"), **ebook launch Tuesday 20 October 2026** (print 4–8 weeks later). `book.html` is a live pre-launch page that upgrades to a purchase page at launch. Full campaign detail in `BOOK_LAUNCH_PLAN.md`.
 2. **Personal brand / field-building funnel** — `work-with-me.html`, `speaking.html`, `about.html`, the blog, and the new `scorecard.html` lead magnet support Mikael's transition from Zinzino Malaysia corporate back into the field as a Zinzino partner/leader under Ignite Ventures. This site is part of that broader personal-brand infrastructure (see `~/Desktop/CLAUDE.md` and the Vault for the full business context — this repo is scoped to the website only).
 
 Brand voice, visual identity (black #1a1a1a / beige #f5f0e8 / red #c0392b), and content pillars are defined in `MARBLISM_INSTRUCTIONS.md` — treat that as the source of truth for anything published.
@@ -25,7 +25,7 @@ Brand voice, visual identity (black #1a1a1a / beige #f5f0e8 / red #c0392b), and 
 | Apex domain | https://mikaelchew.com | same (CNAME file + DNS A records → GitHub Pages IPs) | same | **LIVE**, redirects to www |
 | Chinese mirror | https://www.mikaelchew.com/zh/ | `zh/` — generated, do not hand-edit | same | **LIVE**, regenerate via `build_zh.py` after EN edits |
 | Blog (25 posts) | /blog/ | `blog/` | same | **LIVE** |
-| Book landing page | /book.html | root | same | **LIVE pre-launch page** (as of 2026-07-09 sync) — September 2026 launch date published, Mailchimp email capture wired (tags `book-chapter` / `book-launch`); becomes the purchase page on launch day |
+| Book landing page | /book.html | root | same | **LIVE pre-launch page** — 20 October 2026 launch date published (updated 2026-09-18), Mailchimp email capture wired (tags `book-chapter` / `book-launch`); becomes the purchase page on launch day |
 | Strategic Leader Scorecard | /scorecard.html | root | same | **LIVE page, backend NOT connected** — `ENDPOINT` is empty (`""`), so submissions currently only log to console (demo mode), nothing is captured |
 | Scorecard backend (when connected) | Google Sheet + Apps Script Web App | `scorecard-setup/apps-script.gs` (source copy only — the deployed script lives in Google's cloud) | Google Cloud, tied to Mikael's Google account — **not this repo, not this machine** | Per `scorecard-setup/SETUP.md`, appears **not yet deployed** — confirm with Mikael before assuming it's live |
 | Chapter 1 preview PDF | /downloads/chapter1-sample.pdf | `downloads/` | same | **LIVE** |
@@ -66,7 +66,7 @@ Brand voice, visual identity (black #1a1a1a / beige #f5f0e8 / red #c0392b), and 
 
 **Waiting on Mikael:**
 - Scorecard backend isn't connected yet — `scorecard.html`'s `ENDPOINT` is empty. If live lead capture is wanted, the 3-step process in `scorecard-setup/SETUP.md` (create Sheet → deploy Apps Script → paste `/exec` URL into `scorecard.html`) still needs to be done. Every completed scorecard is currently lost.
-- `book.html` is now a full pre-launch page (September 2026 launch date published, Mailchimp signup forms live) — no longer "Coming Soon". What remains for launch day: purchase links. The purchase mechanism itself (Gumroad / Shopify / direct checkout) hasn't been decided yet, and that decision is on the launch critical path, not just a "flip the switch" task.
+- `book.html` is a full pre-launch page (20 October 2026 launch date published, Mailchimp signup forms live). What remains for launch day: purchase links. **Mechanism decided 2026-09-18 — Billplz (Ignite Ventures) + Google Apps Script delivery**; see `BOOK_LAUNCH_PLAN.md` → Distribution Strategy. Not built yet.
 - Verify in Mailchimp that the `book-chapter` automation actually delivers the Chapter 1 PDF — the book.html form promises "I'll send Chapter 1 directly to your inbox," and that automation lives in Mailchimp's cloud, not in this repo.
 - Review the launch copy drafted 2026-07-09 in `BOOK_LAUNCH_COPY.md` (book descriptions EN/繁中, author bios, press release, email sequences, launch-week captions) and fill its `[PLACEHOLDERS]` before anything is sent or published.
 - Supply 2–3 real mentee case studies (situation → what we did → result, anonymized is fine) for Work With Me — the page's biggest remaining credibility gap. Every current testimonial praises character, not outcomes.
