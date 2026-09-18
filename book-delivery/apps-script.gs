@@ -23,6 +23,9 @@
  *   REPLY_TO           e.g. hello@mikaelchew.com
  *   ADMIN_EMAIL        where failure alerts go
  *   RESEND_TOKEN       random string; lets you re-send a copy by hand
+ *   BILLPLZ_COLLECTION_ID  the collection bills are created under (e.g. kd1zdpfg)
+ *   PRICE_CENTS        price in cents — 2990 for RM 29.90
+ *   REDIRECT_URL       https://www.mikaelchew.com/book-thank-you.html
  */
 
 function prop_(k, dflt) {
@@ -166,6 +169,63 @@ function doPost(e) {
   }
 }
 
+/** Send the browser onward to Billplz. Apps Script cannot issue a real 302. */
+function redirectTo_(url) {
+  return HtmlService.createHtmlOutput(
+    '<!DOCTYPE html><html><head><meta charset="utf-8"><title>...</title></head>' +
+    '<body style="font-family:system-ui,sans-serif;padding:2rem;text-align:center">' +
+    '<p>\u6b63\u5728\u524d\u5f80\u5b89\u5168\u4ed8\u6b3e\u9801\u9762\u2026<br>Taking you to secure payment\u2026</p>' +
+    '<p><a href="' + url.replace(/"/g, '&quot;') + '" target="_top">Continue</a></p>' +
+    '<script>window.top.location.href=' + JSON.stringify(url) + ';</scr' + 'ipt>' +
+    '</body></html>'
+  ).setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
+}
+
+function message_(text) {
+  return HtmlService.createHtmlOutput(
+    '<!DOCTYPE html><html><head><meta charset="utf-8"></head>' +
+    '<body style="font-family:system-ui,sans-serif;padding:2rem;text-align:center"><p>' +
+    text + '</p><p><a href="https://www.mikaelchew.com/book.html#buy" target="_top">Back to the book</a></p></body></html>'
+  ).setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
+}
+
+/**
+ * Create a Billplz bill for one purchase and send the buyer to it.
+ * callback_url is REQUIRED by the Billplz API and cannot be set on a collection,
+ * which is why every purchase gets its own bill created here rather than using a
+ * static payment link.
+ */
+function handleBuy_(p) {
+  var email = String(p.email || '').trim();
+  var name  = String(p.name  || '').trim() || 'Reader';
+  if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
+    return message_('That email address does not look right. Please go back and try again.');
+  }
+  var exec = ScriptApp.getService().getUrl();
+  var res = UrlFetchApp.fetch(apiBase_() + '/bills', {
+    method: 'post',
+    headers: {
+      Authorization: 'Basic ' + Utilities.base64Encode(prop_('BILLPLZ_API_KEY', '') + ':')
+    },
+    payload: {
+      collection_id: prop_('BILLPLZ_COLLECTION_ID', ''),
+      email: email,
+      name: name,
+      amount: prop_('PRICE_CENTS', '2990'),
+      callback_url: exec,
+      redirect_url: prop_('REDIRECT_URL', ''),
+      description: '\u76f4\u92b7\u5b6b\u5b50\u5175\u6cd5\u4e4b\u4e0d\u6230\u800c\u52dd\uff08\u96fb\u5b50\u66f8 EPUB + PDF\uff09'
+    },
+    muteHttpExceptions: true
+  });
+  if (res.getResponseCode() !== 200) {
+    console.error('Bill creation failed: ' + res.getContentText());
+    alertAdmin_('Bill creation FAILED', res.getContentText());
+    return message_('Sorry — payment could not be started. Please email hello@mikaelchew.com and I will sort it out.');
+  }
+  return redirectTo_(JSON.parse(res.getContentText()).url);
+}
+
 /**
  * GET endpoint.
  *   ?ping=1                                  health check
@@ -173,6 +233,7 @@ function doPost(e) {
  */
 function doGet(e) {
   var p = (e && e.parameter) ? e.parameter : {};
+  if (p.action === 'buy') return handleBuy_(p);
   if (p.ping) {
     return ContentService.createTextOutput('ok; mail quota left: ' + MailApp.getRemainingDailyQuota());
   }
