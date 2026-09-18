@@ -62,7 +62,22 @@ offsets a negative balance from daily collections. Top up before you announce th
 
 **1. Put the two files in Drive.** From the book project's `publishing/` folder:
 `直銷孫子兵法之不戰而勝_ebook.epub` and `Manuscript_v1.9_EBOOK_EDITION.pdf`. Open each and
-copy the id out of the URL (`/d/<FILE_ID>/`).
+copy the id out of the URL (`/d/<FILE_ID>/`). Put them in their own folder, e.g. *Book delivery*.
+
+Why Drive and not the repo: GitHub Pages serves everything publicly, so a paid file in the
+site repo would be a free download for anyone who found the URL. (That is exactly why the
+free Chapter 1 sample *does* live there.)
+
+**Updating the book later — read this before you regenerate anything.** `publishing/` is the
+source of truth; Drive is a copy, and a stale copy means buyers get the wrong edition with no
+error anywhere. When a new build exists (adding the eISBN, a v2.0 with errata):
+
+> right-click the existing Drive file → **Manage versions → Upload new version**
+
+That keeps the same file id, so no Script Property changes and nothing to redeploy. Never
+upload the new build as a *new* file unless you also update `EPUB_FILE_ID` / `PDF_FILE_ID`.
+Record the two file ids in the book project's `REVISIONS.md` so a future session knows where
+they point.
 
 **2. Create the orders Sheet.** A blank Google Sheet; copy its id from the URL.
 
