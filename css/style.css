@@ -5300,3 +5300,56 @@ summary:focus-visible,
 
 /* Real cover art fills the 3D book shell */
 .book-cover img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* ========== FREE CHAPTER READING PAGE ========== */
+.chapter-read { padding-top: calc(var(--nav-height) + 3rem); }
+.chapter-head { max-width: 40rem; margin: 0 auto 3.5rem; text-align: center; }
+.chapter-head h1 { font-size: clamp(1.7rem, 4vw, 2.4rem); line-height: 1.35; margin: 0.6rem 0 1.4rem; }
+.chapter-standfirst { color: var(--charcoal); font-size: 1.05rem; line-height: 1.8; }
+.chapter-langnote { color: var(--gray); font-size: 0.85rem; margin-top: 1rem; }
+
+/* Reading column: ~34em keeps CJK lines near 30-40 characters */
+.chapter-body { max-width: 34em; margin: 0 auto; font-size: 1.06rem; line-height: 2; }
+.chapter-body p { margin: 0 0 1.5em; color: var(--white); text-align: justify; }
+.chapter-body h2 {
+  font-size: 1.25em;
+  line-height: 1.5;
+  margin: 2.8em 0 1.2em;
+  padding-top: 1.6em;
+  border-top: 1px solid var(--beige-dark);
+  color: var(--white);
+}
+.chapter-body ol, .chapter-body ul { margin: 0 0 1.5em 1.4em; padding: 0; }
+.chapter-body li { margin: 0 0 1em; color: var(--white); }
+.chapter-body b { color: #fff; }
+
+.chapter-cta {
+  max-width: 34em;
+  margin: 3.5rem auto;
+  padding: 2rem;
+  border: 1px solid var(--beige-dark);
+  border-radius: 4px;
+  background: var(--black-light);
+  text-align: center;
+}
+.chapter-cta p { color: var(--charcoal); line-height: 1.8; margin: 0 0 1.4rem; }
+.chapter-cta-soft { margin: 3rem auto; }
+.chapter-cta-end { border-color: var(--red); margin-top: 4rem; }
+.chapter-cta-end h2 { font-size: 1.5rem; line-height: 1.4; margin: 0 0 1rem; }
+.chapter-cta-actions { display: flex; flex-wrap: wrap; gap: 0.8rem; justify-content: center; margin-bottom: 1.8rem; }
+.chapter-notify { display: flex; flex-wrap: wrap; gap: 0.6rem; justify-content: center; }
+.chapter-notify input { flex: 1 1 14rem; padding: 0.7rem 0.9rem; background: var(--black); border: 1px solid var(--beige-dark); border-radius: 3px; color: var(--white); font-family: var(--font-sans); }
+.chapter-notify input::placeholder { color: var(--gray); }
+.chapter-notify button { padding: 0.7rem 1.2rem; background: transparent; border: 1px solid var(--gray); border-radius: 3px; color: var(--charcoal); font-family: var(--font-sans); cursor: pointer; transition: var(--transition); }
+.chapter-notify button:hover { border-color: var(--white); color: var(--white); }
+@media (max-width: 600px) {
+  .chapter-body { font-size: 1.02rem; line-height: 1.95; }
+  .chapter-cta { padding: 1.5rem; }
+}
+/* keep the newsletter input consistent inside the dark chapter CTA card */
+.chapter-cta .newsletter-form input[type="email"] {
+  background: var(--black);
+  border: 1px solid var(--beige-dark);
+  color: var(--white);
+}
+.chapter-cta .newsletter-form input[type="email"]::placeholder { color: var(--gray); }

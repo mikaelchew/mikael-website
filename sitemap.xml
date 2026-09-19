@@ -135,10 +135,28 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+<url>
+    <loc>https://www.mikaelchew.com/chapter-1.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/chapter-1.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/chapter-1.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/chapter-1.html"/>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://www.mikaelchew.com/zh/book.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/book.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/book.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/book.html"/>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+<url>
+    <loc>https://www.mikaelchew.com/zh/chapter-1.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/book.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/chapter-1.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/book.html"/>
     <lastmod>2026-06-04</lastmod>
     <changefreq>monthly</changefreq>
