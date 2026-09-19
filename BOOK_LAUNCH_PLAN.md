@@ -26,7 +26,7 @@ The book launch is not a single event — it's a 12-week campaign divided into t
 - [ ] Commission professional book cover design (if not done)
 - [x] Set up book sales page on mikaelchew.com (upgrade from current "Coming Soon") — *done as a full pre-launch page (launch badge, 13-chapter list, free Chapter 1 section, FAQ, launch-notify form). Purchase links get added on launch day, pending the mechanism decision below.*
 - [ ] Set up pre-order mechanism (if self-publishing: Gumroad, Shopify, or direct order form) — **decision still open, on the launch critical path**
-- [x] Create a dedicated landing page for book launch email list — *done via Mailchimp signup forms embedded on book.html and the homepage (tags: `book-chapter`, `book-launch`). ⚠️ Still verify in Mailchimp that the `book-chapter` automation actually delivers the Chapter 1 PDF — the form promises "I'll send Chapter 1 directly to your inbox" and that automation can't be verified from the repo.*
+- [x] Create a dedicated landing page for book launch email list — *done via Mailchimp signup forms embedded on book.html and the homepage (tags: `book-chapter`, `book-launch`). ⚠️ The `book-chapter` automation still has to be rewritten to send the **link** to `/chapter-1.html` instead of attaching a PDF — copy is ready in `MAILCHIMP_CHAPTER_EMAIL.md`. That automation lives in Mailchimp's cloud, so it cannot be verified from the repo.*
 - [ ] Design book launch visual assets (social media graphics, email headers, web banners)
 
 ### Week 3-4: Teaser Campaign
