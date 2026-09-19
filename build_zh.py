@@ -97,6 +97,12 @@ def transform(relpath):
         zh_desc = ps[0].get('data-zh') if ps else (h1[0].get('data-zh') if h1 else None)
         if zh_desc and len(zh_desc) > 160:
             zh_desc = zh_desc[:157].rstrip() + "…"
+    # An explicit data-zh on the description meta always wins. Without this the
+    # fallback grabs the first <p data-zh> on the page, which on book.html is the
+    # launch badge — a 10-character meta description.
+    explicit = doc.xpath('//meta[@name="description"][@data-zh]')
+    if explicit and explicit[0].get('data-zh'):
+        zh_desc = explicit[0].get('data-zh')
     title_el = doc.xpath('//title')
     if title_el and zh_title:
         title_el[0].text = zh_title

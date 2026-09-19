@@ -3136,8 +3136,8 @@ p {
 
 .book-cover {
   width: 280px;
-  aspect-ratio: 2 / 3;
-  background: linear-gradient(160deg, #0D0D0D 0%, #1A1A1A 40%, #222222 100%);
+  aspect-ratio: 1 / 1.6;
+  background: #EFE7D4;
   border-radius: 0 6px 6px 0;
   box-shadow:
     8px 8px 30px rgba(0, 0, 0, 0.6),
@@ -5297,3 +5297,6 @@ summary:focus-visible,
 .book-buy-form input::placeholder { color: var(--gray); }
 .book-buy-form input:focus { outline: none; border-color: var(--red); }
 .book-buy-form .book-buy-btn { margin-top: 0.3rem; }
+
+/* Real cover art fills the 3D book shell */
+.book-cover img { width: 100%; height: 100%; object-fit: cover; display: block; }
