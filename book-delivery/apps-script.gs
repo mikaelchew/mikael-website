@@ -87,7 +87,7 @@ function alreadyDelivered_(billId) {
 
 function logOrder_(bill, status, note) {
   sheet_().appendRow([
-    new Date(), bill.id, bill.name || '', bill.email || '',
+    Utilities.formatDate(new Date(), 'Asia/Kuala_Lumpur', 'yyyy-MM-dd HH:mm:ss'), bill.id, bill.name || '', bill.email || '',
     (Number(bill.amount) / 100).toFixed(2), bill.state || '', status, note || ''
   ]);
 }
@@ -148,7 +148,7 @@ function doPost(e) {
     var sigOk = signatureValid_(p);
     if (sigOk === false) {
       // Log loudly but keep going — the API check below is what actually decides.
-      console.warn('X-Signature mismatch for bill ' + billId);
+      console.warn('X-Signature mismatch for bill ' + billId + '; keys=' + Object.keys(p).sort().join(','));
     }
 
     var bill = fetchBill_(billId);          // authoritative
