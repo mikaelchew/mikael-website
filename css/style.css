@@ -4665,6 +4665,10 @@ ul.footer-links {
   text-align: center;
 }
 
+.book-print-waitlist { text-align: center; }
+.book-print-waitlist .section-label { display: block; margin-bottom: 0.75rem; }
+.book-print-waitlist .book-notify-note a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+
 .book-notify-box {
   max-width: 640px;
   margin: 0 auto;
@@ -5142,6 +5146,7 @@ summary:focus-visible,
   .newsletter,
   .newsletter-form,
   .book-launch-notify,
+  .book-print-waitlist,
   .book-notify-box,
   .speaking-cta,
   .post-nav,
