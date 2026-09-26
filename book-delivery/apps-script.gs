@@ -126,8 +126,18 @@ function alertAdmin_(subject, body) {
   if (to) MailApp.sendEmail(to, '[book-delivery] ' + subject, body);
 }
 
-/** Billplz callback endpoint. */
+/**
+ * POST endpoint. Two callers:
+ *  - the book.html buy form: fetch() with a text/plain JSON body {action:'buy', name, email}
+ *    (text/plain avoids a CORS preflight, and keeps the email out of any URL);
+ *  - the Billplz callback: form-encoded, carries the bill id.
+ */
 function doPost(e) {
+  if (e && e.postData && e.postData.type === 'text/plain') {
+    var body = {};
+    try { body = JSON.parse(e.postData.contents); } catch (err) {}
+    if (body.action === 'buy') return handleBuy_(body);
+  }
   var lock = LockService.getScriptLock();
   lock.waitLock(30000);
   try {
@@ -169,28 +179,14 @@ function doPost(e) {
   }
 }
 
-/** Send the browser onward to Billplz. Apps Script cannot issue a real 302. */
-function redirectTo_(url) {
-  return HtmlService.createHtmlOutput(
-    '<!DOCTYPE html><html><head><meta charset="utf-8"><title>...</title></head>' +
-    '<body style="font-family:system-ui,sans-serif;padding:2rem;text-align:center">' +
-    '<p>\u6b63\u5728\u524d\u5f80\u5b89\u5168\u4ed8\u6b3e\u9801\u9762\u2026<br>Taking you to secure payment\u2026</p>' +
-    '<p><a href="' + url.replace(/"/g, '&quot;') + '" target="_top">Continue</a></p>' +
-    '<script>window.top.location.href=' + JSON.stringify(url) + ';</scr' + 'ipt>' +
-    '</body></html>'
-  ).setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
-}
-
-function message_(text) {
-  return HtmlService.createHtmlOutput(
-    '<!DOCTYPE html><html><head><meta charset="utf-8"></head>' +
-    '<body style="font-family:system-ui,sans-serif;padding:2rem;text-align:center"><p>' +
-    text + '</p><p><a href="https://www.mikaelchew.com/book.html#buy" target="_top">Back to the book</a></p></body></html>'
-  ).setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
+/** JSON reply for the buy form. The page itself navigates to `url`. */
+function json_(obj) {
+  return ContentService.createTextOutput(JSON.stringify(obj))
+    .setMimeType(ContentService.MimeType.JSON);
 }
 
 /**
- * Create a Billplz bill for one purchase and send the buyer to it.
+ * Create a Billplz bill for one purchase and return its payment URL.
  * callback_url is REQUIRED by the Billplz API and cannot be set on a collection,
  * which is why every purchase gets its own bill created here rather than using a
  * static payment link.
@@ -199,7 +195,7 @@ function handleBuy_(p) {
   var email = String(p.email || '').trim();
   var name  = String(p.name  || '').trim() || 'Reader';
   if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
-    return message_('That email address does not look right. Please go back and try again.');
+    return json_({ error: 'bad-email' });
   }
   var exec = ScriptApp.getService().getUrl();
   var res = UrlFetchApp.fetch(apiBase_() + '/bills', {
@@ -221,9 +217,9 @@ function handleBuy_(p) {
   if (res.getResponseCode() !== 200) {
     console.error('Bill creation failed: ' + res.getContentText());
     alertAdmin_('Bill creation FAILED', res.getContentText());
-    return message_('Sorry — payment could not be started. Please email hello@mikaelchew.com and I will sort it out.');
+    return json_({ error: 'bill-failed' });
   }
-  return redirectTo_(JSON.parse(res.getContentText()).url);
+  return json_({ url: JSON.parse(res.getContentText()).url });
 }
 
 /**
@@ -233,7 +229,6 @@ function handleBuy_(p) {
  */
 function doGet(e) {
   var p = (e && e.parameter) ? e.parameter : {};
-  if (p.action === 'buy') return handleBuy_(p);
   if (p.ping) {
     return ContentService.createTextOutput('ok; mail quota left: ' + MailApp.getRemainingDailyQuota());
   }

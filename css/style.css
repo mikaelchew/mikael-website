@@ -5289,6 +5289,8 @@ summary:focus-visible,
   .book-buy-price { font-size: 1.9rem; }
 }
 .book-buy-form { margin-top: auto; display: flex; flex-direction: column; gap: 0.6rem; }
+.book-buy-status { margin: 0; font-size: 0.85rem; line-height: 1.5; color: var(--red); }
+.book-buy-status:empty { display: none; }
 .book-buy-form input {
   width: 100%;
   padding: 0.75rem 0.9rem;

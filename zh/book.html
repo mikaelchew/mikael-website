@@ -390,14 +390,14 @@
             <li data-en="Pay by online banking (FPX)" data-zh="以網上銀行（FPX）付款">以網上銀行（FPX）付款</li>
             <li data-en="Sent to your inbox within minutes" data-zh="幾分鐘內寄到你的信箱">幾分鐘內寄到你的信箱</li>
           </ul>
-          <!-- TODO before launch: replace action with the Apps Script /exec URL (see book-delivery/SETUP.md).
-               Name + email are collected here because the Billplz API requires them to create the bill,
-               and the email is where the book is sent. -->
-          <form class="book-buy-form" method="get" action="#APPS_SCRIPT_EXEC_URL_PENDING">
-            <input type="hidden" name="action" value="buy">
+          <!-- Name + email are collected here because the Billplz API requires them to create the bill,
+               and the email is where the book is sent. js/main.js posts them to the Apps Script web app
+               (data-endpoint), gets back the Billplz payment URL, and navigates there. -->
+          <form class="book-buy-form" data-endpoint="https://script.google.com/macros/s/AKfycbzKakMN9ShFaqKmWRPheQBYLdvWBPTh-ZaHjMnC7xa-nlDhERL0Pn54QlwXytkOM-LM_Q/exec">
             <input type="text" name="name" autocomplete="name" required placeholder="你的姓名" data-en="Your name" data-zh="你的姓名">
             <input type="email" name="email" autocomplete="email" required placeholder="your@email.com">
             <button type="submit" class="btn btn-primary book-buy-btn" data-en="Buy Now — RM 29.90" data-zh="立即購買 — RM 29.90">立即購買 — RM 29.90</button>
+            <p class="book-buy-status" role="status" aria-live="polite"></p>
           </form>
           <span class="book-buy-note" data-en="The book is emailed to this address. Payment is processed by Billplz and will appear on your statement as Ignite Ventures." data-zh="電子書會寄到這個信箱。付款由 Billplz 處理，帳單上會顯示為 Ignite Ventures。">電子書會寄到這個信箱。付款由 Billplz 處理，帳單上會顯示為 Ignite Ventures。</span>
         </div>

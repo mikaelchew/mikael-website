@@ -491,4 +491,42 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // ============================
+  // BOOK BUY FORM (book.html)
+  // Apps Script serves HTML in a sandboxed iframe that cannot redirect the page,
+  // so the script returns JSON and this page does the navigation to Billplz.
+  // ============================
+  document.querySelectorAll('.book-buy-form[data-endpoint]').forEach(function (form) {
+    var zh = (document.documentElement.lang || '').indexOf('zh') === 0;
+    var btn = form.querySelector('button[type="submit"]');
+    var status = form.querySelector('.book-buy-status');
+    var label = btn.textContent;
+    var msg = {
+      busy: zh ? '正在前往安全付款頁面…' : 'Opening secure payment…',
+      'bad-email': zh ? '電子郵件地址好像不對，請再檢查一次。' : "That email address doesn't look right. Please check it.",
+      failed: zh ? '付款無法啟動。請再試一次，或寫信到 hello@mikaelchew.com。' : 'Payment could not be started. Please try again, or email hello@mikaelchew.com.'
+    };
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      btn.disabled = true;
+      btn.textContent = msg.busy;
+      status.textContent = '';
+      fetch(form.dataset.endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify({ action: 'buy', name: form.elements.name.value, email: form.elements.email.value })
+      })
+        .then(function (r) { return r.json(); })
+        .then(function (res) {
+          if (res.url) { window.location.href = res.url; return; }
+          throw new Error(res.error || 'failed');
+        })
+        .catch(function (err) {
+          status.textContent = msg[err.message] || msg.failed;
+          btn.disabled = false;
+          btn.textContent = label;
+        });
+    });
+  });
+
 });
