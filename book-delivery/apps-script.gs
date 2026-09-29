@@ -39,7 +39,11 @@ function apiBase_() {
     : 'https://www.billplz.com/api/v3';
 }
 
-/** Billplz signs callbacks: sort keys, join "key"+"value" with "|", HMAC-SHA256. */
+/**
+ * Billplz signs callbacks: build "key"+"value" for every param except x_signature,
+ * sort those STRINGS (not the keys — "paid_amount100" sorts before "paidtrue"),
+ * join with "|", HMAC-SHA256 hex. Matches the source-string order in Billplz's API docs.
+ */
 function signatureValid_(params) {
   var key = prop_('BILLPLZ_XSIGN', '');
   if (!key) return null;                    // not configured — skip; API check still applies
@@ -47,8 +51,8 @@ function signatureValid_(params) {
   if (!given) return false;
   var source = Object.keys(params)
     .filter(function (k) { return k !== 'x_signature'; })
-    .sort()
     .map(function (k) { return k + params[k]; })
+    .sort()
     .join('|');
   var mac = Utilities.computeHmacSha256Signature(source, key);
   var hex = mac.map(function (b) {
