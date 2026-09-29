@@ -74,7 +74,7 @@ The book launch is a 12-week campaign in three phases:
 - The site has both English pages at root and a Chinese mirror under `zh/` — always run `build_zh.py` after editing any page that has a Chinese equivalent
 - `book.html` is the critical page to keep updated throughout the campaign; it starts as "Coming Soon" and goes live on launch day
 - Distribution is primarily via mikaelchew.com direct sales (highest margin, captures customer data); secondary channels are Amazon, Malaysian bookstores (MPH, Kinokuniya, Popular), bulk orders, and speaking events
-- Pricing: **eBook RM 29.90 direct / USD 7.99 Kindle (confirmed 2026-09-18)**; physical RM 79–99 indicative, not yet confirmed
+- Pricing: **eBook RM 29.90 direct / USD 9.99 Kindle (raised from 7.99 on 2026-09-29 — KDP draft set at 9.99, 70% band now $2.99–$12.99)**; physical RM 79–99 indicative, not yet confirmed
 - Book is in Traditional Chinese; English translation is a post-launch consideration
 - All campaign tracking checklists live in `BOOK_LAUNCH_PLAN.md` — update checkboxes there as tasks complete
 

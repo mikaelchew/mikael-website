@@ -8,7 +8,7 @@ Covers the "Written Assets" checklist in `BOOK_LAUNCH_PLAN.md`: book description
 **Fill these placeholders before anything goes out:**
 - `[LAUNCH DATE]` — **Tuesday 20 October 2026**
 - `[PURCHASE LINK]` — depends on the purchase-mechanism decision (Gumroad / Shopify / direct), still open
-- `[PRICE]` — **ebook RM 29.90 direct (EPUB + PDF), Kindle USD 7.99** (confirmed 2026-09-18). Print price not yet set
+- `[PRICE]` — **ebook RM 29.90 direct (EPUB + PDF), Kindle USD 9.99** (7.99 → 9.99 on 2026-09-29). Print price not yet set
 - `[LAUNCH BONUS]` — the launch-week special (book.html already promises "launch-week bonuses reserved for early readers", so this must be defined)
 - `[ISBN]` — not yet assigned
 

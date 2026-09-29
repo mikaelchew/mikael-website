@@ -139,7 +139,7 @@ The book launch is not a single event — it's a 12-week campaign divided into t
 - Speaking events (sell at back of room)
 
 ### Pricing Strategy
-- **Digital/eBook: RM 29.90 direct (EPUB + PDF) — confirmed 2026-09-18.** Kindle USD 7.99 (≈ RM 35), so direct is both the better price for the reader and the better margin for us
+- **Digital/eBook: RM 29.90 direct (EPUB + PDF) — confirmed 2026-09-18.** Kindle USD 9.99 (≈ RM 42; raised from 7.99 on 2026-09-29), so direct is both the better price for the reader and the better margin for us
 - Physical book: RM 79–99 indicative, **not yet confirmed** — settle when the printer quotes
 - Bundle (physical + digital): decide when the print edition exists
 - Launch week special: 10-15% discount or bonus content
