@@ -105,14 +105,14 @@ function sendBook_(toEmail, toName) {
     '<div style="font-family:-apple-system,Segoe UI,Helvetica,Arial,sans-serif;font-size:15px;line-height:1.75;color:#1a1a1a;max-width:560px">' +
     '<p>' + (name ? name + '，' : '') + '謝謝你購買《直銷孫子兵法之不戰而勝》。</p>' +
     '<p>電子書就附在這封信裡，兩種格式都有：</p>' +
-    '<ul><li><b>EPUB</b> — 手機、平板、Kindle App、大部分電子書閱讀器</li>' +
-    '<li><b>PDF</b> — 電腦閱讀或列印</li></ul>' +
+    '<ul><li><b>EPUB</b>：手機、平板、Kindle App、大部分電子書閱讀器</li>' +
+    '<li><b>PDF</b>：電腦閱讀或列印</li></ul>' +
     '<p>沒有 DRM 限制，你可以在自己的任何裝置上閱讀。</p>' +
-    '<p>書裡每一章都從一次真實的失敗開始。如果你不知道從哪裡讀起，翻到〈如何閱讀這本書〉——照你現在的位置選一條路線。</p>' +
+    '<p>書裡每一章都從一次真實的失敗開始。如果你不知道從哪裡讀起，翻到〈如何閱讀這本書〉，照你現在的位置選一條路線。</p>' +
     '<p>讀完之後有任何想法，直接回覆這封信，我會看到。</p>' +
     '<p>我們戰場上見。<br>周俊德（Mikael Chew）</p>' +
     '<hr style="border:none;border-top:1px solid #e5e5e5;margin:24px 0">' +
-    '<p style="font-size:13px;color:#666">Thank you for your purchase. Your copy of <i>直銷孫子兵法之不戰而勝</i> is attached in both EPUB and PDF. No DRM — read it on any device you own. Reply to this email if anything is wrong and I will fix it.</p>' +
+    '<p style="font-size:13px;color:#666">Thank you for your purchase. Your copy of <i>直銷孫子兵法之不戰而勝</i> is attached in both EPUB and PDF. No DRM, so you can read it on any device you own. Reply to this email if anything is wrong and I will fix it.</p>' +
     '</div>';
 
   MailApp.sendEmail({
