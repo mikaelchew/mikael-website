@@ -109,7 +109,7 @@ The book is deliberately company-agnostic and written in Traditional Chinese, wi
 
 ## 4. Email Sequences
 
-All emails go to the Mailchimp list (newsletter + `book-chapter` + `book-launch` tags unless noted). First person, from Mikael.
+Superseded 2026-09-30: the current bilingual launch emails are in `Claude_Book_Editing/publishing/Launch_Comms.md`, sent from Kit.
 
 ### Pre-launch Email 1 — T-minus 3 weeks
 **Subject:** 38 people told me no

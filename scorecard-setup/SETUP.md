@@ -62,4 +62,4 @@ Now each submission pings you:
 ## Notes
 - The bot token / chat ID live **only** inside Apps Script (server-side, private) — never in the website. Safe.
 - To re-deploy after editing the script, always bump to a **New version** (step 3.5), or the change won't go live.
-- No Mailchimp needed. If you ever want automated email sequences too, we can add a Mailchimp call inside `doPost` later.
+- No email platform needed. If you ever want automated email sequences too, we can add a Kit call inside `doPost` later.

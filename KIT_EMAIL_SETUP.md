@@ -1,4 +1,27 @@
-# Mailchimp — `book-chapter` automation, replacement copy
+# Kit email setup (replaces the old email platform, 2026-09-30)
+
+**Platform: Kit (kit.com), free Newsletter plan, account mikaelchew@gmail.com.** The previous platform was retired on
+2026-09-30: its 50 "subscribers" were 49 bot signups plus Mikael, so nothing was migrated.
+
+| Kit form | ID | Used on | After confirming |
+|---|---|---|---|
+| Book list: Chapter 1 + launch | 9983525 | book.html (chapter, launch, print forms), chapter-1.html | `/zh/chapter-1.html` |
+| Newsletter | 9983575 | homepage and blog newsletter forms | homepage |
+| The Long Game waitlist | 9983582 | homepage Long Game form | homepage |
+
+Forms post to `https://app.kit.com/forms/<ID>/subscriptions` with the field `email_address`. Every form uses
+double opt-in (a confirmation email), which is what keeps bots off the list. The hidden `tags` input stays in
+the markup only for the GA4 event names in `js/main.js`; Kit ignores it. Footer address: IGNITE VENTURES,
+28 Lorong Intan Baiduri 4C, Taman Intan Baiduri, 52100 Kuala Lumpur. Time zone: Kuala Lumpur.
+
+Launch emails and WhatsApp copy live in the book repo: `Claude_Book_Editing/publishing/Launch_Comms.md`.
+
+The copy below was written for the old email automation; the Chapter 1 link now arrives through the
+Book list form's confirmation email instead.
+
+---
+
+## Original Chapter 1 email copy (historical)
 
 **Written 2026-09-19. Replaces whatever that automation sends today.**
 
@@ -16,20 +39,6 @@ The old automation promised "I'll send Chapter 1 directly to your inbox" and (pr
 **So: send the link, not the file.** One source of truth (the manuscript → `build_chapter.py` →
 the page), and every reader lands somewhere that can sell.
 
-## Setup in Mailchimp
-
-1. Mailchimp → **Automations** → the journey triggered by the `book-chapter` tag.
-2. Open its email. **Remove the attachment.**
-3. Replace subject, preview text and body with the copy below.
-4. Set the button URL to `https://www.mikaelchew.com/chapter-1.html`
-   (Chinese version of the email: `https://www.mikaelchew.com/zh/chapter-1.html`).
-5. Send yourself a test before switching it back on.
-
-`downloads/chapter1-sample.pdf` stays live and current — it is now regenerated from the v1.9
-manuscript — so any old link already in the wild still serves correct text. Do not link to it from
-anything new.
-
----
 
 ## English version
 

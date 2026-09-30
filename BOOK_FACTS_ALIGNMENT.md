@@ -24,7 +24,7 @@ Source of truth for every decision: the book project's `editorial/Story_Verifica
 - `index.html:262` — home stat **"450+"** → "400+".
 - `build_chapter.py:115–117` (meta descriptions EN/ZH) and `:144` (standfirst) — "38 rejections, RM 28 in the bank" / 「帳戶裡的 RM 28」 / "RM 28 left in…" → first-cheque wording; standfirst also has a dash.
 - `chapter-1.html` — **generated; do not hand-edit** (see §4).
-- `MAILCHIMP_CHAPTER_EMAIL.md:37–91` — "Income: zero. Bank balance: RM 28" and 「收入：零。帳戶餘額：RM 28。」 → rewrite with the first-cheque facts; the preview line "38 people said no" can stay.
+- `KIT_EMAIL_SETUP.md:37–91` — "Income: zero. Bank balance: RM 28" and 「收入：零。帳戶餘額：RM 28。」 → rewrite with the first-cheque facts; the preview line "38 people said no" can stay.
 - `BOOK_LAUNCH_COPY.md` (lines ~31–76) — "450" → "nearly 450"; check every RM 28 / 38 mention; remove 「——」 from Chinese copy.
 - `BOOK_LAUNCH_PLAN.md:153` — "450+" → "400+".
 - `book.html` — check the hook / FAQ / schema for RM 28, 450, and 「——」 (23 occurrences of 「——」 at time of writing).
@@ -34,7 +34,7 @@ Source of truth for every decision: the book project's `editorial/Story_Verifica
 - `chapter-1.html` + `/zh/` regenerated from the corrected manuscript.
 - `book.html` chapter descriptions rewritten to the manuscript: Ch 1 (first cheque), Ch 3 (no partner income claim), Ch 4 (approximate rates), Ch 5 (friendship not lost), Ch 6 (Irene), Ch 7 (Aunty Lim per the verified events), Ch 9 ("the few", not "5% rule"), Ch 10 (Leon), Ch 11 (caught up with KL), Ch 12 (Vivian, no percentages), Ch 13 (no financial-freedom promise). Ch 4 pull quote uses the manuscript's approximate figures.
 - `blog/saying-no-prospect.html` retold the Ch 4 sprint with the old exact numbers and "first two years" framing; now matches the manuscript.
-- `BOOK_LAUNCH_COPY.md`, `MAILCHIMP_CHAPTER_EMAIL.md`, `MARBLISM_INSTRUCTIONS.md`, `llms.txt`, `index.html` schema and stats updated.
+- `BOOK_LAUNCH_COPY.md`, `KIT_EMAIL_SETUP.md`, `MARBLISM_INSTRUCTIONS.md`, `llms.txt`, `index.html` schema and stats updated.
 - 「——」 removed site-wide (644 on 31 pages, rule-based: paired dashes to brackets, single to comma or colon; attributions to brackets). `/zh/` regenerated.
 - **Not done here:** `downloads/chapter1-sample.pdf` is still the 2026-09-19 build (no link to it from the site; see `build_chapter.py` header). The KDP description is the book session's.
 
