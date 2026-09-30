@@ -30,7 +30,7 @@ Most direct selling advice tells you to work harder. This book tells you to thin
 
 The Art of War for Direct Selling applies Sun Tzu's 2,500-year-old strategic principles to the modern network business. It is written from a rare dual perspective: Mikael Chew spent 8 years building teams in the field and 15 years in senior corporate management across three multinational companies. He has seen the industry from both sides of the table, and mentored nearly 450 professionals along the way.
 
-Across 13 chapters, you get frameworks that were paid for in real rejections and real ringgit: strategic prospecting that took one team from a 5% to a 70% success rate, the 1-4-7 follow-up method, the golden 72 hours of onboarding, and the leadership principles that hold a team together when it matters most.
+Across 13 chapters, you get frameworks that were paid for in real rejections and real ringgit: strategic prospecting that took my own success rate from about 5% to about 70%, the 1-4-7 follow-up method, the golden 72 hours of onboarding, and the leadership principles that hold a team together when it matters most.
 
 No hype. No scripts. Strategy that outlasts the hustle.
 
@@ -40,7 +40,7 @@ No hype. No scripts. Strategy that outlasts the hustle.
 
 《直銷孫子兵法之不戰而勝》把兩千五百年的孫子兵法，落實到現代直銷事業。作者 Mikael Chew 擁有罕見的雙重視角：8年前線團隊實戰，15年跨國企業高層管理，並親自輔導將近450位直銷專業人士。
 
-13個章節，每一個框架都是用真實的拒絕和真金白銀換來的：讓成功率從5%提升到70%的精準開發、1-4-7黃金跟進法、黃金72小時啟動系統，以及在關鍵時刻凝聚團隊的領導原則。
+13個章節，每一個框架都是用真實的拒絕和真金白銀換來的：讓成功率從大約5%提升到大約70%的精準開發、1-4-7黃金跟進法、黃金72小時啟動系統，以及在關鍵時刻凝聚團隊的領導原則。
 
 沒有炒作，沒有話術。只有比拼勁更持久的策略。
 
@@ -52,10 +52,10 @@ The Art of War for Direct Selling is the book he wishes someone had handed him a
 
 Inside the 13 chapters:
 
-- **Foundations** — finding your "Dao" (the why that survives rejection), knowing yourself and your market, and the Daily Method of Operation that took one partner from zero clients to a real breakthrough in monthly income in 90 days.
-- **The Battlefield** — the FORMHD prospecting framework that lifted success rates from 5% to 70%, the invitation technique that raised acceptance from 15% to 80%, and the 1-4-7 follow-up method born from three months of fruit deliveries to an aunty who once threw the author out of her house.
+- **Foundations** — finding your "Dao" (the why that survives rejection), knowing yourself and your market, and the Daily Method of Operation: 7 actions, every day, for 90 days.
+- **The Battlefield** — the FORMHD prospecting framework that lifted the author's success rate from about 5% to about 70%, the invitation technique that raised acceptance from about 15% to 80%, and the 1-4-7 follow-up method, told through a retired teacher who once threw the author out of her house and later bought the whole set.
 - **Building Your Army** — the golden 72 hours that decide whether a new partner becomes a diamond or a shooting star, and why training is activation, not education.
-- **The General's Path** — leading with Dao, strategic expansion, crisis management when 60% of a team walks out, and the art of letting go.
+- **The General's Path** — leading with Dao, strategic expansion, crisis management when 5 of 7 core leaders walk out in a month, and the art of letting go.
 
 The book is deliberately company-agnostic. Whether you are building your first team or leading thousands, the question is the same: are you fighting harder, or are you positioned to win before the battle starts?
 
@@ -95,7 +95,7 @@ The book draws on Chew's unusual dual career: 8 years building teams in the fiel
 
 "Most people in this industry don't fail from lack of effort. They fail from lack of strategy," said Chew. "I watched it from the field, then I watched it from the boardroom. The playbook that fixes it is 2,500 years old — someone just had to translate it for our industry."
 
-Across 13 chapters, the book pairs each Sun Tzu principle with real case studies and specific results, including a prospecting framework that raised one team's success rate from 5% to 70%, a 72-hour onboarding system, and a crisis-management method developed after the author lost five of seven core leaders in a single month.
+Across 13 chapters, the book pairs each Sun Tzu principle with real case studies and specific results, including a prospecting framework that raised the author's own success rate from about 5% to about 70%, a 72-hour onboarding system, and a crisis-management method for the month a team loses five of its seven core leaders.
 
 The book is deliberately company-agnostic and written in Traditional Chinese, with an English edition in preparation. It is aimed at direct selling and network marketing leaders at every level, from new builders to senior leaders running large organizations.
 
@@ -130,16 +130,16 @@ Mikael
 P.S. If you haven't read Chapter 1 yet, it's free: https://www.mikaelchew.com/book.html
 
 ### Pre-launch Email 2 — T-minus 2 weeks
-**Subject:** RM 3,500 and 95 rejections later
+**Subject:** Over ninety rejections later
 **Preview text:** The most expensive lesson in the book.
 
-Early in my field years, I ran the numbers on my own prospecting.
+The first time I gave myself a serious 90-day sprint, I ran the numbers on my own prospecting.
 
-177 hours. RM 3,500 spent. 95 rejections. 5 conversions.
+Over a hundred hours. A few thousand ringgit in coffee and petrol. More than ninety rejections. 5 people.
 
-That's a 5% success rate, and I was proud of my work ethic. Working hard at the wrong approach just gets you to nowhere faster.
+That's about a 5% success rate, and I was proud of my work ethic. Working hard at the wrong approach just gets you to nowhere faster.
 
-Chapter 4 of the book tells the story of what changed: a targeting framework called FORMHD. Same effort, same person, same product. The success rate went from 5% to 70%.
+Chapter 4 of the book tells the story of what changed: a targeting framework called FORMHD. Same effort, same person, same product. The success rate went from about 5% to about 70%.
 
 Sun Tzu said victorious warriors win first, then go to war. In our industry that means one thing: aim before you fire.
 
@@ -175,7 +175,7 @@ Today's the day.
 
 **Get your copy: [PURCHASE LINK]**
 
-23 years in this industry — 8 in the field, 15 in corporate — condensed into 13 chapters of strategy that was paid for in real rejections and real money. The 38 no's. Aunty Lim throwing me out of her house. The month I lost five of seven core leaders and had to rebuild.
+23 years in this industry — 8 in the field, 15 in corporate — condensed into 13 chapters of strategy that was paid for in real rejections and real money. The 38 no's. Aunty Lim throwing me out of her house. The night a leader I mentored called me after losing five of her seven core leaders.
 
 Every chapter ends with a weekly exercise, because reading about strategy isn't the same as executing it.
 
@@ -211,7 +211,7 @@ Two weeks since launch. The messages coming in from early readers are the best p
 
 [INSERT 2–3 SHORT REAL READER QUOTES — do not fabricate; collect from launch-week readers first]
 
-If you've been on the fence, here's the plain version: the book costs [PRICE]. My 5% prospecting phase cost me RM 3,500 and 177 hours before I fixed it. Chapters 4 and 7 alone are that fix.
+If you've been on the fence, here's the plain version: the book costs [PRICE]. My 5% prospecting phase cost me over a hundred hours and a few thousand ringgit before I fixed it. Chapters 4 and 7 alone are that fix.
 
 **[PURCHASE LINK]**
 
@@ -277,9 +277,9 @@ Launch-week special: [LAUNCH BONUS], ends [DATE]. [PURCHASE LINK]
 
 She threw me out of her house.
 
-Aunty Lim wanted nothing to do with me or my business. Most people would have crossed her off the list. Instead, for three months, I showed up with fruit and nasi lemak — no pitch, no agenda.
+Aunty Lim wanted nothing to do with me or my business. Most people would have crossed her off the list. Instead, I went back a few times with fruit and nasi lemak. No pitch, no agenda.
 
-She became my most successful partner.
+One day she asked me in. Then she asked about the product herself. She paid for the whole set on the spot, and when I delivered it the next day, two friends were waiting at her house. Both bought.
 
 That story became the 1-4-7 follow-up method in Chapter 7. Not because persistence is magic, but because follow-up is a system, and most people quit it exactly one visit too early.
 
@@ -287,7 +287,7 @@ The full method is in the book: [PURCHASE LINK]
 
 How many people did you write off one follow-up too soon?
 
-**X:** She threw me out of her house. 3 months of fruit and nasi lemak later, she was my most successful partner. Follow-up is a system, not a mood. Ch. 7: [PURCHASE LINK]
+**X:** She threw me out of her house. A few visits with fruit and nasi lemak later, she bought the whole set and had two friends waiting on delivery day. Follow-up is a system, not a mood. Ch. 7: [PURCHASE LINK]
 
 ### Day 5 — "Is this book for me?"
 **Base:**
@@ -298,13 +298,13 @@ Fair question. Here's my honest answer.
 
 If you want new hype, no. There's none in it. If you want scripts, also no.
 
-What's in it: the FORMHD framework that took prospecting success from 5% to 70%. The invitation approach that raised acceptance from 15% to 80%. The crisis method I built after losing 5 of my 7 core leaders in one month. Each one with the story of what it cost to learn.
+What's in it: the FORMHD framework that took my prospecting success from about 5% to about 70%. The invitation approach that raised acceptance from about 15% to 80%. The crisis method a leader I mentored used after losing 5 of her 7 core leaders in one month. Each one with the story of what it cost to learn.
 
 New builders avoid the expensive years. Senior leaders get systems that run without them. The 12-year veterans? Usually it's Part IV they needed.
 
 [PURCHASE LINK]
 
-**X:** No hype. No scripts. Frameworks with the receipts attached: 5%→70% prospecting, 15%→80% invitations, and what I rebuilt after losing 5 of 7 core leaders in a month. [PURCHASE LINK]
+**X:** No hype. No scripts. Frameworks with the receipts attached: 5%→70% prospecting, 15%→80% invitations, and how a team came back after losing 5 of 7 core leaders in a month. [PURCHASE LINK]
 
 ### Day 6 — Final launch-week push
 **Base:**

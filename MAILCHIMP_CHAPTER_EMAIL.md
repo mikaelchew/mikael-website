@@ -92,5 +92,5 @@ RM 900。第一張佣金支票只有 RM 28，第三張是零。而那之前，�
   cheque RM 0) follow the 2026-09-30 fact check in `BOOK_FACTS_ALIGNMENT.md`. Don't round them or
   add new ones, and never print the month-2 cheque figure. Every number that goes out has to be
   traceable back to the book.
-- **Don't switch this on until `chapter-1.html` has been regenerated from the corrected manuscript.**
-  Until then the page still says "RM 28 in the bank", which contradicts this email.
+- `chapter-1.html` was regenerated from the corrected manuscript on 2026-09-30 and matches this
+  email. Once that page is live, this email is safe to switch on.

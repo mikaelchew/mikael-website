@@ -30,7 +30,13 @@ Source of truth for every decision: the book project's `editorial/Story_Verifica
 - `book.html` — check the hook / FAQ / schema for RM 28, 450, and 「——」 (23 occurrences of 「——」 at time of writing).
 - Also the KDP store description (not in this repo) — the book session owns it.
 
-**Status 2026-09-30 (website session):** everything in §2 except `chapter-1.html` is done: `index.html`, `book.html`, `build_chapter.py`, `MAILCHIMP_CHAPTER_EMAIL.md`, `BOOK_LAUNCH_COPY.md`, `BOOK_LAUNCH_PLAN.md`. The same fixes also went into files §2 didn't list: `index.html`'s Person schema, `llms.txt`, `MARBLISM_INSTRUCTIONS.md`, and two 「——」 in `build_zh.py`'s meta translations. `zh/` has been regenerated. Still to do: step 4.1 and 4.2 below, plus 「——」 on the other pages (blog posts, about, speaking and so on), which this pass didn't touch.
+**Status 2026-09-30 (website session, second pass):** done. The book session applied the full story verification to `Manuscript_v1.9_TYPESET_READY.docx` (book repo commit `0bec953`), and the site now matches it:
+- `chapter-1.html` + `/zh/` regenerated from the corrected manuscript.
+- `book.html` chapter descriptions rewritten to the manuscript: Ch 1 (first cheque), Ch 3 (no partner income claim), Ch 4 (approximate rates), Ch 5 (friendship not lost), Ch 6 (Irene), Ch 7 (Aunty Lim per the verified events), Ch 9 ("the few", not "5% rule"), Ch 10 (Leon), Ch 11 (caught up with KL), Ch 12 (Vivian, no percentages), Ch 13 (no financial-freedom promise). Ch 4 pull quote uses the manuscript's approximate figures.
+- `blog/saying-no-prospect.html` retold the Ch 4 sprint with the old exact numbers and "first two years" framing; now matches the manuscript.
+- `BOOK_LAUNCH_COPY.md`, `MAILCHIMP_CHAPTER_EMAIL.md`, `MARBLISM_INSTRUCTIONS.md`, `llms.txt`, `index.html` schema and stats updated.
+- 「——」 removed site-wide (644 on 31 pages, rule-based: paired dashes to brackets, single to comma or colon; attributions to brackets). `/zh/` regenerated.
+- **Not done here:** `downloads/chapter1-sample.pdf` is still the 2026-09-19 build (no link to it from the site; see `build_chapter.py` header). The KDP description is the book session's.
 
 ## 3. Suggested wording (Chinese)
 
