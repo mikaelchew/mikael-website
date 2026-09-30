@@ -156,10 +156,9 @@ def build_page(chapter_html):
           <a href="book.html#buy" class="btn btn-primary" data-en="Get the book — RM 29.90" data-zh="購買電子書 — RM 29.90">Get the book — RM 29.90</a>
           <a href="{wa}" class="btn btn-outline-light" target="_blank" rel="noopener" data-en="Rather talk? Message me" data-zh="想聊聊？傳訊息給我">Rather talk? Message me</a>
         </div>
-        <form class="newsletter-form chapter-notify" action="https://mikaelchew.us13.list-manage.com/subscribe/post?u=2f80eb2c2614b95d65a07406e&amp;id=043e3f13be&amp;f_id=00608de2f0" method="post" target="_blank">
-          <input type="email" name="EMAIL" aria-label="Email address" placeholder="your@email.com" required>
+        <form class="newsletter-form chapter-notify" action="https://app.kit.com/forms/9983525/subscriptions" method="post" target="_blank">
+          <input type="email" name="email_address" aria-label="Email address" placeholder="your@email.com" required>
           <input type="hidden" name="tags" value="book-chapter">
-          <div aria-hidden="true" style="position:absolute;left:-5000px;"><input type="text" name="b_2f80eb2c2614b95d65a07406e_043e3f13be" tabindex="-1" value=""></div>
           <button type="submit" data-en="Not ready yet — keep me posted" data-zh="還沒決定，有消息通知我">Not ready yet — keep me posted</button>
         </form>
       </aside>
