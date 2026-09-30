@@ -2733,11 +2733,20 @@ p {
   padding: 0.85rem 1.25rem;
   border: 2px solid var(--beige-dark);
   border-radius: 4px;
-  background: var(--white);
-  color: var(--charcoal);
+  background: var(--black);
+  color: var(--white);
   font-family: var(--font-sans);
   font-size: 0.95rem;
   transition: border-color var(--transition);
+}
+
+.newsletter-form input[type="email"]::placeholder {
+  color: var(--gray);
+}
+
+.newsletter-form input[type="email"]:-webkit-autofill {
+  -webkit-text-fill-color: var(--white);
+  -webkit-box-shadow: 0 0 0 1000px var(--black) inset;
 }
 
 .newsletter-form input[type="email"]:focus {
