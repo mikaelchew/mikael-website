@@ -3511,6 +3511,13 @@ p {
   color: #1A1A1A;
 }
 
+.book-download-form input[type="email"]:-webkit-autofill,
+.chapter-notify input:-webkit-autofill,
+.lt-newsletter-form input[type="email"]:-webkit-autofill {
+  -webkit-text-fill-color: var(--white);
+  -webkit-box-shadow: 0 0 0 1000px var(--black) inset;
+}
+
 .book-download-form input[type="email"]:focus {
   border-color: #C41E3A;
 }
