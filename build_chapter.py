@@ -101,7 +101,7 @@ def render(blocks):
 
 
 MID_CTA_HTML = '''<aside class="chapter-cta chapter-cta-soft">
-  <p data-en="Still with me? The other twelve chapters go further — prospecting, invitation, the golden 72 hours, leading without being needed." data-zh="還在看？後面十二章走得更遠——拓客、邀約、黃金72小時，以及怎麼帶團隊帶到不需要你。">Still with me? The other twelve chapters go further — prospecting, invitation, the golden 72 hours, leading without being needed.</p>
+  <p data-en="Still with me? The other twelve chapters go further — prospecting, invitation, the golden 72 hours, leading without being needed." data-zh="還在看？後面十二章走得更遠：拓客、邀約、黃金72小時，以及怎麼帶團隊帶到不需要你。">Still with me? The other twelve chapters go further — prospecting, invitation, the golden 72 hours, leading without being needed.</p>
   <a href="book.html#buy" class="btn btn-outline-light" data-en="See the full book" data-zh="看完整本書">See the full book</a>
 </aside>'''
 
@@ -113,8 +113,8 @@ def build_page(chapter_html):
     footer = src[src.index('  <!-- ========== FOOTER ========== -->'):]
 
     desc_en = ("Read Chapter 1 of The Art of War for Direct Selling free: 38 rejections, "
-               "RM 28 in the bank, and the idea that changed everything.")
-    desc_zh = "免費閱讀《直銷孫子兵法之不戰而勝》第一章：38次拒絕、帳戶裡的 RM 28，以及那晚我找到的「道」。"
+               "a first commission cheque of RM 28, and the idea that changed everything.")
+    desc_zh = "免費閱讀《直銷孫子兵法之不戰而勝》第一章：38次拒絕、只有 RM 28 的第一張佣金支票，以及那晚我找到的「道」。"
     head_nav = (head_nav
         .replace('<title>Contact — Mikael Chew</title>',
                  '<title>Read Chapter 1 Free — 直銷孫子兵法之不戰而勝</title>')
@@ -141,7 +141,7 @@ def build_page(chapter_html):
       <div class="chapter-head">
         <span class="section-label" data-en="FREE SAMPLE — CHAPTER 1" data-zh="免費試讀 — 第一章">FREE SAMPLE — CHAPTER 1</span>
         <h1>第一章：發起召集 — 尋找你的「道」</h1>
-        <p class="chapter-standfirst" data-en="The whole first chapter, free, no signup. It is the night I nearly quit — 38 rejections, RM 28 left in the bank — and what I worked out instead." data-zh="整個第一章，免費，不用留資料。那是我差點放棄的晚上——38次拒絕，帳戶裡只剩 RM 28——以及我後來想通的事。">The whole first chapter, free, no signup. It is the night I nearly quit — 38 rejections, RM 28 left in the bank — and what I worked out instead.</p>
+        <p class="chapter-standfirst" data-en="The whole first chapter, free, no signup. It is the night I nearly quit — 38 rejections, a first commission cheque of RM 28 — and what I worked out instead." data-zh="整個第一章，免費，不用留資料。那是我差點放棄的晚上。大約38次拒絕，第一張佣金支票只有 RM 28，還有我後來想通的事。">The whole first chapter, free, no signup. It is the night I nearly quit — 38 rejections, a first commission cheque of RM 28 — and what I worked out instead.</p>
         <p class="chapter-langnote" data-en="The book is written in Traditional Chinese. This chapter is presented exactly as written." data-zh="本書以繁體中文寫成，本章依原文呈現。">The book is written in Traditional Chinese. This chapter is presented exactly as written.</p>
       </div>
 
@@ -160,7 +160,7 @@ def build_page(chapter_html):
           <input type="email" name="EMAIL" aria-label="Email address" placeholder="your@email.com" required>
           <input type="hidden" name="tags" value="book-chapter">
           <div aria-hidden="true" style="position:absolute;left:-5000px;"><input type="text" name="b_2f80eb2c2614b95d65a07406e_043e3f13be" tabindex="-1" value=""></div>
-          <button type="submit" data-en="Not ready yet — keep me posted" data-zh="還沒決定——有消息通知我">Not ready yet — keep me posted</button>
+          <button type="submit" data-en="Not ready yet — keep me posted" data-zh="還沒決定，有消息通知我">Not ready yet — keep me posted</button>
         </form>
       </aside>
     </div>

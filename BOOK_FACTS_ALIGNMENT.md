@@ -30,6 +30,8 @@ Source of truth for every decision: the book project's `editorial/Story_Verifica
 - `book.html` — check the hook / FAQ / schema for RM 28, 450, and 「——」 (23 occurrences of 「——」 at time of writing).
 - Also the KDP store description (not in this repo) — the book session owns it.
 
+**Status 2026-09-30 (website session):** everything in §2 except `chapter-1.html` is done: `index.html`, `book.html`, `build_chapter.py`, `MAILCHIMP_CHAPTER_EMAIL.md`, `BOOK_LAUNCH_COPY.md`, `BOOK_LAUNCH_PLAN.md`. The same fixes also went into files §2 didn't list: `index.html`'s Person schema, `llms.txt`, `MARBLISM_INSTRUCTIONS.md`, and two 「——」 in `build_zh.py`'s meta translations. `zh/` has been regenerated. Still to do: step 4.1 and 4.2 below, plus 「——」 on the other pages (blog posts, about, speaking and so on), which this pass didn't touch.
+
 ## 3. Suggested wording (Chinese)
 
 - Hook: 「23年前，我連續被大約38個人拒絕，第一張佣金支票只有RM 28。」

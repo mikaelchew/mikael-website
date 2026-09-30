@@ -150,7 +150,7 @@ The book launch is not a single event — it's a 12-week campaign divided into t
 
 - [ ] Existing Zinzino network (distributors who would benefit)
 - [ ] DS industry leaders you've worked with across 3 companies
-- [ ] 450+ professionals you've coached over the years
+- [ ] Nearly 450 professionals you've coached over the years
 - [ ] Malaysian Chinese business community networks
 - [ ] DS industry podcasters and bloggers
 - [ ] Business book review sites/bloggers

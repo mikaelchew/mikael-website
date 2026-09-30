@@ -28,7 +28,7 @@ Sun Tzu wrote The Art of War 2,500 years ago. Mikael Chew spent 23 years testing
 
 Most direct selling advice tells you to work harder. This book tells you to think first.
 
-The Art of War for Direct Selling applies Sun Tzu's 2,500-year-old strategic principles to the modern network business. It is written from a rare dual perspective: Mikael Chew spent 8 years building teams in the field and 15 years in senior corporate management across three multinational companies. He has seen the industry from both sides of the table, and mentored over 450 professionals along the way.
+The Art of War for Direct Selling applies Sun Tzu's 2,500-year-old strategic principles to the modern network business. It is written from a rare dual perspective: Mikael Chew spent 8 years building teams in the field and 15 years in senior corporate management across three multinational companies. He has seen the industry from both sides of the table, and mentored nearly 450 professionals along the way.
 
 Across 13 chapters, you get frameworks that were paid for in real rejections and real ringgit: strategic prospecting that took one team from a 5% to a 70% success rate, the 1-4-7 follow-up method, the golden 72 hours of onboarding, and the leadership principles that hold a team together when it matters most.
 
@@ -38,7 +38,7 @@ No hype. No scripts. Strategy that outlasts the hustle.
 
 大多數直銷建議教你更努力。這本書教你先思考。
 
-《直銷孫子兵法之不戰而勝》把兩千五百年的孫子兵法，落實到現代直銷事業。作者 Mikael Chew 擁有罕見的雙重視角：8年前線團隊實戰，15年跨國企業高層管理，並親自輔導超過450位直銷專業人士。
+《直銷孫子兵法之不戰而勝》把兩千五百年的孫子兵法，落實到現代直銷事業。作者 Mikael Chew 擁有罕見的雙重視角：8年前線團隊實戰，15年跨國企業高層管理，並親自輔導將近450位直銷專業人士。
 
 13個章節，每一個框架都是用真實的拒絕和真金白銀換來的：讓成功率從5%提升到70%的精準開發、1-4-7黃金跟進法、黃金72小時啟動系統，以及在關鍵時刻凝聚團隊的領導原則。
 
@@ -46,7 +46,7 @@ No hype. No scripts. Strategy that outlasts the hustle.
 
 ### Long — EN (~300 words)
 
-Thirty-eight people said no before Mikael Chew heard his first yes. That was 23 years ago. Since then he has built teams in the field for 8 years, spent 15 years in senior corporate management across three multinational direct selling companies, and personally mentored more than 450 professionals. He has watched the same pattern repeat at every level: talented, hardworking people burning out because nobody taught them to think strategically.
+Twenty-three years ago, about 38 people turned Mikael Chew down and his first commission cheque was RM 28. Since then he has built teams in the field for 8 years, spent 15 years in senior corporate management across three multinational direct selling companies, and personally mentored nearly 450 professionals. He has watched the same pattern repeat at every level: talented, hardworking people burning out because nobody taught them to think strategically.
 
 The Art of War for Direct Selling is the book he wishes someone had handed him at the start. It takes Sun Tzu's principles seriously — not as decoration, but as a working strategic framework — and pairs each one with real stories, specific numbers, and a weekly exercise you can act on.
 
@@ -65,15 +65,15 @@ The book is deliberately company-agnostic. Whether you are building your first t
 
 ### Short — EN (~60 words)
 
-Mikael Chew has spent 23 years in direct selling: 8 years building teams in the field and 15 years in senior corporate management across three multinational companies. He has personally mentored over 450 professionals. His first book, *The Art of War for Direct Selling* (《直銷孫子兵法之不戰而勝》), launches on 20 October 2026. He writes at mikaelchew.com.
+Mikael Chew has spent 23 years in direct selling: 8 years building teams in the field and 15 years in senior corporate management across three multinational companies. He has personally mentored nearly 450 professionals. His first book, *The Art of War for Direct Selling* (《直銷孫子兵法之不戰而勝》), launches on 20 October 2026. He writes at mikaelchew.com.
 
 ### Short — 繁中 (約60字)
 
-Mikael Chew 深耕直銷業23年：8年前線團隊實戰，15年跨國企業高層管理，親自輔導超過450位專業人士。首部著作《直銷孫子兵法之不戰而勝》將於2026年9月出版。更多內容請見 mikaelchew.com。
+Mikael Chew 深耕直銷業23年：8年前線團隊實戰，15年跨國企業高層管理，親自輔導將近450位專業人士。首部著作《直銷孫子兵法之不戰而勝》將於2026年10月20日出版。更多內容請見 mikaelchew.com。
 
 ### Long — EN (~150 words)
 
-Mikael Chew is a direct selling strategist with a perspective few in the industry have: both sides of the table. He spent 8 years in the field — prospecting, building teams, leading from the front — and 15 years in senior corporate management across three multinational direct selling companies. Over 23 years he has personally mentored more than 450 professionals, helping them replace blind effort with strategic execution.
+Mikael Chew is a direct selling strategist with a perspective few in the industry have: both sides of the table. He spent 8 years in the field — prospecting, building teams, leading from the front — and 15 years in senior corporate management across three multinational direct selling companies. Over 23 years he has personally mentored nearly 450 professionals, helping them replace blind effort with strategic execution.
 
 His philosophy rests on three convictions: win the right way (ethics is a competitive advantage, not a constraint), strategy beats hustle, and real success is measured by how many people no longer need you.
 
@@ -91,7 +91,7 @@ His first book, *The Art of War for Direct Selling* (《直銷孫子兵法之不
 
 **KUALA LUMPUR, Malaysia — [LAUNCH DATE].** After 23 years in the direct selling industry, Mikael Chew today released his first book, *The Art of War for Direct Selling* (《直銷孫子兵法之不戰而勝》), a strategic playbook that applies Sun Tzu's 2,500-year-old principles to the modern network business.
 
-The book draws on Chew's unusual dual career: 8 years building teams in the field, followed by 15 years in senior corporate management across three multinational direct selling companies. Over that time he has personally mentored more than 450 industry professionals.
+The book draws on Chew's unusual dual career: 8 years building teams in the field, followed by 15 years in senior corporate management across three multinational direct selling companies. Over that time he has personally mentored nearly 450 industry professionals.
 
 "Most people in this industry don't fail from lack of effort. They fail from lack of strategy," said Chew. "I watched it from the field, then I watched it from the boardroom. The playbook that fixes it is 2,500 years old — someone just had to translate it for our industry."
 
@@ -115,11 +115,11 @@ All emails go to the Mailchimp list (newsletter + `book-chapter` + `book-launch`
 **Subject:** 38 people told me no
 **Preview text:** The book I wish someone had handed me 23 years ago.
 
-Before my first yes in this industry, 38 people told me no.
+In my first three months in this industry, about 38 people told me no. My first commission cheque was RM 28.
 
 Nobody taught me how to prospect strategically. Nobody told me the first 72 hours decide whether a new partner becomes a diamond or a shooting star. I learned it the expensive way — in rejections, in ringgit, in team members I lost because I led them wrong.
 
-So I wrote it all down. *The Art of War for Direct Selling* (《直銷孫子兵法之不戰而勝》) launches this September. 13 chapters. Every framework I teach, paired with the real story of how I learned it.
+So I wrote it all down. *The Art of War for Direct Selling* (《直銷孫子兵法之不戰而勝》) launches on 20 October. 13 chapters. Every framework I teach, paired with the real story of how I learned it.
 
 You're on this list, so you'll hear it from me first — launch date, launch-week bonuses, all of it.
 
@@ -143,7 +143,7 @@ Chapter 4 of the book tells the story of what changed: a targeting framework cal
 
 Sun Tzu said victorious warriors win first, then go to war. In our industry that means one thing: aim before you fire.
 
-The book launches in September. Next email, I'll give you the exact date and what's in it for early readers.
+The book launches on 20 October. Next email, I'll tell you what's in it for early readers.
 
 Mikael
 
@@ -228,7 +228,7 @@ Base caption works for LinkedIn and Facebook (adjust CTA line per platform). X/T
 ### Day 1 — Launch announcement
 **Base:**
 
-23 years ago, 38 people told me no before I heard my first yes.
+23 years ago, about 38 people told me no, and my first commission cheque was RM 28.
 
 Today, everything those years taught me is in one place. *The Art of War for Direct Selling* (《直銷孫子兵法之不戰而勝》) is officially available.
 
@@ -240,7 +240,7 @@ Get your copy: [PURCHASE LINK]
 
 To everyone who asked "when's the book coming?" over the past year — this is your fault, and thank you.
 
-**X:** 23 years. 38 rejections before the first yes. 13 chapters. The Art of War for Direct Selling is out today. [PURCHASE LINK]
+**X:** 23 years. 38 rejections. A first cheque of RM 28. 13 chapters. The Art of War for Direct Selling is out today. [PURCHASE LINK]
 
 ### Day 2 — First reactions / thank you
 **Base:**

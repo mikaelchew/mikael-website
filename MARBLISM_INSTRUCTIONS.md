@@ -116,11 +116,11 @@ Hashtags: #DirectSellingTruth #NetworkMarketingStrategy #LeadershipLessons #Hone
 Content drawn from Mikael's 23 years of real experience. Specific people, specific situations, specific numbers.
 
 Source material:
-- The 38 rejections before the first "yes" (Aunty Lim story)
-- Alex's story: 1000-person team collapsed because his "why" was only money
+- About 38 rejections from people outside family and relatives, and a first commission cheque of RM 28 (Aunty Lim: the first customer who bought because she believed, not out of obligation)
+- Scott's story: 1000-person team collapsed because his "why" was only money
 - David the engineer who succeeded by being an educator, not a salesman
 - The transition from field to boardroom — what changed in perspective
-- Lessons from coaching 450+ direct selling professionals
+- Lessons from coaching nearly 450 direct selling professionals
 - Early career struggles and turning points
 - Basketball analogies for teamwork and strategy
 
@@ -219,7 +219,7 @@ Secondary (rotate): #LeadershipDevelopment #TeamBuilding #SalesStrategy #Busines
 - "Most direct selling leaders are busy. Very few are strategic. There's a massive difference."
 - "Your upline's playbook worked for your upline. That doesn't mean it works for you."
 - "The 10-Year Test: If you removed the compensation plan, would you still use the product? If not, you have a problem."
-- "38 people told me no before my first yes. The difference wasn't skill. It was clarity of purpose."
+- "About 38 people told me no. My first commission cheque was RM 28. What got me through wasn't skill. It was clarity of purpose."
 
 **Hashtag strategy** (1-3 per tweet, less is more):
 #DirectSelling #NetworkMarketing #LeadershipStrategy #SunTzu

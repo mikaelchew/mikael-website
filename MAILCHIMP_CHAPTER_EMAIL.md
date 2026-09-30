@@ -34,7 +34,7 @@ anything new.
 ## English version
 
 **Subject:** Chapter 1 is ready for you
-**Preview text:** 38 people said no. Here's what happened on the 39th.
+**Preview text:** 38 people said no. Here's what I got wrong.
 
 Hi [FNAME],
 
@@ -46,12 +46,12 @@ download, no app:
 **[ Read Chapter 1 → ]** → https://www.mikaelchew.com/chapter-1.html
 
 The chapter opens on the worst night of my direct selling career. Third month in. Product cost
-RM 3,300. Training RM 800. Petrol RM 900. Income: zero. Bank balance: RM 28. And 38 people had
-already told me no.
+RM 3,300. Training RM 800. Petrol RM 900. My first commission cheque had been RM 28. The third one
+was zero. And about 38 people had already told me no.
 
 What I got wrong wasn't my technique. It was that I had never answered the one question Sun Tzu
-puts before all the others — 「道」, the why. That's what Chapter 1 is about, and it's why the 39th
-conversation went differently.
+puts before all the others — 「道」, the why. That's what Chapter 1 is about, and it's what I built
+everything on after that night.
 
 Take fifteen minutes with it. If it's useful, the other twelve chapters are on the same site.
 
@@ -62,21 +62,21 @@ Mikael
 ## 中文版本
 
 **主旨：** 第一章已經準備好了
-**預覽文字：** 38個人說「不」。第39個人，故事不一樣了。
+**預覽文字：** 38個人說「不」。我錯在哪裡，第一章告訴你。
 
 [FNAME] 你好，
 
 謝謝你索取第一章。
 
-它不是附件，是一個網頁——你現在手上拿著什麼裝置都能直接讀，不必下載，不必裝任何 app：
+它不是附件，是一個網頁。你現在手上拿著什麼裝置都能直接讀，不必下載，不必裝任何 app：
 
 **［ 閱讀第一章 → ］** → https://www.mikaelchew.com/zh/chapter-1.html
 
 這一章從我直銷生涯最糟的那個晚上開始。入行第三個月。產品成本 RM 3,300，培訓 RM 800，交通油費
-RM 900。收入：零。帳戶餘額：RM 28。而那之前，已經有38個人跟我說「不」。
+RM 900。第一張佣金支票只有 RM 28，第三張是零。而那之前，已經有大約38個人跟我說「不」。
 
-我做錯的不是技巧。是我從來沒有回答孫子擺在所有問題最前面的那一個——「道」，你為何而戰。第一章講
-的就是這件事，也是為什麼第39次談話結果不一樣。
+我做錯的不是技巧。是我從來沒有回答孫子擺在所有問題最前面的那一個問題：「道」，你為何而戰。第一章講
+的就是這件事，也是那晚之後我一切的根基。
 
 給它十五分鐘。如果對你有用，另外十二章在同一個網站上。
 
@@ -88,6 +88,9 @@ RM 900。收入：零。帳戶餘額：RM 28。而那之前，已經有38個人�
 
 - No launch date and no price in this email. It is the first thing a new subscriber receives; asking
   for money in it costs more than it earns. The chapter page itself carries both CTAs.
-- The numbers here (38 rejections, RM 3,300 / RM 800 / RM 900 / RM 28) all come straight from the
-  manuscript. Don't round them or add new ones — every number that goes out has to be traceable back
-  to the book.
+- The numbers here (about 38 rejections, RM 3,300 / RM 800 / RM 900, first cheque RM 28, third
+  cheque RM 0) follow the 2026-09-30 fact check in `BOOK_FACTS_ALIGNMENT.md`. Don't round them or
+  add new ones, and never print the month-2 cheque figure. Every number that goes out has to be
+  traceable back to the book.
+- **Don't switch this on until `chapter-1.html` has been regenerated from the corrected manuscript.**
+  Until then the page still says "RM 28 in the bank", which contradicts this email.

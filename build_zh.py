@@ -10,11 +10,11 @@ DOMAIN = "https://www.mikaelchew.com"
 # Curated zh title/description for pages without a clean H1 source
 OVERRIDES = {
  "index.html": ("Mikael Chew — 作家 · 導師 · The Long Game 主持人",
-                "Mikael Chew——作家、導師、播客《The Long Game》主持人。23 年直銷資歷，從前線走到企業管理，幫助領袖以正道致勝。"),
+                "Mikael Chew：作家、導師、播客《The Long Game》主持人。23 年直銷資歷，從前線走到企業管理，幫助領袖以正道致勝。"),
  "404.html": ("找不到頁面 — Mikael Chew",
               "抱歉，這個頁面不存在。回到首頁繼續瀏覽 Mikael Chew 的內容。"),
  "privacy.html": ("隱私政策 — Mikael Chew",
-                  "mikaelchew.com 的隱私政策——我們如何收集、使用和保護你的個人資料。"),
+                  "mikaelchew.com 的隱私政策：我們如何收集、使用和保護你的個人資料。"),
 }
 
 def en_url(relpath):
