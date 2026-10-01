@@ -1,0 +1,163 @@
+/* ============================================
+   Homepage only: the Strategist's Map (spec §5). Shared components are in site.css.
+   ============================================ */
+
+/* ---------- the map ---------- */
+.ops { position: relative; }
+.table { position: relative; overflow: hidden; background: var(--table); }
+.cam { transform-origin: 0 0; }
+#map { display: block; }
+.grid line { stroke: rgba(182, 196, 190, .07); stroke-width: 2; }
+.region { font-family: var(--sans); font-weight: 800; font-size: 30px; letter-spacing: .3em; fill: rgba(182, 196, 190, .78); text-transform: uppercase; }
+.region-zh { font-family: var(--display-zh); font-weight: 900; font-size: 40px; fill: rgba(182, 196, 190, .66); letter-spacing: .3em; }
+.route-ghost { fill: none; stroke: rgba(240, 112, 95, .35); stroke-width: 4; stroke-dasharray: 3 15; stroke-linecap: round; }
+.route { fill: none; stroke: var(--red); stroke-width: 9; stroke-linecap: round; stroke-linejoin: round; }
+.nib { fill: var(--red-lit); }
+.wp { cursor: pointer; }
+.wp .ring { fill: var(--table); stroke: rgba(182, 196, 190, .75); stroke-width: 3; transition: fill 160ms var(--ease-out), stroke 160ms var(--ease-out); }
+.wp text { font-family: var(--sans); font-weight: 800; font-size: 26px; fill: var(--acetate); text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+.wp.done .ring, .wp.now .ring { fill: var(--red); stroke: var(--red); }
+.wp.now .ring { stroke: #fff; stroke-width: 4; }
+.wp .halo { fill: none; stroke: var(--red-lit); stroke-width: 3; opacity: 0; transform-box: fill-box; transform-origin: center; }
+.wp.arrive .halo { animation: halo 420ms var(--ease-out); }
+@keyframes halo { from { opacity: .9; transform: scale(.7); } to { opacity: 0; transform: scale(1); } }
+@media (hover: hover) { .wp:hover .ring { stroke: #fff; } }
+
+/* ---------- panels on the table ---------- */
+.intro .zh-title { display: none; font-family: var(--display-zh); font-weight: 900; color: var(--red-lit); font-size: clamp(2.2rem, 9vw, 3rem); letter-spacing: .12em; line-height: 1; margin-bottom: .3em; }
+.intro h1 { font-weight: 900; font-size: clamp(3rem, 6vw, 5.8rem); line-height: .92; letter-spacing: -.03em; text-wrap: balance; }
+.intro .facts { font-size: clamp(1.12rem, 1.3vw, 1.3rem); line-height: 1.45; max-width: 30ch; margin-top: .8em; text-wrap: pretty; }
+.orders { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; margin-top: 1.2em; }
+.orders .sub { font-weight: 600; color: var(--mute); font-size: 1rem; }
+.cue { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 1.6em; font-size: .98rem; color: var(--mute); }
+.cue a { color: var(--acetate); }
+
+.briefing { z-index: 3; background: rgba(25, 36, 44, .95); border: 1px solid var(--line); padding: 20px 22px 22px; }
+.briefing .part { font-weight: 600; font-size: .95rem; color: var(--mute); }
+.briefing .b-body { will-change: opacity, transform; }
+.briefing .n { font-weight: 900; font-size: 4rem; line-height: .95; color: var(--red-lit); margin-top: .1em; }
+.briefing h2 { font-weight: 800; font-size: clamp(1.5rem, 2vw, 1.95rem); line-height: 1.15; margin-top: .15em; }
+.briefing .zh { font-family: var(--display-zh); font-weight: 900; font-size: 1.3rem; color: var(--mute); margin-top: .2em; }
+.briefing p { margin-top: .7em; font-size: 1.1rem; line-height: 1.5; }
+.briefing a { display: inline-block; margin-top: .8em; font-weight: 800; }
+.briefing a[hidden] { display: none; }
+
+.finale { z-index: 4; max-width: 520px; }
+.finale h2 { font-weight: 900; font-size: clamp(2.2rem, 3.6vw, 3.4rem); line-height: 1; letter-spacing: -.02em; }
+.finale p { margin-top: .7em; font-size: 1.12rem; }
+.finale .field { margin-top: 14px; }
+
+.dossier { z-index: 3; display: block; width: clamp(170px, 15vw, 240px); text-decoration: none; }
+.dossier .paper { position: relative; display: block; transform: rotate(3deg); transition: transform 420ms var(--ease-out); }
+.dossier img { box-shadow: 0 2px 3px rgba(0, 0, 0, .35), 0 24px 40px -12px rgba(0, 0, 0, .6); }
+.dossier .tape { position: absolute; top: -12px; left: 50%; width: 84px; height: 26px; transform: translateX(-50%) rotate(-4deg); background: rgba(242, 242, 238, .55); }
+.dossier .seal { position: absolute; left: -24px; top: 6%; width: 86px; }
+.dossier .date { position: relative; display: inline-block; margin-top: 16px; font-weight: 900; font-size: 1.5rem; transform: rotate(-2deg); }
+.dossier .date svg { position: absolute; inset: -14px -20px; width: calc(100% + 40px); height: calc(100% + 28px); overflow: visible; }
+.dossier .date path { fill: none; stroke: var(--red); stroke-width: 3.5; stroke-linecap: round; }
+@media (hover: hover) and (pointer: fine) { .dossier:hover .paper { transform: rotate(0) translateY(-4px); } }
+
+.rail { z-index: 3; display: flex; align-items: center; gap: 4px; }
+.rail .sep { width: 14px; height: 2px; background: var(--line); margin: 0 4px; }
+.rail button { all: unset; cursor: pointer; width: 40px; height: 40px; display: grid; place-items: center; font-weight: 800; font-size: .9rem; color: var(--mute); border: 2px solid var(--line); border-radius: 50%;
+  transition: background-color 160ms var(--ease-out), color 160ms var(--ease-out), border-color 160ms var(--ease-out); }
+.rail button:hover { border-color: var(--acetate); color: var(--acetate); }
+.rail button.done { background: var(--red); border-color: var(--red); color: #fff; }
+.rail button[aria-current="step"] { background: var(--red); border-color: #fff; color: #fff; }
+.rail button:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+
+/* ---------- motion mode: sticky, scroll-driven table ---------- */
+.motion .table { position: sticky; top: 0; height: 100vh; height: 100svh; }
+.motion .cam { position: absolute; left: 0; top: 0; will-change: transform; }
+.motion .intro, .motion .briefing, .motion .finale { position: absolute; left: var(--gut); top: clamp(84px, 13vh, 136px); }
+.motion .intro { width: min(600px, 48vw); }
+.motion .briefing { width: min(470px, 38vw); }
+.motion .finale { top: auto; bottom: clamp(90px, 15vh, 150px); }
+.motion .legend { position: absolute; right: var(--gut); top: clamp(84px, 12vh, 130px); z-index: 2; }
+.motion .dossier { position: absolute; right: calc(var(--gut) + clamp(70px, 6vw, 110px)); bottom: clamp(84px, 13vh, 130px); transition: transform 600ms var(--ease-out); }
+.motion .rail { position: absolute; left: 50%; bottom: clamp(16px, 3vh, 28px); transform: translateX(-50%); }
+.motion .panel { transition: opacity 220ms var(--ease-out), transform 220ms var(--ease-out), visibility 0s linear 220ms; }
+.motion .panel.off { opacity: 0; transform: translateY(12px); visibility: hidden; pointer-events: none; }
+.motion .panel:not(.off) { transition-delay: 120ms, 120ms, 0s; }
+.motion .ops.end .dossier { transform: translate(-8vw, -6vh) scale(1.18); }
+.motion .dossier .date path { stroke-dasharray: 640; stroke-dashoffset: 640; }
+.motion .ops.end .dossier .date path { stroke-dashoffset: 0; transition: stroke-dashoffset 900ms var(--ease-move); }
+.motion .dossier .seal { opacity: 0; }
+.motion .ops.end .dossier .seal { animation: press 560ms 650ms both; }
+.motion .rail-static { display: none; }
+.snap { position: absolute; left: 0; width: 1px; height: 1px; scroll-snap-align: start; }
+html.motion { scroll-snap-type: y proximity; }
+
+/* ---------- static mode: reduced motion, low-end devices, no JS ---------- */
+html:not(.motion) .table { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: var(--gut); padding: 110px var(--gut) var(--gut); }
+html:not(.motion) .cam { grid-column: 1 / -1; grid-row: 3; }
+html:not(.motion) #map { width: 100%; height: auto; }
+html:not(.motion) .intro { grid-column: 1; grid-row: 1; }
+html:not(.motion) .legend { grid-column: 2; grid-row: 1 / 3; }
+html:not(.motion) .dossier { grid-column: 1; grid-row: 2; }
+html:not(.motion) .briefing, html:not(.motion) .rail, html:not(.motion) .cue .follow { display: none; }
+html:not(.motion) .finale { grid-column: 1 / -1; grid-row: 4; }
+html:not(.motion) .route { stroke-dasharray: none !important; stroke-dashoffset: 0 !important; }
+
+/* ---------- after the map ---------- */
+.parts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(20px, 2.4vw, 36px); }
+.part h3 { font-weight: 800; font-size: 1rem; color: var(--mute); border-top: 1px solid var(--line); padding-top: 10px; margin-bottom: 6px; }
+.part h3 .zh { margin-left: .4em; }
+.part ol { list-style: none; }
+.part li + li { border-top: 1px solid var(--line); }
+.ch { all: unset; cursor: pointer; display: grid; grid-template-columns: 2.2em 1fr; gap: 4px 10px; padding: 14px 0; width: 100%; }
+.ch .n { font-weight: 900; font-size: 1.4rem; color: var(--red-lit); grid-row: span 3; }
+.ch b { font-weight: 800; font-size: 1.08rem; line-height: 1.25; }
+.ch .alt { font-weight: 600; color: var(--mute); font-size: .98rem; }
+.ch p { font-size: .98rem; line-height: 1.45; color: var(--acetate); }
+.ch:hover b { text-decoration: underline; text-underline-offset: .2em; }
+.ch:focus-visible { outline: 2px solid var(--red-lit); outline-offset: 4px; }
+.part .free { display: inline-block; margin: 0 0 12px 2.6em; font-weight: 800; font-size: .95rem; }
+
+.quote { display: grid; grid-template-columns: auto 1fr; gap: clamp(20px, 4vw, 64px); align-items: center; }
+.quote .cn { font-family: var(--display-zh); font-weight: 900; font-size: clamp(2.4rem, 5.2vw, 4.8rem); line-height: 1.2; letter-spacing: .03em; }
+.quote .cn em { font-style: normal; color: var(--red-lit); }
+.quote .en { font-size: clamp(1.2rem, 1.6vw, 1.5rem); line-height: 1.4; max-width: 24ch; }
+.quote cite { display: block; margin-top: .8em; font-style: normal; font-weight: 600; font-size: .95rem; color: var(--mute); }
+
+.sides-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 6vw, 96px); }
+.side h3 { font-weight: 900; font-size: clamp(2.6rem, 5vw, 4.4rem); line-height: .9; letter-spacing: -.03em; margin-top: .45em; }
+.side h3 small { display: block; font-size: max(1.1rem, .34em); font-weight: 800; letter-spacing: 0; margin-top: .35em; }
+.side p { margin-top: .8em; max-width: 36ch; text-wrap: pretty; }
+.glance { display: flex; flex-wrap: wrap; gap: 12px clamp(24px, 5vw, 72px); margin-top: clamp(36px, 5vw, 64px); padding-top: 20px; border-top: 1px solid var(--line); }
+.glance div { font-size: 1rem; color: var(--mute); }
+.glance b { display: block; font-weight: 900; font-size: 2rem; line-height: 1; color: var(--acetate); }
+.glance a { align-self: end; font-weight: 800; }
+
+.c-grid { display: grid; grid-template-columns: 1.35fr 1fr 1fr; gap: clamp(24px, 3vw, 48px); align-items: start; }
+.c blockquote { font-weight: 600; font-size: clamp(1.15rem, 1.4vw, 1.35rem); line-height: 1.45; text-wrap: pretty; }
+.c:first-child blockquote { font-weight: 800; font-size: clamp(1.6rem, 2.5vw, 2.3rem); line-height: 1.3; letter-spacing: -.01em; }
+.c footer { margin-top: 1em; padding-top: .7em; border-top: 1px solid var(--line); font-size: 1rem; }
+.c footer b { display: block; }
+.c footer span { color: var(--mute); }
+
+.band-in { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: clamp(24px, 4vw, 64px); padding-block: clamp(56px, 8vw, 112px); }
+.band h2 { font-weight: 900; font-size: clamp(2rem, 3.2vw, 3rem); line-height: 1; letter-spacing: -.02em; }
+.band h3 { font-weight: 900; font-size: 1.5rem; line-height: 1.1; }
+.band p { margin-top: .6em; font-size: 1.02rem; }
+.band .field { margin-top: 14px; }
+
+/* ---------- narrow screens ---------- */
+@media (max-width: 900px) {
+  .intro .zh-title { display: block; }
+  .legend { display: none !important; }
+  .motion .intro { width: auto; right: var(--gut); top: clamp(76px, 11vh, 104px); }
+  .motion .briefing { width: auto; right: var(--gut); top: auto; bottom: 12px; padding: 16px 18px 18px; }
+  .motion .briefing .n { font-size: 2.8rem; }
+  .motion .rail { display: none; }
+  .motion .dossier { right: auto; left: 50%; bottom: auto; top: clamp(76px, 10vh, 100px); width: 150px; margin-left: -75px; opacity: 0; visibility: hidden;
+    transition: opacity 300ms var(--ease-out), transform 600ms var(--ease-out), visibility 0s 300ms; }
+  .motion .ops.end .dossier { opacity: 1; visibility: visible; transform: none; transition-delay: 0s; }
+  .motion .ops.end .dossier .paper { transform: rotate(-2deg); }
+  .motion .finale { right: var(--gut); bottom: 16px; }
+  .motion .dossier .date { display: none; }
+  .dossier .seal { width: 64px; left: -18px; }
+  html:not(.motion) .table { grid-template-columns: 1fr; }
+  .parts, .c-grid, .band-in, .sides-grid, .quote { grid-template-columns: 1fr; }
+}
+@media (max-width: 900px) and (max-height: 700px) { .motion .briefing p { display: none; } }

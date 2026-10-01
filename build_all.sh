@@ -12,6 +12,7 @@ PY=/usr/bin/python3
 # checkout through git so this also works from a worktree under .claude/worktrees/.
 REPO=$(dirname "$(git rev-parse --path-format=absolute --git-common-dir)")
 MANUSCRIPT=${MANUSCRIPT:-"$REPO/../../writing/Claude_Book_Editing/Manuscript_v2.0_FINAL.docx"}
+$PY build_chapters.py
 $PY build_chapter.py "$MANUSCRIPT"
 $PY build_shell.py
 $PY build_zh.py

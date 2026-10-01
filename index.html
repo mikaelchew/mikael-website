@@ -4,9 +4,11 @@
   <meta charset="UTF-8">
   <meta name="google-site-verification" content="embeCp3FnhQSbE8YajaqByuuUis1O6FDwtC7frU03mU" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Preload LCP hero image (starts download during HTML parse, before CSS) -->
-  <link rel="preload" as="image" href="images/mikael-chew.jpg" imagesrcset="images/mikael-chew-600.jpg 600w, images/mikael-chew.jpg 798w" imagesizes="(max-width: 768px) 100vw, 760px" fetchpriority="high">
+  <script>
+    // Decided before first paint: the scroll-driven map runs only with motion allowed and a
+    // device that can carry it. js/map.js may still drop to the static map after 30 slow frames.
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches && !(navigator.deviceMemory && navigator.deviceMemory <= 2)) document.documentElement.classList.add('motion');
+  </script>
 
   <meta name="description" content="Mikael Chew — author, mentor, and host of The Long Game. 23 years in direct selling, from the field to management. Helping leaders win the right way.">
   <meta name="keywords" content="Mikael Chew, author, mentor, The Long Game, direct selling, network marketing, leadership">
@@ -30,21 +32,16 @@
 
   <title>Mikael Chew — Author · Mentor · Host of The Long Game</title>
 
-  <!-- Google Fonts -->
-  <link rel="preload" as="style" href="vendor/fonts/fonts.css" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="vendor/fonts/fonts.css"></noscript>
-
-  <!-- Font Awesome -->
-  <link rel="preload" as="style" href="vendor/fontawesome/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="vendor/fontawesome/css/all.min.css"></noscript>
-
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="css/style.css">
+  <!-- Fonts (self-hosted) and styles -->
+  <link rel="preload" as="font" type="font/woff2" href="vendor/fonts/overpass-900-latin.woff2" crossorigin>
+  <link rel="stylesheet" href="vendor/fonts/site-fonts.css">
+  <link rel="stylesheet" href="css/site.css">
+  <link rel="stylesheet" href="css/map.css">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="icon" type="image/png" href="favicon.png">
-  <meta name="theme-color" content="#1A1A1A">
+  <meta name="theme-color" content="#22303A">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="manifest" href="site.webmanifest">
   <link rel="canonical" href="https://www.mikaelchew.com/">
@@ -59,476 +56,257 @@
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"WebSite","@id":"https://www.mikaelchew.com/#website","name":"Mikael Chew","url":"https://www.mikaelchew.com/","description":"Strategy, leadership, and the long game for direct selling leaders.","inLanguage":["en","zh"],"publisher":{"@id":"https://www.mikaelchew.com/#person"}}
   </script>
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ENGNTZ3PPC"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-ENGNTZ3PPC');
-</script>
-  <noscript><style>.fade-in,.lt-fade{opacity:1!important;transform:none!important}</style></noscript>
+  <!-- Google Analytics (config call lives in js/site.js: previews report in debug mode) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ENGNTZ3PPC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  </script>
+  <script src="js/site.js" defer></script>
+  <script src="js/map.js" defer></script>
 </head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
-
-  <!-- ========== NAVBAR (desktop only) ========== -->
-  <nav class="navbar navbar-home">
-    <div class="container">
-      <a href="index.html" class="nav-logo">MIKAEL<span>CHEW</span></a>
-      <ul class="nav-links">
-        <li><a href="index.html" class="active" data-en="Home" data-zh="首頁">Home</a></li>
-        <li><a href="about.html" data-en="About" data-zh="關於">About</a></li>
-        <li><a href="blog.html" data-en="Blog" data-zh="部落格">Blog</a></li>
-        <li><a href="book.html" data-en="Book" data-zh="著作">Book</a></li>
-        <li><a href="speaking.html" data-en="Speaking" data-zh="演講">Speaking</a></li>
-        <li><a href="work-with-me.html" data-en="Work With Me" data-zh="與我合作">Work With Me</a></li>
-        <li><a href="contact.html" data-en="Contact" data-zh="聯繫">Contact</a></li>
-      </ul>
-    </div>
+<body data-nav="home">
+<!--
+THESIS: The book as the strategist's campaign: 13 verified stories are positions on a terrain map, and the reader advances halt by halt to a launch date; refuses the coach-site headshot hero, stats bar and icon cards, and the war-room HUD.
+OWN-WORLD: A lifted slate table with vector contour terrain, acetate-white lettering, one red ink for the route, seals and the order; vertical Ming-set 不戰而勝 as the legend; light-on-dark halftone recon prints; the brand-beige back of the map closes the page.
+STORY: The visitor reads the hard facts (about 38 rejections, a first cheque of RM 28) and the first order, follows the route through 13 halts or jumps to any chapter, and arrives at 20.10.2026: read Chapter 1, or join the launch list.
+FIRST VIEWPORT: Left, "Win before the battle." over the facts and the red Read Chapter 1 free; right, vertical red 不戰而勝; bottom right the taped book; the route's lead-in drawn to position 01; the 13-stop rail at the bottom.
+FORM: The Strategist's Map, a synthesis of my #1 (Campaign Map) raised by the Morning Edition's seals, vertical type and facts; seed key c411a6f9.
+FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
+-->
+<!-- shell:header -->
+<a class="skip" href="#main" data-en="Skip to content" data-zh="跳到內容">Skip to content</a>
+<header class="bar">
+  <a class="brand" href="index.html" data-nav="home" aria-current="page"><span class="brand-en">Mikael Chew</span><span class="brand-zh cjk-display" lang="zh-Hant">周俊德</span></a>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav" data-en="Menu" data-zh="選單">Menu</button>
+  <nav class="nav" id="site-nav" aria-label="Main">
+    <a href="book.html" data-nav="book" class="keep" data-en="The Book" data-zh="著作">The Book<span class="nav-zh cjk-display" lang="zh-Hant">著作</span></a>
+    <a href="about.html" data-nav="about" data-en="About" data-zh="關於">About<span class="nav-zh cjk-display" lang="zh-Hant">關於</span></a>
+    <a href="blog.html" data-nav="writing" data-en="Writing" data-zh="專欄">Writing<span class="nav-zh cjk-display" lang="zh-Hant">專欄</span></a>
+    <a href="speaking.html" data-nav="speaking" data-en="Speaking" data-zh="演講">Speaking<span class="nav-zh cjk-display" lang="zh-Hant">演講</span></a>
+    <a href="work-with-me.html" data-nav="work" data-en="Work With Me" data-zh="合作">Work With Me<span class="nav-zh cjk-display" lang="zh-Hant">合作</span></a>
+    <a href="zh/" class="lang-link keep" lang="zh-Hant" hreflang="zh-Hant">中文</a>
   </nav>
+</header>
+<!-- /shell:header -->
 
-  <!-- ============================================
-       MOBILE LAYOUT — Linktree Style
-       (hidden on desktop 769px+)
-       ============================================ -->
-  <div class="linktree mobile-only">
-
-    <!-- Profile Section -->
-    <div class="lt-profile lt-fade" style="animation-delay: 0s">
-      <div class="lt-avatar">
-        <img src="images/mikael-chew.jpg" srcset="images/mikael-chew-600.jpg 600w, images/mikael-chew.jpg 798w" sizes="(max-width: 768px) 100vw, 760px" alt="Mikael Chew" data-alt-en="Mikael Chew" data-alt-zh="Mikael Chew" fetchpriority="high">
-      </div>
-      <h1 class="lt-name">Mikael <span>Chew</span></h1>
-      <p class="lt-title" data-en="Author &middot; Mentor &middot; Host of The Long Game" data-zh="作者 &middot; 導師 &middot; The Long Game 主持人">Author &middot; Mentor &middot; Host of The Long Game</p>
-      <p class="lt-bio" data-en="23 years in direct selling — field leader, corporate director, and now back in the trenches building again.<br>Helping leaders win the right way." data-zh="深耕直銷23年 — 前線領袖、企業高管，如今重返前線親自建立團隊。<br>助領袖以正道致勝。">23 years in direct selling — field leader, corporate director, and now back in the trenches building again.<br>Helping leaders win the right way.</p>
-    </div>
-
-    <!-- Links Section -->
-    <div class="lt-links">
-
-      <!-- Primary CTA -->
-      <a href="https://wa.me/60195513038?text=Hi%20Mikael%2C%20I%20just%20discovered%20your%20website%20and%20want%20to%20connect." class="lt-link lt-link-whatsapp lt-fade" style="animation-delay: 0.1s" target="_blank" rel="noopener">
-        <i class="fab fa-whatsapp"></i>
-        <span data-en="Message Me on WhatsApp" data-zh="透過 WhatsApp 聯繫我">Message Me on WhatsApp</span>
-      </a>
-
-      <!-- About -->
-      <a href="about.html" class="lt-link lt-fade" style="animation-delay: 0.2s">
-        <i class="fas fa-user"></i>
-        <span data-en="About Me" data-zh="關於我">About Me</span>
-      </a>
-
-      <!-- Work With Me -->
-      <a href="work-with-me.html" class="lt-link lt-fade" style="animation-delay: 0.3s">
-        <i class="fas fa-handshake"></i>
-        <span data-en="Work With Me" data-zh="與我合作">Work With Me</span>
-      </a>
-
-      <!-- Divider -->
-      <div class="lt-divider">
-        <span data-en="Blog" data-zh="部落格">Blog</span>
+<main id="main">
+  <section class="ops" id="ops" aria-label="The book as a campaign map">
+    <div class="table" id="table">
+      <div class="cam" id="cam">
+        <svg id="map" width="2400" height="1500" viewBox="0 0 2400 1500" aria-hidden="true" focusable="false">
+          <rect width="2400" height="1500" fill="#22303A"/>
+          <image href="images/map/terrain.svg" x="0" y="0" width="2400" height="1500"/>
+          <g class="grid" id="grid"></g>
+          <g>
+            <text class="region-zh cjk-display" x="110" y="1395" lang="zh-Hant">基礎</text>
+            <text class="region" x="110" y="1445">I · Foundations</text>
+            <text class="region-zh cjk-display" x="760" y="1200" lang="zh-Hant">戰場</text>
+            <text class="region" x="760" y="1250">II · The Battlefield</text>
+            <text class="region-zh cjk-display" x="1165" y="995" lang="zh-Hant">建軍</text>
+            <text class="region" x="1165" y="1045">III · Building Your Army</text>
+            <text class="region-zh cjk-display" x="1420" y="170" lang="zh-Hant">將道</text>
+            <text class="region" x="1420" y="220">IV · The General's Path</text>
+          </g>
+          <path class="route-ghost" id="ghost"/>
+          <path class="route" id="route"/>
+          <circle class="nib" id="nib" r="9" cx="0" cy="0"/>
+          <g id="wps"></g>
+        </svg>
       </div>
 
-      <!-- Blog Posts (newest 5 published shown; future-dated auto-hidden by JS) -->
-      <a href="blog/winning-gen-z.html" class="lt-link lt-fade" data-pubdate="2026-06-24" style="animation-delay: 0.32s">
-        <i class="fas fa-bolt"></i>
-        <span data-en="Winning Gen Z" data-zh="贏得 Z 世代">Winning Gen Z</span>
-      </a>
-
-      <a href="blog/recognition-that-works.html" class="lt-link lt-fade" data-pubdate="2026-06-17" style="animation-delay: 0.33s">
-        <i class="fas fa-award"></i>
-        <span data-en="Recognition That Works" data-zh="真正有效的肯定">Recognition That Works</span>
-      </a>
-
-      <a href="blog/income-plateau.html" class="lt-link lt-fade" data-pubdate="2026-06-10" style="animation-delay: 0.34s">
-        <i class="fas fa-chart-line"></i>
-        <span data-en="The Plateau" data-zh="高原期">The Plateau</span>
-      </a>
-
-      <a href="blog/ai-disruption.html" class="lt-link lt-fade" data-pubdate="2026-06-03" style="animation-delay: 0.35s">
-        <i class="fas fa-robot"></i>
-        <span data-en="The AI Disruption" data-zh="AI 衝擊">The AI Disruption</span>
-      </a>
-
-      <a href="blog/comeback.html" class="lt-link lt-fade" style="animation-delay: 0.36s">
-        <i class="fas fa-mountain"></i>
-        <span data-en="The Comeback" data-zh="東山再起">The Comeback</span>
-      </a>
-
-      <a href="blog/sun-tzu-wrong.html" class="lt-link lt-fade" style="animation-delay: 0.37s">
-        <i class="fas fa-chess-knight"></i>
-        <span data-en="What Sun Tzu Got Wrong" data-zh="孫子兵法錯在哪裡">What Sun Tzu Got Wrong</span>
-      </a>
-
-      <a href="blog/two-year-wall.html" class="lt-link lt-fade" style="animation-delay: 0.38s">
-        <i class="fas fa-stairs"></i>
-        <span data-en="The Two-Year Wall" data-zh="兩年之牆">The Two-Year Wall</span>
-      </a>
-
-      <a href="blog/leadership-transitions.html" class="lt-link lt-fade" style="animation-delay: 0.39s">
-        <i class="fas fa-route"></i>
-        <span data-en="Leadership During Company Transitions" data-zh="公司轉換期的領導">Leadership During Company Transitions</span>
-      </a>
-
-      <a href="blog/mentor-trap.html" class="lt-link lt-fade" style="animation-delay: 0.40s">
-        <i class="fas fa-hand-holding-heart"></i>
-        <span data-en="The Mentor Trap" data-zh="導師陷阱">The Mentor Trap</span>
-      </a>
-
-      <a href="blog.html" class="lt-link lt-link-viewall lt-fade" style="animation-delay: 0.37s">
-        <i class="fas fa-arrow-right"></i>
-        <span data-en="View All Posts" data-zh="查看全部文章">View All Posts</span>
-      </a>
-
-      <!-- Divider -->
-      <div class="lt-divider">
-        <span data-en="Book" data-zh="著作">Book</span>
+      <div class="intro panel" id="intro">
+        <span class="zh-title cjk-display" lang="zh-Hant" data-zh-only>不戰而勝</span>
+        <h1 data-en="Win before the battle." data-zh="先勝而後戰。">Win before the battle.</h1>
+        <p class="facts" data-en="About 38 people turned him down in his first three months. His first commission cheque was RM 28. This is the strategy he worked out after that." data-zh="入行頭三個月，大約38個人拒絕了他。第一張佣金支票只有RM 28。這本書，是他後來想通的策略。">About 38 people turned him down in his first three months. His first commission cheque was RM 28. This is the strategy he worked out after that.</p>
+        <div class="orders">
+          <a class="btn" href="chapter-1.html"><span data-en="Read Chapter 1 free" data-zh="免費試讀第一章">Read Chapter 1 free</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+          <a class="btn btn--ghost when-launched" href="book.html#buy" data-en="Buy the ebook" data-zh="購買電子書">Buy the ebook</a>
+          <span class="sub num when-prelaunch" data-en="Ebook RM 29.90 · on sale 20 October" data-zh="電子書 RM 29.90・10月20日上市">Ebook RM 29.90 · on sale 20 October</span>
+          <span class="sub num when-launched" data-en="Ebook RM 29.90 · on sale now" data-zh="電子書 RM 29.90・現已上市">Ebook RM 29.90 · on sale now</span>
+        </div>
+        <p class="cue"><span class="follow" data-en="Scroll to follow the route through 13 chapters." data-zh="往下捲動，沿著路線走過13章。">Scroll to follow the route through 13 chapters.</span><a href="#chapters" data-en="Skip the map" data-zh="跳過地圖">Skip the map</a></p>
       </div>
 
-      <!-- Book -->
-      <a href="book.html" class="lt-link lt-link-book lt-fade" style="animation-delay: 0.95s">
-        <i class="fas fa-book"></i>
-        <span data-en="My Book — Launching Aug 2026" data-zh="我的書 — 2026 年 8 月出版">My Book — Launching Aug 2026</span>
-        <small data-en="Sun Tzu's Art of War for Direct Selling" data-zh="《直銷孫子兵法之不戰而勝》">Sun Tzu's Art of War for Direct Selling</small>
-      </a>
+      <div class="briefing panel off" id="briefing" role="region" aria-label="Current chapter" inert>
+        <div class="b-body" id="b-body">
+          <div class="part" id="b-part"></div>
+          <div class="n num" id="b-n"></div>
+          <h2 id="b-en"></h2>
+          <div class="zh cjk-display" id="b-zh"></div>
+          <p id="b-line"></p>
+          <a id="b-link" href="chapter-1.html" hidden data-en="Read Chapter 1 free" data-zh="免費試讀第一章">Read Chapter 1 free</a>
+        </div>
+      </div>
 
-    </div>
-
-    <!-- Newsletter -->
-    <div class="lt-divider">
-      <span data-en="Newsletter" data-zh="電子報">Newsletter</span>
-    </div>
-    <div class="lt-newsletter lt-fade" style="animation-delay: 0.88s">
-      <p data-en="Get weekly insights straight to your inbox." data-zh="每週洞見，直送你的信箱。">Get weekly insights straight to your inbox.</p>
-      <form class="lt-newsletter-form" action="https://app.kit.com/forms/9983575/subscriptions" method="post" target="_blank">
-        <input type="email" name="email_address" aria-label="Email address" placeholder="Email address" data-en="Email address" data-zh="電子郵件" required>
-        <input type="hidden" name="tags" value="newsletter">
-        <button type="submit" data-en="Subscribe" data-zh="訂閱">Subscribe</button>
-      </form>
-    </div>
-
-    <!-- Social Icons -->
-    <div class="lt-social lt-fade" style="animation-delay: 0.9s">
-      <a href="https://www.linkedin.com/in/mikael-chew-07487551/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-      <a href="https://www.facebook.com/coachmikaelchew" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://www.instagram.com/mikael_chew/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-    </div>
-
-    <!-- Footer -->
-    <div class="lt-footer">
-      <p data-en="&copy; 2026 Mikael Chew. All rights reserved." data-zh="&copy; 2026 Mikael Chew. 版權所有。">&copy; 2026 Mikael Chew. All rights reserved.</p>
-    </div>
-
-  </div>
-
-
-  <!-- ============================================
-       DESKTOP LAYOUT — Professional Landing Page
-       (hidden on mobile, shown at 769px+)
-       ============================================ -->
-  <main class="home-desktop desktop-only">
-
-    <!-- ===== HERO SECTION ===== -->
-    <section class="home-hero" id="main">
-      <div class="home-hero-inner">
-        <div class="home-hero-content">
-          <p class="home-hero-label" data-en="Author &middot; Mentor &middot; Host of The Long Game" data-zh="作者 &middot; 導師 &middot; The Long Game 主持人">Author &middot; Mentor &middot; Host of The Long Game</p>
-          <div class="home-hero-title" role="heading" aria-level="1">Mikael <span>Chew</span></div>
-          <p class="home-hero-bio" data-en="23 years in direct selling — field leader, corporate director across 7 companies, and now back in the trenches building my own team. I help leaders win the right way." data-zh="深耕直銷23年 — 前線領袖、橫跨7家企業的管理高層，如今重返前線親自建立團隊。助領袖以正道致勝。">23 years in direct selling — field leader, corporate director across 7 companies, and now back in the trenches building my own team. I help leaders win the right way.</p>
-          <div class="home-hero-actions">
-            <a href="https://wa.me/60195513038?text=Hi%20Mikael%2C%20I%20just%20discovered%20your%20website%20and%20want%20to%20connect." class="btn btn-primary" target="_blank" rel="noopener">
-              <i class="fab fa-whatsapp"></i> <span data-en="Message Me on WhatsApp" data-zh="透過 WhatsApp 聯繫我">Message Me on WhatsApp</span>
-            </a>
-            <a href="about.html" class="btn btn-outline-light" data-en="My Story" data-zh="我的故事">My Story</a>
+      <div class="finale panel off" id="finale" inert>
+        <div class="when-prelaunch">
+          <h2 data-en="The route ends on 20 October." data-zh="路線的終點：10月20日。">The route ends on 20&nbsp;October.</h2>
+          <p data-en="The ebook goes on sale that day: RM 29.90 direct, USD 9.99 on Kindle. Chapter 1 is free to read now." data-zh="電子書當天上市：官網直購 RM 29.90，Kindle USD 9.99。第一章現在就能免費讀。">The ebook goes on sale that day: RM 29.90 direct, USD 9.99 on Kindle. Chapter 1 is free to read now.</p>
+          <div class="orders"><a class="btn" href="chapter-1.html" data-en="Read Chapter 1 free" data-zh="免費試讀第一章">Read Chapter 1 free</a></div>
+          <form class="field" action="https://app.kit.com/forms/9983525/subscriptions" method="post" data-ajax>
+            <label class="sr" for="fin-em" data-en="Email address for launch day" data-zh="上市通知的電子郵件">Email address for launch day</label>
+            <input id="fin-em" type="email" name="email_address" placeholder="Your email" data-en="Your email" data-zh="你的電子郵件" autocomplete="email" required>
+            <input type="hidden" name="tags" value="book-launch">
+            <button type="submit" data-en="Tell me on launch day" data-zh="上市當天通知我">Tell me on launch day</button>
+          </form>
+          <p class="form-ok" tabindex="-1" hidden data-en="Check your inbox to confirm, and you'll hear from me on 20 October." data-zh="請到信箱確認訂閱，10月20日我會通知你。">Check your inbox to confirm, and you'll hear from me on 20 October.</p>
+        </div>
+        <div class="when-launched">
+          <h2 data-en="The book is out." data-zh="新書已上市。">The book is out.</h2>
+          <p data-en="RM 29.90 direct (EPUB + PDF), or USD 9.99 on Kindle. Chapter 1 is free to read." data-zh="官網直購 RM 29.90（EPUB + PDF），或 Kindle USD 9.99。第一章可免費試讀。">RM 29.90 direct (EPUB + PDF), or USD 9.99 on Kindle. Chapter 1 is free to read.</p>
+          <div class="orders">
+            <a class="btn" href="book.html#buy" data-en="Buy the ebook" data-zh="購買電子書">Buy the ebook</a>
+            <a class="btn btn--ghost" href="chapter-1.html" data-en="Read Chapter 1 free" data-zh="免費試讀第一章">Read Chapter 1 free</a>
           </div>
         </div>
-        <div class="home-hero-image">
-          <img src="images/mikael-chew.jpg" srcset="images/mikael-chew-600.jpg 600w, images/mikael-chew.jpg 798w" sizes="(max-width: 768px) 100vw, 760px" alt="Mikael Chew" data-alt-en="Mikael Chew" data-alt-zh="Mikael Chew" fetchpriority="high">
-        </div>
       </div>
-    </section>
 
-    <!-- ===== STATS BAR ===== -->
-    <section class="home-stats">
-      <div class="home-stats-inner">
-        <div class="home-stat">
-          <span class="home-stat-number">23</span>
-          <span class="home-stat-label" data-en="Years in Direct Selling" data-zh="年直銷經驗">Years in Direct Selling</span>
-        </div>
-        <div class="home-stat-divider"></div>
-        <div class="home-stat">
-          <span class="home-stat-number">400+</span>
-          <span class="home-stat-label" data-en="Leaders Mentored" data-zh="位指導過的領袖">Leaders Mentored</span>
-        </div>
-        <div class="home-stat-divider"></div>
-        <div class="home-stat">
-          <span class="home-stat-number">3</span>
-          <span class="home-stat-label" data-en="Multinationals Led" data-zh="家跨國企業任職">Multinationals Led</span>
-        </div>
+      <div class="legend" aria-hidden="true" data-zh-only>
+        <span class="vs cjk-display" lang="zh-Hant">直銷孫子兵法之</span><span class="v cjk-display" lang="zh-Hant">不戰而勝</span>
       </div>
-    </section>
 
-    <!-- ===== NAVIGATION CARDS ===== -->
-    <section class="home-cards">
-      <div class="home-cards-inner">
-        <a href="about.html" class="home-card fade-in">
-          <div class="home-card-icon"><i class="fas fa-user"></i></div>
-          <h3 data-en="About Me" data-zh="關於我">About Me</h3>
-          <p data-en="The story behind the strategy — from rejection to management, one principle at a time." data-zh="策略背後的故事 — 從被拒到進入管理層，一步一腳印。">The story behind the strategy — from rejection to management, one principle at a time.</p>
-          <span class="home-card-link" data-en="Learn More" data-zh="了解更多">Learn More</span>
-        </a>
-        <a href="blog.html" class="home-card fade-in">
-          <div class="home-card-icon"><i class="fas fa-pen-nib"></i></div>
-          <h3 data-en="Blog" data-zh="部落格">Blog</h3>
-          <p data-en="Insights on strategy, team building, ethics, and leadership — for direct selling leaders who think deeper." data-zh="策略、團隊建設、道德與領導力的深度洞見 — 寫給願意深入思考的直銷領袖。">Insights on strategy, team building, ethics, and leadership — for direct selling leaders who think deeper.</p>
-          <span class="home-card-link" data-en="Read Articles" data-zh="閱讀文章">Read Articles</span>
-        </a>
-        <a href="work-with-me.html" class="home-card fade-in">
-          <div class="home-card-icon"><i class="fas fa-handshake"></i></div>
-          <h3 data-en="Work With Me" data-zh="與我合作">Work With Me</h3>
-          <p data-en="Strategic mentorship for serious, committed leaders who want real transformation — not just motivation." data-zh="為認真且全力以赴的領袖提供策略指導 — 不只是打雞血，而是真正的蛻變。">Strategic mentorship for serious, committed leaders who want real transformation — not just motivation.</p>
-          <span class="home-card-link" data-en="Get Started" data-zh="開始合作">Get Started</span>
-        </a>
-        <a href="book.html" class="home-card fade-in">
-          <div class="home-card-icon"><i class="fas fa-book"></i></div>
-          <h3 data-en="The Book" data-zh="著作">The Book</h3>
-          <p data-en="Sun Tzu's Art of War for Direct Selling — a strategic playbook 2,500 years in the making. Launching 20 October 2026." data-zh="《直銷孫子兵法之不戰而勝》— 跨越2500年的策略手冊。2026 年 10 月 20 日出版。">Sun Tzu's Art of War for Direct Selling — a strategic playbook 2,500 years in the making. Launching 20 October 2026.</p>
-          <span class="home-card-link" data-en="Learn More" data-zh="了解更多">Learn More</span>
-        </a>
+      <a class="dossier" href="book.html" aria-label="The book: 直銷孫子兵法之不戰而勝, on sale 20 October 2026">
+        <span class="paper">
+          <span class="tape" aria-hidden="true"></span>
+          <img src="images/book-cover.jpg" width="700" height="1120" alt="Book cover: 直銷孫子兵法之不戰而勝 by 周俊德 (Mikael Chew)" data-alt-zh="書封：《直銷孫子兵法之不戰而勝》，周俊德 著">
+          <svg class="seal when-prelaunch" viewBox="0 0 100 100" aria-hidden="true"><use href="#seal-launch"/></svg>
+          <svg class="seal when-launched" viewBox="0 0 100 100" aria-hidden="true"><use href="#seal-live"/></svg>
+        </span>
+        <span class="date num">20.10.2026<svg viewBox="0 0 200 60" preserveAspectRatio="none" aria-hidden="true"><path pathLength="640" d="M30 8 C 110 -6, 196 10, 192 30 C 188 52, 60 58, 14 44 C -6 36, 6 12, 48 6"/></svg></span>
+      </a>
+
+      <nav class="rail" id="rail" aria-label="Jump to a chapter"></nav>
+    </div>
+  </section>
+
+  <section class="sec wrap" id="chapters" aria-labelledby="ch-h">
+    <h2 class="sec-h" id="ch-h"><span data-en="The thirteen chapters" data-zh="十三篇">The thirteen chapters</span><span class="zh cjk-display" lang="zh-Hant" data-en="十三篇" data-zh="">十三篇</span></h2>
+    <!-- chapters:map -->
+<div class="parts">
+<div class="part"><h3><span data-en="Part I · Foundations" data-zh="第一部 · 基礎">Part I · Foundations</span><span class="zh cjk-display" lang="zh-Hant" data-zh-only>基礎</span></h3><ol class="chapters" start="1">
+<li data-x="230" data-y="1290" data-part="0" data-free><button class="ch" type="button" data-i="0"><span class="n num">01</span><b data-en="Finding Your Dao" data-zh="發起召集">Finding Your Dao</b><span class="alt cjk-display" data-en="發起召集" data-zh="Finding Your Dao">發起召集</span><p data-en="About 38 rejections and a first commission cheque of RM 28. Finding the why that everything else is built on." data-zh="大約38次拒絕，第一張佣金支票只有RM 28。找到撐起一切的「為什麼」。">About 38 rejections and a first commission cheque of RM 28. Finding the why that everything else is built on.</p></button><a class="free" href="chapter-1.html" data-en="Read Chapter 1 free" data-zh="免費試讀第一章">Read Chapter 1 free</a></li>
+<li data-x="430" data-y="1170" data-part="0"><button class="ch" type="button" data-i="1"><span class="n num">02</span><b data-en="Know Yourself, Know the Market" data-zh="了解自己、了解市場">Know Yourself, Know the Market</b><span class="alt cjk-display" data-en="了解自己、了解市場" data-zh="Know Yourself, Know the Market">了解自己、了解市場</span><p data-en="A RM 13,500 lesson in market research, and why knowing your weaknesses matters more than your strengths." data-zh="一堂學費RM 13,500的市場研究課，以及為什麼認清弱點比認清優勢更重要。">A RM 13,500 lesson in market research, and why knowing your weaknesses matters more than your strengths.</p></button></li>
+<li data-x="620" data-y="1235" data-part="0"><button class="ch" type="button" data-i="2"><span class="n num">03</span><b data-en="Your Action Blueprint" data-zh="規劃行動藍圖">Your Action Blueprint</b><span class="alt cjk-display" data-en="規劃行動藍圖" data-zh="Your Action Blueprint">規劃行動藍圖</span><p data-en="Seven specific actions, every day, for 90 days." data-zh="7項具體動作，每天執行，持續90天。">Seven specific actions, every day, for 90 days.</p></button></li>
+</ol></div>
+<div class="part"><h3><span data-en="Part II · The Battlefield" data-zh="第二部 · 戰場">Part II · The Battlefield</span><span class="zh cjk-display" lang="zh-Hant" data-zh-only>戰場</span></h3><ol class="chapters" start="4">
+<li data-x="810" data-y="1075" data-part="1"><button class="ch" type="button" data-i="3"><span class="n num">04</span><b data-en="Strategic Prospecting" data-zh="精準識別目標">Strategic Prospecting</b><span class="alt cjk-display" data-en="精準識別目標" data-zh="Strategic Prospecting">精準識別目標</span><p data-en="From about 5% to about 70% with one framework: FORMHD." data-zh="一個框架，讓成功率從大約5%提升到大約70%：FORMHD。">From about 5% to about 70% with one framework: FORMHD.</p></button></li>
+<li data-x="965" data-y="955" data-part="1"><button class="ch" type="button" data-i="4"><span class="n num">05</span><b data-en="The Art of Invitation" data-zh="邀約的藝術">The Art of Invitation</b><span class="alt cjk-display" data-en="邀約的藝術" data-zh="The Art of Invitation">邀約的藝術</span><p data-en="One bad invitation nearly cost a friendship of many years." data-zh="一次糟糕的邀約，差點毀了一段多年的友誼。">One bad invitation nearly cost a friendship of many years.</p></button></li>
+<li data-x="1100" data-y="1050" data-part="1"><button class="ch" type="button" data-i="5"><span class="n num">06</span><b data-en="Presenting Your Plan" data-zh="呈現你的方案">Presenting Your Plan</b><span class="alt cjk-display" data-en="呈現你的方案" data-zh="Presenting Your Plan">呈現你的方案</span><p data-en="60 slides, 2 hours, nothing sold. Then 8 slides, mostly listening, and 2 of 3 bought." data-zh="60張投影片、2小時，沒有人買。後來改用8張、大部分時間在聽，3個人裡2個當場買了。">60 slides, 2 hours, nothing sold. Then 8 slides, mostly listening, and 2 of 3 bought.</p></button></li>
+<li data-x="1225" data-y="895" data-part="1"><button class="ch" type="button" data-i="6"><span class="n num">07</span><b data-en="The Follow-Up System" data-zh="關鍵的後續跟進">The Follow-Up System</b><span class="alt cjk-display" data-en="關鍵的後續跟進" data-zh="The Follow-Up System">關鍵的後續跟進</span><p data-en="She threw him out of her house. A few visits later, Aunty Lim bought the whole set." data-zh="她把他趕出門。去了幾次之後，Aunty Lim整套產品當場付清。">She threw him out of her house. A few visits later, Aunty Lim bought the whole set.</p></button></li>
+</ol></div>
+<div class="part"><h3><span data-en="Part III · Building Your Army" data-zh="第三部 · 建軍">Part III · Building Your Army</span><span class="zh cjk-display" lang="zh-Hant" data-zh-only>建軍</span></h3><ol class="chapters" start="8">
+<li data-x="1365" data-y="790" data-part="2"><button class="ch" type="button" data-i="7"><span class="n num">08</span><b data-en="The Golden 72 Hours" data-zh="喜迎新夥伴">The Golden 72 Hours</b><span class="alt cjk-display" data-en="喜迎新夥伴" data-zh="The Golden 72 Hours">喜迎新夥伴</span><p data-en="The first three days decide whether a new partner becomes a diamond or a shooting star." data-zh="前三天，決定新夥伴成為「鑽石」還是「流星」。">The first three days decide whether a new partner becomes a diamond or a shooting star.</p></button></li>
+<li data-x="1495" data-y="715" data-part="2"><button class="ch" type="button" data-i="8"><span class="n num">09</span><b data-en="Building Momentum" data-zh="引燃「勢」能">Building Momentum</b><span class="alt cjk-display" data-en="引燃「勢」能" data-zh="Building Momentum">引燃「勢」能</span><p data-en="Training is activation, not education." data-zh="培訓是啟動，不是灌輸。">Training is activation, not education.</p></button></li>
+</ol></div>
+<div class="part"><h3><span data-en="Part IV · The General&#x27;s Path" data-zh="第四部 · 將道">Part IV · The General&#x27;s Path</span><span class="zh cjk-display" lang="zh-Hant" data-zh-only>將道</span></h3><ol class="chapters" start="10">
+<li data-x="1645" data-y="610" data-part="3"><button class="ch" type="button" data-i="9"><span class="n num">10</span><b data-en="Leading With Dao" data-zh="以「道」御眾">Leading With Dao</b><span class="alt cjk-display" data-en="以「道」御眾" data-zh="Leading With Dao">以「道」御眾</span><p data-en="A 90-day goal of 50. 44 people in 75 days. The Five Virtues of a General." data-zh="90天目標50人，75天約到44位夥伴。將者五德。">A 90-day goal of 50. 44 people in 75 days. The Five Virtues of a General.</p></button></li>
+<li data-x="1800" data-y="515" data-part="3"><button class="ch" type="button" data-i="10"><span class="n num">11</span><b data-en="Strategic Expansion" data-zh="戰略擴張">Strategic Expansion</b><span class="alt cjk-display" data-en="戰略擴張" data-zh="Strategic Expansion">戰略擴張</span><p data-en="RM 1,600 flight. 50 interested people. Zero results. Then Seremban." data-zh="RM 1,600的機票，50個「有興趣」的人，零結果。直到芙蓉。">RM 1,600 flight. 50 interested people. Zero results. Then Seremban.</p></button></li>
+<li data-x="1935" data-y="405" data-part="3"><button class="ch" type="button" data-i="11"><span class="n num">12</span><b data-en="The Nine Terrains" data-zh="駕馭「九地」之變">The Nine Terrains</b><span class="alt cjk-display" data-en="駕馭「九地」之變" data-zh="The Nine Terrains">駕馭「九地」之變</span><p data-en="5 of 7 core leaders left in one month. How Vivian&#x27;s team came back stronger." data-zh="一個月內7位核心走了5位。Vivian的團隊如何比危機前更強。">5 of 7 core leaders left in one month. How Vivian&#x27;s team came back stronger.</p></button></li>
+<li data-x="2064" data-y="300" data-part="3"><button class="ch" type="button" data-i="12"><span class="n num">13</span><b data-en="A Sustainable Legacy" data-zh="永續經營">A Sustainable Legacy</b><span class="alt cjk-display" data-en="永續經營" data-zh="A Sustainable Legacy">永續經營</span><p data-en="Build a business that runs without you every day, and get your time back." data-zh="建立一個不依賴你日常運作的事業，把時間還給自己。">Build a business that runs without you every day, and get your time back.</p></button></li>
+</ol></div>
+</div>
+<!-- /chapters:map -->
+  </section>
+
+  <section class="sec wrap quote" aria-label="From the book">
+    <p class="cn cjk-display" lang="zh-Hant" data-zh-only>100個<em>不對</em>的人，<br>不如10個<em>對</em>的人。</p>
+    <div>
+      <p class="en" data-en="A hundred wrong people are not worth ten right ones." data-zh="與其約100個不對的人，不如找到10個對的人。">A hundred wrong people are not worth ten right ones.</p>
+      <cite data-en="Chapter 4, Strategic Prospecting" data-zh="第四章：精準識別目標">Chapter 4, Strategic Prospecting</cite>
+    </div>
+  </section>
+
+  <section class="sec wrap" aria-labelledby="sd-h">
+    <h2 class="sec-h" id="sd-h"><span data-en="Both sides of the table" data-zh="雙重視角">Both sides of the table</span><span class="zh cjk-display" lang="zh-Hant" data-en="雙重視角" data-zh="">雙重視角</span></h2>
+    <div class="sides-grid">
+      <div class="side">
+        <figure class="print"><img src="images/print/field.webp" srcset="images/print/field-600.webp 600w, images/print/field.webp 900w" sizes="(max-width: 900px) 100vw, 45vw" width="900" height="555" alt="Mikael Chew teaching a room of direct-selling partners" data-alt-zh="Mikael 在課堂上指導直銷夥伴" loading="lazy">
+          <figcaption class="tag" data-en="In the field" data-zh="前線">In the field</figcaption></figure>
+        <h3><span data-en="8 years" data-zh="8年">8 years</span><small data-en="building teams in the field" data-zh="在前線建立團隊">building teams in the field</small></h3>
+        <p data-en="Prospecting, presenting, following up, and learning most lessons the expensive way." data-zh="開發、呈現、跟進，大部分的課都是用高昂的學費換來的。">Prospecting, presenting, following up, and learning most lessons the expensive way.</p>
       </div>
-    </section>
-
-    <!-- ===== FEATURED BLOG POSTS ===== -->
-    <section class="home-blog">
-      <div class="home-blog-inner">
-        <div class="home-blog-header">
-          <h2 data-en="Latest Insights" data-zh="最新洞察">Latest Insights</h2>
-          <a href="blog.html" class="home-blog-viewall" data-en="View All Posts" data-zh="查看所有文章">View All Posts <i class="fas fa-arrow-right"></i></a>
-        </div>
-        <div class="home-blog-grid">
-
-          <article class="home-blog-card fade-in" data-pubdate="2026-06-24">
-            <span class="home-blog-category" data-en="Relationship &amp; Communication" data-zh="關係與溝通">Relationship &amp; Communication</span>
-            <h3><a href="blog/winning-gen-z.html" data-en="Selling to a Generation That Hates Being Sold To: Winning Gen Z Without the Hype" data-zh="向討厭被推銷的世代銷售：不靠炒作贏得 Z 世代">Selling to a Generation That Hates Being Sold To: Winning Gen Z Without the Hype</a></h3>
-            <p data-en="Gen Z has a finely-tuned radar for hype, urgency, and fake scarcity. The old playbook doesn't just fail with them — it repels them. Here's the new approach." data-zh="Z 世代對炒作、緊迫感和假稀缺有極敏銳的雷達。舊劇本對他們不只是失效，而是直接把他們推開。這篇談的是新做法。">Gen Z has a finely-tuned radar for hype, urgency, and fake scarcity. The old playbook doesn't just fail with them — it repels them. Here's the new approach.</p>
-            <span class="home-blog-readmore" data-en="Read Article" data-zh="閱讀文章">Read Article <i class="fas fa-arrow-right"></i></span>
-          </article>
-
-          <article class="home-blog-card fade-in" data-pubdate="2026-06-17">
-            <span class="home-blog-category" data-en="Team Building" data-zh="團隊建設">Team Building</span>
-            <h3><a href="blog/recognition-that-works.html" data-en="Recognition That Actually Works: Beyond Pins, Trips, and Stage Walks" data-zh="真正有效的肯定：超越別針、旅遊和台上亮相">Recognition That Actually Works: Beyond Pins, Trips, and Stage Walks</a></h3>
-            <p data-en="The industry loves pins, trips, and stage walks — but most recognition doesn't drive behavior. What makes recognition actually work." data-zh="業界熱愛別針、旅遊和台上亮相，但大多數的肯定無法真正驅動行為。什麼樣的肯定才真正有效。">The industry loves pins, trips, and stage walks — but most recognition doesn't drive behavior. What makes recognition actually work.</p>
-            <span class="home-blog-readmore" data-en="Read Article" data-zh="閱讀文章">Read Article <i class="fas fa-arrow-right"></i></span>
-          </article>
-
-          <article class="home-blog-card fade-in" data-pubdate="2026-06-10">
-            <span class="home-blog-category" data-en="Strategic Leadership" data-zh="策略領導力">Strategic Leadership</span>
-            <h3><a href="blog/income-plateau.html" data-en="The Plateau: Why Your Income Stopped Growing — and the 3 Levers That Restart It" data-zh="高原期：為什麼你的收入停止成長，以及重啟成長的三個槓桿">The Plateau: Why Your Income Stopped Growing — and the 3 Levers That Restart It</a></h3>
-            <p data-en="You climb and climb, then flat. The plateau is the most misunderstood phase of a direct selling career — and the 3 structural levers that restart growth." data-zh="你一路往上爬，然後停了。高原期是直銷生涯中最被誤解的階段，以及三個能重啟成長的結構性槓桿。">You climb and climb, then flat. The plateau is the most misunderstood phase of a direct selling career — and the 3 structural levers that restart growth.</p>
-            <span class="home-blog-readmore" data-en="Read Article" data-zh="閱讀文章">Read Article <i class="fas fa-arrow-right"></i></span>
-          </article>
-
-          <article class="home-blog-card fade-in" data-pubdate="2026-06-03">
-            <span class="home-blog-category" data-en="Industry &amp; Adaptation" data-zh="行業與適應">Industry &amp; Adaptation</span>
-            <h3><a href="blog/ai-disruption.html" data-en="The AI Disruption: What Artificial Intelligence Really Means for Direct Selling Leaders" data-zh="AI 衝擊：人工智慧對直銷領袖的真正意義">The AI Disruption: What Artificial Intelligence Really Means for Direct Selling Leaders</a></h3>
-            <p data-en="Social media was going to 'kill' direct selling. It didn't. Now it's AI. Here's what AI actually changes for direct selling leaders — and what it never will." data-zh="當年大家說社群媒體會「殺死」直銷，結果沒有。現在輪到 AI。AI 究竟改變了直銷領袖的什麼，又有什麼是它永遠無法取代的。">Social media was going to 'kill' direct selling. It didn't. Now it's AI. Here's what AI actually changes for direct selling leaders — and what it never will.</p>
-            <span class="home-blog-readmore" data-en="Read Article" data-zh="閱讀文章">Read Article <i class="fas fa-arrow-right"></i></span>
-          </article>
-
-          <article class="home-blog-card fade-in">
-            <span class="home-blog-category" data-en="Personal Growth" data-zh="個人成長">Personal Growth</span>
-            <h3><a href="blog/comeback.html" data-en="The Comeback: How to Restart When You've Lost Momentum" data-zh="東山再起：失去動能後，如何重新開始">The Comeback: How to Restart When You've Lost Momentum</a></h3>
-            <p data-en="Every long-haul leader hits a stall. The strategic anatomy of a comeback — drawn from leaders I've coached through it." data-zh="走長線的領袖都會遇到停滯期。一場真正的東山再起該長什麼樣，來自我陪伴走過的領袖。">Every long-haul leader hits a stall. The strategic anatomy of a comeback — drawn from leaders I've coached through it.</p>
-            <span class="home-blog-readmore" data-en="Read Article" data-zh="閱讀文章">Read Article <i class="fas fa-arrow-right"></i></span>
-          </article>
-
-          <article class="home-blog-card fade-in">
-            <span class="home-blog-category" data-en="Mindset &amp; Ethics" data-zh="心態與道德">Mindset &amp; Ethics</span>
-            <h3><a href="blog/sun-tzu-wrong.html" data-en="What Sun Tzu Got Wrong About Modern Direct Selling" data-zh="在現代直銷裡，孫子兵法錯在哪裡">What Sun Tzu Got Wrong About Modern Direct Selling</a></h3>
-            <p data-en="I wrote a book about applying Sun Tzu to direct selling. Here's the contrarian take: where the 2,500-year-old playbook still works — and where modern terrain breaks it." data-zh="我寫了一本把孫子兵法應用到直銷的書。這篇給你逆向思考：2500 年的兵書哪些原則仍適用，哪些已被現代戰場推翻。">I wrote a book about applying Sun Tzu to direct selling. Here's the contrarian take: where the 2,500-year-old playbook still works — and where modern terrain breaks it.</p>
-            <span class="home-blog-readmore" data-en="Read Article" data-zh="閱讀文章">Read Article <i class="fas fa-arrow-right"></i></span>
-          </article>
-
-          <article class="home-blog-card fade-in">
-            <span class="home-blog-category" data-en="Team Building" data-zh="團隊建設">Team Building</span>
-            <h3><a href="blog/two-year-wall.html" data-en="The Two-Year Wall: Why Half Your Team Quits in Year Two" data-zh="兩年之牆：為什麼一半的團隊會在第二年放棄">The Two-Year Wall: Why Half Your Team Quits in Year Two</a></h3>
-            <p data-en="Year 1 is excitement. Year 3 is momentum. Year 2 is the wall. Why this specific year tests retention — and how to coach your team through it." data-zh="第一年靠熱情。第三年靠慣性。第二年，是一道牆。為什麼這一年最考驗留存率，以及該怎麼帶你的人走過去。">Year 1 is excitement. Year 3 is momentum. Year 2 is the wall. Why this specific year tests retention — and how to coach your team through it.</p>
-            <span class="home-blog-readmore" data-en="Read Article" data-zh="閱讀文章">Read Article <i class="fas fa-arrow-right"></i></span>
-          </article>
-
-        </div>
+      <div class="side">
+        <figure class="print"><img src="images/print/boardroom.webp" srcset="images/print/boardroom-600.webp 600w, images/print/boardroom.webp 900w" sizes="(max-width: 900px) 100vw, 45vw" width="900" height="386" alt="Mikael Chew on stage as Head of Regional Sales, APAC" data-alt-zh="Mikael 以亞太區域銷售主管身分在台上演講" loading="lazy">
+          <figcaption class="tag" data-en="In the boardroom" data-zh="管理層">In the boardroom</figcaption></figure>
+        <h3><span data-en="15 years" data-zh="15年">15 years</span><small data-en="in senior corporate management" data-zh="跨國企業高層管理">in senior corporate management</small></h3>
+        <p data-en="Watching from head office why so much of what works on the ground fails at scale. The book is where the two meet." data-zh="在總部看見，前線行得通的做法，為什麼一放大就失靈。這本書，就是兩邊的交會點。">Watching from head office why so much of what works on the ground fails at scale. The book is where the two meet.</p>
       </div>
-    </section>
+    </div>
+    <div class="glance num">
+      <div><b>23</b><span data-en="years in direct selling" data-zh="年直銷資歷">years in direct selling</span></div>
+      <div><b>3</b><span data-en="multinational companies" data-zh="家跨國公司">multinational companies</span></div>
+      <div><b>400+</b><span data-en="professionals mentored" data-zh="位輔導過的專業人士">professionals mentored</span></div>
+      <a href="about.html" data-en="The full story" data-zh="完整故事">The full story</a>
+    </div>
+  </section>
 
-    <!-- ===== SPEAKING / CREDIBILITY IMAGE ===== -->
-    <section class="home-speaking">
-      <div class="home-speaking-inner">
-        <div class="home-speaking-image">
-          <img src="images/big-stage.jpg" srcset="images/big-stage-600.jpg 600w, images/big-stage-900.jpg 900w, images/big-stage.jpg 1200w" sizes="(max-width: 768px) 100vw, 760px" alt="Mikael Chew speaking on a major stage" data-alt-en="Mikael Chew speaking on a major stage" data-alt-zh="Mikael Chew 在大型舞台上演講" loading="lazy">
-          <p class="home-speaking-caption" data-en="On stage at an industry leadership event" data-zh="於行業領袖活動的舞台上">On stage at an industry leadership event</p>
-        </div>
-        <div class="home-speaking-content">
-          <h2 data-en="From the Field to Management" data-zh="從前線到企業管理層">From the Field to Management</h2>
-          <p data-en="Most people in direct selling see it from one side. I've lived both — building teams of thousands from the ground up, and shaping corporate strategy from the inside. That dual perspective is what makes the difference." data-zh="大多數直銷人只看到一面。我兩邊都走過 — 從零打造數千人的團隊，也從內部制定企業策略。這種雙重視角，就是差別所在。">Most people in direct selling see it from one side. I've lived both — building teams of thousands from the ground up, and shaping corporate strategy from the inside. That dual perspective is what makes the difference.</p>
-          <a href="work-with-me.html" class="btn btn-outline-light" data-en="Work With Me" data-zh="與我合作">Work With Me</a>
-        </div>
-      </div>
-    </section>
+  <section class="sec wrap" aria-labelledby="co-h">
+    <h2 class="sec-h" id="co-h"><span data-en="Colleagues on Mikael" data-zh="同業怎麼說">Colleagues on Mikael</span><span class="zh" data-en="via LinkedIn" data-zh="來自 LinkedIn">via LinkedIn</span></h2>
+    <div class="c-grid">
+      <article class="c"><blockquote data-en="A tower of strength and leadership. He has mentored the entire Asia Pacific group of sales." data-zh="他是團隊的中流砥柱。他帶領了整個亞太區的銷售團隊。">A tower of strength and leadership. He has mentored the entire Asia Pacific group of sales.</blockquote>
+        <footer><b>Tessa Tremain</b><span data-en="Senior Presidential Director, Direct Selling (APAC)" data-zh="資深總裁級總監，直銷業（亞太）">Senior Presidential Director, Direct Selling (APAC)</span></footer></article>
+      <article class="c"><blockquote data-en="A true professional. He balances a no-nonsense approach with approachability." data-zh="不折不扣的專業人士。直來直往，卻依然平易近人。">A true professional. He balances a no-nonsense approach with approachability.</blockquote>
+        <footer><b>James Loh</b><span data-en="Independent Industry Professional" data-zh="獨立行業專業人士">Independent Industry Professional</span></footer></article>
+      <article class="c"><blockquote data-en="As a speaker, he captivates everyone — when he speaks, people ‘tabik’!" data-zh="作為演講者，他總能抓住全場，他一開口，大家都「tabik」！">As a speaker, he captivates everyone — when he speaks, people ‘tabik’!</blockquote>
+        <footer><b>Dyi Wong</b><span data-en="Marketing Manager · Ngai Seik Leatherwaren" data-zh="行銷經理 · Ngai Seik Leatherwaren">Marketing Manager · Ngai Seik Leatherwaren</span></footer></article>
+    </div>
+  </section>
 
-    <!-- ===== THE LONG GAME — COMING SOON ===== -->
-    <section class="home-long-game">
-      <div class="home-long-game-inner">
-        <span class="home-long-game-label" data-en="COMING SOON" data-zh="即將推出">COMING SOON</span>
-        <h2 class="home-long-game-title">The Long Game</h2>
-        <p class="home-long-game-tagline" data-en="A new podcast on strategy, leadership, and the long arc of building something that lasts in direct selling." data-zh="一檔關於策略、領導力，以及在直銷中打造長久事業的新播客節目。">A new podcast on strategy, leadership, and the long arc of building something that lasts in direct selling.</p>
-        <p class="home-long-game-meta" data-en="Hosted by Mikael Chew · Launching Q3 2026" data-zh="主持人：Mikael Chew · 2026 年第三季推出">Hosted by Mikael Chew · Launching Q3 2026</p>
-        <form class="newsletter-form home-long-game-form" action="https://app.kit.com/forms/9983582/subscriptions" method="post" target="_blank">
-          <input type="email" name="email_address" aria-label="Email address" placeholder="Your email — be the first to know" data-en="Your email — be the first to know" data-zh="留下你的電子郵件，第一時間獲得通知" required>
-          <input type="hidden" name="tags" value="long-game-launch">
-          <button type="submit" data-en="Notify Me" data-zh="通知我">Notify Me</button>
+  <section class="band" aria-label="Next steps">
+    <div class="wrap band-in">
+      <div class="when-prelaunch">
+        <h2 data-en="Be there on launch day." data-zh="上市當天，第一時間知道。">Be there on launch day.</h2>
+        <p data-en="One message on 20 October when the ebook goes on sale. Nothing else." data-zh="10月20日電子書上市時，通知你一次。就這樣。">One message on 20 October when the ebook goes on sale. Nothing else.</p>
+        <form class="field" action="https://app.kit.com/forms/9983525/subscriptions" method="post" data-ajax>
+          <label class="sr" for="band-em" data-en="Email address for launch day" data-zh="上市通知的電子郵件">Email address for launch day</label>
+          <input id="band-em" type="email" name="email_address" placeholder="Your email" data-en="Your email" data-zh="你的電子郵件" autocomplete="email" required>
+          <input type="hidden" name="tags" value="book-launch">
+          <button type="submit" data-en="Notify me" data-zh="通知我">Notify me</button>
         </form>
+        <p class="form-ok" tabindex="-1" hidden data-en="Check your inbox to confirm, and you'll hear from me on 20 October." data-zh="請到信箱確認訂閱，10月20日我會通知你。">Check your inbox to confirm, and you'll hear from me on 20 October.</p>
       </div>
-    </section>
-
-    <!-- ===== TESTIMONIALS ===== -->
-    <section class="home-testimonials">
-      <div class="home-testimonials-inner">
-        <div class="home-testimonials-header">
-          <span class="section-label" data-en="TESTIMONIALS" data-zh="推薦評語">TESTIMONIALS</span>
-          <h2 data-en="What Leaders Say" data-zh="領袖們的評價">What Leaders Say</h2>
-        </div>
-        <div class="home-testimonials-grid">
-          <div class="home-testimonial-card fade-in">
-            <div class="home-testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-            <p class="home-testimonial-text" data-en="His strong leadership, strategic thinking, and ability to deliver results are exceptional. His guidance has been invaluable to me. His interpersonal skills and innovative approach make him an essential asset." data-zh="他的領導力、策略思維和執行力都非常出色。他的指導對我來說無比珍貴，他的溝通能力和創新思維讓他成為不可或缺的人才。">His strong leadership, strategic thinking, and ability to deliver results are exceptional. His guidance has been invaluable to me. His interpersonal skills and innovative approach make him an essential asset.</p>
-            <div class="home-testimonial-author">
-              <span class="home-testimonial-name">Car Manuel</span>
-              <span class="home-testimonial-role" data-en="Senior Director, Direct Selling" data-zh="資深總監，直銷業">Senior Director, Direct Selling</span>
-            </div>
-          </div>
-          <div class="home-testimonial-card fade-in">
-            <div class="home-testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-            <p class="home-testimonial-text" data-en="A tower of strength and leadership. He has mentored the entire Asia Pacific group of sales. His skill set is nothing short of extraordinary — organised, talented, multi-lingual, and an overall coordinator of organising a team." data-zh="他是團隊的中流砥柱。他帶領了整個亞太區的銷售團隊。他的能力非凡：高效有序、多才多藝、精通多語，是團隊的全方位核心人物。">A tower of strength and leadership. He has mentored the entire Asia Pacific group of sales. His skill set is nothing short of extraordinary — organised, talented, multi-lingual, and an overall coordinator of organising a team.</p>
-            <div class="home-testimonial-author">
-              <span class="home-testimonial-name">Tessa Tremain</span>
-              <span class="home-testimonial-role" data-en="Senior Presidential Director, Direct Selling (APAC)" data-zh="資深總裁級總監，直銷業（亞太）">Senior Presidential Director, Direct Selling (APAC)</span>
-            </div>
-          </div>
-          <div class="home-testimonial-card fade-in">
-            <div class="home-testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-            <p class="home-testimonial-text" data-en="His creativity and strategic thinking significantly boosted our marketing efforts and sales. He fostered a collaborative and motivating work environment, empowering his team to reach their full potential." data-zh="他的創造力和策略思維大幅提升了我們的行銷與業績。他打造了一個既團結又充滿動力的工作環境，讓團隊成員都能發揮最大潛力。">His creativity and strategic thinking significantly boosted our marketing efforts and sales. He fostered a collaborative and motivating work environment, empowering his team to reach their full potential.</p>
-            <div class="home-testimonial-author">
-              <span class="home-testimonial-name">Elsey Chia</span>
-              <span class="home-testimonial-role" data-en="General Manager · Omni AAA Group" data-zh="總經理 · Omni AAA Group">General Manager · Omni AAA Group</span>
-            </div>
-          </div>
-          <div class="home-testimonial-card fade-in">
-            <div class="home-testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-            <p class="home-testimonial-text" data-en="He possesses a rare ability to foster growth and success by creating an environment that is both supportive and challenging. A person of integrity and unwavering commitment, with an infectious enthusiasm." data-zh="他有一種難得的本事：既給你支持，又推你挑戰。一個正直堅定、熱情有感染力的人。">He possesses a rare ability to foster growth and success by creating an environment that is both supportive and challenging. A person of integrity and unwavering commitment, with an infectious enthusiasm.</p>
-            <div class="home-testimonial-author">
-              <span class="home-testimonial-name">Arvind Bala Krishnan</span>
-              <span class="home-testimonial-role" data-en="Deputy Dean · UniKL MESTECH" data-zh="副院長 · UniKL MESTECH">Deputy Dean · UniKL MESTECH</span>
-            </div>
-          </div>
-          <div class="home-testimonial-card fade-in">
-            <div class="home-testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-            <p class="home-testimonial-text" data-en="A rare blend of insight, empathy, and strategic acumen that sets him apart. His ability to tailor personalized strategies to suit each client's unique needs is a testament to his dedication and proficiency." data-zh="集洞察力、同理心和策略眼光於一身，這讓他與眾不同。他能為每位客戶量身打造策略，充分展現他的用心與專業。">A rare blend of insight, empathy, and strategic acumen that sets him apart. His ability to tailor personalized strategies to suit each client's unique needs is a testament to his dedication and proficiency.</p>
-            <div class="home-testimonial-author">
-              <span class="home-testimonial-name">Zulkifli Yusof</span>
-              <span class="home-testimonial-role" data-en="Talent Global Sdn Bhd · Aviation & Aerospace" data-zh="Talent Global Sdn Bhd · 航空與航太">Talent Global Sdn Bhd · Aviation & Aerospace</span>
-            </div>
-          </div>
-          <div class="home-testimonial-card fade-in">
-            <div class="home-testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-            <p class="home-testimonial-text" data-en="He has excellent coaching ability and knows how to motivate his team members. He has warm leadership — always praises and leads by servant leadership, encouraging his team to participate and challenge themselves." data-zh="他的教練功力一流，懂得如何帶動團隊。他的領導風格溫暖有力，以鼓勵和身體力行帶頭，激發團隊參與和自我突破。">He has excellent coaching ability and knows how to motivate his team members. He has warm leadership — always praises and leads by servant leadership, encouraging his team to participate and challenge themselves.</p>
-            <div class="home-testimonial-author">
-              <span class="home-testimonial-name">Lee Byung-Cheol</span>
-              <span class="home-testimonial-role" data-en="Senior Director, Direct Selling" data-zh="資深總監，直銷業">Senior Director, Direct Selling</span>
-            </div>
-          </div>
-          <div class="home-testimonial-card fade-in">
-            <div class="home-testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-            <p class="home-testimonial-text" data-en="A true professional. He balances a no-nonsense approach with approachability. His leadership and strategic vision have been consistently impressive." data-zh="不折不扣的專業人士。直來直往，卻依然平易近人。他的領導力和策略眼光始終令人印象深刻。">A true professional. He balances a no-nonsense approach with approachability. His leadership and strategic vision have been consistently impressive.</p>
-            <div class="home-testimonial-author">
-              <span class="home-testimonial-name">James Loh</span>
-              <span class="home-testimonial-role" data-en="Independent Industry Professional" data-zh="獨立行業專業人士">Independent Industry Professional</span>
-            </div>
-          </div>
-          <div class="home-testimonial-card fade-in">
-            <div class="home-testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-            <p class="home-testimonial-text" data-en="A standout professional in MLM. Mikael's dedication and passion are unparalleled. As a speaker, he captivates everyone — when he speaks, people ‘tabik’! A top-notch professional and natural leader. No bluff one!" data-zh="MLM 行業中的傑出專業人士。Mikael 的投入和熱情無可比擬。作為演講者，他總能抓住全場，他一開口，大家都「tabik」！絕對的頂尖專業，貨真價實。">A standout professional in MLM. Mikael's dedication and passion are unparalleled. As a speaker, he captivates everyone — when he speaks, people ‘tabik’! A top-notch professional and natural leader. No bluff one!</p>
-            <div class="home-testimonial-author">
-              <span class="home-testimonial-name">Dyi Wong</span>
-              <span class="home-testimonial-role" data-en="Marketing Manager · Ngai Seik Leatherwaren" data-zh="行銷經理 · Ngai Seik Leatherwaren">Marketing Manager · Ngai Seik Leatherwaren</span>
-            </div>
-          </div>
-        </div>
-        <p class="home-testimonials-source" data-en="— From LinkedIn recommendations" data-zh="— 來自 LinkedIn 推薦">— From LinkedIn recommendations</p>
-      </div>
-    </section>
-
-    <!-- ===== NEWSLETTER ===== -->
-    <section class="home-newsletter">
-      <div class="home-newsletter-inner">
-        <h2 data-en="Stay Sharp. Stay Strategic." data-zh="保持敏銳。保持策略。">Stay Sharp. Stay Strategic.</h2>
-        <p data-en="Get weekly insights on leadership and strategy for direct selling — straight to your inbox." data-zh="每週一篇直銷領導力與策略洞見，直接送到你的信箱。">Get weekly insights on leadership and strategy for direct selling — straight to your inbox.</p>
-        <form class="newsletter-form" action="https://app.kit.com/forms/9983575/subscriptions" method="post" target="_blank">
-          <input type="email" name="email_address" aria-label="Email address" placeholder="Your email address" data-en="Your email address" data-zh="你的電子郵件地址" required>
-          <input type="hidden" name="tags" value="newsletter">
+      <div class="when-launched">
+        <h2 data-en="The Long Game" data-zh="The Long Game 長期主義">The Long Game</h2>
+        <p data-en="A short letter on strategy and leadership, when there is something worth saying." data-zh="一封關於策略與領導的短信，有值得說的才寫。">A short letter on strategy and leadership, when there is something worth saying.</p>
+        <form class="field" action="https://app.kit.com/forms/9983582/subscriptions" method="post" data-ajax>
+          <label class="sr" for="lg-em" data-en="Email address" data-zh="電子郵件">Email address</label>
+          <input id="lg-em" type="email" name="email_address" placeholder="Your email" data-en="Your email" data-zh="你的電子郵件" autocomplete="email" required>
+          <input type="hidden" name="tags" value="long-game-launch">
           <button type="submit" data-en="Subscribe" data-zh="訂閱">Subscribe</button>
         </form>
-        <p style="margin-top: 0.75rem; font-size: 0.8rem; color: var(--gray);" data-en="No spam. Unsubscribe anytime." data-zh="不發垃圾信。隨時可退訂。">No spam. Unsubscribe anytime.</p>
+        <p class="form-ok" tabindex="-1" hidden data-en="Check your inbox to confirm your subscription." data-zh="請到信箱確認訂閱。">Check your inbox to confirm your subscription.</p>
       </div>
-    </section>
+      <div><h3 data-en="Book him to speak" data-zh="邀請演講">Book him to speak</h3><p data-en="Keynotes and workshops for direct-selling conventions and leadership days, in English and Mandarin." data-zh="直銷大會與領袖日的主題演講和工作坊，英文和華語皆可。">Keynotes and workshops for direct-selling conventions and leadership days, in English and Mandarin.</p><a class="go" href="speaking.html" data-en="Speaking enquiries" data-zh="演講洽詢">Speaking enquiries</a></div>
+      <div><h3 data-en="Work with him" data-zh="與他合作">Work with him</h3><p data-en="One-to-one mentoring for leaders who have hit a plateau and want a strategy, not another pep talk." data-zh="一對一輔導，給遇到瓶頸、需要策略而不是打氣的領袖。">One-to-one mentoring for leaders who have hit a plateau and want a strategy, not another pep talk.</p><a class="go" href="work-with-me.html" data-en="Mentorship" data-zh="輔導合作">Mentorship</a></div>
+    </div>
+  </section>
+</main>
 
-    <!-- ===== CTA BANNER ===== -->
-    <section class="cta-banner">
-      <div class="container fade-in">
-        <h2 data-en="Ready to Lead Strategically?" data-zh="準備好以策略領導了嗎？">Ready to Lead Strategically?</h2>
-        <p data-en="Whether you're building your first team or leading thousands, the right strategy changes everything. Let's connect." data-zh="不管你是正在建立第一支團隊，還是已經帶領數千人，正確的策略會改變一切。來聊聊吧。">Whether you're building your first team or leading thousands, the right strategy changes everything. Let's connect.</p>
-        <a href="contact.html" class="btn btn-primary" data-en="Get in Touch" data-zh="聯繫我">Get in Touch</a>
-      </div>
-    </section>
-
-    <!-- ===== FOOTER ===== -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-content">
-          <a href="index.html" class="footer-logo">MIKAEL<span>CHEW</span></a>
-          <ul class="footer-links">
-            <li><a href="index.html" data-en="Home" data-zh="首頁">Home</a></li>
-            <li><a href="about.html" data-en="About" data-zh="關於">About</a></li>
-            <li><a href="blog.html" data-en="Blog" data-zh="部落格">Blog</a></li>
-            <li><a href="concepts.html" data-en="Key Concepts" data-zh="核心概念">Key Concepts</a></li>
-            <li><a href="book.html" data-en="Book" data-zh="著作">Book</a></li>
-            <li><a href="speaking.html" data-en="Speaking" data-zh="演講">Speaking</a></li>
-            <li><a href="work-with-me.html" data-en="Work With Me" data-zh="與我合作">Work With Me</a></li>
-            <li><a href="contact.html" data-en="Contact" data-zh="聯繫">Contact</a></li>
-            <li><a href="privacy.html" data-en="Privacy" data-zh="隱私政策">Privacy</a></li>
-          <li><a href="refund-policy.html" data-en="Refunds" data-zh="退款政策">Refunds</a></li>
-          </ul>
-          <div class="footer-social">
-            <a href="https://www.linkedin.com/in/mikael-chew-07487551/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://www.facebook.com/coachmikaelchew" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/mikael_chew/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          </div>
-        </div>
-        <div class="footer-bottom">
-          <p data-en="&copy; 2026 Mikael Chew. All rights reserved." data-zh="&copy; 2026 Mikael Chew. 版權所有。">&copy; 2026 Mikael Chew. All rights reserved.</p>
-        </div>
-      </div>
-    </footer>
-
-  </main>
-
-  <!-- Toggle Controls (fixed bottom-right) -->
-  <div class="site-toggles">
-    <button class="toggle-btn theme-btn" aria-label="Toggle theme"><i class="fas fa-sun"></i></button>
-    <button class="toggle-btn lang-btn" aria-label="Switch language">中文</button>
-  </div>
-
-  <!-- JavaScript -->
-  <script src="js/main.js"></script>
+<!-- shell:footer -->
+<footer class="foot">
+  <span data-en="Mikael Chew, Kuala Lumpur." data-zh="Mikael Chew，吉隆坡。">Mikael Chew, Kuala Lumpur.</span>
+  <nav aria-label="Footer">
+    <a href="contact.html" data-nav="contact" data-en="Contact" data-zh="聯繫">Contact</a>
+    <a href="privacy.html" data-en="Privacy" data-zh="隱私政策">Privacy</a>
+    <a href="refund-policy.html" data-en="Refund policy" data-zh="退款政策">Refund policy</a>
+    <a href="zh/" class="lang-link" lang="zh-Hant" hreflang="zh-Hant">中文</a>
+  </nav>
+</footer>
+<svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false">
+  <defs>
+    <filter id="inked" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency=".75" numOctaves="2" seed="7" result="t"/>
+      <feDisplacementMap in="SourceGraphic" in2="t" scale="3"/>
+    </filter>
+    <symbol id="seal-launch" viewBox="0 0 100 100"><g filter="url(#inked)"><rect x="4" y="4" width="92" height="92" rx="6" fill="none" stroke="#C0392B" stroke-width="6"/><rect x="11" y="11" width="78" height="78" rx="3" fill="#C0392B"/><text class="cjk-display" x="50" y="45" text-anchor="middle" font-family="Noto Serif TC" font-weight="900" font-size="30" fill="#F5F0E8">十月</text><text class="cjk-display" x="50" y="79" text-anchor="middle" font-family="Noto Serif TC" font-weight="900" font-size="30" fill="#F5F0E8">上市</text></g></symbol>
+    <symbol id="seal-live" viewBox="0 0 100 100"><g filter="url(#inked)"><rect x="4" y="4" width="92" height="92" rx="6" fill="none" stroke="#C0392B" stroke-width="6"/><rect x="11" y="11" width="78" height="78" rx="3" fill="#C0392B"/><text class="cjk-display" x="50" y="62" text-anchor="middle" font-family="Noto Serif TC" font-weight="900" font-size="30" fill="#F5F0E8">已上市</text></g></symbol>
+    <symbol id="seal-free" viewBox="0 0 100 100"><g filter="url(#inked)"><rect x="6" y="6" width="88" height="88" rx="4" fill="none" stroke="#F0705F" stroke-width="7"/><text class="cjk-display" x="50" y="47" text-anchor="middle" font-family="Noto Serif TC" font-weight="900" font-size="33" fill="#F0705F">免費</text><text class="cjk-display" x="50" y="80" text-anchor="middle" font-family="Noto Serif TC" font-weight="900" font-size="33" fill="#F0705F">試讀</text></g></symbol>
+    <symbol id="seal-sent" viewBox="0 0 100 100"><g filter="url(#inked)"><rect x="4" y="4" width="92" height="92" rx="6" fill="none" stroke="#C0392B" stroke-width="6"/><rect x="11" y="11" width="78" height="78" rx="3" fill="#C0392B"/><text class="cjk-display" x="50" y="62" text-anchor="middle" font-family="Noto Serif TC" font-weight="900" font-size="30" fill="#F5F0E8">已發送</text></g></symbol>
+  </defs>
+</svg>
+<!-- /shell:footer -->
 </body>
 </html>

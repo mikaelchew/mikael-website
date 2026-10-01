@@ -84,10 +84,11 @@ img { display: block; max-width: 100%; height: auto; }
 }
 
 /* ---------- section headings ---------- */
-.sec { padding: clamp(64px, 9vw, 128px) 0; }
+.sec { padding-block: clamp(64px, 9vw, 128px); }
 .sec + .sec { border-top: 1px solid var(--line); }
 .sec-h { font-weight: 900; font-size: clamp(2.2rem, 4vw, 3.4rem); line-height: 1; letter-spacing: -.02em; margin-bottom: .8em; text-wrap: balance; }
 .sec-h .zh { font-family: var(--display-zh); font-size: max(1.3rem, .62em); color: var(--mute); margin-left: .45em; letter-spacing: .15em; }
+.sec-h .zh:empty { display: none; }
 .lead { font-size: clamp(1.15rem, 1.4vw, 1.35rem); max-width: 38ch; text-wrap: pretty; }
 
 /* ---------- vertical legend ---------- */

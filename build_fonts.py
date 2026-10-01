@@ -63,6 +63,9 @@ def _write(font, out_path, text=None, unicodes=None):
         sub.populate(unicodes=subset.parse_unicodes(unicodes))
     sub.subset(font)
     font.flavor = "woff2"
+    # deterministic output: a rebuild with the same glyphs must not change the file
+    font["head"].modified = font["head"].created
+    font.recalcTimestamp = False
     font.save(out_path)
 
 
