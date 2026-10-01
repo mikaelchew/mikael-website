@@ -72,7 +72,7 @@ def words(s):
 
 def render(s, prev, nxt):
     url = "%s/blog/%s.html" % (SITE, s["slug"])
-    image = "%s/images/book-social-card.jpg" % SITE
+    image = "%s/%s" % (SITE, s.get("image", "images/book-social-card.jpg"))
     d = datetime.date.fromisoformat(s["date"])
     date_en = d.strftime("%B %-d, %Y")
     date_zh = "%d年%d月%d日" % (d.year, d.month, d.day)
@@ -212,6 +212,7 @@ def upsert_index(index, sources):
     by_slug = {p["slug"]: p for p in index}
     for s in sources:
         by_slug[s["slug"]] = {k: s[k] for k in INDEX_KEYS}
+        by_slug[s["slug"]].update({k: s[k] for k in ("image", "image_alt") if k in s})
     return sorted(by_slug.values(), key=lambda p: p["date"], reverse=True)
 
 

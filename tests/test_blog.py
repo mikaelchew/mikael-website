@@ -89,6 +89,17 @@ class WritingTest(unittest.TestCase):
             self.assertEqual(len(items), 1, p)
             self.assertEqual(items[0].get("data-pubdate"), date, p)
 
+    def test_index_cards_show_post_image(self):
+        with open(os.path.join(ROOT, "data", "posts.json"), encoding="utf-8") as f:
+            index = {p["slug"]: p for p in json.load(f)}
+        root = doc("blog.html")
+        for slug, p in index.items():
+            card = root.xpath('//li[contains(concat(" ",@class," ")," dispatch ")][.//a[@href="blog/%s.html"]]' % slug)[0]
+            imgs = card.xpath(".//img/@src")
+            if "image" in p:
+                self.assertEqual(imgs, [p["image"]], slug)
+                self.assertTrue(os.path.exists(os.path.join(ROOT, p["image"])), p["image"])
+
     def test_future_posts_are_gated(self):
         js = read("js/site.js")
         self.assertIn("data-pubdate", js)

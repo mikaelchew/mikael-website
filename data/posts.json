@@ -10,7 +10,9 @@
   "excerpt_en": "The hardest test of a leader comes when they step back. If the team needs you for everything, you've built a job. If it keeps growing while you rest, you've built something that lasts.",
   "excerpt_zh": "領袖最難的考驗，出現在他退後一步的時候。如果團隊什麼都需要你，你建立的是一份工作。如果你休息時它仍在成長，你建立的是一份能長久的事業。",
   "read_en": "6 min",
-  "read_zh": "6 分鐘"
+  "read_zh": "6 分鐘",
+  "image": "images/blog/outlast-you.webp",
+  "image_alt": "Map cover: Build Something That Outlasts You, with the Chinese keyword 傳承"
  },
  {
   "slug": "expand-or-hold",
@@ -49,7 +51,9 @@
   "excerpt_en": "Wisdom, credibility, benevolence, courage, discipline. Sun Tzu listed five qualities of a general 2,500 years ago, and they still make the best check-up I know for anyone leading a team.",
   "excerpt_zh": "智、信、仁、勇、嚴。孫子在兩千五百年前列出將領的五種特質，到今天，它們仍是我知道最好的領袖自我檢測。",
   "read_en": "7 min",
-  "read_zh": "7 分鐘"
+  "read_zh": "7 分鐘",
+  "image": "images/blog/five-virtues-of-a-general.webp",
+  "image_alt": "Map cover: The Five Virtues of a General, with the Chinese keyword 五德"
  },
  {
   "slug": "who-to-invest-in",
@@ -88,7 +92,9 @@
   "excerpt_en": "\"When you surround an army, leave an outlet free.\" Push someone into a corner and they fight back. Give them a way out and they often walk towards you on their own.",
   "excerpt_zh": "「圍師必闕，窮寇勿迫。」把人逼到死角，他會拼命反抗。給他一條出路，他往往會自己走向你。",
   "read_en": "6 min",
-  "read_zh": "6 分鐘"
+  "read_zh": "6 分鐘",
+  "image": "images/blog/leave-the-door-open.webp",
+  "image_alt": "Map cover: Leave the Door Open, with the Chinese keyword 必闕"
  },
  {
   "slug": "follow-up-without-chasing",
@@ -140,7 +146,9 @@
   "excerpt_en": "The most painful lesson of my career came over a cup of coffee with a university friend. It changed how I open every conversation: with a question about what the other person thinks.",
   "excerpt_zh": "我事業裡最慘痛的一課，是跟一位大學同學喝咖啡時學到的。它改變了我開啟每一段對話的方式：先問對方怎麼想。",
   "read_en": "6 min",
-  "read_zh": "6 分鐘"
+  "read_zh": "6 分鐘",
+  "image": "images/blog/ask-for-an-opinion.webp",
+  "image_alt": "Map cover: Ask for an Opinion, with the Chinese keyword 請益"
  },
  {
   "slug": "beyond-the-warm-list",
@@ -166,7 +174,9 @@
   "excerpt_en": "He posted every day, attended every training and read every brochure. Sixty days in, he had no customers. The problem was where his hours went, and the fix was seven simple actions a day for 90 days.",
   "excerpt_zh": "他每天發文、參加每一場培訓、讀完所有產品手冊。60天後，客戶還是零。問題出在他的時間花在哪裡，解法是每天七個簡單的動作，持續90天。",
   "read_en": "8 min",
-  "read_zh": "8 分鐘"
+  "read_zh": "8 分鐘",
+  "image": "images/blog/seven-actions-a-day.webp",
+  "image_alt": "Map cover: Seven Actions a Day, with the Chinese keyword 日課"
  },
  {
   "slug": "speak-from-experience",
@@ -218,7 +228,9 @@
   "excerpt_en": "Gen Z has a finely-tuned radar for everything direct selling traditionally does — hype, urgency, fake scarcity. The old playbook doesn't just fail with them; it repels them. Here's the new approach.",
   "excerpt_zh": "Z 世代對直銷的老套路有著極其敏銳的雷達：炒作、緊迫感、假稀缺。舊劇本對他們不只是失效，而是直接把他們推開。這篇談的是新做法。",
   "read_en": "7 min",
-  "read_zh": "7分鐘"
+  "read_zh": "7分鐘",
+  "image": "images/blog/winning-gen-z.jpg",
+  "image_alt": "Selling to a generation that hates being sold to"
  },
  {
   "slug": "recognition-that-works",
@@ -231,7 +243,9 @@
   "excerpt_en": "The industry loves pins, trips, and stage walks — but most recognition doesn't actually drive behavior. Here's what makes recognition work, drawn from years watching it from the corporate side.",
   "excerpt_zh": "業界熱愛別針、旅遊和台上亮相，但大多數的肯定其實無法真正驅動行為。從企業端觀察多年後，我看懂了什麼樣的肯定才有效。",
   "read_en": "6 min",
-  "read_zh": "6分鐘"
+  "read_zh": "6分鐘",
+  "image": "images/blog/recognition-that-works.jpg",
+  "image_alt": "Recognition That Actually Works"
  },
  {
   "slug": "income-plateau",
@@ -244,7 +258,9 @@
   "excerpt_en": "You climb and climb, then flat. Same income, month after month. The plateau is the most misunderstood phase of a direct selling career — and three structural levers that restart the growth.",
   "excerpt_zh": "你一路往上爬，然後，停了。收入月復一月停在原地。高原期是直銷生涯中最被誤解的階段，以及三個能重啟成長的結構性槓桿。",
   "read_en": "7 min",
-  "read_zh": "7分鐘"
+  "read_zh": "7分鐘",
+  "image": "images/blog/income-plateau.jpg",
+  "image_alt": "The Plateau: Why Your Income Stopped Growing"
  },
  {
   "slug": "ai-disruption",
@@ -257,7 +273,9 @@
   "excerpt_en": "Social media was going to 'kill' direct selling. It didn't. Now it's AI. This time the panic is half-right and half-dangerously-wrong — here's what AI actually changes, and what it never will.",
   "excerpt_zh": "當年大家說社群媒體會「殺死」直銷，結果沒有。現在輪到 AI。這一次的恐慌一半對、一半危險地錯，AI 究竟改變了什麼，又有什麼是它永遠無法取代的。",
   "read_en": "7 min",
-  "read_zh": "7分鐘"
+  "read_zh": "7分鐘",
+  "image": "images/blog/ai-disruption.jpg",
+  "image_alt": "The AI Disruption for direct selling leaders"
  },
  {
   "slug": "comeback",
@@ -270,7 +288,9 @@
   "excerpt_en": "Every long-haul leader hits a stall. The strategic anatomy of a comeback — drawn from the leaders I've coached through it. How to restart when motivation is gone.",
   "excerpt_zh": "每個走長線的領袖都會遇到停滯期。一場真正的東山再起該長什麼樣，來自我陪伴走過的領袖。沒了動力時，如何重新開始。",
   "read_en": "7 min",
-  "read_zh": "7分鐘"
+  "read_zh": "7分鐘",
+  "image": "images/mikael-chew-2.jpg",
+  "image_alt": "Mikael Chew portrait"
  },
  {
   "slug": "sun-tzu-wrong",
@@ -283,7 +303,9 @@
   "excerpt_en": "I wrote a book about applying Sun Tzu to direct selling. Here's the contrarian take: where the 2,500-year-old playbook still works, where modern terrain breaks it, and why both matter.",
   "excerpt_zh": "我寫了一本把孫子兵法應用到直銷的書。這篇給你逆向思考：2500 年的兵書哪些原則仍適用，哪些已被現代戰場推翻，為什麼兩面都要看。",
   "read_en": "7 min",
-  "read_zh": "7分鐘"
+  "read_zh": "7分鐘",
+  "image": "images/blog/chess-strategy-dark.jpg",
+  "image_alt": "Chess pieces in low light symbolizing strategic critique"
  },
  {
   "slug": "two-year-wall",
@@ -296,7 +318,9 @@
   "excerpt_en": "Year 1 is excitement. Year 3 is momentum. Year 2 is the wall. Why this specific year tests retention, what corporate data shows, and how to coach your team through it.",
   "excerpt_zh": "第一年靠熱情。第三年靠慣性。第二年，是一道牆。為什麼這一年最考驗留存率，企業端的數據說了什麼，以及該怎麼帶你的人走過去。",
   "read_en": "6 min",
-  "read_zh": "6分鐘"
+  "read_zh": "6分鐘",
+  "image": "images/blog/two-year-wall.jpg",
+  "image_alt": "The Two-Year Wall: Why Half Your Team Quits in Year Two"
  },
  {
   "slug": "leadership-transitions",
@@ -309,7 +333,9 @@
   "excerpt_en": "Changing companies in direct selling is a leadership stress test. Strategic principles for moving without compromising integrity, breaking trust, or losing the tribe you've built.",
   "excerpt_zh": "在直銷裡換公司，是一場領導力的壓力測試。如何在不犧牲誠信、不破壞信任、不失去你帶出來的人之下完成轉換。",
   "read_en": "7 min",
-  "read_zh": "7分鐘"
+  "read_zh": "7分鐘",
+  "image": "images/blog/leadership-transitions.jpg",
+  "image_alt": "Leadership During Company Transitions"
  },
  {
   "slug": "mentor-trap",
@@ -322,7 +348,9 @@
   "excerpt_en": "The most loyal mentors often build the most dependent teams. Why over-helping is a leadership failure disguised as generosity — and how to build true independence.",
   "excerpt_zh": "最用心的導師，往往養出最依賴的團隊。過度幫忙其實是披著善意外衣的領導失敗，以及如何培養真正的獨立性。",
   "read_en": "7 min",
-  "read_zh": "7分鐘"
+  "read_zh": "7分鐘",
+  "image": "images/blog/mentor-trap.jpg",
+  "image_alt": "The Mentor Trap: When Helping Too Much Hurts Your Team"
  },
  {
   "slug": "saying-no-prospect",
@@ -335,7 +363,9 @@
   "excerpt_en": "Not every lead is worth pursuing. The hidden costs of recruiting the wrong person — and when saying no is the most ethical, strategic move you can make.",
   "excerpt_zh": "不是每個準客戶都值得追。招錯人的隱性代價，以及為什麼說「不」才是你最有策略的選擇。",
   "read_en": "7 min",
-  "read_zh": "7分鐘"
+  "read_zh": "7分鐘",
+  "image": "images/blog/saying-no-prospect.jpg",
+  "image_alt": "When to Say No to a Prospect"
  },
  {
   "slug": "smaller-market-advantage",
@@ -348,7 +378,9 @@
   "excerpt_en": "Everyone chases Kuala Lumpur, Bangkok, Jakarta. But the smartest leaders are building in Ipoh, Kota Kinabalu, Surabaya. Here's why 'second-tier' cities quietly win.",
   "excerpt_zh": "人人搶攻吉隆坡、曼谷、雅加達。但最聰明的領袖正在怡保、亞庇、泗水默默耕耘。這就是「二線」城市悄悄勝出的原因。",
   "read_en": "7 min",
-  "read_zh": "7分鐘"
+  "read_zh": "7分鐘",
+  "image": "images/blog/smaller-market-advantage.jpg",
+  "image_alt": "The Smaller Market Advantage"
  },
  {
   "slug": "not-a-salesman",
@@ -361,7 +393,9 @@
   "excerpt_en": "The biggest myth in direct selling is that you need to be a natural salesperson. The truth is the opposite — the most successful people found their own unique path using the Ikigai framework.",
   "excerpt_zh": "直銷最大的迷思就是你得天生會賣東西。事實正好相反，最成功的人透過Ikigai框架找到了屬於自己的獨特路徑。",
   "read_en": "7 min",
-  "read_zh": "7分鐘"
+  "read_zh": "7分鐘",
+  "image": "images/classroom-teaching.jpg",
+  "image_alt": "Mikael Chew teaching in classroom about finding your unique path"
  },
  {
   "slug": "stop-pitching",
@@ -374,7 +408,9 @@
   "excerpt_en": "Most leaders follow up by pitching again. The real art is listening — understanding what your prospect is actually thinking, and what they need to hear versus what you want to say.",
   "excerpt_zh": "多數領袖的跟進就是再推銷一次。真正的藝術在於傾聽，理解準客戶心裡在想什麼，以及他們真正需要聽到什麼。",
   "read_en": "7 min",
-  "read_zh": "7分鐘"
+  "read_zh": "7分鐘",
+  "image": "images/blog/stop-pitching.jpg",
+  "image_alt": "Stop Pitching, Start Listening"
  },
  {
   "slug": "golden-72-hours",
@@ -387,7 +423,9 @@
   "excerpt_en": "The first 72 hours after someone joins your team are the most critical window. What happens in those hours determines whether they become a long-term builder or a 90-day dropout.",
   "excerpt_zh": "新夥伴加入後的72小時是最關鍵的黃金窗口。這段時間的經歷，決定了他是長期經營者還是90天就消失。",
   "read_en": "7 min",
-  "read_zh": "7分鐘"
+  "read_zh": "7分鐘",
+  "image": "images/blog/golden-72-hours.jpg",
+  "image_alt": "The Golden 72 Hours after someone joins your team"
  },
  {
   "slug": "alliance-problem",
@@ -400,7 +438,9 @@
   "excerpt_en": "Crossline and peer-leader relationships are the most underestimated factor in long-term success. Learn the three toxic patterns — and how cooperative competition builds empires.",
   "excerpt_zh": "旁線和同級領袖的關係是長期成功中最被低估的因素。認識三種有毒模式，以及良性競爭如何打造帝國。",
   "read_en": "7 min",
-  "read_zh": "7分鐘"
+  "read_zh": "7分鐘",
+  "image": "images/blog/alliance-problem.jpg",
+  "image_alt": "The Alliance Problem: building with other leaders"
  },
  {
   "slug": "terrain-has-changed",
@@ -413,7 +453,9 @@
   "excerpt_en": "The direct selling landscape has fundamentally shifted. Learn why yesterday's methods are losing you tomorrow's best leaders — and how to adapt without abandoning your principles.",
   "excerpt_zh": "直銷的格局已經根本性地改變。看懂為什麼昨天的做法正在流失明天最優秀的人才，以及如何在不丟掉原則的前提下轉型。",
   "read_en": "7 min",
-  "read_zh": "7分鐘"
+  "read_zh": "7分鐘",
+  "image": "images/blog/terrain-has-changed.jpg",
+  "image_alt": "The Terrain Has Changed"
  },
  {
   "slug": "passive-income-myth",
@@ -426,7 +468,9 @@
   "excerpt_en": "Passive income is the most overused promise in direct selling. Here is what the income actually pays you for — and why understanding this changes everything.",
   "excerpt_zh": "被動收入是直銷中最被濫用的承諾。真正的收入到底在獎勵什麼？搞懂這件事，一切都會不同。",
   "read_en": "6 min",
-  "read_zh": "6分鐘"
+  "read_zh": "6分鐘",
+  "image": "images/blog/passive-income-myth.jpg",
+  "image_alt": "The Passive Income Myth"
  },
  {
   "slug": "ten-year-test",
@@ -439,7 +483,9 @@
   "excerpt_en": "Most people think about their first 90 days in direct selling. Here is a framework of five questions to evaluate whether your approach will still be working a decade from now.",
   "excerpt_zh": "多數人只想到直銷的頭90天。這裡有五個問題，幫你檢視自己的做法十年後還能不能站得住。",
   "read_en": "6 min",
-  "read_zh": "6分鐘"
+  "read_zh": "6分鐘",
+  "image": "images/blog/ten-year-test.jpg",
+  "image_alt": "The 10-Year Test"
  },
  {
   "slug": "stop-copying-upline",
@@ -452,7 +498,9 @@
   "excerpt_en": "The industry loves the word 'duplication.' But blind copying is why most teams plateau. Learn the difference between duplicating principles and duplicating methods.",
   "excerpt_zh": "這個行業最愛講「複製」。但盲目複製正是多數團隊卡住的原因。搞清楚複製「原則」和複製「方法」的差別。",
   "read_en": "6 min",
-  "read_zh": "6分鐘"
+  "read_zh": "6分鐘",
+  "image": "images/blog/stop-copying-upline.jpg",
+  "image_alt": "Stop Copying Your Upline"
  },
  {
   "slug": "five-battles",
@@ -465,7 +513,9 @@
   "excerpt_en": "The first two years are a battlefield. Most people who quit do so because they did not know which battles to fight. Here are the five that matter most.",
   "excerpt_zh": "頭兩年就是戰場。多數人放棄是因為不知道該打哪些仗。以下是最關鍵的五場。",
   "read_en": "6 min",
-  "read_zh": "6分鐘"
+  "read_zh": "6分鐘",
+  "image": "images/blog/five-battles.jpg",
+  "image_alt": "The 5 Battles Every New Direct Selling Leader Must Win"
  },
  {
   "slug": "team-keeps-quitting",
@@ -478,7 +528,9 @@
   "excerpt_en": "If your team keeps leaving, the problem might not be them. Here are the three silent killers of retention that most leaders never see coming.",
   "excerpt_zh": "如果你的團隊一直在流失，問題可能不在他們身上。這是多數領袖從未察覺的三大隱形殺手。",
   "read_en": "7 min",
-  "read_zh": "7分鐘"
+  "read_zh": "7分鐘",
+  "image": "images/training-presenting.jpg",
+  "image_alt": "Team training and presenting"
  },
  {
   "slug": "generals-dilemma",
@@ -491,7 +543,9 @@
   "excerpt_en": "When should you personally prospect, and when should you step back to develop others? The answer is a sliding scale, not a switch.",
   "excerpt_zh": "什麼時候該親自上陣開發，什麼時候該退一步培養人？答案不是非黑即白，而是一把滑尺。",
   "read_en": "7 min",
-  "read_zh": "7分鐘"
+  "read_zh": "7分鐘",
+  "image": "images/speaking-gesture.jpg",
+  "image_alt": "Mikael Chew making a leadership gesture"
  },
  {
   "slug": "dual-perspective",
@@ -504,7 +558,9 @@
   "excerpt_en": "Most direct selling trainers have only seen one side of the business. After 8 years in the field and 15 in corporate management, here is what both sides get wrong — and right.",
   "excerpt_zh": "多數直銷培訓師只看過一面。走過8年前線和15年管理，以下是雙方各自的對與錯。",
   "read_en": "7 min",
-  "read_zh": "7分鐘"
+  "read_zh": "7分鐘",
+  "image": "images/blog/bridge-dual-perspective.jpg",
+  "image_alt": "Bridge disappearing into fog symbolizing dual perspective"
  },
  {
   "slug": "busy-not-strategic",
@@ -517,7 +573,9 @@
   "excerpt_en": "You built the team. Revenue is growing. But somehow you are busier than ever. The problem is not your work ethic — it is your operating model.",
   "excerpt_zh": "團隊建起來了，業績也在漲。但你卻比以前更忙。問題不在你的態度，而在你的運作模式。",
   "read_en": "6 min",
-  "read_zh": "6分鐘"
+  "read_zh": "6分鐘",
+  "image": "images/blog/cluttered-desk-busy.jpg",
+  "image_alt": "Cluttered desk representing busy but not strategic work"
  },
  {
   "slug": "win-the-right-way",
@@ -530,6 +588,8 @@
   "excerpt_en": "In an industry where hype and shortcuts are common, ethical leadership is not just moral — it is the most powerful long-term strategy you can adopt.",
   "excerpt_zh": "在一個充斥炒作和捷徑的行業裡，堅守道德不只是品格，更是你最強大的長期策略。",
   "read_en": "7 min",
-  "read_zh": "7分鐘"
+  "read_zh": "7分鐘",
+  "image": "images/blog/compass-integrity.jpg",
+  "image_alt": "Vintage compass symbolizing ethical direction"
  }
 ]

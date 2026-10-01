@@ -15,34 +15,148 @@
  "read_en": "7 min",
  "read_zh": "7 分鐘",
  "blocks": [
-  ["quote", "The commander stands for the virtues of wisdom, sincerity, benevolence, courage and strictness.", "將者，智、信、仁、勇、嚴也。", "Sun Tzu", "《孫子兵法・計篇》"],
-  ["p", "In the very first chapter of The Art of War, Sun Tzu lists five things to assess before any battle. One of them is the general, and he describes a good one in five words: wise, credible, benevolent, courageous, disciplined.", "在《孫子兵法》的第一篇，孫子列出開戰前要評估的五件事，其中一件就是將領。他用五個字描述一位好將領：智、信、仁、勇、嚴。"],
-  ["p", "It's a short list, and a demanding one. Most leaders are strong in two or three and quietly weak in the rest. The weak ones are usually where the team's problems come from.", "這張清單很短，卻很嚴格。大多數領袖在其中兩三項很強，其餘幾項悄悄地弱。而那些弱項，通常就是團隊問題的來源。"],
-  ["p", "Here is how I read each virtue for someone leading a direct selling team, with one honest question to ask yourself and the sign that it's missing.", "以下是我對每一德的解讀，對象是帶領直銷團隊的人。每一德附上一個你該誠實問自己的問題，以及它缺席時會出現的徵兆。"],
-  ["h2", "智 Wisdom", "智：智慧"],
-  ["p", "Wisdom is the ability to see the situation clearly and choose the right response. It means knowing whether a problem is about tactics, strategy or purpose, and treating it accordingly.", "智，是看清局勢、選擇正確回應的能力。它意味著分辨一個問題是戰術、戰略，還是目的層面的問題，然後對症下藥。"],
-  ["p", "<strong>Ask yourself:</strong> when my team brings me a problem, do I diagnose it before I answer it?", "<strong>問自己：</strong>團隊帶著問題來找我時，我是先診斷，還是直接給答案？"],
-  ["p", "<strong>When it's missing:</strong> the same advice is given to every problem, usually \"work harder\".", "<strong>它缺席時：</strong>每一個問題都得到同一個建議，通常是「再努力一點」。"],
-  ["h2", "信 Credibility", "信：誠信"],
-  ["p", "Credibility means people can rely on what you say. Promises are kept, standards are applied fairly, and your words match your actions.", "信，是大家可以依靠你說的話。承諾會兌現，標準公平地執行，言行一致。"],
-  ["p", "<strong>Ask yourself:</strong> if my team listed the promises I made this month, how many would they say I kept?", "<strong>問自己：</strong>如果團隊列出我這個月做過的承諾，他們會說我兌現了幾個？"],
-  ["p", "<strong>When it's missing:</strong> people stop believing announcements and wait to see what actually happens.", "<strong>它缺席時：</strong>大家不再相信你的宣布，而是等著看實際會發生什麼。"],
-  ["h2", "仁 Benevolence", "仁：仁愛"],
-  ["p", "Benevolence is genuine care for the people you lead. It's checking in when someone is struggling, and caring about them as people rather than as numbers.", "仁，是對你所帶領的人真心的關懷。是在有人辛苦時去問候他，是把他們當人來關心，而不是當數字。"],
-  ["p", "<strong>Ask yourself:</strong> do my partners hear from me only when their numbers are good, or also when life is hard?", "<strong>問自己：</strong>我的夥伴，只有在業績好的時候才聽到我的消息，還是在生活艱難的時候也會？"],
-  ["p", "<strong>When it's missing:</strong> people stay while things go well and leave quietly the first time they don't.", "<strong>它缺席時：</strong>順利的時候大家都在，第一次遇到不順，就悄悄離開。"],
-  ["h2", "勇 Courage", "勇：勇氣"],
-  ["p", "Courage in a leader is rarely dramatic. It's having the difficult conversation, admitting a mistake in front of the team, and trying something new when the old way has stopped working.", "領袖的勇氣，很少是轟轟烈烈的。它是去進行那場困難的對話、在團隊面前承認錯誤、在舊方法不再有效時嘗試新的做法。"],
-  ["p", "<strong>Ask yourself:</strong> what conversation have I been avoiding for more than a month?", "<strong>問自己：</strong>有哪一場對話，我已經逃避超過一個月了？"],
-  ["p", "<strong>When it's missing:</strong> problems are discussed by everyone except the people involved.", "<strong>它缺席時：</strong>每個人都在談論問題，除了當事人。"],
-  ["h2", "嚴 Discipline", "嚴：紀律"],
-  ["p", "Discipline is holding a clear standard, starting with yourself. It's doing the daily basics you ask others to do, and being consistent about what the team will and won't accept.", "嚴，是守住清楚的標準，從自己開始。它是做到你要求別人做的每日基本功，並且一致地堅持團隊能接受和不能接受的事。"],
-  ["p", "<strong>Ask yourself:</strong> am I doing every day what I ask my newest partner to do?", "<strong>問自己：</strong>我每天都在做我要求最新夥伴做的事嗎？"],
-  ["p", "<strong>When it's missing:</strong> standards slide, and the most committed people lose heart first.", "<strong>它缺席時：</strong>標準慢慢下滑，最投入的人最先灰心。"],
-  ["h2", "The virtues balance each other", "五德彼此平衡"],
-  ["p", "The list works as a whole. Benevolence without discipline becomes softness that helps nobody. Discipline without benevolence becomes harshness people leave. Courage without wisdom becomes recklessness.", "這張清單要整體來看。有仁無嚴，會變成幫不了任何人的軟弱。有嚴無仁，會變成讓人想離開的嚴苛。有勇無智，會變成魯莽。"],
-  ["p", "That's why a leader who is strong in four and weak in one still struggles. The missing virtue throws the others off balance.", "這就是為什麼，一位四德很強、一德很弱的領袖，仍然會吃力。缺席的那一德，會讓其他四德失去平衡。"],
-  ["p", "Read the five questions again tonight and score yourself honestly from one to five on each. Which is your lowest, and what would your team say it is?", "今晚再讀一次這五個問題，誠實地給自己每一項打一到五分。哪一項最低？你的團隊又會說是哪一項？"]
+  [
+   "quote",
+   "The commander stands for the virtues of wisdom, sincerity, benevolence, courage and strictness.",
+   "將者，智、信、仁、勇、嚴也。",
+   "Sun Tzu",
+   "《孫子兵法・計篇》"
+  ],
+  [
+   "p",
+   "In the very first chapter of The Art of War, Sun Tzu lists five things to assess before any battle. One of them is the general, and he describes a good one in five words: wise, credible, benevolent, courageous, disciplined.",
+   "在《孫子兵法》的第一篇，孫子列出開戰前要評估的五件事，其中一件就是將領。他用五個字描述一位好將領：智、信、仁、勇、嚴。"
+  ],
+  [
+   "p",
+   "It's a short list, and a demanding one. Most leaders are strong in two or three and quietly weak in the rest. The weak ones are usually where the team's problems come from.",
+   "這張清單很短，卻很嚴格。大多數領袖在其中兩三項很強，其餘幾項悄悄地弱。而那些弱項，通常就是團隊問題的來源。"
+  ],
+  [
+   "p",
+   "Here is how I read each virtue for someone leading a direct selling team, with one honest question to ask yourself and the sign that it's missing.",
+   "以下是我對每一德的解讀，對象是帶領直銷團隊的人。每一德附上一個你該誠實問自己的問題，以及它缺席時會出現的徵兆。"
+  ],
+  [
+   "h2",
+   "智 Wisdom",
+   "智：智慧"
+  ],
+  [
+   "p",
+   "Wisdom is the ability to see the situation clearly and choose the right response. It means knowing whether a problem is about tactics, strategy or purpose, and treating it accordingly.",
+   "智，是看清局勢、選擇正確回應的能力。它意味著分辨一個問題是戰術、戰略，還是目的層面的問題，然後對症下藥。"
+  ],
+  [
+   "p",
+   "<strong>Ask yourself:</strong> when my team brings me a problem, do I diagnose it before I answer it?",
+   "<strong>問自己：</strong>團隊帶著問題來找我時，我是先診斷，還是直接給答案？"
+  ],
+  [
+   "p",
+   "<strong>When it's missing:</strong> the same advice is given to every problem, usually \"work harder\".",
+   "<strong>它缺席時：</strong>每一個問題都得到同一個建議，通常是「再努力一點」。"
+  ],
+  [
+   "h2",
+   "信 Credibility",
+   "信：誠信"
+  ],
+  [
+   "p",
+   "Credibility means people can rely on what you say. Promises are kept, standards are applied fairly, and your words match your actions.",
+   "信，是大家可以依靠你說的話。承諾會兌現，標準公平地執行，言行一致。"
+  ],
+  [
+   "p",
+   "<strong>Ask yourself:</strong> if my team listed the promises I made this month, how many would they say I kept?",
+   "<strong>問自己：</strong>如果團隊列出我這個月做過的承諾，他們會說我兌現了幾個？"
+  ],
+  [
+   "p",
+   "<strong>When it's missing:</strong> people stop believing announcements and wait to see what actually happens.",
+   "<strong>它缺席時：</strong>大家不再相信你的宣布，而是等著看實際會發生什麼。"
+  ],
+  [
+   "h2",
+   "仁 Benevolence",
+   "仁：仁愛"
+  ],
+  [
+   "p",
+   "Benevolence is genuine care for the people you lead. It's checking in when someone is struggling, and caring about them as people rather than as numbers.",
+   "仁，是對你所帶領的人真心的關懷。是在有人辛苦時去問候他，是把他們當人來關心，而不是當數字。"
+  ],
+  [
+   "p",
+   "<strong>Ask yourself:</strong> do my partners hear from me only when their numbers are good, or also when life is hard?",
+   "<strong>問自己：</strong>我的夥伴，只有在業績好的時候才聽到我的消息，還是在生活艱難的時候也會？"
+  ],
+  [
+   "p",
+   "<strong>When it's missing:</strong> people stay while things go well and leave quietly the first time they don't.",
+   "<strong>它缺席時：</strong>順利的時候大家都在，第一次遇到不順，就悄悄離開。"
+  ],
+  [
+   "h2",
+   "勇 Courage",
+   "勇：勇氣"
+  ],
+  [
+   "p",
+   "Courage in a leader is rarely dramatic. It's having the difficult conversation, admitting a mistake in front of the team, and trying something new when the old way has stopped working.",
+   "領袖的勇氣，很少是轟轟烈烈的。它是去進行那場困難的對話、在團隊面前承認錯誤、在舊方法不再有效時嘗試新的做法。"
+  ],
+  [
+   "p",
+   "<strong>Ask yourself:</strong> what conversation have I been avoiding for more than a month?",
+   "<strong>問自己：</strong>有哪一場對話，我已經逃避超過一個月了？"
+  ],
+  [
+   "p",
+   "<strong>When it's missing:</strong> problems are discussed by everyone except the people involved.",
+   "<strong>它缺席時：</strong>每個人都在談論問題，除了當事人。"
+  ],
+  [
+   "h2",
+   "嚴 Discipline",
+   "嚴：紀律"
+  ],
+  [
+   "p",
+   "Discipline is holding a clear standard, starting with yourself. It's doing the daily basics you ask others to do, and being consistent about what the team will and won't accept.",
+   "嚴，是守住清楚的標準，從自己開始。它是做到你要求別人做的每日基本功，並且一致地堅持團隊能接受和不能接受的事。"
+  ],
+  [
+   "p",
+   "<strong>Ask yourself:</strong> am I doing every day what I ask my newest partner to do?",
+   "<strong>問自己：</strong>我每天都在做我要求最新夥伴做的事嗎？"
+  ],
+  [
+   "p",
+   "<strong>When it's missing:</strong> standards slide, and the most committed people lose heart first.",
+   "<strong>它缺席時：</strong>標準慢慢下滑，最投入的人最先灰心。"
+  ],
+  [
+   "h2",
+   "The virtues balance each other",
+   "五德彼此平衡"
+  ],
+  [
+   "p",
+   "The list works as a whole. Benevolence without discipline becomes softness that helps nobody. Discipline without benevolence becomes harshness people leave. Courage without wisdom becomes recklessness.",
+   "這張清單要整體來看。有仁無嚴，會變成幫不了任何人的軟弱。有嚴無仁，會變成讓人想離開的嚴苛。有勇無智，會變成魯莽。"
+  ],
+  [
+   "p",
+   "That's why a leader who is strong in four and weak in one still struggles. The missing virtue throws the others off balance.",
+   "這就是為什麼，一位四德很強、一德很弱的領袖，仍然會吃力。缺席的那一德，會讓其他四德失去平衡。"
+  ],
+  [
+   "p",
+   "Read the five questions again tonight and score yourself honestly from one to five on each. Which is your lowest, and what would your team say it is?",
+   "今晚再讀一次這五個問題，誠實地給自己每一項打一到五分。哪一項最低？你的團隊又會說是哪一項？"
+  ]
  ],
  "cta": {
   "h_en": "Leading from the front",
@@ -52,5 +166,8 @@
   "href": "../book.html",
   "label_en": "See the book",
   "label_zh": "看這本書"
- }
+ },
+ "cover_zh": "五德",
+ "image": "images/blog/five-virtues-of-a-general.webp",
+ "image_alt": "Map cover: The Five Virtues of a General, with the Chinese keyword 五德"
 }

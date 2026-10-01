@@ -15,33 +15,125 @@
  "read_en": "6 min",
  "read_zh": "6 分鐘",
  "blocks": [
-  ["quote", "When you surround an army, leave an outlet free. Do not press a desperate foe too hard.", "圍師必闕，窮寇勿迫。", "Sun Tzu", "《孫子兵法・軍爭篇》"],
-  ["p", "Sun Tzu understood something about people under pressure. Trap an army completely and it has nothing to lose, so it fights to the last. Leave it a way out and it will often take it.", "孫子很懂人在壓力下的反應。把一支軍隊完全圍死，它就沒有什麼可以失去，於是拼死抵抗。給它留一條路，它往往就會走那條路。"],
-  ["p", "He was writing about war. The same instinct shows up every day in sales conversations, follow-ups and team meetings.", "他寫的是戰爭。但同樣的本能，每天都出現在銷售對話、跟進和團隊會議裡。"],
-  ["h2", "What cornering looks like", "把人逼到死角長什麼樣子"],
-  ["p", "Most of us would never call ourselves pushy. Yet a lot of common habits in this industry quietly close every exit.", "我們大多數人不會覺得自己很強勢。但這一行很多常見的習慣，都在悄悄地把每一個出口關上。"],
-  ["ul", [
-    ["Answering every objection immediately, so the other person runs out of reasons rather than changing their mind.", "對方每提出一個顧慮，就立刻反駁，結果對方是理由用完了，而不是想法改變了。"],
-    ["Creating false urgency: \"This offer ends tonight\" when it doesn't.", "製造假的急迫感：「優惠今晚就結束」，但其實沒有。"],
-    ["Asking for a decision in front of other people, where saying no would mean losing face.", "在別人面前要求對方做決定，讓說「不」變成丟面子的事。"],
-    ["Following up with the same question until the other person gives in or disappears.", "用同一個問題一直跟進，直到對方屈服或消失。"]
-  ]],
-  ["p", "Each of these can produce a yes. It's usually a reluctant one, and reluctant customers rarely stay or refer anyone.", "這些做法都可能換來一個「好」。但那通常是勉強的「好」，而勉強的客戶很少留下來，也很少轉介紹別人。"],
-  ["h2", "Why the open door works", "為什麼留一道門有效"],
-  ["p", "When people feel free to say no, they relax. When they relax, they think more clearly about whether they actually want what you're offering.", "當人覺得自己可以自由地說「不」，他就會放鬆。一放鬆，他就能更清楚地思考，自己到底想不想要你所提供的東西。"],
-  ["p", "Some will still decline, and that's fine. The ones who say yes say it properly, and they stay.", "有些人還是會拒絕，沒關係。說「好」的人，是真心說好，而且會留下來。"],
-  ["p", "The ones who decline leave with their dignity intact and a good memory of you. That memory is worth a great deal. Circumstances change, and people come back to the person who treated them well.", "拒絕的人，帶著完整的尊嚴和對你的好印象離開。這份印象非常值錢。人的處境會改變，而他們會回頭找那個曾經善待他們的人。"],
-  ["h2", "How to leave the door open", "怎麼留一道門"],
-  ["ul", [
-    ["<strong>Say the exit out loud.</strong> \"If it's not right for you, that's completely fine.\" Hearing it said makes people far more willing to stay and listen.", "<strong>把出口說出來。</strong>「如果不適合你，完全沒關係。」聽到這句話，對方反而更願意留下來聽。"],
-    ["<strong>Treat objections as information.</strong> Ask what's behind the concern before you respond. Often the real worry is different from the first one mentioned.", "<strong>把顧慮當成資訊。</strong>在回應之前，先問對方擔心背後的原因。真正的顧慮，常常跟他第一個說出口的不一樣。"],
-    ["<strong>Agree on time, not pressure.</strong> If someone needs to think, ask when you may check in, then honour that date.", "<strong>約定時間，而不是施加壓力。</strong>對方需要想一想，就問他什麼時候方便再聯絡，然後守住那個日子。"],
-    ["<strong>Let a no be a complete sentence.</strong> Thank them, keep the friendship, and don't reopen the subject unless they do.", "<strong>讓「不」本身就是一個完整的句子。</strong>謝謝對方，保住友誼，除非他主動提起，否則不再重提。"]
-  ]],
-  ["h2", "Inside your own team", "在你自己的團隊裡"],
-  ["p", "The principle applies to partners as well. A leader who corners a struggling team member with targets and guilt usually gets either a quiet resignation or a defensive argument.", "這個原則也適用於夥伴。一位用目標和罪惡感把卡關的夥伴逼到牆角的領袖，換來的通常不是默默的退出，就是防衛性的爭辯。"],
-  ["p", "Leave the door open there too. Ask what is getting in the way. Offer a smaller next step. Make it safe to admit they're stuck, because people only ask for help where it's safe to.", "在這裡也留一道門。問問是什麼擋住了他。給一個更小的下一步。讓承認卡關變得安全，因為人只會在安全的地方開口求助。"],
-  ["p", "So the next time you feel the urge to close every exit, stop for a second and ask: would I want this person's yes if it came from having no way out?", "所以，下一次當你很想把所有出口都關上的時候，停一秒，問自己：如果這個「好」，是因為對方沒有退路才說的，我真的想要嗎？"]
+  [
+   "quote",
+   "When you surround an army, leave an outlet free. Do not press a desperate foe too hard.",
+   "圍師必闕，窮寇勿迫。",
+   "Sun Tzu",
+   "《孫子兵法・軍爭篇》"
+  ],
+  [
+   "p",
+   "Sun Tzu understood something about people under pressure. Trap an army completely and it has nothing to lose, so it fights to the last. Leave it a way out and it will often take it.",
+   "孫子很懂人在壓力下的反應。把一支軍隊完全圍死，它就沒有什麼可以失去，於是拼死抵抗。給它留一條路，它往往就會走那條路。"
+  ],
+  [
+   "p",
+   "He was writing about war. The same instinct shows up every day in sales conversations, follow-ups and team meetings.",
+   "他寫的是戰爭。但同樣的本能，每天都出現在銷售對話、跟進和團隊會議裡。"
+  ],
+  [
+   "h2",
+   "What cornering looks like",
+   "把人逼到死角長什麼樣子"
+  ],
+  [
+   "p",
+   "Most of us would never call ourselves pushy. Yet a lot of common habits in this industry quietly close every exit.",
+   "我們大多數人不會覺得自己很強勢。但這一行很多常見的習慣，都在悄悄地把每一個出口關上。"
+  ],
+  [
+   "ul",
+   [
+    [
+     "Answering every objection immediately, so the other person runs out of reasons rather than changing their mind.",
+     "對方每提出一個顧慮，就立刻反駁，結果對方是理由用完了，而不是想法改變了。"
+    ],
+    [
+     "Creating false urgency: \"This offer ends tonight\" when it doesn't.",
+     "製造假的急迫感：「優惠今晚就結束」，但其實沒有。"
+    ],
+    [
+     "Asking for a decision in front of other people, where saying no would mean losing face.",
+     "在別人面前要求對方做決定，讓說「不」變成丟面子的事。"
+    ],
+    [
+     "Following up with the same question until the other person gives in or disappears.",
+     "用同一個問題一直跟進，直到對方屈服或消失。"
+    ]
+   ]
+  ],
+  [
+   "p",
+   "Each of these can produce a yes. It's usually a reluctant one, and reluctant customers rarely stay or refer anyone.",
+   "這些做法都可能換來一個「好」。但那通常是勉強的「好」，而勉強的客戶很少留下來，也很少轉介紹別人。"
+  ],
+  [
+   "h2",
+   "Why the open door works",
+   "為什麼留一道門有效"
+  ],
+  [
+   "p",
+   "When people feel free to say no, they relax. When they relax, they think more clearly about whether they actually want what you're offering.",
+   "當人覺得自己可以自由地說「不」，他就會放鬆。一放鬆，他就能更清楚地思考，自己到底想不想要你所提供的東西。"
+  ],
+  [
+   "p",
+   "Some will still decline, and that's fine. The ones who say yes say it properly, and they stay.",
+   "有些人還是會拒絕，沒關係。說「好」的人，是真心說好，而且會留下來。"
+  ],
+  [
+   "p",
+   "The ones who decline leave with their dignity intact and a good memory of you. That memory is worth a great deal. Circumstances change, and people come back to the person who treated them well.",
+   "拒絕的人，帶著完整的尊嚴和對你的好印象離開。這份印象非常值錢。人的處境會改變，而他們會回頭找那個曾經善待他們的人。"
+  ],
+  [
+   "h2",
+   "How to leave the door open",
+   "怎麼留一道門"
+  ],
+  [
+   "ul",
+   [
+    [
+     "<strong>Say the exit out loud.</strong> \"If it's not right for you, that's completely fine.\" Hearing it said makes people far more willing to stay and listen.",
+     "<strong>把出口說出來。</strong>「如果不適合你，完全沒關係。」聽到這句話，對方反而更願意留下來聽。"
+    ],
+    [
+     "<strong>Treat objections as information.</strong> Ask what's behind the concern before you respond. Often the real worry is different from the first one mentioned.",
+     "<strong>把顧慮當成資訊。</strong>在回應之前，先問對方擔心背後的原因。真正的顧慮，常常跟他第一個說出口的不一樣。"
+    ],
+    [
+     "<strong>Agree on time, not pressure.</strong> If someone needs to think, ask when you may check in, then honour that date.",
+     "<strong>約定時間，而不是施加壓力。</strong>對方需要想一想，就問他什麼時候方便再聯絡，然後守住那個日子。"
+    ],
+    [
+     "<strong>Let a no be a complete sentence.</strong> Thank them, keep the friendship, and don't reopen the subject unless they do.",
+     "<strong>讓「不」本身就是一個完整的句子。</strong>謝謝對方，保住友誼，除非他主動提起，否則不再重提。"
+    ]
+   ]
+  ],
+  [
+   "h2",
+   "Inside your own team",
+   "在你自己的團隊裡"
+  ],
+  [
+   "p",
+   "The principle applies to partners as well. A leader who corners a struggling team member with targets and guilt usually gets either a quiet resignation or a defensive argument.",
+   "這個原則也適用於夥伴。一位用目標和罪惡感把卡關的夥伴逼到牆角的領袖，換來的通常不是默默的退出，就是防衛性的爭辯。"
+  ],
+  [
+   "p",
+   "Leave the door open there too. Ask what is getting in the way. Offer a smaller next step. Make it safe to admit they're stuck, because people only ask for help where it's safe to.",
+   "在這裡也留一道門。問問是什麼擋住了他。給一個更小的下一步。讓承認卡關變得安全，因為人只會在安全的地方開口求助。"
+  ],
+  [
+   "p",
+   "So the next time you feel the urge to close every exit, stop for a second and ask: would I want this person's yes if it came from having no way out?",
+   "所以，下一次當你很想把所有出口都關上的時候，停一秒，問自己：如果這個「好」，是因為對方沒有退路才說的，我真的想要嗎？"
+  ]
  ],
  "cta": {
   "h_en": "Follow-up built on trust",
@@ -51,5 +143,8 @@
   "href": "../book.html",
   "label_en": "See the book",
   "label_zh": "看這本書"
- }
+ },
+ "cover_zh": "必闕",
+ "image": "images/blog/leave-the-door-open.webp",
+ "image_alt": "Map cover: Leave the Door Open, with the Chinese keyword 必闕"
 }

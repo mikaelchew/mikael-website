@@ -30,6 +30,18 @@ def load():
     return sorted(posts, key=lambda p: p["date"], reverse=True)
 
 
+def picture(p):
+    """<img> for a post's picture, with the -600 variant in srcset when it exists."""
+    if "image" not in p:
+        return '<span class="ph" aria-hidden="true"></span>'
+    src = p["image"]
+    base, ext = os.path.splitext(src)
+    small = base + "-600" + ext
+    srcset = (' srcset="%s 600w, %s 1200w" sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 400px"' % (small, src)
+              if os.path.exists(os.path.join(ROOT, small)) else "")
+    return '<img src="%s"%s alt="%s" loading="lazy" width="1200" height="675">' % (src, srcset, esc(p.get("image_alt", "")))
+
+
 def render(posts):
     rows = []
     for p in posts:
@@ -37,19 +49,19 @@ def render(posts):
         href = "blog/%s.html" % p["slug"]
         rows.append(
             '  <li class="dispatch" data-category="%s" data-pubdate="%s">\n'
-            '    <time class="d num" datetime="%s">%s.%s.%s</time>\n'
-            '    <div>\n'
+            '    <a class="card" href="%s">\n'
+            '      <figure>%s</figure>\n'
             '      %s\n'
-            '      <h2><a href="%s" data-en="%s" data-zh="%s">%s</a></h2>\n'
+            '      <h2 data-en="%s" data-zh="%s">%s</h2>\n'
             '      %s\n'
-            '      %s\n'
-            '    </div>\n'
+            '      <span class="meta"><time class="num" datetime="%s">%s.%s.%s</time> · %s</span>\n'
+            '    </a>\n'
             '  </li>'
-            % (p["category"], p["date"], p["date"], d, m, y,
+            % (p["category"], p["date"], href, picture(p),
                bi("small", p["category_en"], p["category_zh"], "cat"),
-               href, esc(p["title_en"]), esc(p["title_zh"]), esc(p["title_en"]),
+               esc(p["title_en"]), esc(p["title_zh"]), esc(p["title_en"]),
                bi("p", p["excerpt_en"], p["excerpt_zh"]),
-               bi("span", p["read_en"], p["read_zh"], "rt")))
+               p["date"], d, m, y, bi("span", p["read_en"], p["read_zh"], "rt")))
     return '<ol class="dispatches">\n%s\n</ol>' % "\n".join(rows)
 
 

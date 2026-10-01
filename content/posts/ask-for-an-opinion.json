@@ -15,32 +15,131 @@
  "read_en": "6 min",
  "read_zh": "6 分鐘",
  "blocks": [
-  ["p", "\"Mikael, I thought you were my friend.\"", "「Mikael，我以為你是我朋友。」"],
-  ["p", "My university friend Jason said that to me across a café table, early in my career. It's still the most painful sentence anyone has said to me in this business.", "這句話，是我入行初期，大學同學Jason在咖啡廳裡對我說的。直到今天，它仍是我在這一行聽過最痛的一句話。"],
-  ["h2", "What I got wrong", "我做錯了什麼"],
-  ["p", "We had known each other for years. I invited him for coffee, but catching up wasn't the plan. I had been to a lot of training, memorised a lot of lines, and I wanted to bring him into my team.", "我們認識很多年了。我約他喝咖啡，但目的不是敘舊。我參加了很多培訓，背了一堆台詞，我想把他拉進我的團隊。"],
-  ["p", "He asked how I was. I launched straight into the big-promise phrases I had learned: once in a lifetime, never work for a boss again, the whole speech.", "他問我最近怎麼樣，我就直接開始背那些學來的大話：千載難逢、不用再替老闆打工，整套說了一遍。"],
-  ["p", "His face changed as I talked. When I finished he said the words I opened with, and added, \"None of that sounds like you. I've read those lines online a hundred times. You're selling to me, not talking to me.\"", "我越講，他的臉色越難看。我說完之後，他說了開頭那句話，又補了一句：「那些話一點都不像你。我在網路上看過一百次了。你是在跟我推銷，不是在跟我聊天。」"],
-  ["p", "He finished his coffee and left. Over the next month several of our mutual friends went quiet on me. I had lost a friend of ten years, and my name in that circle with him.", "他喝完咖啡就走了。接下來一個月，好幾位共同朋友開始不回我訊息。我失去了一個十年的好友，也失去了在那個圈子裡的名聲。"],
-  ["p", "That night I asked myself what I had been thinking when I invited him. The honest answer was uncomfortable. I hadn't asked about his work, his worries or his goals. I had treated him as a target instead of a friend.", "那天晚上，我問自己：約他的時候，我心裡在想什麼？誠實的答案讓我很不舒服。我沒有問過他的工作、他的煩惱、他的目標。我把他當成目標，而不是朋友。"],
-  ["quote", "The supreme art of war is to subdue the enemy without fighting.", "不戰而屈人之兵，善之善者也。", "Sun Tzu", "《孫子兵法・謀攻篇》"],
-  ["h2", "Statements create resistance. Questions create conversation.", "陳述製造抗拒，問題引發對話"],
-  ["p", "Sun Tzu's highest form of victory is the one where nobody has to be forced. In an invitation, that means the other person wants to hear more because you made them feel respected.", "孫子最高明的勝利，是不需要強迫任何人的勝利。放在邀約上，就是對方想多了解一點，因為你讓他感到被尊重。"],
-  ["p", "After Jason I spent years testing different ways to open. The pattern was clear. Openings that make a statement, \"I've got a great opportunity\" or \"You'll love this product\", put people on guard straight away.", "Jason之後，我花了好幾年測試各種開場方式。規律很明顯：陳述式的開場，像是「我有一個很棒的機會」或「你一定會喜歡這個產品」，會讓對方立刻進入防備模式。"],
-  ["p", "Openings that ask for the other person's view do the opposite. In my own comparison, far more people were happy to keep talking when I opened with a genuine question about what they thought.", "請對方給意見的開場，效果正好相反。在我自己的比較裡，用一個真誠的問題開場、問對方怎麼想，願意繼續聊下去的人多得多。"],
-  ["h2", "How the opinion opener works", "「問意見」開場怎麼做"],
-  ["p", "The opening is simple: \"Can I ask you something? I'd value your opinion.\" Then you ask a real question connected to something they know about.", "開場很簡單：「我可以問你一個問題嗎？我想聽聽你的意見。」然後問一個跟對方專長有關的真實問題。"],
-  ["ul", [
-    ["To a friend who trains at the gym: \"You know a lot about this. What matters most to you when you choose a supplement?\"", "對一位常上健身房的朋友：「你對這方面很懂。你選保健品的時候，最看重什麼？」"],
-    ["To someone senior in a company: \"You've seen a lot of careers. What do professionals look for when they consider something on the side?\"", "對一位資深的企業主管：「你看過很多人的職涯。專業人士考慮做副業時，最在意的是什麼？」"]
-  ]],
-  ["p", "Then listen properly, all the way to the end. If what they say connects naturally to what you do, tell them that, briefly, and ask whether they'd like to know more. If it doesn't, you've still had a good conversation with someone you respect.", "然後好好聽，聽到最後。如果他說的跟你在做的事自然地連在一起，簡短地告訴他，再問他想不想多了解。如果沒有連上，你也已經跟一位你尊重的人好好聊了一次。"],
-  ["p", "It works for four reasons. It doesn't sound like a pitch. It puts the other person in the expert's seat. It starts a real two-way conversation. And they can feel that you are actually listening.", "它有效的原因有四個：它聽起來不像推銷；它把對方放在專家的位置；它開啟了真正的雙向對話；而且對方感受得到你真的在聽。"],
-  ["h2", "It isn't a new script", "這不是新的話術"],
-  ["p", "The opinion opener only works if the curiosity is real. Asked as a trick, it turns into another line people have heard a hundred times.", "「問意見」只有在好奇心是真的時候才有效。如果把它當技巧來用，它就會變成另一句大家聽過一百次的台詞。"],
-  ["p", "Bad questions give the game away: \"Do you want to make extra money?\" or \"Are you open to an opportunity?\" Both are still sales pitches wearing a question mark.", "不好的問題一聽就露餡：「你想多賺點錢嗎？」「你對事業機會有興趣嗎？」兩個都還是推銷，只是加了一個問號。"],
-  ["p", "Jason did join my team, much later, and that's another story. I stopped raising the business with him for a long time. The friendship mattered more than any order, so I simply stayed his friend.", "很久以後，Jason還是加入了我的團隊，那是另一個故事了。有很長一段時間，我沒有再跟他提這個事業。友誼比任何訂單都重要，所以我就單純地繼續當他的朋友。"],
-  ["p", "His sentence became the question I ask myself before every invitation. Before your next one, ask it too: right now, are you their friend, or their salesperson?", "他那句話，後來成了我每一次邀約之前都會問自己的問題。下一次邀約之前，你也問問自己：此刻，你是他的朋友，還是他的推銷員？"]
+  [
+   "p",
+   "\"Mikael, I thought you were my friend.\"",
+   "「Mikael，我以為你是我朋友。」"
+  ],
+  [
+   "p",
+   "My university friend Jason said that to me across a café table, early in my career. It's still the most painful sentence anyone has said to me in this business.",
+   "這句話，是我入行初期，大學同學Jason在咖啡廳裡對我說的。直到今天，它仍是我在這一行聽過最痛的一句話。"
+  ],
+  [
+   "h2",
+   "What I got wrong",
+   "我做錯了什麼"
+  ],
+  [
+   "p",
+   "We had known each other for years. I invited him for coffee, but catching up wasn't the plan. I had been to a lot of training, memorised a lot of lines, and I wanted to bring him into my team.",
+   "我們認識很多年了。我約他喝咖啡，但目的不是敘舊。我參加了很多培訓，背了一堆台詞，我想把他拉進我的團隊。"
+  ],
+  [
+   "p",
+   "He asked how I was. I launched straight into the big-promise phrases I had learned: once in a lifetime, never work for a boss again, the whole speech.",
+   "他問我最近怎麼樣，我就直接開始背那些學來的大話：千載難逢、不用再替老闆打工，整套說了一遍。"
+  ],
+  [
+   "p",
+   "His face changed as I talked. When I finished he said the words I opened with, and added, \"None of that sounds like you. I've read those lines online a hundred times. You're selling to me, not talking to me.\"",
+   "我越講，他的臉色越難看。我說完之後，他說了開頭那句話，又補了一句：「那些話一點都不像你。我在網路上看過一百次了。你是在跟我推銷，不是在跟我聊天。」"
+  ],
+  [
+   "p",
+   "He finished his coffee and left. Over the next month several of our mutual friends went quiet on me. I had lost a friend of ten years, and my name in that circle with him.",
+   "他喝完咖啡就走了。接下來一個月，好幾位共同朋友開始不回我訊息。我失去了一個十年的好友，也失去了在那個圈子裡的名聲。"
+  ],
+  [
+   "p",
+   "That night I asked myself what I had been thinking when I invited him. The honest answer was uncomfortable. I hadn't asked about his work, his worries or his goals. I had treated him as a target instead of a friend.",
+   "那天晚上，我問自己：約他的時候，我心裡在想什麼？誠實的答案讓我很不舒服。我沒有問過他的工作、他的煩惱、他的目標。我把他當成目標，而不是朋友。"
+  ],
+  [
+   "quote",
+   "The supreme art of war is to subdue the enemy without fighting.",
+   "不戰而屈人之兵，善之善者也。",
+   "Sun Tzu",
+   "《孫子兵法・謀攻篇》"
+  ],
+  [
+   "h2",
+   "Statements create resistance. Questions create conversation.",
+   "陳述製造抗拒，問題引發對話"
+  ],
+  [
+   "p",
+   "Sun Tzu's highest form of victory is the one where nobody has to be forced. In an invitation, that means the other person wants to hear more because you made them feel respected.",
+   "孫子最高明的勝利，是不需要強迫任何人的勝利。放在邀約上，就是對方想多了解一點，因為你讓他感到被尊重。"
+  ],
+  [
+   "p",
+   "After Jason I spent years testing different ways to open. The pattern was clear. Openings that make a statement, \"I've got a great opportunity\" or \"You'll love this product\", put people on guard straight away.",
+   "Jason之後，我花了好幾年測試各種開場方式。規律很明顯：陳述式的開場，像是「我有一個很棒的機會」或「你一定會喜歡這個產品」，會讓對方立刻進入防備模式。"
+  ],
+  [
+   "p",
+   "Openings that ask for the other person's view do the opposite. In my own comparison, far more people were happy to keep talking when I opened with a genuine question about what they thought.",
+   "請對方給意見的開場，效果正好相反。在我自己的比較裡，用一個真誠的問題開場、問對方怎麼想，願意繼續聊下去的人多得多。"
+  ],
+  [
+   "h2",
+   "How the opinion opener works",
+   "「問意見」開場怎麼做"
+  ],
+  [
+   "p",
+   "The opening is simple: \"Can I ask you something? I'd value your opinion.\" Then you ask a real question connected to something they know about.",
+   "開場很簡單：「我可以問你一個問題嗎？我想聽聽你的意見。」然後問一個跟對方專長有關的真實問題。"
+  ],
+  [
+   "ul",
+   [
+    [
+     "To a friend who trains at the gym: \"You know a lot about this. What matters most to you when you choose a supplement?\"",
+     "對一位常上健身房的朋友：「你對這方面很懂。你選保健品的時候，最看重什麼？」"
+    ],
+    [
+     "To someone senior in a company: \"You've seen a lot of careers. What do professionals look for when they consider something on the side?\"",
+     "對一位資深的企業主管：「你看過很多人的職涯。專業人士考慮做副業時，最在意的是什麼？」"
+    ]
+   ]
+  ],
+  [
+   "p",
+   "Then listen properly, all the way to the end. If what they say connects naturally to what you do, tell them that, briefly, and ask whether they'd like to know more. If it doesn't, you've still had a good conversation with someone you respect.",
+   "然後好好聽，聽到最後。如果他說的跟你在做的事自然地連在一起，簡短地告訴他，再問他想不想多了解。如果沒有連上，你也已經跟一位你尊重的人好好聊了一次。"
+  ],
+  [
+   "p",
+   "It works for four reasons. It doesn't sound like a pitch. It puts the other person in the expert's seat. It starts a real two-way conversation. And they can feel that you are actually listening.",
+   "它有效的原因有四個：它聽起來不像推銷；它把對方放在專家的位置；它開啟了真正的雙向對話；而且對方感受得到你真的在聽。"
+  ],
+  [
+   "h2",
+   "It isn't a new script",
+   "這不是新的話術"
+  ],
+  [
+   "p",
+   "The opinion opener only works if the curiosity is real. Asked as a trick, it turns into another line people have heard a hundred times.",
+   "「問意見」只有在好奇心是真的時候才有效。如果把它當技巧來用，它就會變成另一句大家聽過一百次的台詞。"
+  ],
+  [
+   "p",
+   "Bad questions give the game away: \"Do you want to make extra money?\" or \"Are you open to an opportunity?\" Both are still sales pitches wearing a question mark.",
+   "不好的問題一聽就露餡：「你想多賺點錢嗎？」「你對事業機會有興趣嗎？」兩個都還是推銷，只是加了一個問號。"
+  ],
+  [
+   "p",
+   "Jason did join my team, much later, and that's another story. I stopped raising the business with him for a long time. The friendship mattered more than any order, so I simply stayed his friend.",
+   "很久以後，Jason還是加入了我的團隊，那是另一個故事了。有很長一段時間，我沒有再跟他提這個事業。友誼比任何訂單都重要，所以我就單純地繼續當他的朋友。"
+  ],
+  [
+   "p",
+   "His sentence became the question I ask myself before every invitation. Before your next one, ask it too: right now, are you their friend, or their salesperson?",
+   "他那句話，後來成了我每一次邀約之前都會問自己的問題。下一次邀約之前，你也問問自己：此刻，你是他的朋友，還是他的推銷員？"
+  ]
  ],
  "cta": {
   "h_en": "The art of the invitation",
@@ -50,5 +149,8 @@
   "href": "../book.html",
   "label_en": "See the book",
   "label_zh": "看這本書"
- }
+ },
+ "cover_zh": "請益",
+ "image": "images/blog/ask-for-an-opinion.webp",
+ "image_alt": "Map cover: Ask for an Opinion, with the Chinese keyword 請益"
 }

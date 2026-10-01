@@ -15,28 +15,109 @@
  "read_en": "6 min",
  "read_zh": "6 分鐘",
  "blocks": [
-  ["p", "There's a simple test I give leaders who feel stuck. Imagine you disappear for thirty days. No calls, no messages, no meetings. What happens to your team?", "對覺得卡住的領袖，我會給一個簡單的測驗：想像你消失三十天。不接電話、不回訊息、不開會。你的團隊會怎麼樣？"],
-  ["p", "If the honest answer is \"it would stall\" or \"it would fall apart\", you haven't failed. You've learned something important about what you've built so far.", "如果誠實的答案是「會停下來」或「會散掉」，你並沒有失敗。你只是對自己目前建立的東西，學到了一件重要的事。"],
-  ["p", "A team that needs you for everything is a job with a bigger title. A team that keeps moving while you rest is the start of something that can outlast you.", "一支什麼都需要你的團隊，是一份頭銜比較大的工作。一支在你休息時仍持續前進的團隊，才是一份能比你走得更遠的事業的開始。"],
-  ["quote", "Throw your soldiers into positions whence there is no escape, and they will prefer death to flight.", "投之亡地然後存，陷之死地然後生。", "Sun Tzu", "《孫子兵法・九地篇》"],
-  ["h2", "Why letting go is so hard", "為什麼放手這麼難"],
-  ["p", "Sun Tzu wrote that soldiers placed where there is no retreat discover strength they didn't know they had. Partners are similar. Many only find out what they can do when the leader stops doing it for them.", "孫子寫道，被放在沒有退路之處的士兵，會發現自己不知道擁有的力量。夥伴也類似。很多人只有在領袖不再替他們做的時候，才發現自己能做什麼。"],
-  ["p", "Letting go is hard for honest reasons. You care about the people. You can do it faster yourself. And being needed feels good, which is the most uncomfortable reason to admit.", "放手很難，原因都很真實：你在乎這些人；你自己做比較快；而且被需要的感覺很好，這是最不舒服、也最難承認的原因。"],
-  ["p", "Each of those reasons keeps the team small. Every task you hold on to is a task nobody else learns, and every decision you make for someone is a decision they never practise.", "每一個原因，都讓團隊停在小規模。你抓著不放的每一件事，都是別人沒學會的事；你替別人做的每一個決定，都是他們從來沒練習過的決定。"],
-  ["h2", "What letting go actually looks like", "放手實際上長什麼樣子"],
-  ["ul", [
-    ["<strong>Answer questions with questions.</strong> When a partner asks what to do, ask what they think first. Then add only what's missing.", "<strong>用問題回答問題。</strong>夥伴問你該怎麼做時，先問他怎麼想，再補上缺少的部分。"],
-    ["<strong>Hand over the room.</strong> Let partners run trainings and meetings, even when you'd do it better. Sit at the back and stay quiet.", "<strong>把舞台交出去。</strong>讓夥伴帶培訓、主持會議，即使你會做得更好。坐在後面，保持安靜。"],
-    ["<strong>Let small mistakes happen.</strong> Step in when something would hurt a customer or a person. Otherwise let them learn the way you did.", "<strong>允許小錯誤發生。</strong>只在會傷害客戶或某個人的時候介入。其他時候，讓他們用你當年學習的方式去學。"],
-    ["<strong>Measure yourself differently.</strong> Count how many leaders are growing without you, not how many people need you.", "<strong>換一種方式衡量自己。</strong>計算有多少領袖在沒有你的情況下成長，而不是有多少人需要你。"]
-  ]],
-  ["h2", "What you get back", "你拿回來的東西"],
-  ["p", "When it works, something changes for everyone. Partners grow in confidence because they've been trusted. The team keeps moving through holidays, illness and busy seasons.", "當它奏效時，每個人都會有所改變。夥伴因為被信任而更有自信。團隊在假期、生病、忙碌的季節裡，依然持續前進。"],
-  ["p", "And the leader gets something back that is easy to forget: time to think, to plan, and to look after their own life. That time comes from one place only: leaders around you who no longer need you.", "而領袖拿回了一樣很容易被忘記的東西：思考、規劃、照顧自己生活的時間。這份時間只有一個來源：你身邊那些不再需要你的領袖。"],
-  ["h2", "Next week", "下週"],
-  ["p", "This is the last post before my book, 直銷孫子兵法之不戰而勝, goes on sale on 20 October. The whole book builds towards this idea: a team that grows because of how you led, not because you never left.", "這是我的新書《直銷孫子兵法之不戰而勝》10月20日上市前的最後一篇文章。整本書都在往這個想法推進：一支團隊會成長，是因為你帶領的方式，而不是因為你從不離開。"],
-  ["p", "If you've been reading these posts over the past months, thank you. The first chapter is free to read on this site if you'd like to see where it begins.", "如果過去幾個月你一直在讀這些文章，謝謝你。第一章在這個網站上免費閱讀，如果你想看看它從哪裡開始。"],
-  ["p", "So try the test this week. If you disappeared for thirty days, what would your team do, and what could you start handing over tomorrow?", "所以，這週試試這個測驗：如果你消失三十天，你的團隊會怎麼做？而你明天可以開始交出去的是什麼？"]
+  [
+   "p",
+   "There's a simple test I give leaders who feel stuck. Imagine you disappear for thirty days. No calls, no messages, no meetings. What happens to your team?",
+   "對覺得卡住的領袖，我會給一個簡單的測驗：想像你消失三十天。不接電話、不回訊息、不開會。你的團隊會怎麼樣？"
+  ],
+  [
+   "p",
+   "If the honest answer is \"it would stall\" or \"it would fall apart\", you haven't failed. You've learned something important about what you've built so far.",
+   "如果誠實的答案是「會停下來」或「會散掉」，你並沒有失敗。你只是對自己目前建立的東西，學到了一件重要的事。"
+  ],
+  [
+   "p",
+   "A team that needs you for everything is a job with a bigger title. A team that keeps moving while you rest is the start of something that can outlast you.",
+   "一支什麼都需要你的團隊，是一份頭銜比較大的工作。一支在你休息時仍持續前進的團隊，才是一份能比你走得更遠的事業的開始。"
+  ],
+  [
+   "quote",
+   "Throw your soldiers into positions whence there is no escape, and they will prefer death to flight.",
+   "投之亡地然後存，陷之死地然後生。",
+   "Sun Tzu",
+   "《孫子兵法・九地篇》"
+  ],
+  [
+   "h2",
+   "Why letting go is so hard",
+   "為什麼放手這麼難"
+  ],
+  [
+   "p",
+   "Sun Tzu wrote that soldiers placed where there is no retreat discover strength they didn't know they had. Partners are similar. Many only find out what they can do when the leader stops doing it for them.",
+   "孫子寫道，被放在沒有退路之處的士兵，會發現自己不知道擁有的力量。夥伴也類似。很多人只有在領袖不再替他們做的時候，才發現自己能做什麼。"
+  ],
+  [
+   "p",
+   "Letting go is hard for honest reasons. You care about the people. You can do it faster yourself. And being needed feels good, which is the most uncomfortable reason to admit.",
+   "放手很難，原因都很真實：你在乎這些人；你自己做比較快；而且被需要的感覺很好，這是最不舒服、也最難承認的原因。"
+  ],
+  [
+   "p",
+   "Each of those reasons keeps the team small. Every task you hold on to is a task nobody else learns, and every decision you make for someone is a decision they never practise.",
+   "每一個原因，都讓團隊停在小規模。你抓著不放的每一件事，都是別人沒學會的事；你替別人做的每一個決定，都是他們從來沒練習過的決定。"
+  ],
+  [
+   "h2",
+   "What letting go actually looks like",
+   "放手實際上長什麼樣子"
+  ],
+  [
+   "ul",
+   [
+    [
+     "<strong>Answer questions with questions.</strong> When a partner asks what to do, ask what they think first. Then add only what's missing.",
+     "<strong>用問題回答問題。</strong>夥伴問你該怎麼做時，先問他怎麼想，再補上缺少的部分。"
+    ],
+    [
+     "<strong>Hand over the room.</strong> Let partners run trainings and meetings, even when you'd do it better. Sit at the back and stay quiet.",
+     "<strong>把舞台交出去。</strong>讓夥伴帶培訓、主持會議，即使你會做得更好。坐在後面，保持安靜。"
+    ],
+    [
+     "<strong>Let small mistakes happen.</strong> Step in when something would hurt a customer or a person. Otherwise let them learn the way you did.",
+     "<strong>允許小錯誤發生。</strong>只在會傷害客戶或某個人的時候介入。其他時候，讓他們用你當年學習的方式去學。"
+    ],
+    [
+     "<strong>Measure yourself differently.</strong> Count how many leaders are growing without you, not how many people need you.",
+     "<strong>換一種方式衡量自己。</strong>計算有多少領袖在沒有你的情況下成長，而不是有多少人需要你。"
+    ]
+   ]
+  ],
+  [
+   "h2",
+   "What you get back",
+   "你拿回來的東西"
+  ],
+  [
+   "p",
+   "When it works, something changes for everyone. Partners grow in confidence because they've been trusted. The team keeps moving through holidays, illness and busy seasons.",
+   "當它奏效時，每個人都會有所改變。夥伴因為被信任而更有自信。團隊在假期、生病、忙碌的季節裡，依然持續前進。"
+  ],
+  [
+   "p",
+   "And the leader gets something back that is easy to forget: time to think, to plan, and to look after their own life. That time comes from one place only: leaders around you who no longer need you.",
+   "而領袖拿回了一樣很容易被忘記的東西：思考、規劃、照顧自己生活的時間。這份時間只有一個來源：你身邊那些不再需要你的領袖。"
+  ],
+  [
+   "h2",
+   "Next week",
+   "下週"
+  ],
+  [
+   "p",
+   "This is the last post before my book, 直銷孫子兵法之不戰而勝, goes on sale on 20 October. The whole book builds towards this idea: a team that grows because of how you led, not because you never left.",
+   "這是我的新書《直銷孫子兵法之不戰而勝》10月20日上市前的最後一篇文章。整本書都在往這個想法推進：一支團隊會成長，是因為你帶領的方式，而不是因為你從不離開。"
+  ],
+  [
+   "p",
+   "If you've been reading these posts over the past months, thank you. The first chapter is free to read on this site if you'd like to see where it begins.",
+   "如果過去幾個月你一直在讀這些文章，謝謝你。第一章在這個網站上免費閱讀，如果你想看看它從哪裡開始。"
+  ],
+  [
+   "p",
+   "So try the test this week. If you disappeared for thirty days, what would your team do, and what could you start handing over tomorrow?",
+   "所以，這週試試這個測驗：如果你消失三十天，你的團隊會怎麼做？而你明天可以開始交出去的是什麼？"
+  ]
  ],
  "cta": {
   "h_en": "The book is out on 20 October",
@@ -46,5 +127,8 @@
   "href": "../chapter-1.html",
   "label_en": "Read Chapter 1 free",
   "label_zh": "免費試讀第一章"
- }
+ },
+ "cover_zh": "傳承",
+ "image": "images/blog/outlast-you.webp",
+ "image_alt": "Map cover: Build Something That Outlasts You, with the Chinese keyword 傳承"
 }
