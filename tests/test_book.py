@@ -81,3 +81,20 @@ class BookTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class LaunchReadyTest(unittest.TestCase):
+    """Nothing on the book page or homepage may still say 'launches on 20 October' once phase is launched."""
+
+    def test_launch_faq_is_phase_gated(self):
+        root = doc("book.html")
+        pre = root.xpath('//details[contains(@class,"when-prelaunch")]//summary')
+        post = root.xpath('//details[contains(@class,"when-launched")]//summary')
+        self.assertEqual(len(pre), 1)
+        self.assertEqual(len(post), 1)
+        for s in root.xpath('//script[@type="application/ld+json"]'):
+            self.assertNotIn("launches on", s.text)
+
+    def test_home_dossier_label_has_no_date(self):
+        label = doc("index.html").xpath('//a[contains(@class,"dossier")]/@aria-label')[0]
+        self.assertNotIn("20 October", label)

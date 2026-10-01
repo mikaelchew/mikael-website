@@ -82,6 +82,8 @@
   if (!html.classList.contains('motion')) { toStatic(); return; }
 
   // ---------- motion mode ----------
+  // Panels start hidden in motion mode only; without JS they stay usable (no inert in the HTML).
+  briefing.setAttribute('inert', ''); finale.setAttribute('inert', '');
   var HALT = 45, FIN = 70; // svh: a halt per chapter, a slightly longer finale
   ops.style.height = 'calc(100svh + ' + (N * HALT + FIN) + 'svh)';
   for (var i = 0; i <= N; i++) {

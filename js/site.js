@@ -204,6 +204,9 @@
     var moreWrap = document.getElementById('blog-show-more');
     function show(filter, all) {
       var shown = 0;
+      document.querySelectorAll('.blog-filter').forEach(function (b) {
+        b.setAttribute('aria-pressed', (b.dataset.filter || 'all') === filter ? 'true' : 'false');
+      });
       items.forEach(function (it) {
         var match = filter === 'all' || it.getAttribute('data-category') === filter;
         it.hidden = !match || (!all && filter === 'all' && shown >= SHOW);
@@ -264,8 +267,14 @@
       entries.forEach(function (en) {
         if (!en.isIntersecting) return;
         io.unobserve(en.target);
-        if (en.target.tagName === 'B') countUp(en.target);
-        else en.target.classList.add('in');
+        if (en.target.tagName === 'B') { countUp(en.target); return; }
+        var el = en.target;
+        el.classList.add('in');
+        // Once revealed, hand the element back to its own transitions (card hovers etc.).
+        if (el.hasAttribute('data-reveal')) {
+          var wait = 1000 + (parseInt(el.style.getPropertyValue('--i'), 10) || 0) * 70;
+          setTimeout(function () { el.removeAttribute('data-reveal'); el.classList.remove('in'); }, wait);
+        }
       });
     }, { rootMargin: '0px 0px -12% 0px' });
     items.forEach(function (el) { io.observe(el); });

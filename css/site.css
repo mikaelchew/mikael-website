@@ -332,6 +332,11 @@ img { display: block; max-width: 100%; height: auto; }
   @keyframes read-progress { to { transform: scaleX(1); } }
 }
 
+@media print {
+  .reveals [data-reveal], .reveals .route li, .reveals .print[data-reveal] { opacity: 1 !important; transform: none !important; clip-path: none !important; }
+  .page-head .legend .v, .page-head .legend .vs { animation: none; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .page-head .legend .v, .page-head .legend .vs { animation: none; }
   .c:hover, .brief:hover { transform: none; }
