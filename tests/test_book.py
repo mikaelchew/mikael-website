@@ -19,6 +19,13 @@ class BookTest(unittest.TestCase):
             for anchor in ("buy", "print", "chapters", "free-chapter", "notify"):
                 self.assertTrue(root.xpath('//*[@id="%s"]' % anchor), (page, anchor))
 
+    def test_amazon_link_is_the_kindle_product(self):
+        for page in ("book.html", "zh/book.html"):
+            src = read(page)
+            self.assertNotIn("AMAZON_URL_PENDING", src, page)
+            hrefs = doc(page).xpath('//a[contains(@href,"amazon.")]/@href')
+            self.assertEqual(hrefs, ["https://www.amazon.com/dp/B0HLDGD5M3"], page)
+
     def test_buy_shown_by_phase_not_hidden_attr(self):
         buy = doc("book.html").xpath('//*[@id="buy"]')[0]
         self.assertIn("when-launched", buy.get("class", ""))
