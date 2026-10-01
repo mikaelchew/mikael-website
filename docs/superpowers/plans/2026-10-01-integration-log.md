@@ -17,7 +17,7 @@ Sign in to Vercel as mikaelchew to view it.)
 
 | Check | Expected | Result |
 |---|---|---|
-| Real RM 29.90 FPX purchase | Bill created, payment completes, thank-you page shows "Payment received", delivery email arrives with EPUB + PDF | pending |
+| Real RM 29.90 FPX purchase | Bill created, payment completes, thank-you page shows "Payment received", delivery email arrives with EPUB + PDF | **Pass.** Mikael ran two purchases, both successful (reported 2026-10-01); no further purchase needed |
 | One test submission per Kit form/tag (book-launch, book-print, book-chapter, long-game-launch, newsletter) | Subscriber appears in Kit with the right tag | pending |
 | Formspree test message | Arrives | pending |
 | GA4 DebugView | All events fire with parameters (`debug_mode` is on for non-production hosts) | pending |
