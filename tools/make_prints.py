@@ -3,6 +3,7 @@
 
   images/classroom-teaching.jpg  -> images/print/field.webp (+ field-600.webp)
   images/apac-stage.jpg          -> images/print/boardroom.webp (+ boardroom-600.webp)
+  images/big-stage.jpg           -> images/print/stage.webp (+ stage-600.webp)
 
 Each source is cropped and tone-adjusted, then rendered by tools/halftone.py
 (AM dots, 45°, acetate-white ink on transparent). Provenance: images/print/README.md.
@@ -23,6 +24,8 @@ PRINTS = {
               lambda im: ImageOps.autocontrast(im.convert("L"), cutoff=2).point(lambda v: int(255 * ((v / 255) ** 1.9)))),
     "boardroom": ("apac-stage.jpg", (80, 170, 1200, 650),
                   lambda im: ImageEnhance.Brightness(im).enhance(1.35)),
+    "stage": ("big-stage.jpg", (0, 210, 1200, 725),
+              lambda im: ImageOps.autocontrast(im.convert("L"), cutoff=2).point(lambda v: int(255 * ((v / 255) ** 2.4)))),
 }
 
 

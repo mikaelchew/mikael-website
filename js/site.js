@@ -100,10 +100,16 @@
         if (form.querySelector('input[name="tags"]')) listEvent(form);
         var btn = form.querySelector('button[type="submit"]');
         if (btn) btn.disabled = true;
-        // Kit and Formspree don't send CORS headers for these endpoints, so the response is
-        // opaque: a resolved fetch means the request reached them. A network failure falls
+        // Kit doesn't send CORS headers, so its response is opaque: a resolved fetch means the
+        // request reached it. Formspree answers CORS requests that ask for JSON (and only then
+        // records them without a reCAPTCHA page), so its status is checked. Any failure falls
         // back to the ordinary form post, which always works.
-        fetch(form.action, { method: 'POST', body: new FormData(form), mode: 'no-cors' })
+        var formspree = form.action.indexOf('formspree.io') !== -1;
+        var req = formspree
+          ? fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } })
+              .then(function (res) { if (!res.ok) throw new Error('formspree ' + res.status); })
+          : fetch(form.action, { method: 'POST', body: new FormData(form), mode: 'no-cors' });
+        req
           .then(function () {
             var ok = form.parentNode.querySelector('.form-ok');
             form.hidden = true;

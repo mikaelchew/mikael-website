@@ -25,20 +25,13 @@
   <meta name="twitter:image" content="https://www.mikaelchew.com/images/mikael-chew.jpg">
 
   <title>策略背後的框架 — Mikael Chew</title>
-
-  <!-- Google Fonts -->
-  <link rel="preload" as="style" href="../vendor/fonts/fonts.css" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="../vendor/fonts/fonts.css"></noscript>
-
-  <!-- Font Awesome -->
-  <link rel="preload" as="style" href="../vendor/fontawesome/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="../vendor/fontawesome/css/all.min.css"></noscript>
-
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="preload" as="font" type="font/woff2" href="../vendor/fonts/overpass-900-latin.woff2" crossorigin>
+  <link rel="stylesheet" href="../vendor/fonts/site-fonts.css">
+  <link rel="stylesheet" href="../css/site.css">
+  <link rel="stylesheet" href="../css/inner.css">
+  <meta name="theme-color" content="#22303A">
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
   <link rel="icon" type="image/png" href="../favicon.png">
-  <meta name="theme-color" content="#1A1A1A">
   <link rel="apple-touch-icon" href="../apple-touch-icon.png">
   <link rel="manifest" href="../site.webmanifest">
   <link rel="canonical" href="https://www.mikaelchew.com/zh/concepts.html">
@@ -69,239 +62,143 @@
     {"@type":"DefinedTerm","name":"The Comeback","description":"A comeback is not a return to old form but a reinvention from where you actually are — named honestly, audited clearly, re-anchored to one principle, and made visible.","url":"https://www.mikaelchew.com/blog/comeback.html"}
   ]}
   </script>
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ENGNTZ3PPC"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-ENGNTZ3PPC');
-</script>
-  <noscript><style>.fade-in,.lt-fade{opacity:1!important;transform:none!important}</style></noscript>
-<link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/concepts.html"><link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/concepts.html"><link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/concepts.html"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""><link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&amp;family=Noto+Serif+TC:wght@400;700;900&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&amp;family=Noto+Serif+TC:wght@400;700;900&amp;display=swap"></noscript></head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
-
-  <!-- ========== NAVBAR ========== -->
-  <nav class="navbar">
-    <div class="container">
-      <a href="index.html" class="nav-logo">MIKAEL<span>CHEW</span></a>
-      <ul class="nav-links">
-        <li><a href="index.html" data-en="Home" data-zh="首頁">首頁</a></li>
-        <li><a href="about.html" data-en="About" data-zh="關於">關於</a></li>
-        <li><a href="blog.html" data-en="Blog" data-zh="部落格">部落格</a></li>
-        <li><a href="book.html" data-en="Book" data-zh="著作">著作</a></li>
-        <li><a href="speaking.html" data-en="Speaking" data-zh="演講">演講</a></li>
-        <li><a href="work-with-me.html" data-en="Work With Me" data-zh="與我合作">與我合作</a></li>
-        <li><a href="contact.html" data-en="Contact" data-zh="聯繫">聯繫</a></li>
-      </ul>
-      <div class="nav-toggle" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
+  <!-- Google Analytics (config call lives in js/site.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ENGNTZ3PPC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  </script>
+  <script src="../js/site.js" defer></script>
+<link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/concepts.html"><link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/concepts.html"><link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/concepts.html"></head>
+<body data-nav="writing">
+<!-- shell:header -->
+<a class="skip" href="#main" data-en="Skip to content" data-zh="跳到內容">跳到內容</a>
+<header class="bar">
+  <a class="brand" href="index.html" data-nav="home"><span class="brand-en">Mikael Chew</span><span class="brand-zh cjk-display" lang="zh-Hant">周俊德</span></a>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav" data-en="Menu" data-zh="選單">選單</button>
+  <nav class="nav" id="site-nav" aria-label="Main">
+    <a href="book.html" data-nav="book" class="keep" data-en="The Book" data-zh="著作">著作</a>
+    <a href="about.html" data-nav="about" data-en="About" data-zh="關於">關於</a>
+    <a href="blog.html" data-nav="writing" aria-current="page" data-en="Writing" data-zh="專欄">專欄</a>
+    <a href="speaking.html" data-nav="speaking" data-en="Speaking" data-zh="演講">演講</a>
+    <a href="work-with-me.html" data-nav="work" data-en="Work With Me" data-zh="合作">合作</a>
+    <a href="../concepts.html" class="lang-link keep" lang="en" hreflang="en">English</a>
   </nav>
+</header>
+<!-- /shell:header -->
 
-  <!-- ========== PAGE HERO ========== -->
-  <section class="page-hero" id="main">
-    <div class="container">
-      <span class="section-label" data-en="KEY CONCEPTS" data-zh="核心概念">核心概念</span>
-      <h1 data-en="The Frameworks Behind the Strategy" data-zh="策略背後的框架">策略背後的框架</h1>
-      <p data-en="The signature ideas behind 23 years of direct selling leadership — each defined in a sentence, with the full thinking one click away." data-zh="23 年直銷領導經驗背後的代表性思維，每一個用一句話定義，完整內容只差一個點擊。">23 年直銷領導經驗背後的代表性思維，每一個用一句話定義，完整內容只差一個點擊。</p>
-    </div>
-  </section>
-
-  <!-- ========== CONCEPTS ========== -->
-  <section class="section section-beige">
-    <div class="container">
-      <nav class="breadcrumb" aria-label="Breadcrumb">
-        <ol>
-          <li><a href="index.html" data-en="Home" data-zh="首頁">首頁</a></li>
-          <li aria-current="page" data-en="Key Concepts" data-zh="核心概念">核心概念</li>
-        </ol>
-      </nav>
-
-      <p class="concepts-intro fade-in" data-en="Over 23 years — eight in the field, fifteen in corporate management — a handful of ideas kept proving themselves. These are the frameworks I return to again and again. Use this page as a map: skim the definitions, then dive into any concept that speaks to where you are right now." data-zh="在 23 年裡（八年在前線、十五年在企業管理層）有幾個概念不斷被驗證為真。這些就是我一再回頭使用的框架。把這頁當成一張地圖：先快速瀏覽定義，再深入任何一個正好打中你現況的概念。">在 23 年裡（八年在前線、十五年在企業管理層）有幾個概念不斷被驗證為真。這些就是我一再回頭使用的框架。把這頁當成一張地圖：先快速瀏覽定義，再深入任何一個正好打中你現況的概念。</p>
-
-      <!-- Strategic Leadership -->
-      <div class="concepts-pillar fade-in">
-        <h2 class="concepts-pillar-label" data-en="Strategic Leadership" data-zh="策略領導力">策略領導力</h2>
-        <div class="concept-list">
-          <article class="concept-item">
-            <h3 class="concept-term" data-en="The Dual Perspective" data-zh="雙重視角">雙重視角</h3>
-            <p class="concept-def" data-en="Most direct selling leaders only ever see one side — the field, or the corporate office. The dual perspective is the rare advantage of having led from both: the insight that emerges when field empathy and corporate strategy are held together." data-zh="大多數直銷領袖一輩子只看到一面，前線，或是企業端。雙重視角是同時在兩邊都領導過的罕見優勢：當前線的同理心與企業端的策略思維放在一起時，所浮現的洞見。">大多數直銷領袖一輩子只看到一面，前線，或是企業端。雙重視角是同時在兩邊都領導過的罕見優勢：當前線的同理心與企業端的策略思維放在一起時，所浮現的洞見。</p>
-            <a class="concept-link" href="blog/dual-perspective.html" data-en="Read the full article →" data-zh="閱讀完整文章 →">閱讀完整文章 →</a>
-          </article>
-          <article class="concept-item">
-            <h3 class="concept-term" data-en="The General's Dilemma" data-zh="將軍的困境">將軍的困境</h3>
-            <p class="concept-def" data-en="Should a leader fight from the front lines or direct from behind? The general's dilemma is the constant tension every direct selling leader faces between leading by personal example and leading by building systems and other leaders." data-zh="領袖該在前線衝鋒，還是在後方指揮？將軍的困境是每位直銷領袖都會面對的張力：在親身示範與建立系統、培養其他領袖之間，不斷拉扯。">領袖該在前線衝鋒，還是在後方指揮？將軍的困境是每位直銷領袖都會面對的張力：在親身示範與建立系統、培養其他領袖之間，不斷拉扯。</p>
-            <a class="concept-link" href="blog/generals-dilemma.html" data-en="Read the full article →" data-zh="閱讀完整文章 →">閱讀完整文章 →</a>
-          </article>
-          <article class="concept-item">
-            <h3 class="concept-term" data-en="Busy vs. Strategic" data-zh="瞎忙 vs. 有策略">瞎忙 vs. 有策略</h3>
-            <p class="concept-def" data-en="Most leaders are busy, not strategic. Activity feels like progress, but motion without direction is just exhaustion. Strategic leaders ask what they can build today that makes tomorrow easier — not just what keeps them occupied." data-zh="大多數領袖只是忙，而不是有策略。活動讓人感覺像在前進，但沒有方向的忙碌只是疲於奔命。有策略的領袖會問：今天我能建立什麼，讓明天更輕鬆，而不只是讓自己有事做。">大多數領袖只是忙，而不是有策略。活動讓人感覺像在前進，但沒有方向的忙碌只是疲於奔命。有策略的領袖會問：今天我能建立什麼，讓明天更輕鬆，而不只是讓自己有事做。</p>
-            <a class="concept-link" href="blog/busy-not-strategic.html" data-en="Read the full article →" data-zh="閱讀完整文章 →">閱讀完整文章 →</a>
-          </article>
-          <article class="concept-item">
-            <h3 class="concept-term" data-en="The Plateau" data-zh="高原期">高原期</h3>
-            <p class="concept-def" data-en="A stalled income is a structural problem, not an effort problem. The plateau breaks not by working harder but by pulling one of three levers: depth over width, replacing yourself in income-generating activity, or changing your audience profile." data-zh="收入停滯是結構問題，不是努力問題。突破高原期靠的不是更拼命，而是拉動三個槓桿之一：深度優於廣度、在創造收入的活動中複製自己、或改變你的受眾輪廓。">收入停滯是結構問題，不是努力問題。突破高原期靠的不是更拼命，而是拉動三個槓桿之一：深度優於廣度、在創造收入的活動中複製自己、或改變你的受眾輪廓。</p>
-            <a class="concept-link" href="blog/income-plateau.html" data-en="Read the full article →" data-zh="閱讀完整文章 →">閱讀完整文章 →</a>
-          </article>
-        </div>
+<main id="main">
+  <section class="page-head" aria-labelledby="kc-h">
+    <div class="wrap">
+      <div class="legend" aria-hidden="true" data-zh-only>
+        <span class="vs cjk-display" lang="zh-Hant">策略背後的框架</span><span class="v cjk-display" lang="zh-Hant">核心概念</span>
       </div>
-
-      <!-- Team Building -->
-      <div class="concepts-pillar fade-in">
-        <h2 class="concepts-pillar-label" data-en="Team Building" data-zh="團隊建設">團隊建設</h2>
-        <div class="concept-list">
-          <article class="concept-item">
-            <h3 class="concept-term" data-en="The Golden 72 Hours" data-zh="黃金 72 小時">黃金 72 小時</h3>
-            <p class="concept-def" data-en="The first 72 hours after someone joins your team are the most decisive window of their entire journey. What happens in those three days largely determines whether they become a long-term builder or a 90-day dropout." data-zh="新夥伴加入團隊後的頭 72 小時，是他整段旅程中最關鍵的窗口。這三天發生的事，大致決定了他會成為長期經營者，還是 90 天就消失。">新夥伴加入團隊後的頭 72 小時，是他整段旅程中最關鍵的窗口。這三天發生的事，大致決定了他會成為長期經營者，還是 90 天就消失。</p>
-            <a class="concept-link" href="blog/golden-72-hours.html" data-en="Read the full article →" data-zh="閱讀完整文章 →">閱讀完整文章 →</a>
-          </article>
-          <article class="concept-item">
-            <h3 class="concept-term" data-en="The Two-Year Wall" data-zh="兩年之牆">兩年之牆</h3>
-            <p class="concept-def" data-en="Year one runs on excitement; year three runs on momentum. Year two is the wall in between — the gap where initial motivation fades before lasting results arrive. It is why roughly half of all direct selling teams quit in their second year." data-zh="第一年靠熱情，第三年靠慣性。第二年是中間那道牆：初期動力消退、長期成果還沒到來的空檔。這就是為什麼大約一半的直銷團隊會在第二年放棄。">第一年靠熱情，第三年靠慣性。第二年是中間那道牆：初期動力消退、長期成果還沒到來的空檔。這就是為什麼大約一半的直銷團隊會在第二年放棄。</p>
-            <a class="concept-link" href="blog/two-year-wall.html" data-en="Read the full article →" data-zh="閱讀完整文章 →">閱讀完整文章 →</a>
-          </article>
-          <article class="concept-item">
-            <h3 class="concept-term" data-en="The Mentor Trap" data-zh="導師陷阱">導師陷阱</h3>
-            <p class="concept-def" data-en="Over-helping is a leadership failure disguised as generosity. The mentor trap is what happens when a leader becomes so indispensable that the team can no longer function — or grow — without them. The goal of true leadership is to become unneeded." data-zh="過度幫忙是披著善意外衣的領導失敗。導師陷阱就是當領袖變得太不可或缺，團隊反而無法在沒有他的情況下運作、甚至成長。真正領導力的目標，是讓自己變得「不再被需要」。">過度幫忙是披著善意外衣的領導失敗。導師陷阱就是當領袖變得太不可或缺，團隊反而無法在沒有他的情況下運作、甚至成長。真正領導力的目標，是讓自己變得「不再被需要」。</p>
-            <a class="concept-link" href="blog/mentor-trap.html" data-en="Read the full article →" data-zh="閱讀完整文章 →">閱讀完整文章 →</a>
-          </article>
-          <article class="concept-item">
-            <h3 class="concept-term" data-en="The Five Battles" data-zh="五場戰役">五場戰役</h3>
-            <p class="concept-def" data-en="Every new direct selling leader must win five specific battles in their first two years — over self-doubt, rejection, credibility, time, and consistency. The leaders who quit usually lost a battle they didn't know they were fighting." data-zh="每位新直銷領袖在頭兩年都必須打贏五場仗：自我懷疑、被拒絕、建立信譽、時間管理、與保持一致。會放棄的人，往往輸在一場自己都不知道在打的仗。">每位新直銷領袖在頭兩年都必須打贏五場仗：自我懷疑、被拒絕、建立信譽、時間管理、與保持一致。會放棄的人，往往輸在一場自己都不知道在打的仗。</p>
-            <a class="concept-link" href="blog/five-battles.html" data-en="Read the full article →" data-zh="閱讀完整文章 →">閱讀完整文章 →</a>
-          </article>
-        </div>
-      </div>
-
-      <!-- Mindset & Ethics -->
-      <div class="concepts-pillar fade-in">
-        <h2 class="concepts-pillar-label" data-en="Mindset &amp; Ethics" data-zh="心態與道德">心態與道德</h2>
-        <div class="concept-list">
-          <article class="concept-item">
-            <h3 class="concept-term" data-en="Win the Right Way" data-zh="贏在正道">贏在正道</h3>
-            <p class="concept-def" data-en="In direct selling, ethics is not just a moral choice — it is the most durable long-term strategy. Winning the right way means building on integrity, value, and respect rather than hype, pressure, or shortcuts." data-zh="在直銷裡，道德不只是道德選擇，它是最持久的長期策略。「贏在正道」是指建立在誠信、價值與尊重之上，而不是靠炒作、壓力或捷徑。">在直銷裡，道德不只是道德選擇，它是最持久的長期策略。「贏在正道」是指建立在誠信、價值與尊重之上，而不是靠炒作、壓力或捷徑。</p>
-            <a class="concept-link" href="blog/win-the-right-way.html" data-en="Read the full article →" data-zh="閱讀完整文章 →">閱讀完整文章 →</a>
-          </article>
-          <article class="concept-item">
-            <h3 class="concept-term" data-en="The Ten-Year Test" data-zh="十年大考">十年大考</h3>
-            <p class="concept-def" data-en="Before making any major decision in direct selling, ask: will this still look right in ten years? The ten-year test is a filter that separates short-term tactics that fade from long-term choices that compound." data-zh="在直銷做任何重大決定之前，先問：這個選擇十年後回頭看，還站得住腳嗎？十年大考是一道篩子，把會褪色的短期戰術，和會複利的長期選擇分開。">在直銷做任何重大決定之前，先問：這個選擇十年後回頭看，還站得住腳嗎？十年大考是一道篩子，把會褪色的短期戰術，和會複利的長期選擇分開。</p>
-            <a class="concept-link" href="blog/ten-year-test.html" data-en="Read the full article →" data-zh="閱讀完整文章 →">閱讀完整文章 →</a>
-          </article>
-          <article class="concept-item">
-            <h3 class="concept-term" data-en="The Passive Income Myth" data-zh="被動收入的迷思">被動收入的迷思</h3>
-            <p class="concept-def" data-en="Passive income is the most overused promise in direct selling. The income is real — but it pays you for the leadership, systems, and trust you've built, not for doing nothing. Understanding what the income actually rewards changes how you build." data-zh="被動收入是直銷裡最被濫用的承諾。收入是真的，但它付給你的是你建立的領導力、系統與信任，而不是「什麼都不做」。看懂收入真正在獎勵什麼，會改變你經營的方式。">被動收入是直銷裡最被濫用的承諾。收入是真的，但它付給你的是你建立的領導力、系統與信任，而不是「什麼都不做」。看懂收入真正在獎勵什麼，會改變你經營的方式。</p>
-            <a class="concept-link" href="blog/passive-income-myth.html" data-en="Read the full article →" data-zh="閱讀完整文章 →">閱讀完整文章 →</a>
-          </article>
-        </div>
-      </div>
-
-      <!-- Relationship & Communication -->
-      <div class="concepts-pillar fade-in">
-        <h2 class="concepts-pillar-label" data-en="Relationship &amp; Communication" data-zh="關係與溝通">關係與溝通</h2>
-        <div class="concept-list">
-          <article class="concept-item">
-            <h3 class="concept-term" data-en="The Alliance Problem" data-zh="聯盟問題">聯盟問題</h3>
-            <p class="concept-def" data-en="Cross-line and peer-leader relationships are the most underestimated factor in long-term success. The alliance problem is how to build alongside other leaders through cooperative competition — without destroying each other." data-zh="旁線與同級領袖的關係，是長期成功中最被低估的因素。聯盟問題談的是如何透過良性競爭，與其他領袖並肩共建，而不是互相拆台。">旁線與同級領袖的關係，是長期成功中最被低估的因素。聯盟問題談的是如何透過良性競爭，與其他領袖並肩共建，而不是互相拆台。</p>
-            <a class="concept-link" href="blog/alliance-problem.html" data-en="Read the full article →" data-zh="閱讀完整文章 →">閱讀完整文章 →</a>
-          </article>
-          <article class="concept-item">
-            <h3 class="concept-term" data-en="Stop Pitching, Start Listening" data-zh="停止推銷，開始傾聽">停止推銷，開始傾聽</h3>
-            <p class="concept-def" data-en="Most leaders follow up by pitching again. The real art of the follow-up is listening — understanding what a prospect actually needs to hear, rather than repeating what you want to say." data-zh="多數領袖的跟進就是再推銷一次。真正的跟進藝術在於傾聽，理解準客戶真正需要聽到什麼，而不是重複你想說的話。">多數領袖的跟進就是再推銷一次。真正的跟進藝術在於傾聽，理解準客戶真正需要聽到什麼，而不是重複你想說的話。</p>
-            <a class="concept-link" href="blog/stop-pitching.html" data-en="Read the full article →" data-zh="閱讀完整文章 →">閱讀完整文章 →</a>
-          </article>
-          <article class="concept-item">
-            <h3 class="concept-term" data-en="Saying No to the Wrong Prospect" data-zh="對準客戶說不">對準客戶說不</h3>
-            <p class="concept-def" data-en="Not every lead is worth pursuing. Recruiting the wrong person costs more than recruiting no one — in time, reputation, and team culture. Saying no with grace is often the most ethical and strategic move a leader can make." data-zh="不是每個準客戶都值得追。招錯人付出的代價，比不招還高：在時間、聲譽和團隊文化上。優雅地說「不」，往往是領袖最有道德、也最有策略的一步。">不是每個準客戶都值得追。招錯人付出的代價，比不招還高：在時間、聲譽和團隊文化上。優雅地說「不」，往往是領袖最有道德、也最有策略的一步。</p>
-            <a class="concept-link" href="blog/saying-no-prospect.html" data-en="Read the full article →" data-zh="閱讀完整文章 →">閱讀完整文章 →</a>
-          </article>
-        </div>
-      </div>
-
-      <!-- Industry & Adaptation -->
-      <div class="concepts-pillar fade-in">
-        <h2 class="concepts-pillar-label" data-en="Industry &amp; Adaptation" data-zh="行業與適應">行業與適應</h2>
-        <div class="concept-list">
-          <article class="concept-item">
-            <h3 class="concept-term" data-en="The Smaller Market Advantage" data-zh="小市場的優勢">小市場的優勢</h3>
-            <p class="concept-def" data-en="Everyone chases the capital cities. But 'second-tier' towns often deliver stronger retention, lower churn, and higher referral rates. The smaller market advantage is the contrarian geography of building where no one else is looking." data-zh="人人都搶攻首都。但「二線」城鎮往往帶來更高的留存率、更低的流失率、更強的轉介。小市場的優勢，是一種反向的地理策略：在沒人在看的地方耕耘。">人人都搶攻首都。但「二線」城鎮往往帶來更高的留存率、更低的流失率、更強的轉介。小市場的優勢，是一種反向的地理策略：在沒人在看的地方耕耘。</p>
-            <a class="concept-link" href="blog/smaller-market-advantage.html" data-en="Read the full article →" data-zh="閱讀完整文章 →">閱讀完整文章 →</a>
-          </article>
-          <article class="concept-item">
-            <h3 class="concept-term" data-en="The Terrain Has Changed" data-zh="戰場已變">戰場已變</h3>
-            <p class="concept-def" data-en="The direct selling landscape has fundamentally shifted — socially, technologically, and generationally. Yesterday's playbook is quietly losing tomorrow's best leaders, and adapting without abandoning your principles is the new core skill." data-zh="直銷的格局已經根本性地改變：在社群、科技、世代上都是。昨天的劇本正悄悄流失明天最優秀的人才；在不丟掉原則的前提下適應，是新的核心能力。">直銷的格局已經根本性地改變：在社群、科技、世代上都是。昨天的劇本正悄悄流失明天最優秀的人才；在不丟掉原則的前提下適應，是新的核心能力。</p>
-            <a class="concept-link" href="blog/terrain-has-changed.html" data-en="Read the full article →" data-zh="閱讀完整文章 →">閱讀完整文章 →</a>
-          </article>
-        </div>
-      </div>
-
-      <!-- Personal Growth -->
-      <div class="concepts-pillar fade-in">
-        <h2 class="concepts-pillar-label" data-en="Personal Growth" data-zh="個人成長">個人成長</h2>
-        <div class="concept-list">
-          <article class="concept-item">
-            <h3 class="concept-term" data-en="Find Your Ikigai" data-zh="找到你的使命感 (Ikigai)">找到你的使命感 (Ikigai)</h3>
-            <p class="concept-def" data-en="You don't need to be a natural salesperson to succeed in direct selling. Using the Japanese Ikigai framework — the intersection of what you love, what you're good at, what the world needs, and what you can be paid for — most people find a more authentic and effective path than 'selling.'" data-zh="你不需要天生會賣東西才能在直銷成功。運用日本的「Ikigai」框架（你熱愛的、你擅長的、世界需要的、能讓你獲得報酬的四者交集）大多數人會找到比「推銷」更真實、也更有效的路。">你不需要天生會賣東西才能在直銷成功。運用日本的「Ikigai」框架（你熱愛的、你擅長的、世界需要的、能讓你獲得報酬的四者交集）大多數人會找到比「推銷」更真實、也更有效的路。</p>
-            <a class="concept-link" href="blog/not-a-salesman.html" data-en="Read the full article →" data-zh="閱讀完整文章 →">閱讀完整文章 →</a>
-          </article>
-          <article class="concept-item">
-            <h3 class="concept-term" data-en="The Comeback" data-zh="東山再起">東山再起</h3>
-            <p class="concept-def" data-en="Every long-haul leader hits a stall. A comeback is not a return to old form but a reinvention from where you actually are — named honestly, audited clearly, re-anchored to one principle, and made visible." data-zh="每個走長線的領袖都會遇到停滯期。東山再起不是回到過去的狀態，而是從你現在真正的位置重新開始：誠實地承認、清楚地盤點、重新錨定一個原則、並且讓它被看見。">每個走長線的領袖都會遇到停滯期。東山再起不是回到過去的狀態，而是從你現在真正的位置重新開始：誠實地承認、清楚地盤點、重新錨定一個原則、並且讓它被看見。</p>
-            <a class="concept-link" href="blog/comeback.html" data-en="Read the full article →" data-zh="閱讀完整文章 →">閱讀完整文章 →</a>
-          </article>
-        </div>
+      <div>
+        <span class="kicker" data-en="Key concepts" data-zh="核心概念">核心概念</span>
+        <h1 id="kc-h" data-en="The frameworks behind the strategy" data-zh="策略背後的框架">策略背後的框架</h1>
+        <p class="lead" data-en="The signature ideas behind 23 years of direct selling leadership, each defined in a sentence, with the full thinking one click away." data-zh="23 年直銷領導經驗背後的代表性思維，每一個用一句話定義，完整內容只差一個點擊。">23 年直銷領導經驗背後的代表性思維，每一個用一句話定義，完整內容只差一個點擊。</p>
       </div>
     </div>
   </section>
 
-  <!-- ========== CTA BANNER ========== -->
-  <section class="cta-banner">
-    <div class="container fade-in">
-      <h2 data-en="Want the Full Strategic Playbook?" data-zh="想要完整的策略手冊嗎？">想要完整的策略手冊嗎？</h2>
-      <p data-en="These frameworks come together in my book — Sun Tzu's Art of War applied to modern direct selling. Launching 20 October 2026." data-zh="這些框架在我的書中匯聚成一體，孫子兵法應用於現代直銷。2026 年 10 月 20 日出版。">這些框架在我的書中匯聚成一體，孫子兵法應用於現代直銷。2026 年 10 月 20 日出版。</p>
-      <a href="book.html" class="btn btn-primary" data-en="Explore the Book" data-zh="了解本書">了解本書</a>
+  <section class="sec wrap" aria-label="Concepts">
+    <p class="lead" style="max-width: 62ch; margin-bottom: clamp(32px, 5vw, 64px)" data-en="Over 23 years, 8 in the field and 15 in corporate management, a handful of ideas kept proving themselves. Use this page as a map legend: skim the definitions, then go deep on whichever one fits where you are." data-zh="在 23 年裡（八年在前線、十五年在企業管理層）有幾個概念不斷被驗證為真。這些就是我一再回頭使用的框架。把這頁當成一張地圖：先快速瀏覽定義，再深入任何一個正好打中你現況的概念。">在 23 年裡（八年在前線、十五年在企業管理層）有幾個概念不斷被驗證為真。這些就是我一再回頭使用的框架。把這頁當成一張地圖：先快速瀏覽定義，再深入任何一個正好打中你現況的概念。</p>
+    <div class="legend-list">
+    <div class="legend-group">
+      <h2><span data-en="Strategic Leadership" data-zh="策略領導力">策略領導力</span><span class="zh cjk-display" lang="zh-Hant" data-en="策略領導力" data-zh=""></span></h2>
+      <ul>
+        <li><a href="blog/dual-perspective.html"><span data-en="The Dual Perspective" data-zh="雙重視角">雙重視角</span></a><p data-en="Most direct selling leaders only ever see one side — the field, or the corporate office. The dual perspective is the rare advantage of having led from both: the insight that emerges when field empathy and corporate strategy are held together." data-zh="大多數直銷領袖一輩子只看到一面，前線，或是企業端。雙重視角是同時在兩邊都領導過的罕見優勢：當前線的同理心與企業端的策略思維放在一起時，所浮現的洞見。">大多數直銷領袖一輩子只看到一面，前線，或是企業端。雙重視角是同時在兩邊都領導過的罕見優勢：當前線的同理心與企業端的策略思維放在一起時，所浮現的洞見。</p></li>
+        <li><a href="blog/generals-dilemma.html"><span data-en="The General's Dilemma" data-zh="將軍的困境">將軍的困境</span></a><p data-en="Should a leader fight from the front lines or direct from behind? The general's dilemma is the constant tension every direct selling leader faces between leading by personal example and leading by building systems and other leaders." data-zh="領袖該在前線衝鋒，還是在後方指揮？將軍的困境是每位直銷領袖都會面對的張力：在親身示範與建立系統、培養其他領袖之間，不斷拉扯。">領袖該在前線衝鋒，還是在後方指揮？將軍的困境是每位直銷領袖都會面對的張力：在親身示範與建立系統、培養其他領袖之間，不斷拉扯。</p></li>
+        <li><a href="blog/busy-not-strategic.html"><span data-en="Busy vs. Strategic" data-zh="瞎忙 vs. 有策略">瞎忙 vs. 有策略</span></a><p data-en="Most leaders are busy, not strategic. Activity feels like progress, but motion without direction is just exhaustion. Strategic leaders ask what they can build today that makes tomorrow easier — not just what keeps them occupied." data-zh="大多數領袖只是忙，而不是有策略。活動讓人感覺像在前進，但沒有方向的忙碌只是疲於奔命。有策略的領袖會問：今天我能建立什麼，讓明天更輕鬆，而不只是讓自己有事做。">大多數領袖只是忙，而不是有策略。活動讓人感覺像在前進，但沒有方向的忙碌只是疲於奔命。有策略的領袖會問：今天我能建立什麼，讓明天更輕鬆，而不只是讓自己有事做。</p></li>
+        <li><a href="blog/income-plateau.html"><span data-en="The Plateau" data-zh="高原期">高原期</span></a><p data-en="A stalled income is a structural problem, not an effort problem. The plateau breaks not by working harder but by pulling one of three levers: depth over width, replacing yourself in income-generating activity, or changing your audience profile." data-zh="收入停滯是結構問題，不是努力問題。突破高原期靠的不是更拼命，而是拉動三個槓桿之一：深度優於廣度、在創造收入的活動中複製自己、或改變你的受眾輪廓。">收入停滯是結構問題，不是努力問題。突破高原期靠的不是更拼命，而是拉動三個槓桿之一：深度優於廣度、在創造收入的活動中複製自己、或改變你的受眾輪廓。</p></li>
+      </ul>
+    </div>
+    <div class="legend-group">
+      <h2><span data-en="Team Building" data-zh="團隊建設">團隊建設</span><span class="zh cjk-display" lang="zh-Hant" data-en="團隊建設" data-zh=""></span></h2>
+      <ul>
+        <li><a href="blog/golden-72-hours.html"><span data-en="The Golden 72 Hours" data-zh="黃金 72 小時">黃金 72 小時</span></a><p data-en="The first 72 hours after someone joins your team are the most decisive window of their entire journey. What happens in those three days largely determines whether they become a long-term builder or a 90-day dropout." data-zh="新夥伴加入團隊後的頭 72 小時，是他整段旅程中最關鍵的窗口。這三天發生的事，大致決定了他會成為長期經營者，還是 90 天就消失。">新夥伴加入團隊後的頭 72 小時，是他整段旅程中最關鍵的窗口。這三天發生的事，大致決定了他會成為長期經營者，還是 90 天就消失。</p></li>
+        <li><a href="blog/two-year-wall.html"><span data-en="The Two-Year Wall" data-zh="兩年之牆">兩年之牆</span></a><p data-en="Year one runs on excitement; year three runs on momentum. Year two is the wall in between — the gap where initial motivation fades before lasting results arrive. It is why roughly half of all direct selling teams quit in their second year." data-zh="第一年靠熱情，第三年靠慣性。第二年是中間那道牆：初期動力消退、長期成果還沒到來的空檔。這就是為什麼大約一半的直銷團隊會在第二年放棄。">第一年靠熱情，第三年靠慣性。第二年是中間那道牆：初期動力消退、長期成果還沒到來的空檔。這就是為什麼大約一半的直銷團隊會在第二年放棄。</p></li>
+        <li><a href="blog/mentor-trap.html"><span data-en="The Mentor Trap" data-zh="導師陷阱">導師陷阱</span></a><p data-en="Over-helping is a leadership failure disguised as generosity. The mentor trap is what happens when a leader becomes so indispensable that the team can no longer function — or grow — without them. The goal of true leadership is to become unneeded." data-zh="過度幫忙是披著善意外衣的領導失敗。導師陷阱就是當領袖變得太不可或缺，團隊反而無法在沒有他的情況下運作、甚至成長。真正領導力的目標，是讓自己變得「不再被需要」。">過度幫忙是披著善意外衣的領導失敗。導師陷阱就是當領袖變得太不可或缺，團隊反而無法在沒有他的情況下運作、甚至成長。真正領導力的目標，是讓自己變得「不再被需要」。</p></li>
+        <li><a href="blog/five-battles.html"><span data-en="The Five Battles" data-zh="五場戰役">五場戰役</span></a><p data-en="Every new direct selling leader must win five specific battles in their first two years — over self-doubt, rejection, credibility, time, and consistency. The leaders who quit usually lost a battle they didn't know they were fighting." data-zh="每位新直銷領袖在頭兩年都必須打贏五場仗：自我懷疑、被拒絕、建立信譽、時間管理、與保持一致。會放棄的人，往往輸在一場自己都不知道在打的仗。">每位新直銷領袖在頭兩年都必須打贏五場仗：自我懷疑、被拒絕、建立信譽、時間管理、與保持一致。會放棄的人，往往輸在一場自己都不知道在打的仗。</p></li>
+      </ul>
+    </div>
+    <div class="legend-group">
+      <h2><span data-en="Mindset &amp; Ethics" data-zh="心態與道德">心態與道德</span><span class="zh cjk-display" lang="zh-Hant" data-en="心態與道德" data-zh=""></span></h2>
+      <ul>
+        <li><a href="blog/win-the-right-way.html"><span data-en="Win the Right Way" data-zh="贏在正道">贏在正道</span></a><p data-en="In direct selling, ethics is not just a moral choice — it is the most durable long-term strategy. Winning the right way means building on integrity, value, and respect rather than hype, pressure, or shortcuts." data-zh="在直銷裡，道德不只是道德選擇，它是最持久的長期策略。「贏在正道」是指建立在誠信、價值與尊重之上，而不是靠炒作、壓力或捷徑。">在直銷裡，道德不只是道德選擇，它是最持久的長期策略。「贏在正道」是指建立在誠信、價值與尊重之上，而不是靠炒作、壓力或捷徑。</p></li>
+        <li><a href="blog/ten-year-test.html"><span data-en="The Ten-Year Test" data-zh="十年大考">十年大考</span></a><p data-en="Before making any major decision in direct selling, ask: will this still look right in ten years? The ten-year test is a filter that separates short-term tactics that fade from long-term choices that compound." data-zh="在直銷做任何重大決定之前，先問：這個選擇十年後回頭看，還站得住腳嗎？十年大考是一道篩子，把會褪色的短期戰術，和會複利的長期選擇分開。">在直銷做任何重大決定之前，先問：這個選擇十年後回頭看，還站得住腳嗎？十年大考是一道篩子，把會褪色的短期戰術，和會複利的長期選擇分開。</p></li>
+        <li><a href="blog/passive-income-myth.html"><span data-en="The Passive Income Myth" data-zh="被動收入的迷思">被動收入的迷思</span></a><p data-en="Passive income is the most overused promise in direct selling. The income is real — but it pays you for the leadership, systems, and trust you've built, not for doing nothing. Understanding what the income actually rewards changes how you build." data-zh="被動收入是直銷裡最被濫用的承諾。收入是真的，但它付給你的是你建立的領導力、系統與信任，而不是「什麼都不做」。看懂收入真正在獎勵什麼，會改變你經營的方式。">被動收入是直銷裡最被濫用的承諾。收入是真的，但它付給你的是你建立的領導力、系統與信任，而不是「什麼都不做」。看懂收入真正在獎勵什麼，會改變你經營的方式。</p></li>
+      </ul>
+    </div>
+    <div class="legend-group">
+      <h2><span data-en="Relationship &amp; Communication" data-zh="關係與溝通">關係與溝通</span><span class="zh cjk-display" lang="zh-Hant" data-en="關係與溝通" data-zh=""></span></h2>
+      <ul>
+        <li><a href="blog/alliance-problem.html"><span data-en="The Alliance Problem" data-zh="聯盟問題">聯盟問題</span></a><p data-en="Cross-line and peer-leader relationships are the most underestimated factor in long-term success. The alliance problem is how to build alongside other leaders through cooperative competition — without destroying each other." data-zh="旁線與同級領袖的關係，是長期成功中最被低估的因素。聯盟問題談的是如何透過良性競爭，與其他領袖並肩共建，而不是互相拆台。">旁線與同級領袖的關係，是長期成功中最被低估的因素。聯盟問題談的是如何透過良性競爭，與其他領袖並肩共建，而不是互相拆台。</p></li>
+        <li><a href="blog/stop-pitching.html"><span data-en="Stop Pitching, Start Listening" data-zh="停止推銷，開始傾聽">停止推銷，開始傾聽</span></a><p data-en="Most leaders follow up by pitching again. The real art of the follow-up is listening — understanding what a prospect actually needs to hear, rather than repeating what you want to say." data-zh="多數領袖的跟進就是再推銷一次。真正的跟進藝術在於傾聽，理解準客戶真正需要聽到什麼，而不是重複你想說的話。">多數領袖的跟進就是再推銷一次。真正的跟進藝術在於傾聽，理解準客戶真正需要聽到什麼，而不是重複你想說的話。</p></li>
+        <li><a href="blog/saying-no-prospect.html"><span data-en="Saying No to the Wrong Prospect" data-zh="對準客戶說不">對準客戶說不</span></a><p data-en="Not every lead is worth pursuing. Recruiting the wrong person costs more than recruiting no one — in time, reputation, and team culture. Saying no with grace is often the most ethical and strategic move a leader can make." data-zh="不是每個準客戶都值得追。招錯人付出的代價，比不招還高：在時間、聲譽和團隊文化上。優雅地說「不」，往往是領袖最有道德、也最有策略的一步。">不是每個準客戶都值得追。招錯人付出的代價，比不招還高：在時間、聲譽和團隊文化上。優雅地說「不」，往往是領袖最有道德、也最有策略的一步。</p></li>
+      </ul>
+    </div>
+    <div class="legend-group">
+      <h2><span data-en="Industry &amp; Adaptation" data-zh="行業與適應">行業與適應</span><span class="zh cjk-display" lang="zh-Hant" data-en="行業與適應" data-zh=""></span></h2>
+      <ul>
+        <li><a href="blog/smaller-market-advantage.html"><span data-en="The Smaller Market Advantage" data-zh="小市場的優勢">小市場的優勢</span></a><p data-en="Everyone chases the capital cities. But 'second-tier' towns often deliver stronger retention, lower churn, and higher referral rates. The smaller market advantage is the contrarian geography of building where no one else is looking." data-zh="人人都搶攻首都。但「二線」城鎮往往帶來更高的留存率、更低的流失率、更強的轉介。小市場的優勢，是一種反向的地理策略：在沒人在看的地方耕耘。">人人都搶攻首都。但「二線」城鎮往往帶來更高的留存率、更低的流失率、更強的轉介。小市場的優勢，是一種反向的地理策略：在沒人在看的地方耕耘。</p></li>
+        <li><a href="blog/terrain-has-changed.html"><span data-en="The Terrain Has Changed" data-zh="戰場已變">戰場已變</span></a><p data-en="The direct selling landscape has fundamentally shifted — socially, technologically, and generationally. Yesterday's playbook is quietly losing tomorrow's best leaders, and adapting without abandoning your principles is the new core skill." data-zh="直銷的格局已經根本性地改變：在社群、科技、世代上都是。昨天的劇本正悄悄流失明天最優秀的人才；在不丟掉原則的前提下適應，是新的核心能力。">直銷的格局已經根本性地改變：在社群、科技、世代上都是。昨天的劇本正悄悄流失明天最優秀的人才；在不丟掉原則的前提下適應，是新的核心能力。</p></li>
+      </ul>
+    </div>
+    <div class="legend-group">
+      <h2><span data-en="Personal Growth" data-zh="個人成長">個人成長</span><span class="zh cjk-display" lang="zh-Hant" data-en="個人成長" data-zh=""></span></h2>
+      <ul>
+        <li><a href="blog/not-a-salesman.html"><span data-en="Find Your Ikigai" data-zh="找到你的使命感 (Ikigai)">找到你的使命感 (Ikigai)</span></a><p data-en="You don't need to be a natural salesperson to succeed in direct selling. Using the Japanese Ikigai framework — the intersection of what you love, what you're good at, what the world needs, and what you can be paid for — most people find a more authentic and effective path than 'selling.'" data-zh="你不需要天生會賣東西才能在直銷成功。運用日本的「Ikigai」框架（你熱愛的、你擅長的、世界需要的、能讓你獲得報酬的四者交集）大多數人會找到比「推銷」更真實、也更有效的路。">你不需要天生會賣東西才能在直銷成功。運用日本的「Ikigai」框架（你熱愛的、你擅長的、世界需要的、能讓你獲得報酬的四者交集）大多數人會找到比「推銷」更真實、也更有效的路。</p></li>
+        <li><a href="blog/comeback.html"><span data-en="The Comeback" data-zh="東山再起">東山再起</span></a><p data-en="Every long-haul leader hits a stall. A comeback is not a return to old form but a reinvention from where you actually are — named honestly, audited clearly, re-anchored to one principle, and made visible." data-zh="每個走長線的領袖都會遇到停滯期。東山再起不是回到過去的狀態，而是從你現在真正的位置重新開始：誠實地承認、清楚地盤點、重新錨定一個原則、並且讓它被看見。">每個走長線的領袖都會遇到停滯期。東山再起不是回到過去的狀態，而是從你現在真正的位置重新開始：誠實地承認、清楚地盤點、重新錨定一個原則、並且讓它被看見。</p></li>
+      </ul>
+    </div>
     </div>
   </section>
 
-  <!-- ========== FOOTER ========== -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <a href="index.html" class="footer-logo">MIKAEL<span>CHEW</span></a>
-        <ul class="footer-links">
-          <li><a href="index.html" data-en="Home" data-zh="首頁">首頁</a></li>
-          <li><a href="about.html" data-en="About" data-zh="關於">關於</a></li>
-          <li><a href="blog.html" data-en="Blog" data-zh="部落格">部落格</a></li>
-          <li><a href="concepts.html" data-en="Key Concepts" data-zh="核心概念">核心概念</a></li>
-          <li><a href="book.html" data-en="Book" data-zh="著作">著作</a></li>
-          <li><a href="speaking.html" data-en="Speaking" data-zh="演講">演講</a></li>
-          <li><a href="work-with-me.html" data-en="Work With Me" data-zh="與我合作">與我合作</a></li>
-          <li><a href="contact.html" data-en="Contact" data-zh="聯繫">聯繫</a></li>
-          <li><a href="privacy.html" data-en="Privacy" data-zh="隱私政策">隱私政策</a></li>
-          <li><a href="refund-policy.html" data-en="Refunds" data-zh="退款政策">退款政策</a></li>
-        </ul>
-        <div class="footer-social">
-          <a href="https://www.linkedin.com/in/mikael-chew-07487551/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://www.facebook.com/coachmikaelchew" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://www.instagram.com/mikael_chew/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        </div>
+  <section class="band" aria-labelledby="pb-h">
+    <div class="wrap band-in">
+      <div>
+        <h2 id="pb-h" data-en="The full strategic playbook" data-zh="完整的策略手冊">完整的策略手冊</h2>
+        <p data-en="These frameworks come together in the book: Sun Tzu's Art of War applied to modern direct selling." data-zh="這些框架在我的書中匯聚成一體：孫子兵法應用於現代直銷。">這些框架在我的書中匯聚成一體：孫子兵法應用於現代直銷。</p>
       </div>
-      <div class="footer-bottom">
-        <p data-en="© 2026 Mikael Chew. All rights reserved." data-zh="© 2026 Mikael Chew. 版權所有。">© 2026 Mikael Chew. 版權所有。</p>
+      <div>
+        <h3 data-en="The book" data-zh="這本書">這本書</h3>
+        <p class="when-prelaunch" data-en="On sale 20 October 2026." data-zh="2026 年 10 月 20 日上市。">2026 年 10 月 20 日上市。</p>
+        <p class="when-launched" data-en="On sale now." data-zh="現已上市。">現已上市。</p>
+        <a class="go" href="book.html" data-en="Explore the book" data-zh="了解本書">了解本書</a>
+      </div>
+      <div>
+        <h3 data-en="Start reading" data-zh="開始閱讀">開始閱讀</h3>
+        <p data-en="Chapter 1 is free on this site." data-zh="第一章在網站上免費閱讀。">第一章在網站上免費閱讀。</p>
+        <a class="go" href="chapter-1.html" data-en="Read Chapter 1 free" data-zh="免費試讀第一章">免費試讀第一章</a>
       </div>
     </div>
-  </footer>
+  </section>
+</main>
 
-  <!-- JavaScript -->
-  <script src="../js/main.js"></script>
-  <!-- Toggle Controls (fixed bottom-right) -->
-  <div class="site-toggles">
-    <button class="toggle-btn theme-btn" aria-label="Toggle theme"><i class="fas fa-sun"></i></button>
-    <button class="toggle-btn lang-btn" aria-label="Switch language">中文</button>
-  </div>
+<!-- shell:footer -->
+<footer class="foot">
+  <span data-en="Mikael Chew, Kuala Lumpur." data-zh="Mikael Chew，吉隆坡。">Mikael Chew，吉隆坡。</span>
+  <nav aria-label="Footer">
+    <a href="contact.html" data-nav="contact" data-en="Contact" data-zh="聯繫">聯繫</a>
+    <a href="privacy.html" data-en="Privacy" data-zh="隱私政策">隱私政策</a>
+    <a href="refund-policy.html" data-en="Refund policy" data-zh="退款政策">退款政策</a>
+    <a href="../concepts.html" class="lang-link" lang="en" hreflang="en">English</a>
+  </nav>
+</footer>
+<svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false">
+  <defs>
+    <filter id="inked" x="-10%" y="-10%" width="120%" height="120%">
+      <feturbulence type="fractalNoise" basefrequency=".75" numoctaves="2" seed="7" result="t"></feturbulence>
+      <fedisplacementmap in="SourceGraphic" in2="t" scale="3"></fedisplacementmap>
+    </filter>
+    <symbol id="seal-launch" viewbox="0 0 100 100"><g filter="url(#inked)"><rect x="4" y="4" width="92" height="92" rx="6" fill="none" stroke="#C0392B" stroke-width="6"></rect><rect x="11" y="11" width="78" height="78" rx="3" fill="#C0392B"></rect><text class="cjk-display" x="50" y="45" text-anchor="middle" font-family="Noto Serif TC" font-weight="900" font-size="30" fill="#F5F0E8">十月</text><text class="cjk-display" x="50" y="79" text-anchor="middle" font-family="Noto Serif TC" font-weight="900" font-size="30" fill="#F5F0E8">上市</text></g></symbol>
+    <symbol id="seal-live" viewbox="0 0 100 100"><g filter="url(#inked)"><rect x="4" y="4" width="92" height="92" rx="6" fill="none" stroke="#C0392B" stroke-width="6"></rect><rect x="11" y="11" width="78" height="78" rx="3" fill="#C0392B"></rect><text class="cjk-display" x="50" y="62" text-anchor="middle" font-family="Noto Serif TC" font-weight="900" font-size="30" fill="#F5F0E8">已上市</text></g></symbol>
+    <symbol id="seal-free" viewbox="0 0 100 100"><g filter="url(#inked)"><rect x="6" y="6" width="88" height="88" rx="4" fill="none" stroke="#F0705F" stroke-width="7"></rect><text class="cjk-display" x="50" y="47" text-anchor="middle" font-family="Noto Serif TC" font-weight="900" font-size="33" fill="#F0705F">免費</text><text class="cjk-display" x="50" y="80" text-anchor="middle" font-family="Noto Serif TC" font-weight="900" font-size="33" fill="#F0705F">試讀</text></g></symbol>
+    <symbol id="seal-sent" viewbox="0 0 100 100"><g filter="url(#inked)"><rect x="4" y="4" width="92" height="92" rx="6" fill="none" stroke="#C0392B" stroke-width="6"></rect><rect x="11" y="11" width="78" height="78" rx="3" fill="#C0392B"></rect><text class="cjk-display" x="50" y="62" text-anchor="middle" font-family="Noto Serif TC" font-weight="900" font-size="30" fill="#F5F0E8">已發送</text></g></symbol>
+  </defs>
+</svg>
+<!-- /shell:footer -->
 </body>
 </html>

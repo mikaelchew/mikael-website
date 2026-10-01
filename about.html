@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="google-site-verification" content="embeCp3FnhQSbE8YajaqByuuUis1O6FDwtC7frU03mU" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Learn about Mikael Chew — 23 years in direct selling, author, strategic coach, and bridge between the field and management.">
+  <meta name="description" data-zh="認識周俊德 Mikael Chew：23年直銷資歷，作者、策略教練，連接前線與管理層的橋樑。" content="Learn about Mikael Chew — 23 years in direct selling, author, strategic coach, and bridge between the field and management.">
   <meta name="author" content="Mikael Chew">
   <meta property="og:title" content="About Mikael Chew — The Story Behind the Strategy">
   <meta property="og:description" content="23 years in direct selling. From the field to management. The story behind the author, mentor, and host of The Long Game.">
@@ -14,20 +14,13 @@
   <meta property="og:locale" content="en_US">
   <meta property="og:locale:alternate" content="zh_TW">
   <title>About | Mikael Chew — Strategy. Leadership. Direct Selling.</title>
-
-  <!-- Google Fonts -->
-  <link rel="preload" as="style" href="vendor/fonts/fonts.css" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="vendor/fonts/fonts.css"></noscript>
-
-  <!-- Font Awesome -->
-  <link rel="preload" as="style" href="vendor/fontawesome/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="vendor/fontawesome/css/all.min.css"></noscript>
-
-  <!-- Site Styles -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" as="font" type="font/woff2" href="vendor/fonts/overpass-900-latin.woff2" crossorigin>
+  <link rel="stylesheet" href="vendor/fonts/site-fonts.css">
+  <link rel="stylesheet" href="css/site.css">
+  <link rel="stylesheet" href="css/inner.css">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="icon" type="image/png" href="favicon.png">
-  <meta name="theme-color" content="#1A1A1A">
+  <meta name="theme-color" content="#22303A">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="manifest" href="site.webmanifest">
   <script type="application/ld+json">
@@ -42,230 +35,142 @@
   <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Person","name":"Mikael Chew","url":"https://www.mikaelchew.com","jobTitle":"Author","description":"Author, mentor, and host of The Long Game. 23 years of dual perspective in direct selling.","sameAs":["https://www.linkedin.com/in/mikael-chew-07487551/","https://www.facebook.com/coachmikaelchew","https://www.instagram.com/mikael_chew/"]}
 </script>
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ENGNTZ3PPC"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-ENGNTZ3PPC');
-</script>
-  <noscript><style>.fade-in,.lt-fade{opacity:1!important;transform:none!important}</style></noscript>
+  <!-- Google Analytics (config call lives in js/site.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ENGNTZ3PPC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  </script>
+  <script src="js/site.js" defer></script>
 </head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
-
-  <!-- ============================================
-       NAVBAR (Inner Page — NOT transparent)
-       ============================================ -->
-  <nav class="navbar">
-    <div class="container">
-      <a href="index.html" class="nav-logo">MIKAEL<span>CHEW</span></a>
-      <ul class="nav-links">
-        <li><a href="index.html" data-en="Home" data-zh="首頁">Home</a></li>
-        <li><a href="about.html" class="active" data-en="About" data-zh="關於">About</a></li>
-        <li><a href="blog.html" data-en="Blog" data-zh="部落格">Blog</a></li>
-        <li><a href="book.html" data-en="Book" data-zh="著作">Book</a></li>
-        <li><a href="speaking.html" data-en="Speaking" data-zh="演講">Speaking</a></li>
-        <li><a href="work-with-me.html" data-en="Work With Me" data-zh="與我合作">Work With Me</a></li>
-        <li><a href="contact.html" data-en="Contact" data-zh="聯繫">Contact</a></li>
-      </ul>
-      <div class="nav-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
+<body data-nav="about">
+<!-- shell:header -->
+<a class="skip" href="#main" data-en="Skip to content" data-zh="跳到內容">Skip to content</a>
+<header class="bar">
+  <a class="brand" href="index.html" data-nav="home"><span class="brand-en">Mikael Chew</span><span class="brand-zh cjk-display" lang="zh-Hant">周俊德</span></a>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav" data-en="Menu" data-zh="選單">Menu</button>
+  <nav class="nav" id="site-nav" aria-label="Main">
+    <a href="book.html" data-nav="book" class="keep" data-en="The Book" data-zh="著作">The Book<span class="nav-zh cjk-display" lang="zh-Hant">著作</span></a>
+    <a href="about.html" data-nav="about" aria-current="page" data-en="About" data-zh="關於">About<span class="nav-zh cjk-display" lang="zh-Hant">關於</span></a>
+    <a href="blog.html" data-nav="writing" data-en="Writing" data-zh="專欄">Writing<span class="nav-zh cjk-display" lang="zh-Hant">專欄</span></a>
+    <a href="speaking.html" data-nav="speaking" data-en="Speaking" data-zh="演講">Speaking<span class="nav-zh cjk-display" lang="zh-Hant">演講</span></a>
+    <a href="work-with-me.html" data-nav="work" data-en="Work With Me" data-zh="合作">Work With Me<span class="nav-zh cjk-display" lang="zh-Hant">合作</span></a>
+    <a href="zh/about.html" class="lang-link keep" lang="zh-Hant" hreflang="zh-Hant">中文</a>
   </nav>
+</header>
+<!-- /shell:header -->
 
-  <!-- ============================================
-       PAGE HERO
-       ============================================ -->
-  <section class="page-hero" id="main">
-    <div class="container">
-      <span class="section-label" data-en="ABOUT" data-zh="關於">ABOUT</span>
-      <h1 data-en="The Story Behind the Strategy" data-zh="策略背後的故事">The Story Behind the Strategy</h1>
-      <p data-en="23 years. Two perspectives. One mission: to help direct selling leaders win the right way." data-zh="23年。兩種視角。一個使命：助直銷領袖以正道致勝。">23 years. Two perspectives. One mission: to help direct selling leaders win the right way.</p>
-    </div>
-  </section>
-
-  <!-- ============================================
-       MY STORY
-       ============================================ -->
-  <section class="section section-beige">
-    <div class="container">
-      <nav class="breadcrumb" aria-label="Breadcrumb">
-        <ol>
-          <li><a href="index.html" data-en="Home" data-zh="首頁">Home</a></li>
-          <li aria-current="page" data-en="About" data-zh="關於">About</li>
-        </ol>
-      </nav>
-      <div class="about-preview fade-in">
-        <div class="about-preview-image">
-          <img src="images/mikael-chew.jpg" srcset="images/mikael-chew-600.jpg 600w, images/mikael-chew.jpg 798w" sizes="(max-width: 768px) 100vw, 760px" alt="Mikael Chew" loading="lazy">
-        </div>
-        <div class="about-preview-content">
-          <span class="section-label" data-en="MY STORY" data-zh="我的故事">MY STORY</span>
-          <h2 data-en="From Rejection to Management — and Back to the Field" data-zh="從被拒到企業管理層，再重返前線">From Rejection to Management — and Back to the Field</h2>
-          <p data-en="More than two decades ago, I walked into my first direct selling opportunity with nothing but determination and a willingness to learn. What followed was a masterclass in resilience. Dozens of rejections. Zero income. Every logical reason to walk away. But something kept me going — a belief that there had to be a smarter, more strategic way to build in this industry." data-zh="二十多年前，我踏入直銷行業，身上只有決心和學習的意願。接下來是一堂深刻的韌性課。數十次被拒絕。零收入。每一個合理的理由都叫我放棄。但有一股信念驅使我前行：一定有更聰明、更具策略性的方式在這個行業中發展。">More than two decades ago, I walked into my first direct selling opportunity with nothing but determination and a willingness to learn. What followed was a masterclass in resilience. Dozens of rejections. Zero income. Every logical reason to walk away. But something kept me going — a belief that there had to be a smarter, more strategic way to build in this industry.</p>
-          <p data-en="For eight years, I was in the trenches. Prospecting strangers, leading meetings in living rooms, building teams from the ground up. I learned what it truly costs to lead from the front lines — the late nights, the personal investment, the emotional weight of responsibility for other people's dreams." data-zh="八年間，我在前線奮戰。開發陌生人、在客廳主持會議、從零開始建立團隊。我學到了從前線領導的真正代價：深夜不眠、個人投入、承擔他人夢想的情感重量。">For eight years, I was in the trenches. Prospecting strangers, leading meetings in living rooms, building teams from the ground up. I learned what it truly costs to lead from the front lines — the late nights, the personal investment, the emotional weight of responsibility for other people's dreams.</p>
-          <p data-en="Then came the rare transition. I moved from the field to the corporate side, stepping into senior management roles across three multinational direct selling companies. Suddenly, I was seeing the industry from the other side of the table — designing strategies, building training systems, and understanding the corporate decisions that shape the lives of thousands of distributors." data-zh="隨後迎來了罕見的轉變。我從前線轉入企業管理層，在三家跨國直銷公司擔任高層管理職務。突然間，我從另一個角度審視這個行業：設計策略、建立培訓體系、理解影響數千名經銷商命運的企業決策。">Then came the rare transition. I moved from the field to the corporate side, stepping into senior management roles across three multinational direct selling companies. Suddenly, I was seeing the industry from the other side of the table — designing strategies, building training systems, and understanding the corporate decisions that shape the lives of thousands of distributors.</p>
-          <p data-en="That dual perspective changed everything. I realized that most leaders only ever see one side. Field leaders don't understand corporate strategy. Corporate executives don't feel the pulse of the field. I had lived both — and I knew that bridging this gap was the key to building something truly sustainable." data-zh="這種雙重視角改變了一切。我意識到大多數領導者只看到一面。前線領袖不理解企業策略。企業高管感受不到前線的脈動。我兩者都經歷過，我深知，彌合這個差距是建立真正可持續事業的關鍵。">That dual perspective changed everything. I realized that most leaders only ever see one side. Field leaders don't understand corporate strategy. Corporate executives don't feel the pulse of the field. I had lived both — and I knew that bridging this gap was the key to building something truly sustainable.</p>
-          <p data-en="In 2026, I made the decision to go full circle — stepping away from the corporate chair and returning to the field as a partner and team builder. Not because I had to. Because I chose to lead by example. Today, I'm building my own organization from the ground up while coaching others to do the same. I combine Sun Tzu's timeless strategy with modern AI tools and 23 years of real-world experience — from both sides of the table." data-zh="2026年，我做了一個回歸原點的決定，離開企業高管的位置，重返前線成為夥伴和建隊者。不是因為不得不，而是我選擇以身作則。今天，我一邊從零開始建立自己的團隊，一邊指導他人做到同樣的事。我將孫子兵法的永恆策略與現代AI工具和23年的實戰經驗融合，來自桌子兩側的視角。">In 2026, I made the decision to go full circle — stepping away from the corporate chair and returning to the field as a partner and team builder. Not because I had to. Because I chose to lead by example. Today, I'm building my own organization from the ground up while coaching others to do the same. I combine Sun Tzu's timeless strategy with modern AI tools and 23 years of real-world experience — from both sides of the table.</p>
-          <blockquote class="quote" data-en="&quot;The gap between success and failure is not about how hard you work — it's about how strategically you think.&quot;" data-zh="&quot;成功與失敗之間的差距，不在於你多努力工作，而在於你多有策略地思考。&quot;">"The gap between success and failure is not about how hard you work — it's about how strategically you think."</blockquote>
-        </div>
+<main id="main">
+  <section class="page-head" aria-labelledby="about-h">
+    <div class="wrap">
+      <div class="legend" aria-hidden="true" data-zh-only>
+        <span class="vs cjk-display" lang="zh-Hant">關於周俊德</span><span class="v cjk-display" lang="zh-Hant">雙重視角</span>
+      </div>
+      <div>
+        <span class="kicker" data-en="About" data-zh="關於">About</span>
+        <h1 id="about-h" data-en="The story behind the strategy" data-zh="策略背後的故事">The story behind the strategy</h1>
+        <p class="lead" data-en="23 years. Two perspectives. One mission: to help direct selling leaders win the right way." data-zh="23年。兩種視角。一個使命：助直銷領袖以正道致勝。">23 years. Two perspectives. One mission: to help direct selling leaders win the right way.</p>
       </div>
     </div>
   </section>
 
-  <!-- ============================================
-       CAREER TIMELINE
-       ============================================ -->
-  <section class="section section-dark">
-    <div class="container">
-      <div class="section-header fade-in">
-        <span class="section-label" data-en="JOURNEY" data-zh="歷程">JOURNEY</span>
-        <h2 data-en="A Career Built on Both Sides of the Table" data-zh="橫跨前線與管理層的職業歷程">A Career Built on Both Sides of the Table</h2>
-      </div>
-      <div class="timeline fade-in">
-        <div class="timeline-item">
-          <div class="timeline-year" data-en="Early 2000s" data-zh="2000年代初">Early 2000s</div>
-          <div class="timeline-title" data-en="The Beginning" data-zh="起步">The Beginning</div>
-          <p class="timeline-desc" data-en="Entered the world of direct selling. Faced dozens of rejections, zero income, and every reason to quit. Chose to stay and learn." data-zh="踏入直銷世界。數十次被拒、零收入，每個理由都叫我放棄。我選擇留下來學。">Entered the world of direct selling. Faced dozens of rejections, zero income, and every reason to quit. Chose to stay and learn.</p>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-year" data-en="Field Years" data-zh="前線歲月">Field Years</div>
-          <div class="timeline-title" data-en="Building From the Ground Up" data-zh="從零開始建立">Building From the Ground Up</div>
-          <p class="timeline-desc" data-en="Spent eight years in the trenches — prospecting, presenting, building teams, and learning the real cost of leadership from the front lines." data-zh="前線奮鬥了八年：開發準客戶、做產品演示、帶團隊，學到從前線領導的真正代價。">Spent eight years in the trenches — prospecting, presenting, building teams, and learning the real cost of leadership from the front lines.</p>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-year" data-en="The Transition" data-zh="轉型">The Transition</div>
-          <div class="timeline-title" data-en="From Field to Management" data-zh="從前線到企業管理層">From Field to Management</div>
-          <p class="timeline-desc" data-en="Made the rare leap to corporate management. Joined the leadership team of a multinational direct selling company, overseeing marketing, training, and network operations." data-zh="完成罕見的跨界。加入一家跨國直銷公司的管理團隊，負責行銷、培訓與網絡營運。">Made the rare leap to corporate management. Joined the leadership team of a multinational direct selling company, overseeing marketing, training, and network operations.</p>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-year" data-en="Corporate Leadership" data-zh="企業領導">Corporate Leadership</div>
-          <div class="timeline-title" data-en="Directing Strategy Across Markets" data-zh="跨市場策略操盤">Directing Strategy Across Markets</div>
-          <p class="timeline-desc" data-en="Served in senior management roles across three multinational companies. Developed market strategies, built training systems, and bridged the gap between corporate vision and field execution." data-zh="在三家跨國公司擔任高階管理職。制定市場策略、建立培訓系統，串連企業願景與前線執行。">Served in senior management roles across three multinational companies. Developed market strategies, built training systems, and bridged the gap between corporate vision and field execution.</p>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-year" data-en="2026" data-zh="2026">2026</div>
-          <div class="timeline-title" data-en="Author, Coach &amp; Field Leader" data-zh="作者、教練與前線領袖">Author, Coach &amp; Field Leader</div>
-          <p class="timeline-desc" data-en="Published a strategic guide for direct selling leaders combining Sun Tzu's Art of War with two decades of real experience. Then made the rarest move of all — left the corporate chair to return to the field. Now building a team from the ground up while coaching leaders to do the same. The circle is complete." data-zh="出版融合孫子兵法與二十多年實戰經驗的直銷領袖策略指南。然後做了最罕見的一步，離開企業高管之位，重返前線。如今從零開始建立團隊，同時指導領袖們做到同樣的事。這個圓，終於合攏了。">Published a strategic guide for direct selling leaders combining Sun Tzu's Art of War with two decades of real experience. Then made the rarest move of all — left the corporate chair to return to the field. Now building a team from the ground up while coaching leaders to do the same. The circle is complete.</p>
-        </div>
+  <section class="sec wrap" aria-labelledby="story-h">
+    <div class="story">
+      <img src="images/mikael-chew.jpg" srcset="images/mikael-chew-600.jpg 600w, images/mikael-chew.jpg 798w" sizes="(max-width: 900px) 280px, 360px" width="798" height="798" alt="Mikael Chew" loading="lazy">
+      <div class="copy">
+        <h2 class="sec-h" id="story-h"><span data-en="From rejection to management, and back to the field" data-zh="從被拒到企業管理層，再重返前線">From rejection to management, and back to the field</span></h2>
+        <p data-en="In 2003 I walked into my first direct selling opportunity with nothing but determination and a willingness to learn. What followed was a masterclass in resilience: about 38 rejections, a first commission cheque of RM 28, and every logical reason to walk away. Something kept me going: a belief that there had to be a smarter, more strategic way to build in this industry." data-zh="2003年，我踏入直銷行業，身上只有決心和學習的意願。接下來是一堂深刻的韌性課：大約38次被拒絕，第一張佣金支票只有RM 28，每一個合理的理由都叫我放棄。但有一股信念驅使我前行：一定有更聰明、更具策略性的方式在這個行業中發展。">In 2003 I walked into my first direct selling opportunity with nothing but determination and a willingness to learn. What followed was a masterclass in resilience: about 38 rejections, a first commission cheque of RM 28, and every logical reason to walk away. Something kept me going: a belief that there had to be a smarter, more strategic way to build in this industry.</p>
+        <p data-en="For 8 years I was in the trenches. Prospecting strangers, leading meetings in living rooms, building teams from the ground up. I learned what it truly costs to lead from the front lines: the late nights, the personal investment, the emotional weight of responsibility for other people's dreams." data-zh="八年間，我在前線奮戰。開發陌生人、在客廳主持會議、從零開始建立團隊。我學到了從前線領導的真正代價：深夜不眠、個人投入、承擔他人夢想的情感重量。">For 8 years I was in the trenches. Prospecting strangers, leading meetings in living rooms, building teams from the ground up. I learned what it truly costs to lead from the front lines: the late nights, the personal investment, the emotional weight of responsibility for other people's dreams.</p>
+        <p data-en="Then came the rare transition. I moved from the field to the corporate side and spent 15 years in senior management across three multinational direct selling companies. Suddenly I was seeing the industry from the other side of the table: designing strategies, building training systems, and understanding the corporate decisions that shape the lives of thousands of distributors." data-zh="隨後迎來了罕見的轉變。我從前線轉入企業管理層，十五年間在三家跨國直銷公司擔任高層管理職務。突然間，我從另一個角度審視這個行業：設計策略、建立培訓體系、理解影響數千名經銷商命運的企業決策。">Then came the rare transition. I moved from the field to the corporate side and spent 15 years in senior management across three multinational direct selling companies. Suddenly I was seeing the industry from the other side of the table: designing strategies, building training systems, and understanding the corporate decisions that shape the lives of thousands of distributors.</p>
+        <p data-en="That dual perspective changed everything. Most leaders only ever see one side. Field leaders don't understand corporate strategy. Corporate executives don't feel the pulse of the field. I had lived both, and I knew that bridging this gap was the key to building something truly sustainable." data-zh="這種雙重視角改變了一切。大多數領導者只看到一面。前線領袖不理解企業策略。企業高管感受不到前線的脈動。我兩者都經歷過，我深知，彌合這個差距是建立真正可持續事業的關鍵。">That dual perspective changed everything. Most leaders only ever see one side. Field leaders don't understand corporate strategy. Corporate executives don't feel the pulse of the field. I had lived both, and I knew that bridging this gap was the key to building something truly sustainable.</p>
+        <p data-en="In 2026 I went full circle: I stepped away from the corporate chair and returned to the field as a partner and team builder. Not because I had to, but because I chose to lead by example. Today I'm building my own organisation from the ground up while coaching others to do the same, combining Sun Tzu's strategy with modern AI tools and 23 years of experience from both sides of the table." data-zh="2026年，我做了一個回歸原點的決定，離開企業高管的位置，重返前線成為夥伴和建隊者。不是因為不得不，而是我選擇以身作則。今天，我一邊從零開始建立自己的團隊，一邊指導他人做到同樣的事，將孫子兵法的策略與現代AI工具，以及來自桌子兩側的23年經驗融合在一起。">In 2026 I went full circle: I stepped away from the corporate chair and returned to the field as a partner and team builder. Not because I had to, but because I chose to lead by example. Today I'm building my own organisation from the ground up while coaching others to do the same, combining Sun Tzu's strategy with modern AI tools and 23 years of experience from both sides of the table.</p>
+        <p class="pull" data-en="The gap between success and failure is not how hard you work. It is how strategically you think." data-zh="成功與失敗之間的差距，不在於你多努力，而在於你多有策略地思考。">The gap between success and failure is not how hard you work. It is how strategically you think.</p>
       </div>
     </div>
   </section>
 
-  <!-- ============================================
-       PHILOSOPHY
-       ============================================ -->
-  <section class="section section-beige">
-    <div class="container">
-      <div class="section-header fade-in">
-        <span class="section-label" data-en="PHILOSOPHY" data-zh="理念">PHILOSOPHY</span>
-        <h2 data-en="What I Stand For" data-zh="我的信念">What I Stand For</h2>
-      </div>
-      <div class="philosophy-grid fade-in">
-        <div class="philosophy-card">
-          <h3 data-en="Win the Right Way (正道)" data-zh="贏在正道（正道）">Win the Right Way (&#27491;&#36947;)</h3>
-          <p data-en="True success in direct selling is built on integrity, value, and respect. Not on hype, pressure, or shortcuts. The &quot;right way&quot; isn't just moral — it's strategic." data-zh="直銷的真正成功建立在誠信、價值和尊重之上，而不是靠炒作、施壓或走捷徑。「正道」不只是道德，更是策略。">True success in direct selling is built on integrity, value, and respect. Not on hype, pressure, or shortcuts. The "right way" isn't just moral — it's strategic.</p>
-        </div>
-        <div class="philosophy-card">
-          <h3 data-en="Strategy Over Hustle" data-zh="策略勝於蠻幹">Strategy Over Hustle</h3>
-          <p data-en="Hard work without direction is just exhaustion. I teach leaders to think like generals — to plan, assess, adapt, and execute with precision." data-zh="沒有方向的努力只是疲於奔命。我教導領袖像將軍一樣思考：規劃、評估、適應並精準執行。">Hard work without direction is just exhaustion. I teach leaders to think like generals — to plan, assess, adapt, and execute with precision.</p>
-        </div>
-        <div class="philosophy-card">
-          <h3 data-en="Build Leaders, Not Followers" data-zh="培養領袖，而非追隨者">Build Leaders, Not Followers</h3>
-          <p data-en="The ultimate measure of leadership isn't how many people need you — it's how many people no longer do. True freedom comes from building independence." data-zh="領導力的終極衡量標準不是有多少人需要你，而是有多少人不再需要你。真正的自由來自建立獨立性。">The ultimate measure of leadership isn't how many people need you — it's how many people no longer do. True freedom comes from building independence.</p>
-        </div>
-      </div>
+  <section class="sec wrap" aria-labelledby="route-h">
+    <h2 class="sec-h" id="route-h"><span data-en="The route" data-zh="歷程">The route</span><span class="zh cjk-display" lang="zh-Hant" data-en="歷程" data-zh="">歷程</span></h2>
+    <ol class="route">
+      <li><span class="when num">2003</span><h3 data-en="The beginning" data-zh="起步">The beginning</h3><p data-en="Entered direct selling. About 38 rejections, a first cheque of RM 28, and every reason to quit. Chose to stay and learn." data-zh="踏入直銷世界。大約38次被拒、第一張支票只有RM 28，每個理由都叫我放棄。我選擇留下來學。">Entered direct selling. About 38 rejections, a first cheque of RM 28, and every reason to quit. Chose to stay and learn.</p></li>
+      <li><span class="when num" data-en="8 years" data-zh="8年">8 years</span><h3 data-en="Building in the field" data-zh="前線建隊">Building in the field</h3><p data-en="Prospecting, presenting, building teams, and learning the real cost of leadership from the front lines." data-zh="開發準客戶、做產品演示、帶團隊，學到從前線領導的真正代價。">Prospecting, presenting, building teams, and learning the real cost of leadership from the front lines.</p></li>
+      <li><span class="when num" data-en="15 years" data-zh="15年">15 years</span><h3 data-en="Corporate leadership" data-zh="企業管理層">Corporate leadership</h3><p data-en="Senior management across three multinational companies: market strategy, training systems, and the bridge between corporate vision and field execution." data-zh="在三家跨國公司擔任高階管理職：市場策略、培訓系統，串連企業願景與前線執行。">Senior management across three multinational companies: market strategy, training systems, and the bridge between corporate vision and field execution.</p></li>
+      <li><span class="when num">2026</span><h3 data-en="Author and field leader" data-zh="作者與前線領袖">Author and field leader</h3><p data-en="Wrote 直銷孫子兵法之不戰而勝, then left the corporate chair to build a team from the ground up again. The circle is complete." data-zh="寫成《直銷孫子兵法之不戰而勝》，然後離開企業高管之位，重新從零建立團隊。這個圓，終於合攏了。">Wrote 直銷孫子兵法之不戰而勝, then left the corporate chair to build a team from the ground up again. The circle is complete.</p></li>
+    </ol>
+    <div class="sides-grid" style="margin-top: clamp(40px, 6vw, 80px)">
+      <figure class="print"><img src="images/print/field.webp" srcset="images/print/field-600.webp 600w, images/print/field.webp 900w" sizes="(max-width: 900px) 100vw, 45vw" width="900" height="555" alt="Mikael Chew teaching a room of direct-selling partners" data-alt-zh="Mikael 在課堂上指導直銷夥伴" loading="lazy">
+        <figcaption class="tag" data-en="In the field" data-zh="前線">In the field</figcaption></figure>
+      <figure class="print"><img src="images/print/boardroom.webp" srcset="images/print/boardroom-600.webp 600w, images/print/boardroom.webp 900w" sizes="(max-width: 900px) 100vw, 45vw" width="900" height="386" alt="Mikael Chew on stage as Head of Regional Sales, APAC" data-alt-zh="Mikael 以亞太區域銷售主管身分在台上演講" loading="lazy">
+        <figcaption class="tag" data-en="In the boardroom" data-zh="管理層">In the boardroom</figcaption></figure>
     </div>
   </section>
 
-  <!-- ============================================
-       BOOK TEASER
-       ============================================ -->
-  <section class="section section-dark">
-    <div class="container">
-      <div class="book-teaser fade-in">
-        <div class="book-teaser-badge">
-          <span class="coming-soon" data-en="Coming Soon" data-zh="即將出版">Coming Soon</span>
-          <span class="book-title" data-en="The Art of War for Direct Selling" data-zh="直銷孫子兵法">The Art of War for Direct Selling</span>
-        </div>
-        <div class="book-teaser-content">
-          <h3 data-en="Sun Tzu Meets Modern Direct Selling" data-zh="孫子兵法遇上現代直銷">Sun Tzu Meets Modern Direct Selling</h3>
-          <p data-en="What happens when you apply 2,500 years of battle-tested strategic wisdom to the modern direct selling battlefield? This book bridges the ancient principles of Sun Tzu's Art of War with the real-world challenges that today's network leaders face — from team building and market positioning to ethical influence and long-term sustainability." data-zh="當你將2500年經過戰場考驗的策略智慧應用於現代直銷戰場時，會發生什麼？這本書將孫子兵法的古老原則與當今網絡領袖面臨的實際挑戰連接起來，從團隊建設和市場定位到道德影響力和長期可持續性。">What happens when you apply 2,500 years of battle-tested strategic wisdom to the modern direct selling battlefield? This book bridges the ancient principles of Sun Tzu's Art of War with the real-world challenges that today's network leaders face — from team building and market positioning to ethical influence and long-term sustainability.</p>
-          <p data-en="Written from the rare perspective of someone who has led from both sides of the table, this is the strategic playbook the industry has been waiting for." data-zh="從罕見的雙重視角出發（一位曾在桌子兩側領導的人）這是業界期待已久的策略手冊。">Written from the rare perspective of someone who has led from both sides of the table, this is the strategic playbook the industry has been waiting for.</p>
-          <p><strong class="text-red" data-en="Stay tuned for the launch." data-zh="敬請期待新書發佈。">Stay tuned for the launch.</strong></p>
-          <a href="book.html" class="btn btn-primary" style="margin-top: 1.5rem;" data-en="Learn More About the Book" data-zh="了解更多關於本書">Learn More About the Book</a>
-        </div>
-      </div>
+  <section class="sec wrap" aria-labelledby="values-h">
+    <h2 class="sec-h" id="values-h"><span data-en="What I stand for" data-zh="我的信念">What I stand for</span><span class="zh cjk-display" lang="zh-Hant" data-en="信念" data-zh="">信念</span></h2>
+    <div class="cards">
+      <article class="brief"><span class="n num">01</span><h3 data-en="Win the right way" data-zh="贏在正道">Win the right way</h3><div class="zh cjk-display" lang="zh-Hant" data-zh-only>正道</div><p data-en="Real success in direct selling is built on integrity, value and respect, not hype, pressure or shortcuts. The right way isn't just moral. It's strategic." data-zh="直銷的真正成功建立在誠信、價值和尊重之上，而不是靠炒作、施壓或走捷徑。「正道」不只是道德，更是策略。">Real success in direct selling is built on integrity, value and respect, not hype, pressure or shortcuts. The right way isn't just moral. It's strategic.</p></article>
+      <article class="brief"><span class="n num">02</span><h3 data-en="Strategy over hustle" data-zh="策略勝於蠻幹">Strategy over hustle</h3><div class="zh cjk-display" lang="zh-Hant" data-zh-only>謀定後動</div><p data-en="Hard work without direction is just exhaustion. I teach leaders to think like generals: plan, assess, adapt, and execute with precision." data-zh="沒有方向的努力只是疲於奔命。我教導領袖像將軍一樣思考：規劃、評估、適應並精準執行。">Hard work without direction is just exhaustion. I teach leaders to think like generals: plan, assess, adapt, and execute with precision.</p></article>
+      <article class="brief"><span class="n num">03</span><h3 data-en="Build leaders, not followers" data-zh="培養領袖，而非追隨者">Build leaders, not followers</h3><div class="zh cjk-display" lang="zh-Hant" data-zh-only>以道御眾</div><p data-en="The measure of leadership isn't how many people need you. It's how many no longer do. A team that runs without you is the real goal." data-zh="領導力的衡量標準不是有多少人需要你，而是有多少人不再需要你。一支不靠你也能運作的團隊，才是真正的目標。">The measure of leadership isn't how many people need you. It's how many no longer do. A team that runs without you is the real goal.</p></article>
     </div>
   </section>
 
-  <!-- ============================================
-       SPEAKING ENGAGEMENTS
-       ============================================ -->
-  <section class="section section-beige">
-    <div class="container">
-      <div class="about-speaking-callout fade-in">
-        <span class="section-label" data-en="ALSO" data-zh="此外">ALSO</span>
-        <h2 data-en="I Speak at Industry Events" data-zh="我也接行業活動的演講">I Speak at Industry Events</h2>
-        <p data-en="Beyond writing and mentorship, I deliver keynotes, workshops, and fireside chats for direct selling companies, industry associations, and leadership conferences across Southeast Asia. Available in English, Mandarin, and Bahasa Malaysia." data-zh="除了寫作和指導之外，我也為東南亞各地的直銷企業、行業協會與領導力研討會擔任主題演講者、工作坊講師和爐邊談話嘉賓。可使用英文、華語、或馬來語演講。">Beyond writing and mentorship, I deliver keynotes, workshops, and fireside chats for direct selling companies, industry associations, and leadership conferences across Southeast Asia. Available in English, Mandarin, and Bahasa Malaysia.</p>
-        <a href="speaking.html" class="btn btn-primary" data-en="See Speaking Topics" data-zh="查看演講主題">See Speaking Topics</a>
-      </div>
+  <section class="sec wrap" aria-labelledby="co-h">
+    <h2 class="sec-h" id="co-h"><span data-en="Colleagues on Mikael" data-zh="同業怎麼說">Colleagues on Mikael</span><span class="zh" data-en="via LinkedIn" data-zh="來自 LinkedIn">via LinkedIn</span></h2>
+    <div class="c-grid">
+      <article class="c"><blockquote data-en="A tower of strength and leadership. He has mentored the entire Asia Pacific group of sales." data-zh="他是團隊的中流砥柱。他帶領了整個亞太區的銷售團隊。">A tower of strength and leadership. He has mentored the entire Asia Pacific group of sales.</blockquote>
+        <footer><b>Tessa Tremain</b><span data-en="Senior Presidential Director, Direct Selling (APAC)" data-zh="資深總裁級總監，直銷業（亞太）">Senior Presidential Director, Direct Selling (APAC)</span></footer></article>
+      <article class="c"><blockquote data-en="A true professional. He balances a no-nonsense approach with approachability." data-zh="不折不扣的專業人士。直來直往，卻依然平易近人。">A true professional. He balances a no-nonsense approach with approachability.</blockquote>
+        <footer><b>James Loh</b><span data-en="Independent Industry Professional" data-zh="獨立行業專業人士">Independent Industry Professional</span></footer></article>
+      <article class="c"><blockquote data-en="As a speaker, he captivates everyone — when he speaks, people ‘tabik’!" data-zh="作為演講者，他總能抓住全場，他一開口，大家都「tabik」！">As a speaker, he captivates everyone — when he speaks, people ‘tabik’!</blockquote>
+        <footer><b>Dyi Wong</b><span data-en="Marketing Manager · Ngai Seik Leatherwaren" data-zh="行銷經理 · Ngai Seik Leatherwaren">Marketing Manager · Ngai Seik Leatherwaren</span></footer></article>
     </div>
   </section>
 
-  <!-- ============================================
-       CTA BANNER
-       ============================================ -->
-  <section class="cta-banner">
-    <div class="container fade-in">
-      <h2 data-en="Ready to Lead Strategically?" data-zh="準備好以策略領導了嗎？">Ready to Lead Strategically?</h2>
-      <p data-en="Whether you're building your first team or leading thousands, the right strategy changes everything. Let's connect." data-zh="無論你是正在建立第一支團隊還是領導數千人，正確的策略將改變一切。讓我們聯繫吧。">Whether you're building your first team or leading thousands, the right strategy changes everything. Let's connect.</p>
-      <a href="contact.html" class="btn btn-primary" data-en="Get in Touch" data-zh="聯繫我">Get in Touch</a>
+  <section class="band" aria-label="Next steps">
+    <div class="wrap band-in">
+      <div>
+        <h2 data-en="The book" data-zh="這本書">The book</h2>
+        <p data-en="直銷孫子兵法之不戰而勝 pairs Sun Tzu's principles with 23 years of field and boardroom experience: 13 chapters, each with a real story and a weekly exercise." data-zh="《直銷孫子兵法之不戰而勝》把孫子兵法與23年前線和管理層的經驗結合：十三章，每章都有真實故事與每週練習。">直銷孫子兵法之不戰而勝 pairs Sun Tzu's principles with 23 years of field and boardroom experience: 13 chapters, each with a real story and a weekly exercise.</p>
+        <a class="go when-prelaunch" href="book.html" data-en="On sale 20 October: see the book" data-zh="10月20日上市：看這本書">On sale 20 October: see the book</a>
+        <a class="go when-launched" href="book.html#buy" data-en="On sale now: get the book" data-zh="現已上市：購買本書">On sale now: get the book</a>
+      </div>
+      <div>
+        <h3 data-en="Speaking" data-zh="演講">Speaking</h3>
+        <p data-en="Keynotes, workshops and fireside chats for companies, associations and conferences across Southeast Asia, in English, Mandarin or Bahasa Malaysia." data-zh="為東南亞各地的企業、行業協會與研討會擔任主題演講、工作坊與爐邊談話嘉賓，可用英文、華語或馬來語。">Keynotes, workshops and fireside chats for companies, associations and conferences across Southeast Asia, in English, Mandarin or Bahasa Malaysia.</p>
+        <a class="go" href="speaking.html" data-en="Speaking topics" data-zh="演講主題">Speaking topics</a>
+      </div>
+      <div>
+        <h3 data-en="Talk to me" data-zh="聊一聊">Talk to me</h3>
+        <p data-en="Building your first team or leading thousands, the right strategy changes everything." data-zh="無論你是正在建立第一支團隊還是領導數千人，正確的策略將改變一切。">Building your first team or leading thousands, the right strategy changes everything.</p>
+        <a class="go" href="contact.html" data-en="Get in touch" data-zh="聯繫我">Get in touch</a>
+      </div>
     </div>
   </section>
+</main>
 
-  <!-- ============================================
-       FOOTER
-       ============================================ -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <a href="index.html" class="footer-logo">MIKAEL<span>CHEW</span></a>
-        <ul class="footer-links">
-          <li><a href="index.html" data-en="Home" data-zh="首頁">Home</a></li>
-          <li><a href="about.html" data-en="About" data-zh="關於">About</a></li>
-          <li><a href="blog.html" data-en="Blog" data-zh="部落格">Blog</a></li>
-          <li><a href="concepts.html" data-en="Key Concepts" data-zh="核心概念">Key Concepts</a></li>
-          <li><a href="book.html" data-en="Book" data-zh="著作">Book</a></li>
-          <li><a href="speaking.html" data-en="Speaking" data-zh="演講">Speaking</a></li>
-          <li><a href="work-with-me.html" data-en="Work With Me" data-zh="與我合作">Work With Me</a></li>
-          <li><a href="contact.html" data-en="Contact" data-zh="聯繫">Contact</a></li>
-          <li><a href="privacy.html" data-en="Privacy" data-zh="隱私政策">Privacy</a></li>
-          <li><a href="refund-policy.html" data-en="Refunds" data-zh="退款政策">Refunds</a></li>
-        </ul>
-        <div class="footer-social">
-          <a href="https://www.linkedin.com/in/mikael-chew-07487551/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://www.facebook.com/coachmikaelchew" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://www.instagram.com/mikael_chew/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p data-en="&copy; 2026 Mikael Chew. All rights reserved." data-zh="&copy; 2026 Mikael Chew. 版權所有。">&copy; 2026 Mikael Chew. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Site Scripts -->
-  <script src="js/main.js"></script>
-  <!-- Toggle Controls (fixed bottom-right) -->
-  <div class="site-toggles">
-    <button class="toggle-btn theme-btn" aria-label="Toggle theme"><i class="fas fa-sun"></i></button>
-    <button class="toggle-btn lang-btn" aria-label="Switch language">中文</button>
-  </div>
+<!-- shell:footer -->
+<footer class="foot">
+  <span data-en="Mikael Chew, Kuala Lumpur." data-zh="Mikael Chew，吉隆坡。">Mikael Chew, Kuala Lumpur.</span>
+  <nav aria-label="Footer">
+    <a href="contact.html" data-nav="contact" data-en="Contact" data-zh="聯繫">Contact</a>
+    <a href="privacy.html" data-en="Privacy" data-zh="隱私政策">Privacy</a>
+    <a href="refund-policy.html" data-en="Refund policy" data-zh="退款政策">Refund policy</a>
+    <a href="zh/about.html" class="lang-link" lang="zh-Hant" hreflang="zh-Hant">中文</a>
+  </nav>
+</footer>
+<svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false">
+  <defs>
+    <filter id="inked" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency=".75" numOctaves="2" seed="7" result="t"/>
+      <feDisplacementMap in="SourceGraphic" in2="t" scale="3"/>
+    </filter>
+    <symbol id="seal-launch" viewBox="0 0 100 100"><g filter="url(#inked)"><rect x="4" y="4" width="92" height="92" rx="6" fill="none" stroke="#C0392B" stroke-width="6"/><rect x="11" y="11" width="78" height="78" rx="3" fill="#C0392B"/><text class="cjk-display" x="50" y="45" text-anchor="middle" font-family="Noto Serif TC" font-weight="900" font-size="30" fill="#F5F0E8">十月</text><text class="cjk-display" x="50" y="79" text-anchor="middle" font-family="Noto Serif TC" font-weight="900" font-size="30" fill="#F5F0E8">上市</text></g></symbol>
+    <symbol id="seal-live" viewBox="0 0 100 100"><g filter="url(#inked)"><rect x="4" y="4" width="92" height="92" rx="6" fill="none" stroke="#C0392B" stroke-width="6"/><rect x="11" y="11" width="78" height="78" rx="3" fill="#C0392B"/><text class="cjk-display" x="50" y="62" text-anchor="middle" font-family="Noto Serif TC" font-weight="900" font-size="30" fill="#F5F0E8">已上市</text></g></symbol>
+    <symbol id="seal-free" viewBox="0 0 100 100"><g filter="url(#inked)"><rect x="6" y="6" width="88" height="88" rx="4" fill="none" stroke="#F0705F" stroke-width="7"/><text class="cjk-display" x="50" y="47" text-anchor="middle" font-family="Noto Serif TC" font-weight="900" font-size="33" fill="#F0705F">免費</text><text class="cjk-display" x="50" y="80" text-anchor="middle" font-family="Noto Serif TC" font-weight="900" font-size="33" fill="#F0705F">試讀</text></g></symbol>
+    <symbol id="seal-sent" viewBox="0 0 100 100"><g filter="url(#inked)"><rect x="4" y="4" width="92" height="92" rx="6" fill="none" stroke="#C0392B" stroke-width="6"/><rect x="11" y="11" width="78" height="78" rx="3" fill="#C0392B"/><text class="cjk-display" x="50" y="62" text-anchor="middle" font-family="Noto Serif TC" font-weight="900" font-size="30" fill="#F5F0E8">已發送</text></g></symbol>
+  </defs>
+</svg>
+<!-- /shell:footer -->
 </body>
 </html>
