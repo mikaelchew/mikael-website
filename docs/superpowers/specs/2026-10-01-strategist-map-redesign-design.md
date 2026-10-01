@@ -1,6 +1,6 @@
 # mikaelchew.com redesign: The Strategist's Map 兵法圖
 
-**Date:** 2026-10-01 · **Status:** draft for Mikael's review · **Approved direction:** prototype `redesign/strategist-map/index.html` (Design 3)
+**Date:** 2026-10-01 · **Status:** approved by Mikael 2026-10-01 · **Approved direction:** prototype `redesign/strategist-map/index.html` (Design 3)
 
 ---
 
@@ -279,7 +279,7 @@ Today the switch is a hand edit across several places. The redesign makes it one
 
 ## 13. Open decisions (needed from Mikael)
 
-1. **Preview method:** a private Vercel preview link, or local-network testing on his phone (§11.2).
+1. ~~Preview method~~ **Decided 2026-10-01: private Vercel preview** of the redesign branch (§11.2).
 2. **Amazon Kindle URL:** needed before launch (§9).
-3. **Merge date:** 17 October proposed (§11.5).
+3. ~~Merge date~~ **Decided 2026-10-01: merge on 17 October** (§11.5).
 4. **Work With Me case studies:** supply 2–3 anonymised cases, or keep the section without outcomes (§6.4).
