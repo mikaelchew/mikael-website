@@ -15,36 +15,148 @@
  "read_en": "6 min",
  "read_zh": "6 分鐘",
  "blocks": [
-  ["p", "Ask a direct seller who their customer is and you will usually hear a description of someone they imagine. Women in their thirties. Busy professionals. Health-conscious parents.", "問一位直銷夥伴：你的客戶是誰？通常聽到的，是他想像出來的一群人。三十多歲的女性、忙碌的上班族、注重健康的父母。"],
-  ["p", "Sometimes that picture is right. Often it is a guess that has been repeated so many times it starts to feel like a fact.", "有時候這個描述是對的。但更多時候，它只是一個被重複了太多次、聽起來像事實的猜測。"],
-  ["p", "The good news is that you don't have to guess. The answer is sitting in your phone, in the names of the people who have already bought from you.", "好消息是，你不需要猜。答案就在你的手機裡，就在那些已經跟你買過東西的人的名字裡。"],
-  ["quote", "If you know the enemy and know yourself, you need not fear the result of a hundred battles.", "知彼知己，百戰不殆。", "Sun Tzu", "《孫子兵法・謀攻篇》"],
-  ["h2", "What versus why", "WHAT與WHY"],
-  ["p", "Information tells you <em>what</em> is happening: which age group buys, which product sells most, what the competition charges. It rarely tells you <em>why</em>.", "資料告訴你「發生了什麼」：哪個年齡層在買、哪個產品賣得最好、競爭對手怎麼定價。它很少告訴你「為什麼」。"],
-  ["p", "In this business the why decides almost everything. People buy for reasons they feel long before they can explain them, and those reasons are often not the ones on the brochure.", "在這一行，「為什麼」幾乎決定一切。人們買東西的理由，往往是先感受到，很久之後才說得出口，而且常常不是產品手冊上寫的那些理由。"],
-  ["p", "Someone may buy a product for themselves, or for a parent, a child, or a friend who is struggling. If you don't know which, every message you write is aimed slightly to the side of the target.", "有人買給自己，有人買給父母、孩子，或一位正在辛苦的朋友。如果你不知道是哪一種，你寫的每一則訊息，都會稍微偏離靶心。"],
-  ["h2", "Ten conversations", "十次對話"],
-  ["p", "Here is a method that costs nothing but a few coffees and some patience. Do it once a year, or any time your sharing stops landing.", "這個方法不花什麼錢，只需要幾杯咖啡和一點耐心。一年做一次，或是在你的分享開始沒反應的時候做。"],
-  ["ul", [
-    ["<strong>Choose ten people who have already bought from you.</strong> Start with customers rather than prospects, because they have already made the decision you are trying to understand.", "<strong>挑十位已經跟你買過的人。</strong>先找客戶，而不是潛在客戶，因為他們已經做過你想了解的那個決定。"],
-    ["<strong>Ask for their help, not their money.</strong> \"I'm trying to understand my customers better. Could I buy you a coffee and ask a few questions?\" Very few people say no to that.", "<strong>請他們幫忙，而不是向他們推銷。</strong>「我想更了解我的客戶，可以請你喝杯咖啡，問你幾個問題嗎？」很少有人會拒絕。"],
-    ["<strong>Ask about the decision.</strong> Why did you buy? What were you hoping it would help with? What nearly stopped you? Who else did you think of when you bought it?", "<strong>問他們當時的決定。</strong>你為什麼買？你希望它幫你解決什麼？你差點沒買的原因是什麼？買的時候，你還想到了誰？"],
-    ["<strong>Then be quiet.</strong> The first answer is usually the polite one. The real answer tends to arrive after a pause, if you are patient enough to leave the pause alone.", "<strong>然後安靜。</strong>第一個答案通常是客氣的答案。真正的答案，往往在一段停頓之後才出現，前提是你有耐心讓那段停頓留在那裡。"],
-    ["<strong>Write down their exact words.</strong> Their phrasing becomes your language later, so don't tidy it up.", "<strong>記下他們的原話。</strong>他們的說法，以後就是你的語言，所以不要幫他們修飾。"]
-  ]],
-  ["h2", "Look for the pattern", "找出規律"],
-  ["p", "After ten conversations, read your notes in one sitting. You are looking for repetition, not for the most interesting story.", "十次對話之後，一口氣把筆記讀完。你要找的是重複出現的東西，而不是最精彩的那個故事。"],
-  ["p", "One person is an anecdote. Six or seven people saying a version of the same thing is your market telling you something.", "一個人說的是個案。六、七個人說了差不多的話，那是你的市場在告訴你一件事。"],
-  ["p", "Most people who do this find at least one surprise. Sometimes it's who is really buying. Sometimes it's the reason. Often it's an objection nobody ever said to their face.", "做過這件事的人，幾乎都會發現至少一個意外。有時是誰真的在買，有時是為什麼買，更常見的是一個從來沒有人當面說過的顧慮。"],
-  ["h2", "Then change what you say", "然後，改變你說的話"],
-  ["p", "The point of listening is to change your next conversation. If your customers talk about looking after their family, your sharing should sound like that, in their words, not in the language of the product sheet.", "聆聽的目的，是改變你的下一次對話。如果你的客戶談的是照顧家人，你的分享就應該聽起來像那樣，用他們的話，而不是產品說明書的語言。"],
-  ["p", "Change who you speak to as well. Many builders discover they have been aiming at one group while a quieter, more loyal group was buying all along.", "也要調整你說話的對象。很多夥伴會發現，自己一直瞄準某一群人，而真正安靜又忠實地在買的，其實是另一群人。"],
-  ["p", "Small shifts in wording and audience often matter more than any amount of extra posting. You stop shouting at a crowd and start talking to the person who was already listening.", "措辭和對象的小小調整，往往比多發幾倍的貼文更有用。你不再對著人群大喊，而是開始跟那個本來就在聽的人說話。"],
-  ["h2", "Why this is harder than it sounds", "為什麼這比聽起來難"],
-  ["p", "Asking feels slow. Most of us would rather be doing something that looks like selling. And listening means hearing things we would rather not hear, such as why someone almost didn't buy.", "發問感覺很慢。我們大多寧願做一些看起來像在銷售的事。而聆聽，意味著要聽到一些不想聽的東西，例如有人差點不買的原因。"],
-  ["p", "That discomfort is exactly why it works. The builders who are willing to ask, and to hear the answer, end up knowing their market better than people who have been in it far longer.", "正是這種不舒服，讓它有效。願意發問、也願意聽答案的人，最後對市場的了解，會超過那些比他們早入行很多年的人。"],
-  ["p", "Knowing the other side takes two things no report can sell you: the humility to ask, and the discipline to listen before you decide.", "「知彼」需要兩樣東西，是任何報告都賣不了給你的：開口去問的謙卑，以及先聽完再下決定的紀律。"],
-  ["p", "So, this week: when did you last ask a customer <em>why</em> they bought, and listen to the whole answer?", "所以，這週問問自己：你上一次問客戶「你為什麼買」，並且真正把整個答案聽完，是什麼時候？"]
+  [
+   "p",
+   "Ask a direct seller who their customer is and you will usually hear a description of someone they imagine. Women in their thirties. Busy professionals. Health-conscious parents.",
+   "問一位直銷夥伴：你的客戶是誰？通常聽到的，是他想像出來的一群人。三十多歲的女性、忙碌的上班族、注重健康的父母。"
+  ],
+  [
+   "p",
+   "Sometimes that picture is right. Often it is a guess that has been repeated so many times it starts to feel like a fact.",
+   "有時候這個描述是對的。但更多時候，它只是一個被重複了太多次、聽起來像事實的猜測。"
+  ],
+  [
+   "p",
+   "The good news is that you don't have to guess. The answer is sitting in your phone, in the names of the people who have already bought from you.",
+   "好消息是，你不需要猜。答案就在你的手機裡，就在那些已經跟你買過東西的人的名字裡。"
+  ],
+  [
+   "quote",
+   "If you know the enemy and know yourself, you need not fear the result of a hundred battles.",
+   "知彼知己，百戰不殆。",
+   "Sun Tzu",
+   "《孫子兵法・謀攻篇》"
+  ],
+  [
+   "h2",
+   "What versus why",
+   "WHAT與WHY"
+  ],
+  [
+   "p",
+   "Information tells you <em>what</em> is happening: which age group buys, which product sells most, what the competition charges. It rarely tells you <em>why</em>.",
+   "資料告訴你「發生了什麼」：哪個年齡層在買、哪個產品賣得最好、競爭對手怎麼定價。它很少告訴你「為什麼」。"
+  ],
+  [
+   "p",
+   "In this business the why decides almost everything. People buy for reasons they feel long before they can explain them, and those reasons are often not the ones on the brochure.",
+   "在這一行，「為什麼」幾乎決定一切。人們買東西的理由，往往是先感受到，很久之後才說得出口，而且常常不是產品手冊上寫的那些理由。"
+  ],
+  [
+   "p",
+   "Someone may buy a product for themselves, or for a parent, a child, or a friend who is struggling. If you don't know which, every message you write is aimed slightly to the side of the target.",
+   "有人買給自己，有人買給父母、孩子，或一位正在辛苦的朋友。如果你不知道是哪一種，你寫的每一則訊息，都會稍微偏離靶心。"
+  ],
+  [
+   "h2",
+   "Ten conversations",
+   "十次對話"
+  ],
+  [
+   "p",
+   "Here is a method that costs nothing but a few coffees and some patience. Do it once a year, or any time your sharing stops landing.",
+   "這個方法不花什麼錢，只需要幾杯咖啡和一點耐心。一年做一次，或是在你的分享開始沒反應的時候做。"
+  ],
+  [
+   "ul",
+   [
+    [
+     "<strong>Choose ten people who have already bought from you.</strong> Start with customers rather than prospects, because they have already made the decision you are trying to understand.",
+     "<strong>挑十位已經跟你買過的人。</strong>先找客戶，而不是潛在客戶，因為他們已經做過你想了解的那個決定。"
+    ],
+    [
+     "<strong>Ask for their help, not their money.</strong> \"I'm trying to understand my customers better. Could I buy you a coffee and ask a few questions?\" Very few people say no to that.",
+     "<strong>請他們幫忙，而不是向他們推銷。</strong>「我想更了解我的客戶，可以請你喝杯咖啡，問你幾個問題嗎？」很少有人會拒絕。"
+    ],
+    [
+     "<strong>Ask about the decision.</strong> Why did you buy? What were you hoping it would help with? What nearly stopped you? Who else did you think of when you bought it?",
+     "<strong>問他們當時的決定。</strong>你為什麼買？你希望它幫你解決什麼？你差點沒買的原因是什麼？買的時候，你還想到了誰？"
+    ],
+    [
+     "<strong>Then be quiet.</strong> The first answer is usually the polite one. The real answer tends to arrive after a pause, if you are patient enough to leave the pause alone.",
+     "<strong>然後安靜。</strong>第一個答案通常是客氣的答案。真正的答案，往往在一段停頓之後才出現，前提是你有耐心讓那段停頓留在那裡。"
+    ],
+    [
+     "<strong>Write down their exact words.</strong> Their phrasing becomes your language later, so don't tidy it up.",
+     "<strong>記下他們的原話。</strong>他們的說法，以後就是你的語言，所以不要幫他們修飾。"
+    ]
+   ]
+  ],
+  [
+   "h2",
+   "Look for the pattern",
+   "找出規律"
+  ],
+  [
+   "p",
+   "After ten conversations, read your notes in one sitting. You are looking for repetition, not for the most interesting story.",
+   "十次對話之後，一口氣把筆記讀完。你要找的是重複出現的東西，而不是最精彩的那個故事。"
+  ],
+  [
+   "p",
+   "One person is an anecdote. Six or seven people saying a version of the same thing is your market telling you something.",
+   "一個人說的是個案。六、七個人說了差不多的話，那是你的市場在告訴你一件事。"
+  ],
+  [
+   "p",
+   "Most people who do this find at least one surprise. Sometimes it's who is really buying. Sometimes it's the reason. Often it's an objection nobody ever said to their face.",
+   "做過這件事的人，幾乎都會發現至少一個意外。有時是誰真的在買，有時是為什麼買，更常見的是一個從來沒有人當面說過的顧慮。"
+  ],
+  [
+   "h2",
+   "Then change what you say",
+   "然後，改變你說的話"
+  ],
+  [
+   "p",
+   "The point of listening is to change your next conversation. If your customers talk about looking after their family, your sharing should sound like that, in their words, not in the language of the product sheet.",
+   "聆聽的目的，是改變你的下一次對話。如果你的客戶談的是照顧家人，你的分享就應該聽起來像那樣，用他們的話，而不是產品說明書的語言。"
+  ],
+  [
+   "p",
+   "Change who you speak to as well. Many builders discover they have been aiming at one group while a quieter, more loyal group was buying all along.",
+   "也要調整你說話的對象。很多夥伴會發現，自己一直瞄準某一群人，而真正安靜又忠實地在買的，其實是另一群人。"
+  ],
+  [
+   "p",
+   "Small shifts in wording and audience often matter more than any amount of extra posting. You stop shouting at a crowd and start talking to the person who was already listening.",
+   "措辭和對象的小小調整，往往比多發幾倍的貼文更有用。你不再對著人群大喊，而是開始跟那個本來就在聽的人說話。"
+  ],
+  [
+   "h2",
+   "Why this is harder than it sounds",
+   "為什麼這比聽起來難"
+  ],
+  [
+   "p",
+   "Asking feels slow. Most of us would rather be doing something that looks like selling. And listening means hearing things we would rather not hear, such as why someone almost didn't buy.",
+   "發問感覺很慢。我們大多寧願做一些看起來像在銷售的事。而聆聽，意味著要聽到一些不想聽的東西，例如有人差點不買的原因。"
+  ],
+  [
+   "p",
+   "That discomfort is exactly why it works. The builders who are willing to ask, and to hear the answer, end up knowing their market better than people who have been in it far longer.",
+   "正是這種不舒服，讓它有效。願意發問、也願意聽答案的人，最後對市場的了解，會超過那些比他們早入行很多年的人。"
+  ],
+  [
+   "p",
+   "Knowing the other side takes two things no report can sell you: the humility to ask, and the discipline to listen before you decide.",
+   "「知彼」需要兩樣東西，是任何報告都賣不了給你的：開口去問的謙卑，以及先聽完再下決定的紀律。"
+  ],
+  [
+   "p",
+   "So, this week: when did you last ask a customer <em>why</em> they bought, and listen to the whole answer?",
+   "所以，這週問問自己：你上一次問客戶「你為什麼買」，並且真正把整個答案聽完，是什麼時候？"
+  ]
  ],
  "cta": {
   "h_en": "Know yourself as well as your market",
@@ -54,5 +166,7 @@
   "href": "../book.html",
   "label_en": "See the book",
   "label_zh": "看這本書"
- }
+ },
+ "image": "images/blog/ask-before-you-sell.webp",
+ "image_alt": "Two people talking over coffee in a Kuala Lumpur café, one listening closely"
 }

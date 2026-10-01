@@ -25,7 +25,9 @@
   "excerpt_en": "A new city, a new country, a new audience. Expansion feels like growth, and sometimes it is. Other times it spreads a team too thin to hold anything. Five questions help you tell the difference.",
   "excerpt_zh": "一個新城市、一個新國家、一群新受眾。擴張感覺像成長，有時候確實是。但有時候，它把團隊拉得太薄，什麼都守不住。五個問題，幫你分辨。",
   "read_en": "6 min",
-  "read_zh": "6 分鐘"
+  "read_zh": "6 分鐘",
+  "image": "images/blog/expand-or-hold.webp",
+  "image_alt": "An old paper map of Southeast Asia with pins, a compass and a cup of coffee"
  },
  {
   "slug": "teach-one-thing",
@@ -38,7 +40,9 @@
   "excerpt_en": "Long trainings feel generous and change very little. People leave inspired, remember almost nothing, and do what they did before. Teach one skill, practise it on the spot, and check it next week.",
   "excerpt_zh": "很長的培訓感覺很慷慨，卻改變很少。大家帶著熱血離開，幾乎什麼都記不住，然後繼續做以前做的事。一次教一個技能，當場練習，下週檢查。",
   "read_en": "6 min",
-  "read_zh": "6 分鐘"
+  "read_zh": "6 分鐘",
+  "image": "images/blog/teach-one-thing.webp",
+  "image_alt": "Adults practising in pairs in a small training room"
  },
  {
   "slug": "five-virtues-of-a-general",
@@ -66,7 +70,9 @@
   "excerpt_en": "A leader's time is the scarcest thing in the team. Spend it on the people you hope will start, and you'll run out. Spend it on the people already moving, and the whole team speeds up.",
   "excerpt_zh": "領袖的時間，是團隊裡最稀缺的資源。把它花在你希望會開始的人身上，你很快就會用光。把它花在已經在動的人身上，整個團隊都會加速。",
   "read_en": "6 min",
-  "read_zh": "6 分鐘"
+  "read_zh": "6 分鐘",
+  "image": "images/blog/who-to-invest-in.webp",
+  "image_alt": "A leader in a one-to-one meeting with a team member over a notebook"
  },
  {
   "slug": "first-week-first-year",
@@ -79,7 +85,9 @@
   "excerpt_en": "New partners listen to what you say in their first week, but they copy what you do. Show them the work, let them try it beside you, and the habits they form will carry them through the year.",
   "excerpt_zh": "新夥伴第一週會聽你說什麼，但他們複製的是你做什麼。讓他們看到工作怎麼做，讓他們在你身邊試，他們養成的習慣，會陪他們走過一整年。",
   "read_en": "6 min",
-  "read_zh": "6 分鐘"
+  "read_zh": "6 分鐘",
+  "image": "images/blog/first-week-first-year.webp",
+  "image_alt": "An experienced woman showing a newcomer how to do something on a laptop"
  },
  {
   "slug": "leave-the-door-open",
@@ -107,7 +115,9 @@
   "excerpt_en": "Most opportunities are lost to silence rather than rejection. The fix is following up properly: often enough to be remembered, kindly enough to be welcome, and always with something worth reading.",
   "excerpt_zh": "大多數機會不是被拒絕，而是在沉默中流失。解法是好好跟進：頻繁到對方記得你，溫和到對方歡迎你，而且每次都帶著值得一讀的東西。",
   "read_en": "6 min",
-  "read_zh": "6 分鐘"
+  "read_zh": "6 分鐘",
+  "image": "images/blog/follow-up-without-chasing.webp",
+  "image_alt": "A desk calendar, a phone and a hand writing a note card"
  },
  {
   "slug": "third-voice",
@@ -120,7 +130,9 @@
   "excerpt_en": "New builders often think they must be the expert before they can share anything. You don't. Your job is to connect people with the right voice, and that voice doesn't have to be yours.",
   "excerpt_zh": "很多新人以為，自己要先成為專家，才能分享任何東西。其實不必。你的工作是把人跟對的聲音連起來，而那個聲音不一定是你。",
   "read_en": "6 min",
-  "read_zh": "6 分鐘"
+  "read_zh": "6 分鐘",
+  "image": "images/blog/third-voice.webp",
+  "image_alt": "An experienced mentor explaining something to two listeners at a café table"
  },
  {
   "slug": "fear-of-inviting",
@@ -133,7 +145,9 @@
   "excerpt_en": "Most people who stop inviting don't lack skill. They are protecting themselves from a feeling. Name the feeling, shrink the stakes, and the phone gets lighter.",
   "excerpt_zh": "大多數不再邀約的人，缺的不是技巧。他們是在保護自己，躲開某一種感覺。說出那種感覺、降低賭注，手機就會變輕。",
   "read_en": "6 min",
-  "read_zh": "6 分鐘"
+  "read_zh": "6 分鐘",
+  "image": "images/blog/fear-of-inviting.webp",
+  "image_alt": "A man by a window at dusk, hesitating with his phone in hand"
  },
  {
   "slug": "ask-for-an-opinion",
@@ -161,7 +175,9 @@
   "excerpt_en": "Every new builder is told to start with friends and family. It's a fine place to start and a poor place to stay. The people most likely to value what you offer are usually people you haven't met yet.",
   "excerpt_zh": "每個新人都被教導從親朋好友開始。這是不錯的起點，卻不是久留的地方。最可能珍惜你所提供的東西的人，通常是你還沒認識的人。",
   "read_en": "6 min",
-  "read_zh": "6 分鐘"
+  "read_zh": "6 分鐘",
+  "image": "images/blog/beyond-the-warm-list.webp",
+  "image_alt": "A community running club chatting at dawn in a Kuala Lumpur park"
  },
  {
   "slug": "seven-actions-a-day",
@@ -189,7 +205,9 @@
   "excerpt_en": "People can tell within seconds whether you are repeating a brochure or describing your own life. Before you share any product, live with it long enough to talk about it honestly, including what didn't change for you.",
   "excerpt_zh": "對方幾秒鐘內就分辨得出，你是在背產品手冊，還是在講自己的生活。分享任何產品之前，先跟它一起生活夠久，久到你能誠實地談它，包括在你身上沒有改變的地方。",
   "read_en": "6 min",
-  "read_zh": "6 分鐘"
+  "read_zh": "6 分鐘",
+  "image": "images/blog/speak-from-experience.webp",
+  "image_alt": "A hand writing a daily entry in a notebook beside a cup of tea"
  },
  {
   "slug": "team-copies-all-of-you",
@@ -202,7 +220,9 @@
   "excerpt_en": "Duplication is the whole point of this business, and it doesn't stop at your strengths. If your team keeps attracting people and losing them, look at what you are modelling when you are not on stage.",
   "excerpt_zh": "複製是這個事業的核心，而它不會只複製你的優勢。如果你的團隊一直吸引人、又一直留不住人，看看你不在台上的時候，示範的是什麼。",
   "read_en": "6 min",
-  "read_zh": "6 分鐘"
+  "read_zh": "6 分鐘",
+  "image": "images/blog/team-copies-all-of-you.webp",
+  "image_alt": "A leader training a room while a team member follows up on the phone"
  },
  {
   "slug": "ask-before-you-sell",
@@ -215,7 +235,9 @@
   "excerpt_en": "Most of us guess who our customers are and why they buy. The people who already bought from you can tell you, in their own words, if you ask the right questions and then stop talking.",
   "excerpt_zh": "我們大多是用猜的：猜客戶是誰、猜他們為什麼買。其實已經跟你買過的人，可以用他們自己的話告訴你，前提是你問對問題，然後閉上嘴。",
   "read_en": "6 min",
-  "read_zh": "6 分鐘"
+  "read_zh": "6 分鐘",
+  "image": "images/blog/ask-before-you-sell.webp",
+  "image_alt": "Two people talking over coffee in a Kuala Lumpur café, one listening closely"
  },
  {
   "slug": "winning-gen-z",

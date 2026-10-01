@@ -96,6 +96,7 @@ class WritingTest(unittest.TestCase):
         for slug, p in index.items():
             card = root.xpath('//li[contains(concat(" ",@class," ")," dispatch ")][.//a[@href="blog/%s.html"]]' % slug)[0]
             imgs = card.xpath(".//img/@src")
+            self.assertIn("image", p, slug)  # every post has a picture (photo, map cover or Gemini)
             if "image" in p:
                 self.assertEqual(imgs, [p["image"]], slug)
                 self.assertTrue(os.path.exists(os.path.join(ROOT, p["image"])), p["image"])

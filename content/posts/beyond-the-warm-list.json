@@ -15,33 +15,134 @@
  "read_en": "6 min",
  "read_zh": "6 分鐘",
  "blocks": [
-  ["p", "Almost every new builder hears the same advice in week one. Write down everyone you know. Friends, family, old classmates, colleagues. Start there.", "幾乎每一位新人，在第一週都會聽到同樣的建議：把你認識的每一個人寫下來。朋友、家人、老同學、同事。從這裡開始。"],
-  ["p", "It's reasonable advice. Those people already know you, and trust takes time to build with strangers. The trouble starts when the warm list becomes the whole plan.", "這個建議沒有錯。這些人本來就認識你，而跟陌生人建立信任需要時間。問題是，當熟人名單變成整個計劃的時候，麻煩就來了。"],
-  ["h2", "Why the warm list runs out", "為什麼熟人名單會用完"],
-  ["p", "Most people's warm list is a few hundred names at best. Some will be interested, many won't, and a handful will be put off by being asked at all.", "大多數人的熟人名單，最多幾百個名字。有些人會有興趣，很多人不會，還有少數人光是被問就會反感。"],
-  ["p", "If you keep going back to the same circle, two things happen. You run out of people, and you start spending goodwill you can't easily win back. Friendships are worth more than any order.", "如果你一直回到同一個圈子，會發生兩件事：你的人會用完，而且你開始消耗很難再補回來的情分。友誼，比任何一張訂單都珍貴。"],
-  ["p", "There's a quieter problem too. The people closest to you were chosen for reasons that have nothing to do with your business. Being someone's friend doesn't make them the right fit for what you offer.", "還有一個比較隱性的問題：你身邊最親近的人，當初是因為跟事業毫無關係的原因成為朋友的。是你的朋友，不代表他就適合你所提供的東西。"],
-  ["quote", "Appear at points which the enemy must hasten to defend; march swiftly to places where you are not expected.", "出其所不趨，趨其所不意。", "Sun Tzu", "《孫子兵法・虛實篇》"],
-  ["h2", "Go where the right people already are", "去對的人本來就在的地方"],
-  ["p", "Sun Tzu talks about moving to the places others aren't watching. In prospecting, that usually means looking past the obvious circle to the groups where the people who would value your offer already gather.", "孫子談的是走到別人沒在注意的地方。放在拓客上，通常就是越過那個理所當然的圈子，去那些會珍惜你所提供東西的人本來就聚集的地方。"],
-  ["p", "Start by describing the person you serve best, as specifically as you can. Their stage of life, what they care about, what they're already trying to do for themselves or their family.", "先盡可能具體地描述你最能服務的那個人：他的人生階段、他在乎什麼、他已經在為自己或家人努力做些什麼。"],
-  ["p", "Then ask where that person spends time. A running club, a parents' group, a hobby class, an online community about the very thing your product helps with. Those rooms are full of people who already care about what you care about.", "然後問：這個人平常把時間花在哪裡？跑步社團、家長群組、興趣班、一個正好在討論你產品相關主題的線上社群。這些地方，滿滿都是跟你在乎同一件事的人。"],
-  ["h2", "Join as a person first", "先以一個人的身份加入"],
-  ["p", "The fastest way to ruin a new group is to arrive with a pitch. People can smell it, and they will close ranks.", "毀掉一個新群體最快的方法，就是帶著推銷走進去。大家聞得出來，而且會立刻築起高牆。"],
-  ["ul", [
-    ["<strong>Be useful before you are visible.</strong> Answer questions, share what you've learned, encourage people who are trying.", "<strong>先有用，再被看見。</strong>回答問題、分享你學到的東西、鼓勵正在努力的人。"],
-    ["<strong>Be curious about them.</strong> Ask what brought them there and what they're working on. Remember the answers.", "<strong>對他們好奇。</strong>問他們為什麼來、正在努力什麼。記住他們的答案。"],
-    ["<strong>Let your work be discoverable rather than announced.</strong> If someone asks what you do, tell them plainly and briefly. That's enough.", "<strong>讓別人自己發現你的事業，而不是你去宣布。</strong>有人問你做什麼，簡單、坦白地告訴他。這樣就夠了。"],
-    ["<strong>Keep a simple record.</strong> Each evening, note who you met, where, and one detail you'll remember. That record becomes your list.", "<strong>做一份簡單的紀錄。</strong>每天晚上記下今天認識了誰、在哪裡、一個你會記住的細節。這份紀錄，就是你的名單。"]
-  ]],
-  ["p", "Three to five new people a week is plenty. Over a year that's a couple of hundred real connections, most of them with people who share the interest that brought you together.", "一週認識三到五位新朋友就足夠。一年下來，就是兩百多段真實的連結，而且大多數人跟你有共同的興趣。"],
-  ["h2", "Online counts, with the same rules", "線上也算，規則一樣"],
-  ["p", "Online groups work the same way. Comment thoughtfully on posts, reply to people who reply to you, send a friendly message to someone whose work you admire. Then let the relationship grow at its own pace.", "線上社群也是同樣的道理。認真地在貼文下留言、回覆回覆你的人、主動向你欣賞的人傳一則友善的訊息。然後讓關係按它自己的速度成長。"],
-  ["p", "The mistake is treating a new connection as a lead the moment they accept your request. A copy-paste message about an opportunity, sent to a stranger, does more damage to your name than silence would.", "最常見的錯誤，是對方一接受好友邀請，你就把他當成名單。傳給陌生人一則複製貼上的事業機會訊息，對你名聲的傷害，比什麼都不說還大。"],
-  ["h2", "What about the warm list?", "那熟人名單呢？"],
-  ["p", "Keep it, and treat it with care. Share your work with the people close to you once, honestly, and respect their answer. Many will become your best customers in time, simply because they watched you do things properly.", "留著它，好好珍惜。把你在做的事，誠實地跟身邊的人分享一次，然後尊重他們的回答。很多人日後會成為你最好的客戶，只因為他們看到你一直用對的方式做事。"],
-  ["p", "Just don't build the whole business on it. A business that depends on the next friend saying yes has a short runway.", "只是不要把整份事業建立在它上面。一份靠「下一個朋友說好」才能維持的事業，跑道很短。"],
-  ["p", "So look at your list honestly this week. How many of the names on it are people you chose, and how many are people who would choose what you offer?", "所以，這週誠實地看一看你的名單：上面有多少名字，是你挑的人？又有多少，是會挑你所提供東西的人？"]
+  [
+   "p",
+   "Almost every new builder hears the same advice in week one. Write down everyone you know. Friends, family, old classmates, colleagues. Start there.",
+   "幾乎每一位新人，在第一週都會聽到同樣的建議：把你認識的每一個人寫下來。朋友、家人、老同學、同事。從這裡開始。"
+  ],
+  [
+   "p",
+   "It's reasonable advice. Those people already know you, and trust takes time to build with strangers. The trouble starts when the warm list becomes the whole plan.",
+   "這個建議沒有錯。這些人本來就認識你，而跟陌生人建立信任需要時間。問題是，當熟人名單變成整個計劃的時候，麻煩就來了。"
+  ],
+  [
+   "h2",
+   "Why the warm list runs out",
+   "為什麼熟人名單會用完"
+  ],
+  [
+   "p",
+   "Most people's warm list is a few hundred names at best. Some will be interested, many won't, and a handful will be put off by being asked at all.",
+   "大多數人的熟人名單，最多幾百個名字。有些人會有興趣，很多人不會，還有少數人光是被問就會反感。"
+  ],
+  [
+   "p",
+   "If you keep going back to the same circle, two things happen. You run out of people, and you start spending goodwill you can't easily win back. Friendships are worth more than any order.",
+   "如果你一直回到同一個圈子，會發生兩件事：你的人會用完，而且你開始消耗很難再補回來的情分。友誼，比任何一張訂單都珍貴。"
+  ],
+  [
+   "p",
+   "There's a quieter problem too. The people closest to you were chosen for reasons that have nothing to do with your business. Being someone's friend doesn't make them the right fit for what you offer.",
+   "還有一個比較隱性的問題：你身邊最親近的人，當初是因為跟事業毫無關係的原因成為朋友的。是你的朋友，不代表他就適合你所提供的東西。"
+  ],
+  [
+   "quote",
+   "Appear at points which the enemy must hasten to defend; march swiftly to places where you are not expected.",
+   "出其所不趨，趨其所不意。",
+   "Sun Tzu",
+   "《孫子兵法・虛實篇》"
+  ],
+  [
+   "h2",
+   "Go where the right people already are",
+   "去對的人本來就在的地方"
+  ],
+  [
+   "p",
+   "Sun Tzu talks about moving to the places others aren't watching. In prospecting, that usually means looking past the obvious circle to the groups where the people who would value your offer already gather.",
+   "孫子談的是走到別人沒在注意的地方。放在拓客上，通常就是越過那個理所當然的圈子，去那些會珍惜你所提供東西的人本來就聚集的地方。"
+  ],
+  [
+   "p",
+   "Start by describing the person you serve best, as specifically as you can. Their stage of life, what they care about, what they're already trying to do for themselves or their family.",
+   "先盡可能具體地描述你最能服務的那個人：他的人生階段、他在乎什麼、他已經在為自己或家人努力做些什麼。"
+  ],
+  [
+   "p",
+   "Then ask where that person spends time. A running club, a parents' group, a hobby class, an online community about the very thing your product helps with. Those rooms are full of people who already care about what you care about.",
+   "然後問：這個人平常把時間花在哪裡？跑步社團、家長群組、興趣班、一個正好在討論你產品相關主題的線上社群。這些地方，滿滿都是跟你在乎同一件事的人。"
+  ],
+  [
+   "h2",
+   "Join as a person first",
+   "先以一個人的身份加入"
+  ],
+  [
+   "p",
+   "The fastest way to ruin a new group is to arrive with a pitch. People can smell it, and they will close ranks.",
+   "毀掉一個新群體最快的方法，就是帶著推銷走進去。大家聞得出來，而且會立刻築起高牆。"
+  ],
+  [
+   "ul",
+   [
+    [
+     "<strong>Be useful before you are visible.</strong> Answer questions, share what you've learned, encourage people who are trying.",
+     "<strong>先有用，再被看見。</strong>回答問題、分享你學到的東西、鼓勵正在努力的人。"
+    ],
+    [
+     "<strong>Be curious about them.</strong> Ask what brought them there and what they're working on. Remember the answers.",
+     "<strong>對他們好奇。</strong>問他們為什麼來、正在努力什麼。記住他們的答案。"
+    ],
+    [
+     "<strong>Let your work be discoverable rather than announced.</strong> If someone asks what you do, tell them plainly and briefly. That's enough.",
+     "<strong>讓別人自己發現你的事業，而不是你去宣布。</strong>有人問你做什麼，簡單、坦白地告訴他。這樣就夠了。"
+    ],
+    [
+     "<strong>Keep a simple record.</strong> Each evening, note who you met, where, and one detail you'll remember. That record becomes your list.",
+     "<strong>做一份簡單的紀錄。</strong>每天晚上記下今天認識了誰、在哪裡、一個你會記住的細節。這份紀錄，就是你的名單。"
+    ]
+   ]
+  ],
+  [
+   "p",
+   "Three to five new people a week is plenty. Over a year that's a couple of hundred real connections, most of them with people who share the interest that brought you together.",
+   "一週認識三到五位新朋友就足夠。一年下來，就是兩百多段真實的連結，而且大多數人跟你有共同的興趣。"
+  ],
+  [
+   "h2",
+   "Online counts, with the same rules",
+   "線上也算，規則一樣"
+  ],
+  [
+   "p",
+   "Online groups work the same way. Comment thoughtfully on posts, reply to people who reply to you, send a friendly message to someone whose work you admire. Then let the relationship grow at its own pace.",
+   "線上社群也是同樣的道理。認真地在貼文下留言、回覆回覆你的人、主動向你欣賞的人傳一則友善的訊息。然後讓關係按它自己的速度成長。"
+  ],
+  [
+   "p",
+   "The mistake is treating a new connection as a lead the moment they accept your request. A copy-paste message about an opportunity, sent to a stranger, does more damage to your name than silence would.",
+   "最常見的錯誤，是對方一接受好友邀請，你就把他當成名單。傳給陌生人一則複製貼上的事業機會訊息，對你名聲的傷害，比什麼都不說還大。"
+  ],
+  [
+   "h2",
+   "What about the warm list?",
+   "那熟人名單呢？"
+  ],
+  [
+   "p",
+   "Keep it, and treat it with care. Share your work with the people close to you once, honestly, and respect their answer. Many will become your best customers in time, simply because they watched you do things properly.",
+   "留著它，好好珍惜。把你在做的事，誠實地跟身邊的人分享一次，然後尊重他們的回答。很多人日後會成為你最好的客戶，只因為他們看到你一直用對的方式做事。"
+  ],
+  [
+   "p",
+   "Just don't build the whole business on it. A business that depends on the next friend saying yes has a short runway.",
+   "只是不要把整份事業建立在它上面。一份靠「下一個朋友說好」才能維持的事業，跑道很短。"
+  ],
+  [
+   "p",
+   "So look at your list honestly this week. How many of the names on it are people you chose, and how many are people who would choose what you offer?",
+   "所以，這週誠實地看一看你的名單：上面有多少名字，是你挑的人？又有多少，是會挑你所提供東西的人？"
+  ]
  ],
  "cta": {
   "h_en": "Prospecting with precision",
@@ -51,5 +152,7 @@
   "href": "../book.html",
   "label_en": "See the book",
   "label_zh": "看這本書"
- }
+ },
+ "image": "images/blog/beyond-the-warm-list.webp",
+ "image_alt": "A community running club chatting at dawn in a Kuala Lumpur park"
 }
