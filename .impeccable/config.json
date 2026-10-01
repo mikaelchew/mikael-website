@@ -79,6 +79,16 @@
         "rule": "tight-leading",
         "value": "when",
         "createdAt": "2026-10-01T14:42:39.105Z"
+      },
+      {
+        "rule": "side-tab",
+        "value": "bar",
+        "createdAt": "2026-10-01T16:30:01.040Z"
+      },
+      {
+        "rule": "dark-glow",
+        "value": "rgba(240, 112, 95",
+        "createdAt": "2026-10-01T16:30:01.087Z"
       }
     ]
   }
