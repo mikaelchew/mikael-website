@@ -44,6 +44,15 @@ class InnerPagesTest(unittest.TestCase):
             self.assertIn(fact, text)
         self.assertNotRegex(text, r"\b(2011|2016|2017|2018)\b")
 
+    def test_no_return_to_field_claim(self):
+        # Mikael, 2026-10-02: the site must not say he is moving back to the field in 2026.
+        for page in ("about.html", "zh/about.html", "index.html", "zh/index.html"):
+            src = read(page)
+            # ("field leaders" as a general term elsewhere on the page is fine)
+            for phrase in ("full circle", "corporate chair", "back to the field", "Author and field leader",
+                           "ground up again", "重返前線", "回歸原點", "作者與前線領袖", "重新從零"):
+                self.assertNotIn(phrase, src, (page, phrase))
+
     def test_no_invented_outcomes(self):
         root = doc("work-with-me.html")
         for q in root.xpath("//blockquote"):
