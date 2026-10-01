@@ -69,6 +69,11 @@
         "rule": "cramped-padding",
         "value": "epigraph",
         "createdAt": "2026-10-01T13:15:06.158Z"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "dispatch",
+        "createdAt": "2026-10-01T14:26:11.668Z"
       }
     ]
   }

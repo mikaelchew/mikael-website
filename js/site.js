@@ -184,9 +184,49 @@
     seals.forEach(function (s) { io.observe(s); });
   }
 
+  // ---------- Writing: scheduled posts, topic filter, show more ----------
+  // Anything with a future data-pubdate (index entries, next/previous links) stays hidden
+  // until that local date, so a post can be published ahead and appear on its day.
+  var SHOW = 8;
+  function initWriting() {
+    var today = new Date();
+    today.setHours(0, 0, 0, 0);
+    document.querySelectorAll('[data-pubdate]').forEach(function (el) {
+      var s = el.getAttribute('data-pubdate');
+      if (s && new Date(s + 'T00:00:00').getTime() > today.getTime()) {
+        el.classList.add('post-scheduled');
+        el.hidden = true;
+      }
+    });
+
+    var items = Array.prototype.slice.call(document.querySelectorAll('.dispatch:not(.post-scheduled)'));
+    if (!items.length) return;
+    var moreWrap = document.getElementById('blog-show-more');
+    function show(filter, all) {
+      var shown = 0;
+      items.forEach(function (it) {
+        var match = filter === 'all' || it.getAttribute('data-category') === filter;
+        it.hidden = !match || (!all && filter === 'all' && shown >= SHOW);
+        it.classList.toggle('top', match && shown === 0);
+        if (match) shown++;
+      });
+      if (moreWrap) moreWrap.hidden = all || filter !== 'all' || shown <= SHOW;
+    }
+    show('all', false);
+    document.querySelectorAll('.blog-filter').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        document.querySelectorAll('.blog-filter').forEach(function (b) { b.classList.toggle('active', b === btn); });
+        show(btn.dataset.filter || 'all', false);
+      });
+    });
+    var more = moreWrap && moreWrap.querySelector('button');
+    if (more) more.addEventListener('click', function () { show('all', true); });
+  }
+
   initNav();
   initTracking();
   initForms();
   initBuyForm();
   initSeals();
+  initWriting();
 })();
