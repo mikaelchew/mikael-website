@@ -1,6 +1,6 @@
 # Integration log: Strategist's Map preview
 
-Preview: https://mikaelchew-redesign-preview-gb09gvgoy-mikaelchews-projects.vercel.app
+Preview: https://mikaelchew-redesign-preview-inoi7d2wz-mikaelchews-projects.vercel.app
 (Vercel project `mikaelchew-redesign-preview`, deployed 2026-10-01 from commit after c5508d0.
 Sign in to Vercel as mikaelchew to view it.)
 
