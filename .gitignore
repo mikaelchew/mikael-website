@@ -23,3 +23,5 @@ __pycache__/
 
 # Redesign: font sources (only subsets in vendor/fonts are committed)
 tools/font-src/
+.vercel
+.env*
