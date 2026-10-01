@@ -46,7 +46,7 @@ No hype. No scripts. Strategy that outlasts the hustle.
 
 ### Long — EN (~300 words)
 
-Twenty-three years ago, about 38 people turned Mikael Chew down and his first commission cheque was RM 128. Since then he has built teams in the field for 8 years, spent 15 years in senior corporate management across three multinational direct selling companies, and personally mentored nearly 450 professionals. He has watched the same pattern repeat at every level: talented, hardworking people burning out because nobody taught them to think strategically.
+Twenty-three years ago, 38 people turned Mikael Chew down and his first commission cheque was RM 128. Since then he has built teams in the field for 8 years, spent 15 years in senior corporate management across three multinational direct selling companies, and personally mentored nearly 450 professionals. He has watched the same pattern repeat at every level: talented, hardworking people burning out because nobody taught them to think strategically.
 
 The Art of War for Direct Selling is the book he wishes someone had handed him at the start. It takes Sun Tzu's principles seriously — not as decoration, but as a working strategic framework — and pairs each one with real stories, specific numbers, and a weekly exercise you can act on.
 
@@ -115,7 +115,7 @@ Superseded 2026-09-30: the current bilingual launch emails are in `Claude_Book_E
 **Subject:** 38 people told me no
 **Preview text:** The book I wish someone had handed me 23 years ago.
 
-In my first three months in this industry, about 38 people told me no. My first commission cheque was RM 128.
+In my first three months in this industry, 38 people told me no. My first commission cheque was RM 128.
 
 Nobody taught me how to prospect strategically. Nobody told me the first 72 hours decide whether a new partner becomes a diamond or a shooting star. I learned it the expensive way — in rejections, in ringgit, in team members I lost because I led them wrong.
 
@@ -228,7 +228,7 @@ Base caption works for LinkedIn and Facebook (adjust CTA line per platform). X/T
 ### Day 1 — Launch announcement
 **Base:**
 
-23 years ago, about 38 people told me no, and my first commission cheque was RM 128.
+23 years ago, 38 people told me no, and my first commission cheque was RM 128.
 
 Today, everything those years taught me is in one place. *The Art of War for Direct Selling* (《直銷孫子兵法之不戰而勝》) is officially available.
 
