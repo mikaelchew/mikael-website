@@ -20,3 +20,6 @@ server.py
 # Claude project files
 .claude/
 __pycache__/
+
+# Redesign: font sources (only subsets in vendor/fonts are committed)
+tools/font-src/

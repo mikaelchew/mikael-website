@@ -1,0 +1,8 @@
+/* Self-hosted fonts for the Strategist's Map redesign. Generated files: run build_fonts.py. */
+@font-face { font-family: 'Overpass'; font-style: normal; font-weight: 400; font-display: swap; src: url(overpass-400-latin.woff2) format('woff2'); }
+@font-face { font-family: 'Overpass'; font-style: normal; font-weight: 600; font-display: swap; src: url(overpass-600-latin.woff2) format('woff2'); }
+@font-face { font-family: 'Overpass'; font-style: normal; font-weight: 800; font-display: swap; src: url(overpass-800-latin.woff2) format('woff2'); }
+@font-face { font-family: 'Overpass'; font-style: normal; font-weight: 900; font-display: swap; src: url(overpass-900-latin.woff2) format('woff2'); }
+/* Display-only Chinese subset (titles, legends, seals). Body Chinese uses system fonts. */
+@font-face { font-family: 'Noto Serif TC Display'; font-style: normal; font-weight: 600; font-display: swap; src: url(noto-serif-tc-600-subset.woff2) format('woff2'); }
+@font-face { font-family: 'Noto Serif TC Display'; font-style: normal; font-weight: 900; font-display: swap; src: url(noto-serif-tc-900-subset.woff2) format('woff2'); }

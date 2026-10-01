@@ -15,7 +15,7 @@ import xml.etree.ElementTree as ET
 W = '{http://schemas.openxmlformats.org/wordprocessingml/2006/main}'
 ROOT = os.path.dirname(os.path.abspath(__file__))
 DEFAULT_DOCX = os.path.normpath(os.path.join(
-    ROOT, '..', '..', 'writing', 'Claude_Book_Editing', 'Manuscript_v1.9_TYPESET_READY.docx'))
+    ROOT, '..', '..', 'writing', 'Claude_Book_Editing', 'Manuscript_v2.0_FINAL.docx'))
 
 # --- where the mid-chapter soft CTA goes (before this heading) ---
 MID_CTA_BEFORE = '用Ikigai找到你獨特的切入點'

@@ -60,13 +60,24 @@ def rewrite_srcset(val):
 def transform(relpath):
     src = os.path.join(ROOT, relpath)
     html = open(src, encoding='utf-8').read()
+    out_html = transform_html(html, relpath)
+    out_path = os.path.join(ROOT, 'zh', relpath)
+    os.makedirs(os.path.dirname(out_path), exist_ok=True)
+    open(out_path, 'w', encoding='utf-8').write(out_html)
+    return out_path
+
+def transform_html(html, relpath):
+    """Return the zh-Hant page for one EN page's HTML (relpath is its repo-relative path)."""
     doc = lxml.html.fromstring(html)
+    # Pages rebuilt for the 2026-10 redesign load css/site.css: they ship a self-hosted
+    # Chinese display subset and use system CJK fonts for body text.
+    redesigned = bool(doc.xpath('//link[@rel="stylesheet"][contains(@href,"site.css")]'))
 
     # 1. html lang
     doc.set('lang', 'zh-Hant')
 
-    # 2. swap visible text for data-en/data-zh
-    for el in doc.xpath('//*[@data-zh]'):
+    # 2. swap visible text for data-en/data-zh (elements inside data-zh-only stay as authored)
+    for el in doc.xpath('//*[@data-zh][not(ancestor-or-self::*[@data-zh-only])]'):
         val = el.get('data-zh')
         if val is None: continue
         tag = el.tag.lower() if isinstance(el.tag, str) else ''
@@ -137,6 +148,15 @@ def transform(relpath):
     for el in doc.xpath('//*[@imagesrcset]'):
         el.set('imagesrcset', rewrite_srcset(el.get('imagesrcset')))
 
+    # 6b. language link points back to the EN page (set after the asset rewrite above,
+    # which would otherwise bump "zh/" on the homepage)
+    back = '../' * (relpath.count('/') + 1) + ('' if relpath == 'index.html' else relpath)
+    for a in doc.xpath('//a[contains(concat(" ",normalize-space(@class)," ")," lang-link ")]'):
+        a.set('href', back)
+        a.set('lang', 'en'); a.set('hreflang', 'en')
+        for c in list(a): a.remove(c)
+        a.text = 'English'
+
     # 7. canonical -> zh + hreflang alternates
     for c in doc.xpath('//link[@rel="canonical"]'):
         c.set('href', zh_url(relpath))
@@ -156,8 +176,9 @@ def transform(relpath):
     pre2 = lxml.html.Element('link'); pre2.set('rel','preconnect'); pre2.set('href','https://fonts.gstatic.com'); pre2.set('crossorigin','')
     pl = lxml.html.Element('link'); pl.set('rel','preload'); pl.set('as','style'); pl.set('href', GF_TC); pl.set('onload',"this.onload=null;this.rel='stylesheet'")
     ns = lxml.html.fragment_fromstring('<noscript><link rel="stylesheet" href="%s"></noscript>' % GF_TC)
-    for el in (pre1, pre2, pl, ns):
-        head.append(el)
+    if not redesigned:
+        for el in (pre1, pre2, pl, ns):
+            head.append(el)
 
     # 8. JSON-LD: point page's own url to zh + inLanguage
     e_url = en_url(relpath); z_url = zh_url(relpath)
@@ -167,11 +188,7 @@ def transform(relpath):
         t = t.replace('"inLanguage":"en"', '"inLanguage":"zh-Hant"')
         s.text = t
 
-    out_html = '<!DOCTYPE html>\n' + tostring(doc, encoding='unicode', method='html')
-    out_path = os.path.join(ROOT, 'zh', relpath)
-    os.makedirs(os.path.dirname(out_path), exist_ok=True)
-    open(out_path, 'w', encoding='utf-8').write(out_html)
-    return out_path
+    return '<!DOCTYPE html>\n' + tostring(doc, encoding='unicode', method='html')
 
 def main():
     # scorecard.html has no data-zh translations yet — skip it so we don't
