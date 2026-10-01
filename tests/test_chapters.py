@@ -70,7 +70,7 @@ class FirstChequeTest(unittest.TestCase):
     def test_no_page_says_rm_28(self):
         import glob
         import re
-        pat = re.compile(r"RM[\s ]?28(?![0-9,]|\.[0-9])")
+        pat = re.compile(r"RM[\s ]?28(?![0-9]|[,.][0-9])")
         files = []
         for g in ("*.html", "blog/*.html", "zh/*.html", "zh/blog/*.html", "data/*.json",
                   "content/posts/*.json", "build_chapter.py"):

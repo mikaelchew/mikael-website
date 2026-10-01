@@ -97,7 +97,7 @@ RM 900。第一張佣金支票只有 RM 128，第三張是零。而那之前，�
 
 - No launch date and no price in this email. It is the first thing a new subscriber receives; asking
   for money in it costs more than it earns. The chapter page itself carries both CTAs.
-- The numbers here (about 38 rejections, RM 3,300 / RM 800 / RM 900, first cheque RM 28, third
+- The numbers here (about 38 rejections, RM 3,300 / RM 800 / RM 900, first cheque RM 128, third
   cheque RM 0) follow the 2026-09-30 fact check in `BOOK_FACTS_ALIGNMENT.md`. Don't round them or
   add new ones, and never print the month-2 cheque figure. Every number that goes out has to be
   traceable back to the book.

@@ -36,12 +36,13 @@ class InnerPagesTest(unittest.TestCase):
         self.assertIn("res.ok", js)
 
     def test_about_timeline_facts(self):
-        # Manuscript author bio: 8 years in the field, then 15 in corporate (23 years from 2003).
+        # Mikael, 2026-10-01: 2003-09 in the field with the first company, then corporate from 2009;
+        # a second field spell (2016-17, another company) makes 8 field years in total, 15 corporate.
+        # Spec §6.4: the 2016-18 period is not described specifically.
         text = doc("about.html").xpath("string(//main)")
-        self.assertIn("2003", text)
-        self.assertIn("8 years", text)
-        self.assertIn("15 years", text)
-        self.assertNotRegex(text, r"\b(2009|2011|2016|2018)\b")
+        for fact in ("2003", "2009", "8 years", "15 years"):
+            self.assertIn(fact, text)
+        self.assertNotRegex(text, r"\b(2011|2016|2017|2018)\b")
 
     def test_no_invented_outcomes(self):
         root = doc("work-with-me.html")
