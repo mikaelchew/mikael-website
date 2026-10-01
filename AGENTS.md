@@ -8,33 +8,49 @@ Static HTML/CSS/JS site serving as Mikael Chew's personal brand hub for his Zinz
 
 ## Tech stack
 
-- Static HTML pages (no framework)
-- Custom CSS in `css/`
-- Vanilla JS in `js/`
-- `build_zh.py` — Python script that generates the Chinese (`zh/`) version of pages
-- `server.py` — local dev server for previewing the site
-- CNAME set to `mikaelchew.com`
+- Static HTML pages (no framework), redesigned October 2026 as "The Strategist's Map" (see `DESIGN.md`)
+- CSS: `css/site.css` (shared design system + motion layer), `css/map.css` (homepage), `css/book.css` (book page), `css/inner.css` (inner pages + Writing index)
+- Vanilla JS: `js/site.js` (every page: GA4, nav, forms, buy form, seals, Writing filter/scheduling, scroll motion), `js/map.js` (homepage map)
+- Self-hosted fonts in `vendor/fonts/` (Overpass + a Noto Serif TC display subset built by `build_fonts.py`)
+- Python generators (system Python `/usr/bin/python3`; needs lxml, fonttools, brotli, Pillow), run together by `build_all.sh`
+- Hosted on **GitHub Pages**: pushing `main` publishes. CNAME `mikaelchew.com`
 
 ## Setup
 
 ```bash
-# No install step required — pure static site
-# Run local preview server:
-python3 server.py
+# No install step for the site itself. Generators use system Python:
+/usr/bin/python3 -c "import lxml, fontTools, brotli, PIL"
+python3 server.py          # local preview (gitignored, port 8080)
 ```
 
 ## Run / Build / Test
 
 ```bash
-python3 server.py          # local dev server
-python3 build_zh.py        # regenerate zh/ Chinese pages from source
+./build_all.sh                                   # regenerate everything, in order (see below)
+/usr/bin/python3 -m unittest discover -s tests -t .   # the test suite; must pass before any push
 ```
+
+`build_all.sh` runs: `build_chapters.py` (chapter data → map + book cards) → `build_chapter.py` (Chapter 1
+from the manuscript) → `build_posts.py` (blog posts from `content/posts/*.json`) → `build_blog.py` (Writing
+index from `data/posts.json`) → `build_quotes.py` (LinkedIn recommendations) → `build_shell.py` (shared
+header/footer + launch phase) → `build_zh.py` (the `/zh/` mirror) → `build_fonts.py` (Chinese display subset).
+Never hand-edit generated output: `zh/`, `chapter-1.html`, `blog/<new post>.html`, or anything between
+`<!-- … -->` build markers.
+
+**Launch switch:** `data/site.json` `{"phase": "prelaunch"}` → `"launched"`, then `./build_all.sh`, test, push.
+That shows the buy section and "on sale now" copy everywhere (`.when-launched`) and hides pre-launch copy.
+
+**New blog post:** add `content/posts/<slug>.json` (see an existing one for the shape: metadata, bilingual
+blocks, CTA, optional `image` or `cover_zh` for a generated map cover via `tools/make_covers.py`), then
+`./build_all.sh`. Posts dated in the future stay hidden on the site until their day (`js/site.js`); the RSS
+feed only picks up posts dated on or before the build day, so rebuild and push after a scheduled post's date.
 
 ## Key files
 
-- `index.html` — homepage
-- `book.html` — book landing page (upgrade from "Coming Soon" to live purchase page on launch)
-- `blog.html` / `blog/` — blog index and individual posts
+- `index.html` — homepage (the Map)
+- `book.html` — book page; buy section switches on with the launch phase
+- `blog.html` / `blog/` — Writing index (generated) and posts; `content/posts/` holds post sources
+- `data/` — `site.json` (launch phase), `chapters.json`, `posts.json`, `testimonials.json`
 - `about.html` — about page
 - `work-with-me.html` — Zinzino collaboration / business page
 - `speaking.html` — speaking engagements
@@ -44,8 +60,10 @@ python3 build_zh.py        # regenerate zh/ Chinese pages from source
 - `BOOK_LAUNCH_PLAN.md` — full 12-week launch campaign plan with checklists
 - `FACEBOOK_GROUP_PLAN.md` — Facebook group growth strategy
 - `YOUTUBE_PODCAST_PLAN.md` — YouTube and podcast content plan
-- `MARBLISM_INSTRUCTIONS.md` — design/build instructions for the site
-- `《直銷孫子兵法之不戰而勝》完整修訂版_v2.docx` — full revised manuscript
+- `MARBLISM_INSTRUCTIONS.md` — brand voice and facts (the original 2026 build brief; the visual design is now in `DESIGN.md`)
+- `DESIGN.md` — the redesign's design system: tokens, components, motion rules, page compositions
+- `PRODUCT.md` — who the site is for and what it must do
+- `tests/` — the unittest suite (facts, integrations, bilingual output, posts, motion-safe markup)
 - `downloads/` — downloadable assets (e.g. chapter preview PDF)
 - `images/` — site images and graphics
 - `llms.txt` — LLM-readable site summary
@@ -80,21 +98,28 @@ The book launch is a 12-week campaign in three phases:
 
 ## Open tasks / next steps
 
-*(Synced against the live site 2026-07-09 — see `BOOK_LAUNCH_PLAN.md` for the full checklist.)*
+*(Synced 2026-10-02, after the redesign went live — see `BOOK_LAUNCH_PLAN.md` for the full campaign checklist.)*
 
-- **Done:** `book.html` upgraded from "Coming Soon" to a full pre-launch page — **20 October 2026** launch badge, 13-chapter list, prominent free Chapter 1 section, FAQ, launch-notify form. It becomes the purchase page on launch day.
-- **Done:** Email list capture on Kit (2026-09-30): three Kit forms with double opt-in replace the old Mailchimp forms; see `KIT_EMAIL_SETUP.md`.
-- **Done:** Chapter 1 published as a reading page (`chapter-1.html`, generated from the manuscript by `build_chapter.py`) — ungated, with buy CTAs mid-chapter and at the end. "Read Chapter 1 Free" is book.html's primary CTA; it links to the page, not a download.
-- Review the drafted launch copy in `BOOK_LAUNCH_COPY.md` (descriptions, bios, press release, email sequences, launch-week captions) and fill its `[PLACEHOLDERS]`
-- Decide and set up the purchase mechanism (Gumroad, Shopify, or WooCommerce) — **still open, on the launch critical path**
-- Design and add book launch visual assets (social graphics, email banners, web hero banner)
-- Build out `zh/` versions of any new pages added during campaign (mirror current as of 2026-07-09)
+- **Done (2026-10-02):** "The Strategist's Map" redesign live on every page, EN and ZH, with Chapter 1, the
+  Writing index, 16 weekly posts (1 Jul – 14 Oct) and all 8 LinkedIn recommendations. See `DESIGN.md`.
+- **Done:** Purchase flow: book.html buy form → Billplz via the Apps Script endpoint → `book-thank-you.html`;
+  Mikael completed two real purchases (2026-10-01). Amazon Kindle link set (B0HLDGD5M3). Kit email capture
+  (three forms, double opt-in, `KIT_EMAIL_SETUP.md`).
+- **20 Oct 2026:** flip the launch phase (see "Launch switch" above), rebuild, test, push.
+- **After 7 and 14 Oct:** rebuild and push once each, so those scheduled posts reach `feed.xml`.
+- **Mikael:** update the emails already set up in Kit from "RM 28" to "RM 128" (first commission cheque).
+- **Mikael:** supply 2–3 real (anonymised is fine) mentee cases for a Work With Me case-study section.
+- Review the drafted launch copy in `BOOK_LAUNCH_COPY.md` and fill its `[PLACEHOLDERS]`.
+- Blog posts: keep book stories to roughly one post in four; the rest are essays (Mikael, 2026-10-01).
 
 ## Notes for agents
 
-- Live site is at mikaelchew.com — changes to HTML/CSS go live on deploy (no build step beyond `build_zh.py` for Chinese pages)
-- When adding new blog posts, add an entry to `blog.html` index and place the post file under `blog/`
-- When adding new pages with Chinese equivalents, run `build_zh.py` to regenerate `zh/`
-- The manuscript DOCX (`《直銷孫子兵法之不戰而勝》完整修訂版_v2.docx`) is the source of truth for book content — use it when generating excerpts, quotes, or summaries
+- Live site is at mikaelchew.com — pushing `main` publishes via GitHub Pages. Get Mikael's OK before any push.
+- New blog posts: a source file in `content/posts/` and `./build_all.sh`; never hand-edit `blog.html`'s index
+  or `data/posts.json` order (both are generated/maintained by the build).
+- New pages with Chinese equivalents: carry `data-en`/`data-zh` on every text element, then `./build_all.sh`.
+- The manuscript (`../../writing/Claude_Book_Editing/Manuscript_v2.0_FINAL.docx`, outside this repo) is the
+  source of truth for book content; `build_chapter.py` regenerates Chapter 1 from it. Facts on the site must
+  match it (e.g. first commission cheque RM 128; about 38 rejections; 8 years field + 15 corporate).
 - Campaign plan checklists are in `BOOK_LAUNCH_PLAN.md`; supplementary plans are in `FACEBOOK_GROUP_PLAN.md` and `YOUTUBE_PODCAST_PLAN.md`
 - Owner email: mikaelchew@gmail.com
