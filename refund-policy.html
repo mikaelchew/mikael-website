@@ -18,14 +18,12 @@
   <meta name="twitter:description" content="Refund policy for the ebook 《直銷孫子兵法之不戰而勝》 bought on mikaelchew.com.">
   <meta name="twitter:image" content="https://www.mikaelchew.com/images/mikael-chew.jpg">
   <title>Refund Policy — Mikael Chew</title>
-  <link rel="preload" as="style" href="vendor/fonts/fonts.css" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="vendor/fonts/fonts.css"></noscript>
-  <link rel="preload" as="style" href="vendor/fontawesome/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="vendor/fontawesome/css/all.min.css"></noscript>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" as="font" type="font/woff2" href="vendor/fonts/overpass-900-latin.woff2" crossorigin>
+  <link rel="stylesheet" href="vendor/fonts/site-fonts.css">
+  <link rel="stylesheet" href="css/site.css">
+  <meta name="theme-color" content="#22303A">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="icon" type="image/png" href="favicon.png">
-  <meta name="theme-color" content="#1A1A1A">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="manifest" href="site.webmanifest">
   <script type="application/ld+json">
@@ -35,100 +33,80 @@
   <link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/refund-policy.html">
   <link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/refund-policy.html">
   <link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/refund-policy.html">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ENGNTZ3PPC"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-ENGNTZ3PPC');
-</script>
-  <noscript><style>.fade-in,.lt-fade{opacity:1!important;transform:none!important}</style></noscript>
+  <!-- Google Analytics (config call lives in js/site.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ENGNTZ3PPC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  </script>
+  <script src="js/site.js" defer></script>
 </head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <nav class="navbar">
-    <div class="container">
-      <a href="index.html" class="nav-logo">MIKAEL<span>CHEW</span></a>
-      <ul class="nav-links">
-        <li><a href="index.html" data-en="Home" data-zh="首頁">Home</a></li>
-        <li><a href="about.html" data-en="About" data-zh="關於">About</a></li>
-        <li><a href="blog.html" data-en="Blog" data-zh="部落格">Blog</a></li>
-        <li><a href="book.html" data-en="Book" data-zh="著作">Book</a></li>
-        <li><a href="speaking.html" data-en="Speaking" data-zh="演講">Speaking</a></li>
-        <li><a href="work-with-me.html" data-en="Work With Me" data-zh="與我合作">Work With Me</a></li>
-        <li><a href="contact.html" data-en="Contact" data-zh="聯繫">Contact</a></li>
-      </ul>
-      <div class="nav-toggle" aria-label="Toggle navigation">
-        <span></span><span></span><span></span>
-      </div>
-    </div>
+<body data-nav="legal">
+<!-- shell:header -->
+<a class="skip" href="#main" data-en="Skip to content" data-zh="跳到內容">Skip to content</a>
+<header class="bar">
+  <a class="brand" href="index.html" data-nav="home"><span class="brand-en">Mikael Chew</span><span class="brand-zh cjk-display" lang="zh-Hant">周俊德</span></a>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav" data-en="Menu" data-zh="選單">Menu</button>
+  <nav class="nav" id="site-nav" aria-label="Main">
+    <a href="book.html" data-nav="book" class="keep" data-en="The Book" data-zh="著作">The Book<span class="nav-zh cjk-display" lang="zh-Hant">著作</span></a>
+    <a href="about.html" data-nav="about" data-en="About" data-zh="關於">About<span class="nav-zh cjk-display" lang="zh-Hant">關於</span></a>
+    <a href="blog.html" data-nav="writing" data-en="Writing" data-zh="專欄">Writing<span class="nav-zh cjk-display" lang="zh-Hant">專欄</span></a>
+    <a href="speaking.html" data-nav="speaking" data-en="Speaking" data-zh="演講">Speaking<span class="nav-zh cjk-display" lang="zh-Hant">演講</span></a>
+    <a href="work-with-me.html" data-nav="work" data-en="Work With Me" data-zh="合作">Work With Me<span class="nav-zh cjk-display" lang="zh-Hant">合作</span></a>
+    <a href="zh/refund-policy.html" class="lang-link keep" lang="zh-Hant" hreflang="zh-Hant">中文</a>
   </nav>
+</header>
+<!-- /shell:header -->
 
-  <section class="post-hero" id="main">
-    <div class="container">
-      <h1 data-en="Refund Policy" data-zh="退款政策">Refund Policy</h1>
-      <div class="post-meta">
-        <span><i class="fas fa-calendar"></i> <span data-en="Last updated: September 30, 2026" data-zh="最後更新：2026年9月30日">Last updated: September 30, 2026</span></span>
+<main id="main" class="prose on-paper">
+  <div class="measure">
+    <article class="post">
+      <header class="post-head">
+        
+        <h1 data-en="Refund Policy" data-zh="退款政策">Refund Policy</h1>
+        <p class="meta"><span data-en="Last updated: September 30, 2026" data-zh="最後更新：2026年9月30日">Last updated: September 30, 2026</span></p>
+      </header>
+      <div class="post-body">
+        <p data-en="This policy applies to the ebook 《直銷孫子兵法之不戰而勝》 (EPUB + PDF) bought directly on mikaelchew.com. Copies bought on Amazon Kindle follow Amazon&amp;rsquo;s own refund policy." data-zh="本政策適用於在 mikaelchew.com 直接購買的電子書《直銷孫子兵法之不戰而勝》（EPUB + PDF）。在 Amazon Kindle 購買的版本，依 Amazon 的退款政策處理。">This policy applies to the ebook 《直銷孫子兵法之不戰而勝》 (EPUB + PDF) bought directly on mikaelchew.com. Copies bought on Amazon Kindle follow Amazon’s own refund policy.</p>
+        <h2 data-en="Delivery" data-zh="寄送">Delivery</h2>
+        <p data-en='Your ebook is emailed to the address you enter, usually within minutes of payment. If it hasn&amp;rsquo;t arrived within 24 hours (please check your spam folder), email &lt;a href="mailto:mikaelchew@gmail.com"&gt;mikaelchew@gmail.com&lt;/a&gt; with your name and payment receipt and we will resend it.' data-zh='付款後，電子書會寄到你填寫的電郵地址，通常幾分鐘內就會收到。如果24小時後還沒收到（請先檢查垃圾郵件匣），請把你的名字和付款收據寄到 &lt;a href="mailto:mikaelchew@gmail.com"&gt;mikaelchew@gmail.com&lt;/a&gt;，我們會重新寄給你。'>Your ebook is emailed to the address you enter, usually within minutes of payment. If it hasn’t arrived within 24 hours (please check your spam folder), email <a href="mailto:mikaelchew@gmail.com">mikaelchew@gmail.com</a> with your name and payment receipt and we will resend it.</p>
+        <h2 data-en="When we refund in full" data-zh="以下情況全額退款">When we refund in full</h2>
+        <p data-en="&amp;bull; You paid but did not receive the book, and we could not deliver it within 3 working days of you telling us&lt;br&gt;&amp;bull; You were charged twice for the same order&lt;br&gt;&amp;bull; The file is damaged or will not open, and a replacement does not fix it" data-zh="&amp;bull; 你已付款但沒有收到電子書，而我們在你通知後3個工作天內仍無法寄出&lt;br&gt;&amp;bull; 同一筆訂單被重複扣款&lt;br&gt;&amp;bull; 檔案損壞或無法開啟，更換檔案後仍無法解決">• You paid but did not receive the book, and we could not deliver it within 3 working days of you telling us<br>• You were charged twice for the same order<br>• The file is damaged or will not open, and a replacement does not fix it</p>
+        <h2 data-en="Change of mind" data-zh="改變主意">Change of mind</h2>
+        <p data-en="Because the ebook is a digital file delivered immediately, we don&amp;rsquo;t usually refund a change of mind. If the book isn&amp;rsquo;t what you expected, write to us within 7 days of purchase and tell us why. We look at every request individually." data-zh="電子書是付款後立即寄出的數位檔案，一般不接受因改變主意而退款。如果這本書不是你預期的內容，請在購買後7天內寫信告訴我們原因，每一個申請我們都會個別處理。">Because the ebook is a digital file delivered immediately, we don’t usually refund a change of mind. If the book isn’t what you expected, write to us within 7 days of purchase and tell us why. We look at every request individually.</p>
+        <h2 data-en="How to ask for a refund" data-zh="如何申請退款">How to ask for a refund</h2>
+        <p data-en='Email &lt;a href="mailto:mikaelchew@gmail.com"&gt;mikaelchew@gmail.com&lt;/a&gt; within 7 days of purchase with your receipt (Billplz bill ID). Approved refunds go back to the original payment method within 7 working days.' data-zh='在購買後7天內，把收據（Billplz 帳單編號）寄到 &lt;a href="mailto:mikaelchew@gmail.com"&gt;mikaelchew@gmail.com&lt;/a&gt;。退款核准後，會在7個工作天內退回原付款方式。'>Email <a href="mailto:mikaelchew@gmail.com">mikaelchew@gmail.com</a> within 7 days of purchase with your receipt (Billplz bill ID). Approved refunds go back to the original payment method within 7 working days.</p>
+        <h2 data-en="Seller" data-zh="賣家">Seller</h2>
+        <p data-en="IGNITE VENTURES (202603114272), Kuala Lumpur, Malaysia. Payments are processed by Billplz and appear on your statement as Ignite Ventures." data-zh="IGNITE VENTURES（202603114272），馬來西亞吉隆坡。付款由 Billplz 處理，帳單上會顯示為 Ignite Ventures。">IGNITE VENTURES (202603114272), Kuala Lumpur, Malaysia. Payments are processed by Billplz and appear on your statement as Ignite Ventures.</p>
       </div>
-    </div>
-  </section>
+    </article>
 
-  <section class="post-content">
-    <div class="container">
-      <nav class="breadcrumb" aria-label="Breadcrumb">
-        <ol>
-          <li><a href="index.html" data-en="Home" data-zh="首頁">Home</a></li>
-          <li aria-current="page" data-en="Refund Policy" data-zh="退款政策">Refund Policy</li>
-        </ol>
-      </nav>
-
-      <p data-en="This policy applies to the ebook 《直銷孫子兵法之不戰而勝》 (EPUB + PDF) bought directly on mikaelchew.com. Copies bought on Amazon Kindle follow Amazon&amp;rsquo;s own refund policy." data-zh="本政策適用於在 mikaelchew.com 直接購買的電子書《直銷孫子兵法之不戰而勝》（EPUB + PDF）。在 Amazon Kindle 購買的版本，依 Amazon 的退款政策處理。">This policy applies to the ebook 《直銷孫子兵法之不戰而勝》 (EPUB + PDF) bought directly on mikaelchew.com. Copies bought on Amazon Kindle follow Amazon&rsquo;s own refund policy.</p>
-      <h2 data-en="Delivery" data-zh="寄送">Delivery</h2>
-      <p data-en="Your ebook is emailed to the address you enter, usually within minutes of payment. If it hasn&amp;rsquo;t arrived within 24 hours (please check your spam folder), email &lt;a href=&quot;mailto:mikaelchew@gmail.com&quot;&gt;mikaelchew@gmail.com&lt;/a&gt; with your name and payment receipt and we will resend it." data-zh="付款後，電子書會寄到你填寫的電郵地址，通常幾分鐘內就會收到。如果24小時後還沒收到（請先檢查垃圾郵件匣），請把你的名字和付款收據寄到 &lt;a href=&quot;mailto:mikaelchew@gmail.com&quot;&gt;mikaelchew@gmail.com&lt;/a&gt;，我們會重新寄給你。">Your ebook is emailed to the address you enter, usually within minutes of payment. If it hasn&rsquo;t arrived within 24 hours (please check your spam folder), email <a href="mailto:mikaelchew@gmail.com">mikaelchew@gmail.com</a> with your name and payment receipt and we will resend it.</p>
-      <h2 data-en="When we refund in full" data-zh="以下情況全額退款">When we refund in full</h2>
-      <p data-en="&amp;bull; You paid but did not receive the book, and we could not deliver it within 3 working days of you telling us&lt;br&gt;&amp;bull; You were charged twice for the same order&lt;br&gt;&amp;bull; The file is damaged or will not open, and a replacement does not fix it" data-zh="&amp;bull; 你已付款但沒有收到電子書，而我們在你通知後3個工作天內仍無法寄出&lt;br&gt;&amp;bull; 同一筆訂單被重複扣款&lt;br&gt;&amp;bull; 檔案損壞或無法開啟，更換檔案後仍無法解決">&bull; You paid but did not receive the book, and we could not deliver it within 3 working days of you telling us<br>&bull; You were charged twice for the same order<br>&bull; The file is damaged or will not open, and a replacement does not fix it</p>
-      <h2 data-en="Change of mind" data-zh="改變主意">Change of mind</h2>
-      <p data-en="Because the ebook is a digital file delivered immediately, we don&amp;rsquo;t usually refund a change of mind. If the book isn&amp;rsquo;t what you expected, write to us within 7 days of purchase and tell us why. We look at every request individually." data-zh="電子書是付款後立即寄出的數位檔案，一般不接受因改變主意而退款。如果這本書不是你預期的內容，請在購買後7天內寫信告訴我們原因，每一個申請我們都會個別處理。">Because the ebook is a digital file delivered immediately, we don&rsquo;t usually refund a change of mind. If the book isn&rsquo;t what you expected, write to us within 7 days of purchase and tell us why. We look at every request individually.</p>
-      <h2 data-en="How to ask for a refund" data-zh="如何申請退款">How to ask for a refund</h2>
-      <p data-en="Email &lt;a href=&quot;mailto:mikaelchew@gmail.com&quot;&gt;mikaelchew@gmail.com&lt;/a&gt; within 7 days of purchase with your receipt (Billplz bill ID). Approved refunds go back to the original payment method within 7 working days." data-zh="在購買後7天內，把收據（Billplz 帳單編號）寄到 &lt;a href=&quot;mailto:mikaelchew@gmail.com&quot;&gt;mikaelchew@gmail.com&lt;/a&gt;。退款核准後，會在7個工作天內退回原付款方式。">Email <a href="mailto:mikaelchew@gmail.com">mikaelchew@gmail.com</a> within 7 days of purchase with your receipt (Billplz bill ID). Approved refunds go back to the original payment method within 7 working days.</p>
-      <h2 data-en="Seller" data-zh="賣家">Seller</h2>
-      <p data-en="IGNITE VENTURES (202603114272), Kuala Lumpur, Malaysia. Payments are processed by Billplz and appear on your statement as Ignite Ventures." data-zh="IGNITE VENTURES（202603114272），馬來西亞吉隆坡。付款由 Billplz 處理，帳單上會顯示為 Ignite Ventures。">IGNITE VENTURES (202603114272), Kuala Lumpur, Malaysia. Payments are processed by Billplz and appear on your statement as Ignite Ventures.</p>
-
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <a href="index.html" class="footer-logo">MIKAEL<span>CHEW</span></a>
-        <ul class="footer-links">
-          <li><a href="index.html" data-en="Home" data-zh="首頁">Home</a></li>
-          <li><a href="about.html" data-en="About" data-zh="關於">About</a></li>
-          <li><a href="blog.html" data-en="Blog" data-zh="部落格">Blog</a></li>
-          <li><a href="concepts.html" data-en="Key Concepts" data-zh="核心概念">Key Concepts</a></li>
-          <li><a href="book.html" data-en="Book" data-zh="著作">Book</a></li>
-          <li><a href="speaking.html" data-en="Speaking" data-zh="演講">Speaking</a></li>
-          <li><a href="work-with-me.html" data-en="Work With Me" data-zh="與我合作">Work With Me</a></li>
-          <li><a href="contact.html" data-en="Contact" data-zh="聯繫">Contact</a></li>
-          <li><a href="privacy.html" data-en="Privacy" data-zh="隱私政策">Privacy</a></li>
-          <li><a href="refund-policy.html" data-en="Refunds" data-zh="退款政策">Refunds</a></li>
-        </ul>
-        <div class="footer-social">
-          <a href="https://www.linkedin.com/in/mikael-chew-07487551/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://www.facebook.com/coachmikaelchew" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://www.instagram.com/mikael_chew/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p data-en="&copy; 2026 Mikael Chew. All rights reserved." data-zh="&copy; 2026 Mikael Chew. 版權所有。">&copy; 2026 Mikael Chew. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
-
-  <script src="js/main.js"></script>
-  <div class="site-toggles">
-    <button class="toggle-btn theme-btn" aria-label="Toggle theme"><i class="fas fa-sun"></i></button>
-    <button class="toggle-btn lang-btn" aria-label="Switch language">中文</button>
   </div>
+</main>
+
+<!-- shell:footer -->
+<footer class="foot">
+  <span data-en="Mikael Chew, Kuala Lumpur." data-zh="Mikael Chew，吉隆坡。">Mikael Chew, Kuala Lumpur.</span>
+  <nav aria-label="Footer">
+    <a href="contact.html" data-nav="contact" data-en="Contact" data-zh="聯繫">Contact</a>
+    <a href="privacy.html" data-en="Privacy" data-zh="隱私政策">Privacy</a>
+    <a href="refund-policy.html" data-en="Refund policy" data-zh="退款政策">Refund policy</a>
+    <a href="zh/refund-policy.html" class="lang-link" lang="zh-Hant" hreflang="zh-Hant">中文</a>
+  </nav>
+</footer>
+<svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false">
+  <defs>
+    <filter id="inked" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency=".75" numOctaves="2" seed="7" result="t"/>
+      <feDisplacementMap in="SourceGraphic" in2="t" scale="3"/>
+    </filter>
+    <symbol id="seal-launch" viewBox="0 0 100 100"><g filter="url(#inked)"><rect x="4" y="4" width="92" height="92" rx="6" fill="none" stroke="#C0392B" stroke-width="6"/><rect x="11" y="11" width="78" height="78" rx="3" fill="#C0392B"/><text class="cjk-display" x="50" y="45" text-anchor="middle" font-family="Noto Serif TC" font-weight="900" font-size="30" fill="#F5F0E8">十月</text><text class="cjk-display" x="50" y="79" text-anchor="middle" font-family="Noto Serif TC" font-weight="900" font-size="30" fill="#F5F0E8">上市</text></g></symbol>
+    <symbol id="seal-live" viewBox="0 0 100 100"><g filter="url(#inked)"><rect x="4" y="4" width="92" height="92" rx="6" fill="none" stroke="#C0392B" stroke-width="6"/><rect x="11" y="11" width="78" height="78" rx="3" fill="#C0392B"/><text class="cjk-display" x="50" y="62" text-anchor="middle" font-family="Noto Serif TC" font-weight="900" font-size="30" fill="#F5F0E8">已上市</text></g></symbol>
+    <symbol id="seal-free" viewBox="0 0 100 100"><g filter="url(#inked)"><rect x="6" y="6" width="88" height="88" rx="4" fill="none" stroke="#F0705F" stroke-width="7"/><text class="cjk-display" x="50" y="47" text-anchor="middle" font-family="Noto Serif TC" font-weight="900" font-size="33" fill="#F0705F">免費</text><text class="cjk-display" x="50" y="80" text-anchor="middle" font-family="Noto Serif TC" font-weight="900" font-size="33" fill="#F0705F">試讀</text></g></symbol>
+    <symbol id="seal-sent" viewBox="0 0 100 100"><g filter="url(#inked)"><rect x="4" y="4" width="92" height="92" rx="6" fill="none" stroke="#C0392B" stroke-width="6"/><rect x="11" y="11" width="78" height="78" rx="3" fill="#C0392B"/><text class="cjk-display" x="50" y="62" text-anchor="middle" font-family="Noto Serif TC" font-weight="900" font-size="30" fill="#F5F0E8">已發送</text></g></symbol>
+  </defs>
+</svg>
+<!-- /shell:footer -->
 </body>
 </html>

@@ -30,6 +30,10 @@ def _partial(name):
 def _render(name, page, nav):
     prefix = "../" * page.count("/")
     lang_href = prefix + ("zh/" if page == "index.html" else "zh/" + page)
+    if page == "404.html":
+        # GitHub Pages serves the 404 page at whatever URL was missed, so its links must
+        # not depend on the folder. build_zh.py maps them to /zh/ for the Chinese 404.
+        prefix, lang_href = "/", "/zh/404.html"
     out = _partial(name).replace("{{R}}", prefix).replace("{{LANG_HREF}}", lang_href)
     if nav and name == "header":
         out = out.replace(f'data-nav="{nav}"', f'data-nav="{nav}" aria-current="page"', 1)

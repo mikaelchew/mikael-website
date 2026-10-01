@@ -5,28 +5,21 @@
   <meta name="google-site-verification" content="embeCp3FnhQSbE8YajaqByuuUis1O6FDwtC7frU03mU" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>404 — Page Not Found | Mikael Chew</title>
+  <link rel="preload" as="font" type="font/woff2" href="/vendor/fonts/overpass-900-latin.woff2" crossorigin>
+  <link rel="stylesheet" href="/vendor/fonts/site-fonts.css">
+  <link rel="stylesheet" href="/css/site.css">
+  <link rel="stylesheet" href="/css/inner.css">
+  <meta name="theme-color" content="#22303A">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="icon" type="image/png" href="favicon.png">
-  <meta name="theme-color" content="#1A1A1A">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  <link rel="manifest" href="site.webmanifest">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
   <link rel="canonical" href="https://www.mikaelchew.com/404.html">
   <link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/404.html">
   <link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/404.html">
   <link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/404.html">
-
-  <!-- Google Fonts -->
-  <link rel="preload" as="style" href="vendor/fonts/fonts.css" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="vendor/fonts/fonts.css"></noscript>
-
-  <!-- Font Awesome -->
-  <link rel="preload" as="style" href="vendor/fontawesome/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="vendor/fontawesome/css/all.min.css"></noscript>
-
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="css/style.css">
 
   <style>
     .error-section {
@@ -72,86 +65,74 @@
       justify-content: center;
     }
   </style>
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ENGNTZ3PPC"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-ENGNTZ3PPC');
-</script>
-  <noscript><style>.fade-in,.lt-fade{opacity:1!important;transform:none!important}</style></noscript>
+  <!-- Google Analytics (config call lives in js/site.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ENGNTZ3PPC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  </script>
+  <script src="/js/site.js" defer></script>
 </head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
-
-  <!-- ========== NAVBAR ========== -->
-  <nav class="navbar">
-    <div class="container">
-      <a href="index.html" class="nav-logo">MIKAEL<span>CHEW</span></a>
-      <ul class="nav-links">
-        <li><a href="index.html" data-en="Home" data-zh="首頁">Home</a></li>
-        <li><a href="about.html" data-en="About" data-zh="關於">About</a></li>
-        <li><a href="blog.html" data-en="Blog" data-zh="部落格">Blog</a></li>
-        <li><a href="book.html" data-en="Book" data-zh="著作">Book</a></li>
-        <li><a href="speaking.html" data-en="Speaking" data-zh="演講">Speaking</a></li>
-        <li><a href="work-with-me.html" data-en="Work With Me" data-zh="與我合作">Work With Me</a></li>
-        <li><a href="contact.html" data-en="Contact" data-zh="聯繫">Contact</a></li>
-      </ul>
-      <div class="nav-toggle" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
+<body data-nav="none">
+<!-- shell:header -->
+<a class="skip" href="#main" data-en="Skip to content" data-zh="跳到內容">Skip to content</a>
+<header class="bar">
+  <a class="brand" href="/index.html" data-nav="home"><span class="brand-en">Mikael Chew</span><span class="brand-zh cjk-display" lang="zh-Hant">周俊德</span></a>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav" data-en="Menu" data-zh="選單">Menu</button>
+  <nav class="nav" id="site-nav" aria-label="Main">
+    <a href="/book.html" data-nav="book" class="keep" data-en="The Book" data-zh="著作">The Book<span class="nav-zh cjk-display" lang="zh-Hant">著作</span></a>
+    <a href="/about.html" data-nav="about" data-en="About" data-zh="關於">About<span class="nav-zh cjk-display" lang="zh-Hant">關於</span></a>
+    <a href="/blog.html" data-nav="writing" data-en="Writing" data-zh="專欄">Writing<span class="nav-zh cjk-display" lang="zh-Hant">專欄</span></a>
+    <a href="/speaking.html" data-nav="speaking" data-en="Speaking" data-zh="演講">Speaking<span class="nav-zh cjk-display" lang="zh-Hant">演講</span></a>
+    <a href="/work-with-me.html" data-nav="work" data-en="Work With Me" data-zh="合作">Work With Me<span class="nav-zh cjk-display" lang="zh-Hant">合作</span></a>
+    <a href="/zh/404.html" class="lang-link keep" lang="zh-Hant" hreflang="zh-Hant">中文</a>
   </nav>
+</header>
+<!-- /shell:header -->
 
-  <!-- ========== 404 CONTENT ========== -->
-  <section class="error-section" id="main">
-    <p class="error-code">404</p>
-    <h1 class="error-heading" data-en="Page Not Found" data-zh="找不到頁面">Page Not Found</h1>
-    <p class="error-message" data-en="The page you're looking for doesn't exist or has been moved." data-zh="你找的頁面不存在，或已經被移走了。">The page you're looking for doesn't exist or has been moved.</p>
-    <div class="error-buttons">
-      <a href="index.html" class="btn-primary" data-en="Back to Home" data-zh="返回首頁">Back to Home</a>
-      <a href="blog.html" class="btn-outline" data-en="Browse Blog" data-zh="瀏覽部落格">Browse Blog</a>
+<main id="main">
+  <section class="page-head" aria-labelledby="nf-h">
+    <div class="wrap">
+      <div class="legend" aria-hidden="true" data-zh-only>
+        <span class="vs cjk-display" lang="zh-Hant">迷路了</span><span class="v cjk-display" lang="zh-Hant">此路不通</span>
+      </div>
+      <div>
+        <span class="kicker num">404</span>
+        <h1 id="nf-h" data-en="Off the map" data-zh="找不到頁面">Off the map</h1>
+        <p class="lead" data-en="The page you're looking for doesn't exist or has been moved." data-zh="你找的頁面不存在，或已經被移走了。">The page you're looking for doesn't exist or has been moved.</p>
+        <p style="margin-top: 1.4em; display: flex; flex-wrap: wrap; gap: 12px">
+          <a class="btn" href="/index.html" data-en="Back to home" data-zh="返回首頁">Back to home</a>
+          <a class="btn btn--ghost" href="/book.html" data-en="See the book" data-zh="看這本書">See the book</a>
+          <a class="btn btn--ghost" href="/blog.html" data-en="Browse writing" data-zh="瀏覽專欄">Browse writing</a>
+        </p>
+      </div>
     </div>
   </section>
+</main>
 
-  <!-- ========== FOOTER ========== -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <a href="index.html" class="footer-logo">MIKAEL<span>CHEW</span></a>
-        <ul class="footer-links">
-          <li><a href="index.html" data-en="Home" data-zh="首頁">Home</a></li>
-          <li><a href="about.html" data-en="About" data-zh="關於">About</a></li>
-          <li><a href="blog.html" data-en="Blog" data-zh="部落格">Blog</a></li>
-          <li><a href="concepts.html" data-en="Key Concepts" data-zh="核心概念">Key Concepts</a></li>
-          <li><a href="book.html" data-en="Book" data-zh="著作">Book</a></li>
-          <li><a href="speaking.html" data-en="Speaking" data-zh="演講">Speaking</a></li>
-          <li><a href="work-with-me.html" data-en="Work With Me" data-zh="與我合作">Work With Me</a></li>
-          <li><a href="contact.html" data-en="Contact" data-zh="聯繫">Contact</a></li>
-          <li><a href="privacy.html" data-en="Privacy" data-zh="隱私政策">Privacy</a></li>
-          <li><a href="refund-policy.html" data-en="Refunds" data-zh="退款政策">Refunds</a></li>
-        </ul>
-        <div class="footer-social">
-          <a href="https://www.linkedin.com/in/mikael-chew-07487551/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://www.facebook.com/coachmikaelchew" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://www.instagram.com/mikael_chew/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p data-en="&copy; 2026 Mikael Chew. All rights reserved." data-zh="&copy; 2026 Mikael Chew. 版權所有。">&copy; 2026 Mikael Chew. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- JavaScript -->
-  <script src="js/main.js"></script>
-  <!-- Toggle Controls (fixed bottom-right) -->
-  <div class="site-toggles">
-    <button class="toggle-btn theme-btn" aria-label="Toggle theme"><i class="fas fa-sun"></i></button>
-    <button class="toggle-btn lang-btn" aria-label="Switch language">中文</button>
-  </div>
+<!-- shell:footer -->
+<footer class="foot">
+  <span data-en="Mikael Chew, Kuala Lumpur." data-zh="Mikael Chew，吉隆坡。">Mikael Chew, Kuala Lumpur.</span>
+  <nav aria-label="Footer">
+    <a href="/contact.html" data-nav="contact" data-en="Contact" data-zh="聯繫">Contact</a>
+    <a href="/privacy.html" data-en="Privacy" data-zh="隱私政策">Privacy</a>
+    <a href="/refund-policy.html" data-en="Refund policy" data-zh="退款政策">Refund policy</a>
+    <a href="/zh/404.html" class="lang-link" lang="zh-Hant" hreflang="zh-Hant">中文</a>
+  </nav>
+</footer>
+<svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false">
+  <defs>
+    <filter id="inked" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency=".75" numOctaves="2" seed="7" result="t"/>
+      <feDisplacementMap in="SourceGraphic" in2="t" scale="3"/>
+    </filter>
+    <symbol id="seal-launch" viewBox="0 0 100 100"><g filter="url(#inked)"><rect x="4" y="4" width="92" height="92" rx="6" fill="none" stroke="#C0392B" stroke-width="6"/><rect x="11" y="11" width="78" height="78" rx="3" fill="#C0392B"/><text class="cjk-display" x="50" y="45" text-anchor="middle" font-family="Noto Serif TC" font-weight="900" font-size="30" fill="#F5F0E8">十月</text><text class="cjk-display" x="50" y="79" text-anchor="middle" font-family="Noto Serif TC" font-weight="900" font-size="30" fill="#F5F0E8">上市</text></g></symbol>
+    <symbol id="seal-live" viewBox="0 0 100 100"><g filter="url(#inked)"><rect x="4" y="4" width="92" height="92" rx="6" fill="none" stroke="#C0392B" stroke-width="6"/><rect x="11" y="11" width="78" height="78" rx="3" fill="#C0392B"/><text class="cjk-display" x="50" y="62" text-anchor="middle" font-family="Noto Serif TC" font-weight="900" font-size="30" fill="#F5F0E8">已上市</text></g></symbol>
+    <symbol id="seal-free" viewBox="0 0 100 100"><g filter="url(#inked)"><rect x="6" y="6" width="88" height="88" rx="4" fill="none" stroke="#F0705F" stroke-width="7"/><text class="cjk-display" x="50" y="47" text-anchor="middle" font-family="Noto Serif TC" font-weight="900" font-size="33" fill="#F0705F">免費</text><text class="cjk-display" x="50" y="80" text-anchor="middle" font-family="Noto Serif TC" font-weight="900" font-size="33" fill="#F0705F">試讀</text></g></symbol>
+    <symbol id="seal-sent" viewBox="0 0 100 100"><g filter="url(#inked)"><rect x="4" y="4" width="92" height="92" rx="6" fill="none" stroke="#C0392B" stroke-width="6"/><rect x="11" y="11" width="78" height="78" rx="3" fill="#C0392B"/><text class="cjk-display" x="50" y="62" text-anchor="middle" font-family="Noto Serif TC" font-weight="900" font-size="30" fill="#F5F0E8">已發送</text></g></symbol>
+  </defs>
+</svg>
+<!-- /shell:footer -->
 </body>
 </html>

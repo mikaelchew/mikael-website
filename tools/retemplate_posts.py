@@ -28,9 +28,9 @@ DROP_HEAD = [
     r"\s*<meta name=\"theme-color\"[^>]*>",
 ]
 ASSETS = """
-  <link rel="preload" as="font" type="font/woff2" href="../vendor/fonts/overpass-900-latin.woff2" crossorigin>
-  <link rel="stylesheet" href="../vendor/fonts/site-fonts.css">
-  <link rel="stylesheet" href="../css/site.css">
+  <link rel="preload" as="font" type="font/woff2" href="{R}vendor/fonts/overpass-900-latin.woff2" crossorigin>
+  <link rel="stylesheet" href="{R}vendor/fonts/site-fonts.css">
+  <link rel="stylesheet" href="{R}css/site.css">
   <meta name="theme-color" content="#22303A">"""
 GA = """
   <!-- Google Analytics (config call lives in js/site.js) -->
@@ -40,7 +40,20 @@ GA = """
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
   </script>
-  <script src="../js/site.js" defer></script>
+  <script src="{R}js/site.js" defer></script>
+"""
+
+LETTER = """    <aside class="post-letter">
+      <h2 data-en="Enjoyed this article?" data-zh="喜歡這篇文章嗎？">Enjoyed this article?</h2>
+      <p data-en="Get weekly insights on leadership and strategy for direct selling, straight to your inbox." data-zh="每週收到直銷領導力與策略的洞見，直接寄到你的信箱。">Get weekly insights on leadership and strategy for direct selling, straight to your inbox.</p>
+      <form class="field" action="https://app.kit.com/forms/9983575/subscriptions" method="post" data-ajax>
+        <label class="sr" for="nl-em" data-en="Email address" data-zh="電子郵件">Email address</label>
+        <input id="nl-em" type="email" name="email_address" placeholder="Your email" data-en="Your email" data-zh="你的電子郵件" autocomplete="email" required>
+        <input type="hidden" name="tags" value="newsletter">
+        <button type="submit" data-en="Subscribe" data-zh="訂閱">Subscribe</button>
+      </form>
+      <p class="form-ok" tabindex="-1" hidden data-en="Check your inbox to confirm. No spam, unsubscribe any time." data-zh="請到信箱確認訂閱。不發垃圾信，隨時可退訂。">Check your inbox to confirm. No spam, unsubscribe any time.</p>
+    </aside>
 """
 
 
@@ -69,22 +82,24 @@ def pair(el, tag, cls=""):
     return "<%s%s%s>%s</%s>" % (tag, c, a, esc(el.text_content().strip()), tag)
 
 
-def retemplate(path):
+def retemplate(path, prefix="../", nav="writing", letter=True):
+    """prefix: path back to the site root; nav: the header item marked current;
+    letter: whether the newsletter box closes the page (posts yes, legal pages no)."""
     src = open(path, encoding="utf-8").read()
     if "<!-- shell:header -->" in src:
         return src
     head = src[src.index("<head>") + len("<head>"):src.index("</head>")]
     for pat in DROP_HEAD:
         head = re.sub(pat, "", head, flags=re.S)
-    head = re.sub(r"(<title>.*?</title>)", lambda m: m.group(1) + ASSETS, head, count=1, flags=re.S)
-    head = head.rstrip() + GA
+    head = re.sub(r"(<title>.*?</title>)", lambda m: m.group(1) + ASSETS.replace("{R}", prefix), head, count=1, flags=re.S)
+    head = head.rstrip() + GA.replace("{R}", prefix)
 
     root = lxml.html.fromstring(src)
     hero = root.xpath('//section[contains(@class,"post-hero")]')[0]
     box = root.xpath('//section[contains(@class,"post-content")]/div[contains(@class,"container")]')[0]
     dates = pubdates()
 
-    cat = hero.xpath('.//*[contains(@class,"post-category")]')[0]
+    cat = hero.xpath('.//*[contains(@class,"post-category")]')
     h1 = hero.xpath(".//h1")[0]
     # Meta items are either <span data-en>…</span> or <span><i/> <span data-en>…</span></span>.
     meta_bits = [pair(s if s.get("data-en") else s.xpath("./span")[0], "span")
@@ -119,10 +134,10 @@ def retemplate(path):
                    % (pair(h3, "h2"), pair(p, "p"), esc(a.get("href")),
                       "".join(' %s="%s"' % (k, esc(a.get(k))) for k in ("data-en", "data-zh") if a.get(k) is not None),
                       esc(a.text_content().strip())))
-    nav = box.xpath('.//nav[contains(@class,"post-nav")]')
-    if nav:
+    pnav = box.xpath('.//nav[contains(@class,"post-nav")]')
+    if pnav:
         links = []
-        for a in nav[0].xpath(".//a"):
+        for a in pnav[0].xpath(".//a"):
             target = os.path.normpath(os.path.join("blog", a.get("href"))).replace(os.sep, "/")
             label = a.xpath('.//*[contains(@class,"post-nav-label")]')[0]
             title = a.xpath('.//*[contains(@class,"post-nav-title")]')[0]
@@ -143,7 +158,7 @@ def retemplate(path):
     page = """<!DOCTYPE html>
 <html data-phase="prelaunch" lang="en">
 <head>%s</head>
-<body data-nav="writing">
+<body data-nav="%s">
 <!-- shell:header -->
 <!-- /shell:header -->
 
@@ -160,25 +175,15 @@ def retemplate(path):
       </div>
     </article>
 %s
-    <aside class="post-letter">
-      <h2 data-en="Enjoyed this article?" data-zh="喜歡這篇文章嗎？">Enjoyed this article?</h2>
-      <p data-en="Get weekly insights on leadership and strategy for direct selling, straight to your inbox." data-zh="每週收到直銷領導力與策略的洞見，直接寄到你的信箱。">Get weekly insights on leadership and strategy for direct selling, straight to your inbox.</p>
-      <form class="field" action="https://app.kit.com/forms/9983575/subscriptions" method="post" data-ajax>
-        <label class="sr" for="nl-em" data-en="Email address" data-zh="電子郵件">Email address</label>
-        <input id="nl-em" type="email" name="email_address" placeholder="Your email" data-en="Your email" data-zh="你的電子郵件" autocomplete="email" required>
-        <input type="hidden" name="tags" value="newsletter">
-        <button type="submit" data-en="Subscribe" data-zh="訂閱">Subscribe</button>
-      </form>
-      <p class="form-ok" tabindex="-1" hidden data-en="Check your inbox to confirm. No spam, unsubscribe any time." data-zh="請到信箱確認訂閱。不發垃圾信，隨時可退訂。">Check your inbox to confirm. No spam, unsubscribe any time.</p>
-    </aside>
-  </div>
+%s  </div>
 </main>
 
 <!-- shell:footer -->
 <!-- /shell:footer -->
 </body>
 </html>
-""" % (head, pair(cat, "p", "kicker"), html_of(h1), " · ".join(meta_bits), "\n".join(body), "\n".join(end))
+""" % (head, nav, pair(cat[0], "p", "kicker") if cat else "", html_of(h1), " · ".join(meta_bits),
+           "\n".join(body), "\n".join(end), LETTER if letter else "")
     return page
 
 

@@ -157,6 +157,16 @@ def transform_html(html, relpath):
         for c in list(a): a.remove(c)
         a.text = 'English'
 
+    # 6c. the 404 page uses root-absolute links (it is served at any missed URL):
+    # point its page links at the /zh/ mirror and its language link at /404.html
+    if relpath == '404.html':
+        for a in doc.xpath('//a[@href]'):
+            u = a.get('href')
+            if u.startswith('/') and not u.startswith('/zh/') and u.endswith('.html'):
+                a.set('href', '/zh' + u)
+        for a in doc.xpath('//a[contains(concat(" ",normalize-space(@class)," ")," lang-link ")]'):
+            a.set('href', '/404.html')
+
     # 7. canonical -> zh + hreflang alternates
     for c in doc.xpath('//link[@rel="canonical"]'):
         c.set('href', zh_url(relpath))
