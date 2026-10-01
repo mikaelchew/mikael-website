@@ -74,6 +74,11 @@
         "rule": "cramped-padding",
         "value": "dispatch",
         "createdAt": "2026-10-01T14:26:11.668Z"
+      },
+      {
+        "rule": "tight-leading",
+        "value": "when",
+        "createdAt": "2026-10-01T14:42:39.105Z"
       }
     ]
   }
