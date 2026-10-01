@@ -9,6 +9,9 @@ import lxml.html
 
 from tests.helpers import ROOT, doc, read
 
+# Last commit of the pre-redesign site (live until the 2026-10-02 merge): post text is checked against it.
+OLD_SITE = "722e978"
+
 CHROME = ("breadcrumb", "share-section", "post-share", "post-cta", "post-nav", "related-posts")
 
 
@@ -18,7 +21,7 @@ def posts():
 
 def on_main(path):
     try:
-        out = subprocess.run(["git", "show", "main:" + path], cwd=ROOT, capture_output=True, check=True).stdout
+        out = subprocess.run(["git", "show", OLD_SITE + ":" + path], cwd=ROOT, capture_output=True, check=True).stdout
     except subprocess.CalledProcessError:
         return None  # a post that is new on this branch
     return lxml.html.fromstring(out)

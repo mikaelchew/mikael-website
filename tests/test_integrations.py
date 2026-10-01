@@ -79,7 +79,7 @@ class FormsTest(unittest.TestCase):
                     self.assertIn(tag, KIT_TAGS, (p, tag))
 
     def test_buy_form_endpoint_unchanged(self):
-        main_book = subprocess.run(["git", "show", "main:book.html"], cwd=ROOT, capture_output=True, text=True, check=True).stdout
+        main_book = subprocess.run(["git", "show", "722e978:book.html"], cwd=ROOT, capture_output=True, text=True, check=True).stdout
         want = re.search(r'class="book-buy-form" data-endpoint="([^"]+)"', main_book).group(1)
         got = doc("book.html").xpath("//form[contains(@class,'book-buy-form')]/@data-endpoint")
         self.assertEqual(got, [want])

@@ -223,10 +223,61 @@
     if (more) more.addEventListener('click', function () { show('all', true); });
   }
 
+  // ---------- Motion: scroll reveals, the About timeline, count-up figures ----------
+  // Only below-the-fold elements are hidden, so nothing on the first screen waits for JS
+  // (no effect on LCP). Without IntersectionObserver or with reduced motion, nothing hides.
+  var REVEAL = '.sec-h, .cards > *, .c-grid .c, .dispatch, .legend-group, .lines li, .faq details, ' +
+    '.side, .print, .band-in > *, .glance > *, .quote, .free-card, .audience > div, .author, .buy-card, ' +
+    '.chapter-cta, .post-nav, .related li, .story .copy > *';
+  function countUp(el) {
+    var m = el.textContent.match(/^(\d+)(.*)$/);
+    if (!m) return;
+    var end = parseInt(m[1], 10), rest = m[2], t0 = null;
+    function step(t) {
+      if (t0 === null) t0 = t;
+      var p = Math.min((t - t0) / 900, 1), eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.round(end * eased) + rest;
+      if (p < 1) requestAnimationFrame(step);
+    }
+    el.textContent = '0' + rest;
+    requestAnimationFrame(step);
+  }
+  function initMotion() {
+    if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var fold = window.innerHeight;
+    var below = function (el) { return el.getBoundingClientRect().top > fold * 0.92; };
+    var items = Array.prototype.slice.call(document.querySelectorAll(REVEAL)).filter(below);
+    var route = document.querySelector('.route');
+    var counts = Array.prototype.slice.call(document.querySelectorAll('.glance b')).filter(below);
+    if (!items.length && !(route && below(route)) && !counts.length) return;
+    html.classList.add('reveals');
+    items.forEach(function (el) {
+      var sibs = Array.prototype.filter.call(el.parentNode.children, function (s) { return s.matches(REVEAL); });
+      el.style.setProperty('--i', Math.min(sibs.indexOf(el), 6));
+      el.setAttribute('data-reveal', '');
+    });
+    if (route) {
+      Array.prototype.forEach.call(route.children, function (li, i) { li.style.setProperty('--i', i); });
+      if (!below(route)) route.classList.add('in');
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        io.unobserve(en.target);
+        if (en.target.tagName === 'B') countUp(en.target);
+        else en.target.classList.add('in');
+      });
+    }, { rootMargin: '0px 0px -12% 0px' });
+    items.forEach(function (el) { io.observe(el); });
+    counts.forEach(function (el) { io.observe(el); });
+    if (route && below(route)) io.observe(route);
+  }
+
   initNav();
   initTracking();
   initForms();
   initBuyForm();
   initSeals();
   initWriting();
+  initMotion();
 })();
