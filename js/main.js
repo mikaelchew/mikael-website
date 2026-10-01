@@ -415,7 +415,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Newsletter form submissions (uses hidden 'tags' input to differentiate)
-  document.querySelectorAll('form.newsletter-form, form.lt-newsletter-form').forEach(function(form) {
+  document.querySelectorAll('form.newsletter-form, form.lt-newsletter-form, form.book-download-form').forEach(function(form) {
     form.addEventListener('submit', function() {
       var tagInput = form.querySelector('input[name="tags"]');
       var tag = tagInput ? tagInput.value : 'unknown';
@@ -423,6 +423,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (tag === 'long-game-launch') eventName = 'long_game_waitlist';
       else if (tag === 'book-chapter') eventName = 'book_waitlist';
       else if (tag === 'book-launch') eventName = 'book_launch_waitlist';
+      else if (tag === 'book-print') eventName = 'book_print_waitlist';
       trackEvent(eventName, {
         list_tag: tag,
         source_page: window.location.pathname
@@ -508,6 +509,12 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     form.addEventListener('submit', function (e) {
       e.preventDefault();
+      trackEvent('begin_checkout', {
+        currency: 'MYR',
+        value: 29.90,
+        items: [{ item_name: 'Ebook ' + (zh ? 'zh' : 'en') + ' page' }],
+        source_page: window.location.pathname
+      });
       btn.disabled = true;
       btn.textContent = msg.busy;
       status.textContent = '';
