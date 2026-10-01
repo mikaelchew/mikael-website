@@ -649,56 +649,20 @@
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://www.mikaelchew.com/blog/coffee-not-reports.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/coffee-not-reports.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/coffee-not-reports.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/coffee-not-reports.html"/>
+    <loc>https://www.mikaelchew.com/blog/ask-before-you-sell.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/ask-before-you-sell.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/ask-before-you-sell.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/ask-before-you-sell.html"/>
     <lastmod>2026-07-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.mikaelchew.com/zh/blog/coffee-not-reports.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/coffee-not-reports.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/coffee-not-reports.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/coffee-not-reports.html"/>
+    <loc>https://www.mikaelchew.com/zh/blog/ask-before-you-sell.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/ask-before-you-sell.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/ask-before-you-sell.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/ask-before-you-sell.html"/>
     <lastmod>2026-07-01</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.mikaelchew.com/blog/be-your-own-lab-rat.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/be-your-own-lab-rat.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/be-your-own-lab-rat.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/be-your-own-lab-rat.html"/>
-    <lastmod>2026-07-15</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.mikaelchew.com/zh/blog/be-your-own-lab-rat.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/be-your-own-lab-rat.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/be-your-own-lab-rat.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/be-your-own-lab-rat.html"/>
-    <lastmod>2026-07-15</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.mikaelchew.com/blog/one-sheet-of-paper.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/one-sheet-of-paper.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/one-sheet-of-paper.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/one-sheet-of-paper.html"/>
-    <lastmod>2026-07-08</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.mikaelchew.com/zh/blog/one-sheet-of-paper.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/one-sheet-of-paper.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/one-sheet-of-paper.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/one-sheet-of-paper.html"/>
-    <lastmod>2026-07-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -717,6 +681,42 @@
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/seven-actions-a-day.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/seven-actions-a-day.html"/>
     <lastmod>2026-07-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mikaelchew.com/blog/speak-from-experience.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/speak-from-experience.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/speak-from-experience.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/speak-from-experience.html"/>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mikaelchew.com/zh/blog/speak-from-experience.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/speak-from-experience.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/speak-from-experience.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/speak-from-experience.html"/>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mikaelchew.com/blog/team-copies-all-of-you.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/team-copies-all-of-you.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/team-copies-all-of-you.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/team-copies-all-of-you.html"/>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mikaelchew.com/zh/blog/team-copies-all-of-you.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/team-copies-all-of-you.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/team-copies-all-of-you.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/team-copies-all-of-you.html"/>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
