@@ -3,6 +3,7 @@
 #   1. build_chapter.py  chapter-1.html from the manuscript
 #      build_posts.py    blog/<slug>.html from content/posts/*.json
 #      build_blog.py     Writing index (blog.html) from data/posts.json
+#      build_quotes.py   LinkedIn recommendations from data/testimonials.json
 #   2. build_shell.py    launch phase on every page + shared header/footer on marked pages
 #   3. build_zh.py       /zh/ mirror from the EN pages
 #   4. build_fonts.py    Chinese display subset from .cjk-display text (EN + zh)
@@ -18,6 +19,7 @@ $PY build_chapters.py
 $PY build_chapter.py "$MANUSCRIPT"
 $PY build_posts.py
 $PY build_blog.py
+$PY build_quotes.py
 $PY build_shell.py
 $PY build_zh.py
 $PY build_fonts.py
