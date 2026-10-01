@@ -47,7 +47,7 @@ A dual perspective few in the industry hold: 8 years building teams in the field
 - Real, named LinkedIn recommendations (quoted word-for-word on the homepage). They carry no star ratings; never show stars.
 - Real stage and teaching photography in `images/` (APAC stage, big stage, large audience, speaking, classroom, team).
 - The book: 13 chapters in four parts (Foundations, The Battlefield, Building Your Army, The General's Path), chapter blurbs on `book.html`, and the full Chapter 1.
-- Verified story facts per `BOOK_FACTS_ALIGNMENT.md` (first commission cheque RM 28, about 38 rejections, nearly 450 mentored, "400+" on stat counters).
+- Verified story facts per `BOOK_FACTS_ALIGNMENT.md` (first commission cheque RM 128, about 38 rejections, nearly 450 mentored, "400+" on stat counters).
 - **Absent, never fabricate:** book endorsements, press coverage, video, reader reviews, sales figures, star ratings.
 
 ## Product Principles

@@ -158,8 +158,8 @@ def build_page(chapter_html):
     footer = src[src.index('  <!-- ========== FOOTER ========== -->'):]
 
     desc_en = ("Read Chapter 1 of The Art of War for Direct Selling free: 38 rejections, "
-               "a first commission cheque of RM 28, and the idea that changed everything.")
-    desc_zh = "免費閱讀《直銷孫子兵法之不戰而勝》第一章：38次拒絕、只有 RM 28 的第一張佣金支票，以及那晚我找到的「道」。"
+               "a first commission cheque of RM 128, and the idea that changed everything.")
+    desc_zh = "免費閱讀《直銷孫子兵法之不戰而勝》第一章：38次拒絕、只有 RM 128 的第一張佣金支票，以及那晚我找到的「道」。"
     head_nav = (head_nav
         .replace('<title>Contact — Mikael Chew</title>',
                  '<title>Read Chapter 1 Free — 直銷孫子兵法之不戰而勝</title>')
@@ -186,7 +186,7 @@ def build_page(chapter_html):
       <div class="chapter-head">
         <span class="section-label" data-en="FREE SAMPLE — CHAPTER 1" data-zh="免費試讀 — 第一章">FREE SAMPLE — CHAPTER 1</span>
         <h1>第一章：發起召集 — 尋找你的「道」</h1>
-        <p class="chapter-standfirst" data-en="The whole first chapter, free, no signup. It is the night I nearly quit — 38 rejections, a first commission cheque of RM 28 — and what I worked out instead." data-zh="整個第一章，免費，不用留資料。那是我差點放棄的晚上。大約38次拒絕，第一張佣金支票只有 RM 28，還有我後來想通的事。">The whole first chapter, free, no signup. It is the night I nearly quit — 38 rejections, a first commission cheque of RM 28 — and what I worked out instead.</p>
+        <p class="chapter-standfirst" data-en="The whole first chapter, free, no signup. It is the night I nearly quit — 38 rejections, a first commission cheque of RM 128 — and what I worked out instead." data-zh="整個第一章，免費，不用留資料。那是我差點放棄的晚上。大約38次拒絕，第一張佣金支票只有 RM 128，還有我後來想通的事。">The whole first chapter, free, no signup. It is the night I nearly quit — 38 rejections, a first commission cheque of RM 128 — and what I worked out instead.</p>
         <p class="chapter-langnote" data-en="The book is written in Traditional Chinese. This chapter is presented exactly as written." data-zh="本書以繁體中文寫成，本章依原文呈現。">The book is written in Traditional Chinese. This chapter is presented exactly as written.</p>
       </div>
 

@@ -117,7 +117,7 @@ This is built from the approved prototype. The table below covers the parts kept
 
 | Part | Specification |
 |---|---|
-| First screen | **Left:** "Win before the battle.", then the facts (about 38 rejections; first cheque RM 28), then a red **Read Chapter 1 free** button and the price and date line, then "Skip the map". **Right:** the vertical red 不戰而勝 legend, and the book taped to the table. **Bottom:** a 13-stop rail. |
+| First screen | **Left:** "Win before the battle.", then the facts (about 38 rejections; first cheque RM 128), then a red **Read Chapter 1 free** button and the price and date line, then "Skip the map". **Right:** the vertical red 不戰而勝 legend, and the book taped to the table. **Bottom:** a 13-stop rail. |
 | The route | 13 waypoints in four regions (基礎 Foundations, 戰場 The Battlefield, 建軍 Building Your Army, 將道 The General's Path).<br>Each chapter gets a 45svh halt; scrolling advances the route with smoothstep easing.<br>Proximity scroll-snap at each halt. Tapping a waypoint, a rail stop or a chapter in the list jumps straight to that halt. |
 | Briefing | The current chapter's card: Part, number, English and Chinese titles, and one verified line. Chapter 1 also carries a link to read it free. |
 | Finale | After chapter 13 the view pulls back to the whole campaign. The 20.10.2026 circle draws itself, the seal stamps, and the panel offers **Read Chapter 1 free** plus the launch-list form (Kit 9983525, tag `book-launch`). |

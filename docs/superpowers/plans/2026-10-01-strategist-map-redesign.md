@@ -229,7 +229,7 @@ The phase flag lives in `data/site.json`, written into `<html data-phase>` by `b
 
 - [ ] **Step 1: Write the failing tests:**
   - `test_thirteen_chapters_in_four_parts`: the JSON has 13 chapters, part indices are 0–3, and the counts per part are 3, 4, 2, 4.
-  - `test_chapter_facts_current`: no chapter line contains "450+", "RM 28 in the bank", "Alex", "most successful partner", "50% stronger" or "——".
+  - `test_chapter_facts_current`: no chapter line contains "450+", "RM 128 in the bank", "Alex", "most successful partner", "50% stronger" or "——".
   - `test_home_content_present_without_js`: the static `index.html` holds 13 `.chapters li`, the "Read Chapter 1" link to `chapter-1.html`, and a Kit 9983525 form carrying the tag `book-launch`.
   - `test_zh_home_briefing_strings_are_chinese`: every `.chapters li p` in `zh/index.html` contains CJK characters and no ASCII words longer than 3 letters, apart from FORMHD, RM and numbers.
   - `test_prints_have_phone_variant`: every `img` under `.print` has a `srcset` containing a `-600.webp` candidate.

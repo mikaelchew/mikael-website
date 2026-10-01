@@ -1,5 +1,7 @@
 # Book facts alignment — for any agent editing mikaelchew.com
 
+> **2026-10-01:** Mikael checked: the first commission cheque was **RM 128**, not RM 28. Every mention below and across the site now says RM 128.
+
 **Written 2026-09-30 by the book-editing session.** Mikael has just finished a line-by-line truth check of every story in the manuscript. Several facts the website repeats have **changed**. This file lists what the site must say from now on, and where the old versions live. The manuscript itself has **not been updated yet** — the book session will apply everything in one pass and then regenerate `chapter-1.html` (see §4).
 
 Source of truth for every decision: the book project's `editorial/Story_Verification_2026-09-29.md` (private; not in this repo).
@@ -8,8 +10,8 @@ Source of truth for every decision: the book project's `editorial/Story_Verifica
 
 | Topic | OLD (wrong) | NEW (use this) |
 |---|---|---|
-| **RM 28** | "RM 28 in the bank" / 「銀行帳戶裡只剩RM 28」 / 「帳戶餘額：RM 28」 | **RM 28 was his first commission cheque.** 「第一張佣金支票只有RM 28」 / "his first commission cheque was RM 28". Bank balance at the low point ≈ **RM 240**. |
-| **Income in the first three months** | "Income: zero" / 「收入：零」 / 「三個月零收入」 | Income was **not** zero: cheque 1 RM 28, cheque 2 higher (family and relatives bought — **never print the month-2 figure**), cheque 3 RM 0. |
+| **RM 128** | "RM 128 in the bank" / 「銀行帳戶裡只剩RM 128」 / 「帳戶餘額：RM 128」 | **RM 128 was his first commission cheque.** 「第一張佣金支票只有RM 128」 / "his first commission cheque was RM 128". Bank balance at the low point ≈ **RM 240**. |
+| **Income in the first three months** | "Income: zero" / 「收入：零」 / 「三個月零收入」 | Income was **not** zero: cheque 1 RM 128, cheque 2 higher (family and relatives bought — **never print the month-2 figure**), cheque 3 RM 0. |
 | **Costs, first three months** | (unchanged) | Product RM 3,300+, training RM 800+, petrol RM 900+ ≈ **RM 5,000** spent; net loss ≈ RM 3,300. |
 | **38 rejections** | "38 people, every one said no" | Roughly **38 people outside his family and relatives**, from a name list of 200, said no. Keep "38" as an approximate count. |
 | **The 39th / first customer** | "my first customer, on the 39th attempt"; Aunty Lim "a neighbour" | Aunty Lim was **the first customer who bought because she believed, not out of obligation** (family had bought earlier). She was a teacher who phoned after getting his leaflet and lived ~30 min away (**not** a neighbour). |
@@ -22,12 +24,12 @@ Source of truth for every decision: the book project's `editorial/Story_Verifica
 ## 2. Where the old versions are (as of commit on 2026-09-30)
 
 - `index.html:262` — home stat **"450+"** → "400+".
-- `build_chapter.py:115–117` (meta descriptions EN/ZH) and `:144` (standfirst) — "38 rejections, RM 28 in the bank" / 「帳戶裡的 RM 28」 / "RM 28 left in…" → first-cheque wording; standfirst also has a dash.
+- `build_chapter.py:115–117` (meta descriptions EN/ZH) and `:144` (standfirst) — "38 rejections, RM 128 in the bank" / 「帳戶裡的 RM 128」 / "RM 128 left in…" → first-cheque wording; standfirst also has a dash.
 - `chapter-1.html` — **generated; do not hand-edit** (see §4).
-- `KIT_EMAIL_SETUP.md:37–91` — "Income: zero. Bank balance: RM 28" and 「收入：零。帳戶餘額：RM 28。」 → rewrite with the first-cheque facts; the preview line "38 people said no" can stay.
-- `BOOK_LAUNCH_COPY.md` (lines ~31–76) — "450" → "nearly 450"; check every RM 28 / 38 mention; remove 「——」 from Chinese copy.
+- `KIT_EMAIL_SETUP.md:37–91` — "Income: zero. Bank balance: RM 128" and 「收入：零。帳戶餘額：RM 128。」 → rewrite with the first-cheque facts; the preview line "38 people said no" can stay.
+- `BOOK_LAUNCH_COPY.md` (lines ~31–76) — "450" → "nearly 450"; check every RM 128 / 38 mention; remove 「——」 from Chinese copy.
 - `BOOK_LAUNCH_PLAN.md:153` — "450+" → "400+".
-- `book.html` — check the hook / FAQ / schema for RM 28, 450, and 「——」 (23 occurrences of 「——」 at time of writing).
+- `book.html` — check the hook / FAQ / schema for RM 128, 450, and 「——」 (23 occurrences of 「——」 at time of writing).
 - Also the KDP store description (not in this repo) — the book session owns it.
 
 **Status 2026-09-30 (website session, second pass):** done. The book session applied the full story verification to `Manuscript_v1.9_TYPESET_READY.docx` (book repo commit `0bec953`), and the site now matches it:
@@ -40,7 +42,7 @@ Source of truth for every decision: the book project's `editorial/Story_Verifica
 
 ## 3. Suggested wording (Chinese)
 
-- Hook: 「23年前，我連續被大約38個人拒絕，第一張佣金支票只有RM 28。」
+- Hook: 「23年前，我連續被大約38個人拒絕，第一張佣金支票只有RM 128。」
 - Stat line: 「23年。近450名學員。38次拒絕。」
 - EN: "Twenty-three years ago, about 38 people turned him down and his first commission cheque was RM 28."
 
