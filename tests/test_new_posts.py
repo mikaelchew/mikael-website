@@ -78,6 +78,21 @@ class NewPostsTest(unittest.TestCase):
             self.assertLessEqual(en.count("—"), 2, (s["slug"], "em dashes"))
             self.assertLessEqual(en.count("..."), 1, (s["slug"], "ellipses"))
 
+    def test_no_raw_entities_in_visible_text(self):
+        # build_zh only parses data-zh as markup when it contains "<", so an escaped entity
+        # would show as literal "&larr;" on the Chinese page.
+        for s in sources():
+            for page in ("blog/%s.html" % s["slug"], "zh/blog/%s.html" % s["slug"]):
+                text = doc(page).xpath("string(//body)")
+                self.assertIsNone(re.search(r"&[a-z]+;", text), page)
+
+    def test_sitemap_skips_future_posts(self):
+        today = datetime.date.today().isoformat()
+        xml = read("sitemap.xml")
+        for s in sources():
+            listed = "/blog/%s.html</loc>" % s["slug"] in xml
+            self.assertEqual(listed, s["date"] <= today, s["slug"])
+
     def test_chinese_has_no_double_dash(self):
         for s in sources():
             self.assertNotIn("——", read("zh/blog/%s.html" % s["slug"]), s["slug"])

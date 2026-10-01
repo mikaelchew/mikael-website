@@ -93,10 +93,10 @@ def render(s, prev, nxt):
     nav = []
     if prev:
         nav.append('<a class="prev" href="%s.html" data-pubdate="%s">%s%s</a>'
-                   % (prev["slug"], prev["date"], bi("small", "&larr; Previous", "&larr; 上一篇"), bi("b", esc(prev["title_en"]), esc(prev["title_zh"]))))
+                   % (prev["slug"], prev["date"], bi("small", "← Previous", "← 上一篇"), bi("b", esc(prev["title_en"]), esc(prev["title_zh"]))))
     if nxt:
         nav.append('<a class="next" href="%s.html" data-pubdate="%s">%s%s</a>'
-                   % (nxt["slug"], nxt["date"], bi("small", "Next &rarr;", "下一篇 &rarr;"), bi("b", esc(nxt["title_en"]), esc(nxt["title_zh"]))))
+                   % (nxt["slug"], nxt["date"], bi("small", "Next →", "下一篇 →"), bi("b", esc(nxt["title_en"]), esc(nxt["title_zh"]))))
     share_text = "%s%%20%s" % (re.sub(r"[^A-Za-z0-9]+", "%20", s["short_en"]).strip("%20"), url)
     cta = s["cta"]
     return """<!DOCTYPE html>
@@ -225,7 +225,7 @@ def link_previous_latest(order, sources):
             html = open(path, encoding="utf-8").read()
             nxt = order[i + 1]
             link = ('<a class="next" href="%s.html" data-pubdate="%s">%s%s</a>'
-                    % (nxt["slug"], nxt["date"], bi("small", "Next &rarr;", "下一篇 &rarr;"),
+                    % (nxt["slug"], nxt["date"], bi("small", "Next →", "下一篇 →"),
                        bi("b", esc(nxt["title_en"]), esc(nxt["title_zh"]))))
             out = re.sub(r'<a class="next"[^>]*>.*?</a>(?=</nav>)', "", html)
             out = out.replace('</nav>\n      <div class="related">', link + '</nav>\n      <div class="related">', 1)
@@ -233,12 +233,17 @@ def link_previous_latest(order, sources):
                 open(path, "w", encoding="utf-8").write(out)
 
 
-def update_sitemap(sources):
+def update_sitemap(sources, today):
+    """List each post once its date has come; keep scheduled posts out until then."""
     path = os.path.join(ROOT, "sitemap.xml")
-    xml = open(path, encoding="utf-8").read()
+    orig = xml = open(path, encoding="utf-8").read()
     add = []
     for s in sources:
         en, zh = "%s/blog/%s.html" % (SITE, s["slug"]), "%s/zh/blog/%s.html" % (SITE, s["slug"])
+        if datetime.date.fromisoformat(s["date"]) > today:
+            for loc in (en, zh):
+                xml = re.sub(r"  <url>\n    <loc>%s</loc>.*?</url>\n" % re.escape(loc), "", xml, flags=re.S)
+            continue
         if "<loc>%s</loc>" % en in xml:
             continue
         alts = ('    <xhtml:link rel="alternate" hreflang="en" href="%s"/>\n'
@@ -249,6 +254,7 @@ def update_sitemap(sources):
                        "    <priority>0.7</priority>\n  </url>\n" % (loc, alts, s["date"]))
     if add:
         xml = xml.replace("</urlset>", "".join(add) + "</urlset>")
+    if xml != orig:
         open(path, "w", encoding="utf-8").write(xml)
 
 
@@ -285,7 +291,7 @@ def main():
         with open(os.path.join(ROOT, "blog", s["slug"] + ".html"), "w", encoding="utf-8") as f:
             f.write(render(s, prev, nxt))
     link_previous_latest(order, sources)
-    update_sitemap(sources)
+    update_sitemap(sources, datetime.date.today())
     update_feed(sources, datetime.date.today())
     print("build_posts: %d sources rendered" % len(sources))
 

@@ -1,7 +1,10 @@
+import os
 import re
 import unittest
 
-from tests.helpers import doc, read
+import lxml.html
+
+from tests.helpers import ROOT, doc, read
 
 INNER = ("about.html", "speaking.html", "work-with-me.html", "concepts.html", "contact.html")
 
@@ -52,6 +55,14 @@ class InnerPagesTest(unittest.TestCase):
             for phrase in ("full circle", "corporate chair", "back to the field", "Author and field leader",
                            "ground up again", "重返前線", "回歸原點", "作者與前線領袖", "重新從零"):
                 self.assertNotIn(phrase, src, (page, phrase))
+
+    def test_no_boardroom_wording(self):
+        # Mikael, 2026-10-02: say "management" / "corporate management", never "boardroom".
+        import glob
+        for p in glob.glob(os.path.join(ROOT, "*.html")) + glob.glob(os.path.join(ROOT, "blog", "*.html")):
+            text = lxml.html.parse(p).getroot().xpath("string(//body)")
+            attrs = " ".join(lxml.html.parse(p).getroot().xpath("//@data-en | //@alt"))
+            self.assertNotIn("boardroom", (text + attrs).lower(), os.path.relpath(p, ROOT))
 
     def test_no_invented_outcomes(self):
         root = doc("work-with-me.html")

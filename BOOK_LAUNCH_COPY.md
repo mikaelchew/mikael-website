@@ -18,7 +18,7 @@ Covers the "Written Assets" checklist in `BOOK_LAUNCH_PLAN.md`: book description
 
 ### Short — EN (~50 words)
 
-Sun Tzu wrote The Art of War 2,500 years ago. Mikael Chew spent 23 years testing it in direct selling — 8 in the field, 15 in corporate boardrooms. The result: 13 chapters of battle-tested strategy for leaders who are done working hard in the wrong direction. Win without fighting.
+Sun Tzu wrote The Art of War 2,500 years ago. Mikael Chew spent 23 years testing it in direct selling — 8 in the field, 15 in corporate management. The result: 13 chapters of battle-tested strategy for leaders who are done working hard in the wrong direction. Win without fighting.
 
 ### Short — 繁中 (約50字)
 
@@ -93,7 +93,7 @@ His first book, *The Art of War for Direct Selling* (《直銷孫子兵法之不
 
 The book draws on Chew's unusual dual career: 8 years building teams in the field, followed by 15 years in senior corporate management across three multinational direct selling companies. Over that time he has personally mentored nearly 450 industry professionals.
 
-"Most people in this industry don't fail from lack of effort. They fail from lack of strategy," said Chew. "I watched it from the field, then I watched it from the boardroom. The playbook that fixes it is 2,500 years old — someone just had to translate it for our industry."
+"Most people in this industry don't fail from lack of effort. They fail from lack of strategy," said Chew. "I watched it from the field, then I watched it from corporate management. The playbook that fixes it is 2,500 years old — someone just had to translate it for our industry."
 
 Across 13 chapters, the book pairs each Sun Tzu principle with real case studies and specific results, including a prospecting framework that raised the author's own success rate from about 5% to about 70%, a 72-hour onboarding system, and a crisis-management method for the month a team loses five of its seven core leaders.
 

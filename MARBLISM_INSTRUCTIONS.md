@@ -119,7 +119,7 @@ Source material:
 - About 38 rejections from people outside family and relatives, and a first commission cheque of RM 128 (Aunty Lim: the first customer who bought because she believed, not out of obligation)
 - Scott's story: 1000-person team collapsed because his "why" was only money
 - David the engineer who succeeded by being an educator, not a salesman
-- The transition from field to boardroom — what changed in perspective
+- The transition from field to corporate management — what changed in perspective
 - Lessons from coaching nearly 450 direct selling professionals
 - Early career struggles and turning points
 - Basketball analogies for teamwork and strategy
