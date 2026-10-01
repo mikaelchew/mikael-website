@@ -9,7 +9,7 @@ Sign in to Vercel as mikaelchew to view it.)
 | Check | Result |
 |---|---|
 | Hashed preview URL needs a Vercel login | Yes: 302 to the Vercel login |
-| Short alias `mikaelchew-redesign-preview.vercel.app` | **Still public (200).** It is the first deploy's production alias, which the plan's protection does not cover. Mikael to remove it (command in the hand-off message) |
+| Short alias `mikaelchew-redesign-preview.vercel.app` | Removed by Mikael 2026-10-01; now 404 |
 | mikaelchew.com untouched | Yes. Still GitHub Pages from `main`; no domain on the Vercel project |
 | Upload contents | Site files only (`.vercelignore` excludes Markdown, Python, Apps Script sources, docs, tests, tools, the manuscript and `.env*`) |
 
