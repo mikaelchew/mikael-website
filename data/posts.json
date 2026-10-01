@@ -1,5 +1,57 @@
 [
  {
+  "slug": "third-voice",
+  "date": "2026-08-19",
+  "category": "team-building",
+  "category_en": "TEAM BUILDING",
+  "category_zh": "團隊建設",
+  "title_en": "You Don't Need Every Answer: The Power of a Third Voice",
+  "title_zh": "你不需要知道所有答案：第三個聲音的力量",
+  "excerpt_en": "New builders often think they must be the expert before they can share anything. You don't. Your job is to connect people with the right voice, and that voice doesn't have to be yours.",
+  "excerpt_zh": "很多新人以為，自己要先成為專家，才能分享任何東西。其實不必。你的工作是把人跟對的聲音連起來，而那個聲音不一定是你。",
+  "read_en": "6 min",
+  "read_zh": "6 分鐘"
+ },
+ {
+  "slug": "fear-of-inviting",
+  "date": "2026-08-12",
+  "category": "mindset-ethics",
+  "category_en": "MINDSET & ETHICS",
+  "category_zh": "心態與道德",
+  "title_en": "The Real Reason You Avoid Inviting, and How to Stop Avoiding It",
+  "title_zh": "你一直逃避邀約的真正原因，以及怎麼停止逃避",
+  "excerpt_en": "Most people who stop inviting don't lack skill. They are protecting themselves from a feeling. Name the feeling, shrink the stakes, and the phone gets lighter.",
+  "excerpt_zh": "大多數不再邀約的人，缺的不是技巧。他們是在保護自己，躲開某一種感覺。說出那種感覺、降低賭注，手機就會變輕。",
+  "read_en": "6 min",
+  "read_zh": "6 分鐘"
+ },
+ {
+  "slug": "ask-for-an-opinion",
+  "date": "2026-08-05",
+  "category": "relationship",
+  "category_en": "RELATIONSHIP & COMMUNICATION",
+  "category_zh": "關係與溝通",
+  "title_en": "\"I Thought You Were My Friend\": Why I Ask for an Opinion Before I Invite",
+  "title_zh": "「我以為你是我朋友」：為什麼我邀約之前，先請對方給意見",
+  "excerpt_en": "The most painful lesson of my career came over a cup of coffee with a university friend. It changed how I open every conversation: with a question about what the other person thinks.",
+  "excerpt_zh": "我事業裡最慘痛的一課，是跟一位大學同學喝咖啡時學到的。它改變了我開啟每一段對話的方式：先問對方怎麼想。",
+  "read_en": "6 min",
+  "read_zh": "6 分鐘"
+ },
+ {
+  "slug": "beyond-the-warm-list",
+  "date": "2026-07-29",
+  "category": "relationship",
+  "category_en": "RELATIONSHIP & COMMUNICATION",
+  "category_zh": "關係與溝通",
+  "title_en": "Your Best Prospects Probably Aren't on Your Warm List",
+  "title_zh": "你最好的潛在客戶，多半不在你的熟人名單上",
+  "excerpt_en": "Every new builder is told to start with friends and family. It's a fine place to start and a poor place to stay. The people most likely to value what you offer are usually people you haven't met yet.",
+  "excerpt_zh": "每個新人都被教導從親朋好友開始。這是不錯的起點，卻不是久留的地方。最可能珍惜你所提供的東西的人，通常是你還沒認識的人。",
+  "read_en": "6 min",
+  "read_zh": "6 分鐘"
+ },
+ {
   "slug": "seven-actions-a-day",
   "date": "2026-07-22",
   "category": "strategic-leadership",

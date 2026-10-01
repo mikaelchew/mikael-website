@@ -720,4 +720,76 @@
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://www.mikaelchew.com/blog/ask-for-an-opinion.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/ask-for-an-opinion.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/ask-for-an-opinion.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/ask-for-an-opinion.html"/>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mikaelchew.com/zh/blog/ask-for-an-opinion.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/ask-for-an-opinion.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/ask-for-an-opinion.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/ask-for-an-opinion.html"/>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mikaelchew.com/blog/beyond-the-warm-list.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/beyond-the-warm-list.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/beyond-the-warm-list.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/beyond-the-warm-list.html"/>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mikaelchew.com/zh/blog/beyond-the-warm-list.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/beyond-the-warm-list.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/beyond-the-warm-list.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/beyond-the-warm-list.html"/>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mikaelchew.com/blog/fear-of-inviting.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/fear-of-inviting.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/fear-of-inviting.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/fear-of-inviting.html"/>
+    <lastmod>2026-08-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mikaelchew.com/zh/blog/fear-of-inviting.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/fear-of-inviting.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/fear-of-inviting.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/fear-of-inviting.html"/>
+    <lastmod>2026-08-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mikaelchew.com/blog/third-voice.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/third-voice.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/third-voice.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/third-voice.html"/>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mikaelchew.com/zh/blog/third-voice.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/third-voice.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/third-voice.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/third-voice.html"/>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
