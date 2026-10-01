@@ -1,5 +1,57 @@
 [
  {
+  "slug": "outlast-you",
+  "date": "2026-10-14",
+  "category": "personal-growth",
+  "category_en": "PERSONAL GROWTH",
+  "category_zh": "個人成長",
+  "title_en": "Build Something That Outlasts You",
+  "title_zh": "建立一份比你走得更遠的事業",
+  "excerpt_en": "The hardest test of a leader comes when they step back. If the team needs you for everything, you've built a job. If it keeps growing while you rest, you've built something that lasts.",
+  "excerpt_zh": "領袖最難的考驗，出現在他退後一步的時候。如果團隊什麼都需要你，你建立的是一份工作。如果你休息時它仍在成長，你建立的是一份能長久的事業。",
+  "read_en": "6 min",
+  "read_zh": "6 分鐘"
+ },
+ {
+  "slug": "expand-or-hold",
+  "date": "2026-10-07",
+  "category": "industry-adaptation",
+  "category_en": "INDUSTRY & ADAPTATION",
+  "category_zh": "行業與適應",
+  "title_en": "Expand or Hold? Five Questions Before You Open a New Market",
+  "title_zh": "擴張，還是守住？打開新市場之前的五個問題",
+  "excerpt_en": "A new city, a new country, a new audience. Expansion feels like growth, and sometimes it is. Other times it spreads a team too thin to hold anything. Five questions help you tell the difference.",
+  "excerpt_zh": "一個新城市、一個新國家、一群新受眾。擴張感覺像成長，有時候確實是。但有時候，它把團隊拉得太薄，什麼都守不住。五個問題，幫你分辨。",
+  "read_en": "6 min",
+  "read_zh": "6 分鐘"
+ },
+ {
+  "slug": "teach-one-thing",
+  "date": "2026-09-30",
+  "category": "team-building",
+  "category_en": "TEAM BUILDING",
+  "category_zh": "團隊建設",
+  "title_en": "Teach One Thing at a Time: Why Your Best Training Is Your Shortest",
+  "title_zh": "一次只教一件事：為什麼你最好的培訓，往往是最短的那一場",
+  "excerpt_en": "Long trainings feel generous and change very little. People leave inspired, remember almost nothing, and do what they did before. Teach one skill, practise it on the spot, and check it next week.",
+  "excerpt_zh": "很長的培訓感覺很慷慨，卻改變很少。大家帶著熱血離開，幾乎什麼都記不住，然後繼續做以前做的事。一次教一個技能，當場練習，下週檢查。",
+  "read_en": "6 min",
+  "read_zh": "6 分鐘"
+ },
+ {
+  "slug": "five-virtues-of-a-general",
+  "date": "2026-09-23",
+  "category": "strategic-leadership",
+  "category_en": "STRATEGIC LEADERSHIP",
+  "category_zh": "策略領導力",
+  "title_en": "The Five Virtues of a General: Sun Tzu's Leadership Test for Direct Selling",
+  "title_zh": "將者五德：孫子給直銷領袖的領導力檢測",
+  "excerpt_en": "Wisdom, credibility, benevolence, courage, discipline. Sun Tzu listed five qualities of a general 2,500 years ago, and they still make the best check-up I know for anyone leading a team.",
+  "excerpt_zh": "智、信、仁、勇、嚴。孫子在兩千五百年前列出將領的五種特質，到今天，它們仍是我知道最好的領袖自我檢測。",
+  "read_en": "7 min",
+  "read_zh": "7 分鐘"
+ },
+ {
   "slug": "who-to-invest-in",
   "date": "2026-09-16",
   "category": "strategic-leadership",

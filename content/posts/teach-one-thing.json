@@ -1,0 +1,52 @@
+{
+ "slug": "teach-one-thing",
+ "date": "2026-09-30",
+ "category": "team-building",
+ "category_en": "TEAM BUILDING",
+ "category_zh": "團隊建設",
+ "title_en": "Teach One Thing at a Time: Why Your Best Training Is Your Shortest",
+ "title_zh": "一次只教一件事：為什麼你最好的培訓，往往是最短的那一場",
+ "short_en": "Teach One Thing at a Time",
+ "excerpt_en": "Long trainings feel generous and change very little. People leave inspired, remember almost nothing, and do what they did before. Teach one skill, practise it on the spot, and check it next week.",
+ "excerpt_zh": "很長的培訓感覺很慷慨，卻改變很少。大家帶著熱血離開，幾乎什麼都記不住，然後繼續做以前做的事。一次教一個技能，當場練習，下週檢查。",
+ "description_en": "Why packed training sessions rarely change behaviour, and a simple one-skill format that turns teaching into habits your team can actually duplicate.",
+ "description_zh": "為什麼塞滿內容的培訓很少改變行為，以及一個簡單的「一次一技能」形式，把教學變成團隊真正能複製的習慣。",
+ "keywords": "team training, coaching, duplication, practice, direct selling training, one skill at a time, Mikael Chew, 培訓",
+ "read_en": "6 min",
+ "read_zh": "6 分鐘",
+ "blocks": [
+  ["p", "Most of us have run a training like this. Three hours, forty slides, everything we know about prospecting, follow-up, product knowledge and mindset. People take notes and clap at the end.", "我們大多數人都辦過這樣的培訓：三個小時、四十張投影片，把我們所知道的拓客、跟進、產品知識和心態全部講完。大家抄筆記，最後鼓掌。"],
+  ["p", "A week later, ask what changed. Usually very little. The notes are in a drawer and the habits are the same as before.", "一週後，問問有什麼改變。通常很少。筆記躺在抽屜裡，習慣跟以前一模一樣。"],
+  ["p", "The training felt generous. It just tried to do too much at once.", "那場培訓感覺很慷慨。只是它一次想做的事太多了。"],
+  ["h2", "People change one habit at a time", "人一次只能改變一個習慣"],
+  ["p", "Information is easy to give and hard to use. Most people can only adopt one new behaviour at a time, and only if they practise it soon after learning it.", "資訊很容易給，卻很難用。大多數人一次只能養成一個新行為，而且前提是學完之後很快就練習。"],
+  ["p", "A training with ten ideas usually produces zero new habits, because nobody knows which one to start with. A training with one idea, practised properly, can change how a whole team works.", "一場有十個重點的培訓，通常養成零個新習慣，因為沒有人知道該從哪一個開始。一場只有一個重點、好好練習過的培訓，可以改變整個團隊的工作方式。"],
+  ["quote", "Regard your soldiers as your children, and they will follow you into the deepest valleys.", "視卒如嬰兒，故可與之赴深溪。", "Sun Tzu", "《孫子兵法・地形篇》"],
+  ["p", "Sun Tzu wrote about caring for soldiers as you would your own children. Good parents don't teach a child everything in an afternoon. They teach one thing, watch it tried, correct it gently, and come back to it until it sticks.", "孫子說，要像對待自己的孩子一樣對待士兵。好的父母，不會在一個下午教會孩子所有事。他們教一件事，看著孩子嘗試，溫和地糾正，一再回到這件事，直到孩子學會。"],
+  ["h2", "The one-skill format", "「一次一技能」的形式"],
+  ["p", "Here is the structure I like for team trainings. It fits into 45 minutes and works online or in a room.", "這是我喜歡用在團隊培訓的結構。45分鐘就夠，線上線下都適用。"],
+  ["ul", [
+    ["<strong>One skill, named clearly.</strong> \"Opening a conversation by asking for an opinion.\" Not \"communication\". The narrower the better.", "<strong>一個技能，名稱清楚。</strong>「用請對方給意見來開啟對話」，而不是「溝通」。越具體越好。"],
+    ["<strong>Why it matters, in five minutes.</strong> One reason, one example, no more.", "<strong>用五分鐘說明為什麼重要。</strong>一個理由、一個例子，不要更多。"],
+    ["<strong>A live demonstration.</strong> Do it in front of them, ideally for real. Watching it done is worth more than any slide.", "<strong>現場示範。</strong>在大家面前做一次，最好是真的做。親眼看到，勝過任何投影片。"],
+    ["<strong>Practice in pairs.</strong> Twenty minutes of people actually trying it, swapping roles, getting it wrong and trying again.", "<strong>兩人一組練習。</strong>二十分鐘，讓大家真的去試、交換角色、出錯、再試一次。"],
+    ["<strong>One commitment.</strong> Everyone leaves with a specific number: \"I'll use this opener with three people before Friday.\"", "<strong>一個承諾。</strong>每個人帶著一個具體的數字離開：「週五之前，我要用這個開場跟三個人聊。」"]
+  ]],
+  ["h2", "Check it next week", "下週檢查"],
+  ["p", "The part most trainings skip is the follow-up. Start the next session with five minutes on last week's skill. Who used it, what happened, what got in the way.", "大多數培訓都跳過的，是後續追蹤。下一次培訓的開頭，花五分鐘回顧上週的技能：誰用了、發生了什麼、什麼擋住了。"],
+  ["p", "Those five minutes do two things. They show everyone that training leads to action here, and they give you real stories from your own team to teach with.", "這五分鐘做了兩件事：讓每個人看到，在這個團隊裡培訓會帶來行動；也讓你有來自自己團隊的真實故事可以拿來教。"],
+  ["h2", "Why short training duplicates", "為什麼短的培訓能被複製"],
+  ["p", "There's one more advantage. A forty-slide training can only be run by the person who built it. A one-skill session can be run by any partner who has practised it a few times.", "還有一個好處：四十張投影片的培訓，只有做它的人能講。一個「一次一技能」的課程，任何練習過幾次的夥伴都能帶。"],
+  ["p", "That's how training spreads through a team without you in every room. Your partners can teach one skill to their own people next week, and they will.", "這就是培訓如何在你不必出現在每一個場合的情況下，在團隊裡擴散。你的夥伴下週就能把一個技能教給他們自己的人，而他們會去做。"],
+  ["p", "So look at your next training plan. If you had to cut it down to one skill, which would you keep?", "所以，看看你下一場培訓的計劃。如果只能留下一個技能，你會留哪一個？"]
+ ],
+ "cta": {
+  "h_en": "Coaching that duplicates",
+  "h_zh": "能被複製的教練方式",
+  "p_en": "My book covers how to coach new partners step by step and build a team that can teach itself.",
+  "p_zh": "我的書談如何一步步教練新夥伴，打造一支能夠自我傳承的團隊。",
+  "href": "../book.html",
+  "label_en": "See the book",
+  "label_zh": "看這本書"
+ }
+}
