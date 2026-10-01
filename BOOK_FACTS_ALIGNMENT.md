@@ -42,9 +42,9 @@ Source of truth for every decision: the book project's `editorial/Story_Verifica
 
 ## 3. Suggested wording (Chinese)
 
-- Hook: 「23年前，我連續被大約38個人拒絕，第一張佣金支票只有RM 128。」
+- Hook: 「23年前，我連續被38個人拒絕，第一張佣金支票只有RM 128。」
 - Stat line: 「23年。近450名學員。38次拒絕。」
-- EN: "Twenty-three years ago, about 38 people turned him down and his first commission cheque was RM 28."
+- EN: "Twenty-three years ago, 38 people turned him down and his first commission cheque was RM 128."
 
 ## 4. Order of operations
 

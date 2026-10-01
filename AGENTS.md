@@ -120,6 +120,6 @@ The book launch is a 12-week campaign in three phases:
 - New pages with Chinese equivalents: carry `data-en`/`data-zh` on every text element, then `./build_all.sh`.
 - The manuscript (`../../writing/Claude_Book_Editing/Manuscript_v2.0_FINAL.docx`, outside this repo) is the
   source of truth for book content; `build_chapter.py` regenerates Chapter 1 from it. Facts on the site must
-  match it (e.g. first commission cheque RM 128; about 38 rejections; 8 years field + 15 corporate).
+  match it (e.g. first commission cheque RM 128; 38 rejections; 8 years field + 15 corporate).
 - Campaign plan checklists are in `BOOK_LAUNCH_PLAN.md`; supplementary plans are in `FACEBOOK_GROUP_PLAN.md` and `YOUTUBE_PODCAST_PLAN.md`
 - Owner email: mikaelchew@gmail.com

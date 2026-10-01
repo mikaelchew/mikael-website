@@ -56,7 +56,7 @@ download, no app:
 
 The chapter opens on the worst night of my direct selling career. Third month in. Product cost
 RM 3,300. Training RM 800. Petrol RM 900. My first commission cheque had been RM 128. The third one
-was zero. And about 38 people had already told me no.
+was zero. And 38 people had already told me no.
 
 What I got wrong wasn't my technique. It was that I had never answered the one question Sun Tzu
 puts before all the others — 「道」, the why. That's what Chapter 1 is about, and it's what I built
@@ -82,7 +82,7 @@ Mikael
 **［ 閱讀第一章 → ］** → https://www.mikaelchew.com/zh/chapter-1.html
 
 這一章從我直銷生涯最糟的那個晚上開始。入行第三個月。產品成本 RM 3,300，培訓 RM 800，交通油費
-RM 900。第一張佣金支票只有 RM 128，第三張是零。而那之前，已經有大約38個人跟我說「不」。
+RM 900。第一張佣金支票只有 RM 128，第三張是零。而那之前，已經有38個人跟我說「不」。
 
 我做錯的不是技巧。是我從來沒有回答孫子擺在所有問題最前面的那一個問題：「道」，你為何而戰。第一章講
 的就是這件事，也是那晚之後我一切的根基。
@@ -97,7 +97,7 @@ RM 900。第一張佣金支票只有 RM 128，第三張是零。而那之前，�
 
 - No launch date and no price in this email. It is the first thing a new subscriber receives; asking
   for money in it costs more than it earns. The chapter page itself carries both CTAs.
-- The numbers here (about 38 rejections, RM 3,300 / RM 800 / RM 900, first cheque RM 128, third
+- The numbers here (38 rejections, RM 3,300 / RM 800 / RM 900, first cheque RM 128, third
   cheque RM 0) follow the 2026-09-30 fact check in `BOOK_FACTS_ALIGNMENT.md`. Don't round them or
   add new ones, and never print the month-2 cheque figure. Every number that goes out has to be
   traceable back to the book.

@@ -82,6 +82,17 @@ class FirstChequeTest(unittest.TestCase):
                     bad.append(os.path.relpath(p, ROOT))
         self.assertEqual(sorted(bad), [])
 
+    def test_exactly_38_rejections(self):
+        # The corrected manuscript (2026-10-02) says 38 rejections, not "about 38".
+        import glob
+        import re
+        pat = re.compile(r"[Aa]bout 38\b|大約 ?38")
+        files = []
+        for g in ("*.html", "blog/*.html", "zh/*.html", "zh/blog/*.html", "data/*.json", "content/posts/*.json"):
+            files += glob.glob(os.path.join(ROOT, g))
+        bad = [os.path.relpath(p, ROOT) for p in files if pat.search(open(p, encoding="utf-8").read())]
+        self.assertEqual(sorted(bad), [])
+
 
 if __name__ == "__main__":
     unittest.main()
