@@ -1,5 +1,57 @@
 [
  {
+  "slug": "who-to-invest-in",
+  "date": "2026-09-16",
+  "category": "strategic-leadership",
+  "category_en": "STRATEGIC LEADERSHIP",
+  "category_zh": "策略領導力",
+  "title_en": "Choosing Who to Invest In: Why Your Time Should Follow Action, Not Hope",
+  "title_zh": "選擇把時間投資在誰身上：你的時間應該跟著行動走，而不是跟著希望走",
+  "excerpt_en": "A leader's time is the scarcest thing in the team. Spend it on the people you hope will start, and you'll run out. Spend it on the people already moving, and the whole team speeds up.",
+  "excerpt_zh": "領袖的時間，是團隊裡最稀缺的資源。把它花在你希望會開始的人身上，你很快就會用光。把它花在已經在動的人身上，整個團隊都會加速。",
+  "read_en": "6 min",
+  "read_zh": "6 分鐘"
+ },
+ {
+  "slug": "first-week-first-year",
+  "date": "2026-09-09",
+  "category": "team-building",
+  "category_en": "TEAM BUILDING",
+  "category_zh": "團隊建設",
+  "title_en": "The First Week Decides the First Year: What New Partners Learn by Watching You",
+  "title_zh": "第一週決定第一年：新夥伴看著你，學到了什麼",
+  "excerpt_en": "New partners listen to what you say in their first week, but they copy what you do. Show them the work, let them try it beside you, and the habits they form will carry them through the year.",
+  "excerpt_zh": "新夥伴第一週會聽你說什麼，但他們複製的是你做什麼。讓他們看到工作怎麼做，讓他們在你身邊試，他們養成的習慣，會陪他們走過一整年。",
+  "read_en": "6 min",
+  "read_zh": "6 分鐘"
+ },
+ {
+  "slug": "leave-the-door-open",
+  "date": "2026-09-02",
+  "category": "mindset-ethics",
+  "category_en": "MINDSET & ETHICS",
+  "category_zh": "心態與道德",
+  "title_en": "Leave the Door Open: What Sun Tzu Teaches About Never Cornering People",
+  "title_zh": "留一道門：孫子教我們，永遠不要把人逼到死角",
+  "excerpt_en": "\"When you surround an army, leave an outlet free.\" Push someone into a corner and they fight back. Give them a way out and they often walk towards you on their own.",
+  "excerpt_zh": "「圍師必闕，窮寇勿迫。」把人逼到死角，他會拼命反抗。給他一條出路，他往往會自己走向你。",
+  "read_en": "6 min",
+  "read_zh": "6 分鐘"
+ },
+ {
+  "slug": "follow-up-without-chasing",
+  "date": "2026-08-26",
+  "category": "relationship",
+  "category_en": "RELATIONSHIP & COMMUNICATION",
+  "category_zh": "關係與溝通",
+  "title_en": "Following Up Without Chasing: How to Stay in Touch So People Are Glad to Hear From You",
+  "title_zh": "跟進，而不是追著跑：怎麼保持聯絡，讓對方樂於收到你的訊息",
+  "excerpt_en": "Most opportunities are lost to silence rather than rejection. The fix is following up properly: often enough to be remembered, kindly enough to be welcome, and always with something worth reading.",
+  "excerpt_zh": "大多數機會不是被拒絕，而是在沉默中流失。解法是好好跟進：頻繁到對方記得你，溫和到對方歡迎你，而且每次都帶著值得一讀的東西。",
+  "read_en": "6 min",
+  "read_zh": "6 分鐘"
+ },
+ {
   "slug": "third-voice",
   "date": "2026-08-19",
   "category": "team-building",

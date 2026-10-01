@@ -1,0 +1,53 @@
+{
+ "slug": "first-week-first-year",
+ "date": "2026-09-09",
+ "category": "team-building",
+ "category_en": "TEAM BUILDING",
+ "category_zh": "團隊建設",
+ "title_en": "The First Week Decides the First Year: What New Partners Learn by Watching You",
+ "title_zh": "第一週決定第一年：新夥伴看著你，學到了什麼",
+ "short_en": "First Week, First Year",
+ "excerpt_en": "New partners listen to what you say in their first week, but they copy what you do. Show them the work, let them try it beside you, and the habits they form will carry them through the year.",
+ "excerpt_zh": "新夥伴第一週會聽你說什麼，但他們複製的是你做什麼。讓他們看到工作怎麼做，讓他們在你身邊試，他們養成的習慣，會陪他們走過一整年。",
+ "description_en": "Why the habits a new partner forms in week one matter more than anything you tell them, and how to coach by showing first, then letting them try with you beside them.",
+ "description_zh": "為什麼新夥伴第一週養成的習慣，比你告訴他的任何事都重要，以及如何先示範、再讓他在你身邊嘗試的教練方式。",
+ "keywords": "onboarding new partners, coaching, duplication, show then try, new distributor first week, Mikael Chew, 新人啟動",
+ "read_en": "6 min",
+ "read_zh": "6 分鐘",
+ "blocks": [
+  ["p", "A new partner's first week is noisy. Welcome messages, group chats, a starter pack, a training video, three people telling them three slightly different things.", "新夥伴的第一週很吵。歡迎訊息、群組、入門套組、培訓影片，還有三個人告訴他三件略有出入的事。"],
+  ["p", "Through all of that, they are quietly watching one thing: what you actually do. Whatever you say in that first week, they will copy what they see you doing.", "在這一切之中，他其實在安靜地觀察一件事：你實際上做了什麼。不管你第一週說了什麼，他複製的，是他看到你在做的事。"],
+  ["h2", "Habits form early", "習慣很早就成形"],
+  ["p", "If week one is all welcome posts and motivation, the lesson they absorb is that this business runs on excitement. When the excitement fades, as it always does, they have nothing to stand on.", "如果第一週只有歡迎貼文和激勵，他學到的就是：這個事業靠的是熱情。當熱情退去（它一定會退），他就沒有立足的地方。"],
+  ["p", "If week one includes real work done together, such as a first conversation, a first follow-up, a first simple routine, the lesson is different. This business runs on small actions repeated, and they can already do some of them.", "如果第一週包含一起完成的真實工作，例如第一次對話、第一次跟進、第一個簡單的日常習慣，他學到的就不一樣：這個事業靠的是不斷重複的小動作，而他已經會做其中幾個了。"],
+  ["quote", "If commands are consistently carried out, the army will be well disciplined.", "令素行以教其民，則民服。", "Sun Tzu", "《孫子兵法・行軍篇》"],
+  ["p", "Sun Tzu observed that orders practised consistently become how an army behaves. A new partner is the same. What they practise in the first days becomes how they work.", "孫子觀察到，平時一貫執行的命令，就會成為軍隊的行為方式。新夥伴也是一樣：他最初幾天練習的東西，就會變成他工作的方式。"],
+  ["h2", "Show first, then let them try", "先示範，再讓他試"],
+  ["p", "The most reliable way I know to coach a new partner has a simple order to it. Explain it, show it, let them try with you beside them, then let them do it alone.", "我知道最可靠的新人教練方式，有一個簡單的順序：先說明，再示範，然後讓他在你身邊試，最後讓他自己做。"],
+  ["ul", [
+    ["<strong>Explain briefly.</strong> One clear reason why this action matters, in a sentence or two.", "<strong>簡短說明。</strong>用一兩句話，說清楚這個動作為什麼重要。"],
+    ["<strong>Show it for real.</strong> Make a real call or send a real message while they watch. Seeing it done takes away a surprising amount of fear.", "<strong>真的示範一次。</strong>讓他看著你打一通真的電話，或傳一則真的訊息。親眼看到怎麼做，能消除驚人程度的恐懼。"],
+    ["<strong>Let them try beside you.</strong> Their first attempt should happen with you there, so a stumble is a lesson rather than a setback.", "<strong>讓他在你身邊試。</strong>他的第一次嘗試，要有你在旁邊，這樣跌倒了是一堂課，而不是一次挫敗。"],
+    ["<strong>Step back.</strong> Once they've done it a few times, let them do it without you and review afterwards.", "<strong>退一步。</strong>他做過幾次之後，讓他自己做，事後再一起檢討。"]
+  ]],
+  ["h2", "Three things to do in week one", "第一週要做的三件事"],
+  ["ul", [
+    ["<strong>Set expectations honestly.</strong> Tell them plainly that the early months are about learning and building habits, and that results take time.", "<strong>誠實地設定期待。</strong>直接告訴他：前幾個月的重點是學習和建立習慣，成果需要時間。"],
+    ["<strong>Get one small win together.</strong> A first customer conversation, a first follow-up, a first person invited to an event. Small and real beats big and imagined.", "<strong>一起拿下一個小勝利。</strong>第一次客戶對話、第一次跟進、第一次邀約一個人參加活動。小而真實，勝過大而想像。"],
+    ["<strong>Agree a simple daily routine.</strong> Two or three actions they can do every day, even when life is busy. The routine matters more than the size.", "<strong>約定一個簡單的每日習慣。</strong>兩三個即使生活忙碌也能每天做的動作。習慣本身，比份量大小更重要。"]
+  ]],
+  ["h2", "You are the curriculum", "你就是教材"],
+  ["p", "It's tempting to hand a new partner a pile of videos and let the system do the teaching. The videos help. They will still copy what they see their leader doing, whatever the videos say.", "把一堆影片丟給新夥伴，讓系統去教，這很誘人。影片有幫助。但不管影片怎麼說，他還是會複製他看到領袖在做的事。"],
+  ["p", "That's a responsibility, and it's also a relief. You don't need to be perfect. You need to be visibly doing the basics, consistently, where they can see you.", "這是一份責任，也是一種解脫。你不需要完美。你只需要在他看得到的地方，持續地、清楚地做好基本功。"],
+  ["p", "So if your newest partner copied your last seven days exactly, what habits would they have by the end of the year?", "所以，如果你最新的夥伴完完全全複製你過去七天的樣子，到年底，他會養成哪些習慣？"]
+ ],
+ "cta": {
+  "h_en": "Welcoming new partners well",
+  "h_zh": "好好迎接新夥伴",
+  "p_en": "Chapter 8 of my book is about the first days of a new partnership, including the four-step coaching method I use.",
+  "p_zh": "我新書第八章談新夥伴加入的最初幾天，包括我使用的四步教練法。",
+  "href": "../book.html",
+  "label_en": "See the book",
+  "label_zh": "看這本書"
+ }
+}
