@@ -1,0 +1,62 @@
+{
+ "slug": "seven-actions-a-day",
+ "date": "2026-07-22",
+ "category": "strategic-leadership",
+ "category_en": "STRATEGIC LEADERSHIP",
+ "category_zh": "策略領導力",
+ "title_en": "Busy for 60 Days, Zero Customers: The Seven Daily Actions That Fixed It",
+ "title_zh": "忙了60天，客戶是零：改變局面的每日七項行動",
+ "short_en": "Seven Actions a Day",
+ "excerpt_en": "He posted every day, attended every training and read every brochure. Sixty days in, he had no customers. The problem was where his hours went, and the fix was seven simple actions a day for 90 days.",
+ "excerpt_zh": "他每天發文、參加每一場培訓、讀完所有產品手冊。60天後，客戶還是零。問題出在他的時間花在哪裡，解法是每天七個簡單的動作，持續90天。",
+ "description_en": "Most new builders spend 80% of their time preparing and 20% in contact with people. The Daily Method of Operation turns that around with seven countable actions a day.",
+ "description_zh": "多數新人把80%的時間花在準備，只有20%真正跟人接觸。每日行動模式（DMO）用每天七個可以計算的動作，把比例翻轉過來。",
+ "keywords": "DMO, daily method of operation, direct selling daily habits, 90 day plan, follow up 1-4-7, Mikael Chew, 每日行動模式",
+ "read_en": "8 min",
+ "read_zh": "8 分鐘",
+ "blocks": [
+  ["p", "I see this story so often I could tell it with my eyes closed.", "這個故事我看過太多次，閉著眼睛都講得出來。"],
+  ["p", "A new partner joins. He works hard. He posts on social media every day, goes to every training, reads every product brochure twice. Sixty days later he has no customers and is ready to quit.", "一位新夥伴加入。他很努力，每天發社群貼文，每一場培訓都到，產品手冊讀了兩遍。60天後，他一個客戶都沒有，準備放棄。"],
+  ["p", "I ask him what he actually did each day, and he gives me a long list. Then I ask how much of it involved talking to a real person. He works it out and says, \"Maybe 20%?\"", "我問他每天具體做了什麼，他給我一長串清單。接著我問：這裡面有多少是真的在跟人接觸？他算了一下：「大概……20%？」"],
+  ["p", "That's the whole problem. Eighty percent of his effort went into getting ready, and twenty percent into the activity that produces results. He was busy in all the wrong places.", "問題就在這裡。他80%的力氣花在「準備」，只有20%花在真正會帶來結果的行動上。他很忙，但忙錯了地方。"],
+  ["quote", "The general who wins makes many calculations in his temple before the battle is fought.", "夫未戰而廟算勝者，得算多也。", "Sun Tzu", "《孫子兵法・計篇》"],
+  ["p", "Sun Tzu prized careful planning, and in the very next chapter he warned that long campaigns drain every resource. His answer was to plan well and then move quickly. In this business that means a clear goal and a short daily list you can actually finish.", "孫子重視周密的計劃，但在下一篇他就提醒：長期作戰會耗盡資源。他的答案是：計劃要周密，行動要迅速。放在直銷裡，就是一個清楚的目標，加上一張你每天真的做得完的短清單。"],
+  ["h2", "The Daily Method of Operation", "每日行動模式（DMO）"],
+  ["p", "DMO stands for Daily Method of Operation. These are the seven actions I did every day as a distributor, and the same seven I have taught ever since. Do them for 90 days and you will see your business start to look different.", "DMO是Daily Method of Operation的縮寫，也就是「每日行動模式」。這七項，是我當年做直銷商時每天堅持的動作，後來我也一直這樣教夥伴。連續做90天，你會清楚看到自己的事業開始不一樣。"],
+  ["p", "A good DMO has three qualities. It's simple enough to start today. Every item can be counted, so you know each night whether you did it. And it's never broken: the power comes from 90 days without a gap, not from one heroic day.", "好的DMO有三個特點：簡單到今天就能開始；每一項都能計算，晚上一看就知道做了沒有；而且不中斷。它的力量來自90天一天都沒斷，而不是某一天特別拼。"],
+  ["ul", [
+    ["<strong>Use the product every day and write one line about it.</strong> Belief comes from experience. When someone asks if it really works, you can look them in the eye and say you use it every day.", "<strong>每天使用產品，每天記一行。</strong>信心來自體驗。當有人問「真的有用嗎」，你可以看著他的眼睛說：我每天都在用。"],
+    ["<strong>Send your upline a three-line report.</strong> What you did today, where you got stuck, what you'll do tomorrow. Your upline is there to save you from detours, so tell them when you're stuck.", "<strong>每天給上線三句話的報告。</strong>今天做了什麼、卡在哪裡、明天打算做什麼。上線是來幫你少走彎路的，卡住了就說。"],
+    ["<strong>Check in on one partner.</strong> Ask how they are, how the week's goal is going, and how you can help. If you have no partners yet, check in on a customer instead.", "<strong>關心一位夥伴。</strong>問他最近好嗎、這週的目標進度如何、你可以怎麼幫他。還沒有夥伴，就關心一位客戶。"],
+    ["<strong>Meet three to five new people.</strong> Meet them as people, without pitching. Online, comment on their posts and start real conversations. Offline, talk to people at events, classes and cafés. Write each one down that night.", "<strong>認識三到五位新朋友。</strong>是認識人，不是找客戶。線上，在對方的貼文留言，開啟真實的對話；線下，在活動、課堂、咖啡廳跟人聊天。每晚把今天認識的人記下來。"],
+    ["<strong>Share something of value with five people.</strong> A short post, a story, an article that would help them. Keep it about 80% value and 20% product, and send some of it one-to-one.", "<strong>跟五個人分享有價值的東西。</strong>一則短貼文、一個故事、一篇對他有用的文章。大約80%是價值，20%是產品，其中一部分要一對一傳。"],
+    ["<strong>Follow up with five people you've already spoken to.</strong> Most lost opportunities were never rejected; someone simply forgot to follow up. Put every follow-up in your calendar so it doesn't depend on memory.", "<strong>跟進五位已經接觸過的人。</strong>很多機會不是被拒絕掉的，是被忘掉的。每一次跟進都放進日曆，不靠記憶。"],
+    ["<strong>Invite three people to an event.</strong> Keep it short and let the event do the heavy lifting. \"There's a sharing session this Saturday I think you'd enjoy. Want to come along?\"", "<strong>邀約三個人參加活動。</strong>簡短就好，讓活動幫你做重的部分。「這週六有個分享會，我覺得蠻適合你的，一起去聽聽？」"]
+  ]],
+  ["h2", "How to fit it into a day with a full-time job", "有全職工作，怎麼排得進去"],
+  ["p", "Most people building this on the side have one or two hours a day, at best. Here's a pattern that works for many of my partners.", "大多數兼職經營的人，一天頂多擠出一到兩個小時。這是很多夥伴用得順手的排法。"],
+  ["ul", [
+    ["<strong>Morning, about 15 minutes:</strong> use the product and log it, then check today's follow-ups in your calendar.", "<strong>早上，大約15分鐘：</strong>使用產品並記錄，然後看日曆上今天要跟進誰。"],
+    ["<strong>Lunch, about 20 minutes:</strong> post one useful thing and send a few one-to-one messages.", "<strong>中午，大約20分鐘：</strong>發一則有價值的分享，一對一傳幾則訊息。"],
+    ["<strong>Evening, 45 to 60 minutes:</strong> invitations, one partner check-in, write down the people you met, and report to your upline.", "<strong>晚上，45到60分鐘：</strong>邀約、關心一位夥伴、整理今天認識的人、跟上線報告。"]
+  ]],
+  ["p", "The exact times don't matter. What matters is that each of the seven has a fixed slot, so you never start the evening wondering what to do.", "時間不一定要這樣分。重點是七項都有一個固定的位置，你永遠不用在晚上才開始想「今天要做什麼」。"],
+  ["h2", "When seven is too many", "當七項太多的時候"],
+  ["p", "Very few people manage all seven from day one, especially with a job and a family. If your time is genuinely tight, protect three: use the product, meet new people, and follow up. Those three create results directly.", "很少有人第一天就能做完全部七項，尤其是有工作、有家庭的人。如果時間真的很有限，至少守住三項：使用產品、認識新朋友、跟進。這三項直接創造結果。"],
+  ["p", "Then build up. Three actions for the first week, five from the second, and all seven once you have 30 days behind you.", "然後慢慢加上去。第一週三項，第二週開始五項，連續做滿30天之後，挑戰全部七項。"],
+  ["p", "And when life gets in the way, as it will, don't start again from zero. A plan's job is to show you how far you've drifted. Adjust from where you are today.", "當生活插隊的時候（一定會發生），不要從零開始。計劃的作用，是讓你知道自己偏離了多少。從今天的位置重新調整就好。"],
+  ["h2", "If a month passes and nothing happens", "如果一個月過去，什麼都沒發生"],
+  ["p", "Before you blame the system, check the quality. Are the people you're meeting the people you actually want to serve? Is what you share genuinely useful to them? When you follow up, are you showing care or applying pressure?", "在怪罪系統之前，先檢查質量。你認識的人，是你真正想服務的人嗎？你分享的內容，對他們真的有用嗎？你的跟進，是在關心，還是在施壓？"],
+  ["p", "Usually the volume is fine and the direction needs a small adjustment. The DMO is a tool, and it works best with the right strategy behind it.", "通常數量沒問題，是方向需要微調。DMO是工具，它需要正確的策略在後面支撐，才能發揮最大的作用。"],
+  ["p", "Write the seven actions on a card tonight and put it where you'll see it tomorrow morning. Then answer this honestly: of the hours you put into this business last week, how many were spent with actual people?", "今晚把這七項寫在一張卡片上，放在你明天早上一定會看到的地方。然後誠實回答這個問題：上週你投入這份事業的時間裡，有幾個小時是真的花在人身上？"]
+ ],
+ "cta": {
+  "h_en": "Get the full action blueprint",
+  "h_zh": "拿到完整的行動藍圖",
+  "p_en": "Chapter 3 of the book walks through each of the seven actions in detail, with the minimum standard and the most common mistake for every one.",
+  "p_zh": "書中第三章逐一拆解這七項行動，每一項都附上最低標準和最常見的錯誤。",
+  "href": "../book.html",
+  "label_en": "See the book",
+  "label_zh": "看這本書"
+ }
+}

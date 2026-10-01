@@ -666,4 +666,58 @@
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://www.mikaelchew.com/blog/be-your-own-lab-rat.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/be-your-own-lab-rat.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/be-your-own-lab-rat.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/be-your-own-lab-rat.html"/>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mikaelchew.com/zh/blog/be-your-own-lab-rat.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/be-your-own-lab-rat.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/be-your-own-lab-rat.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/be-your-own-lab-rat.html"/>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mikaelchew.com/blog/one-sheet-of-paper.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/one-sheet-of-paper.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/one-sheet-of-paper.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/one-sheet-of-paper.html"/>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mikaelchew.com/zh/blog/one-sheet-of-paper.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/one-sheet-of-paper.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/one-sheet-of-paper.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/one-sheet-of-paper.html"/>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mikaelchew.com/blog/seven-actions-a-day.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/seven-actions-a-day.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/seven-actions-a-day.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/seven-actions-a-day.html"/>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mikaelchew.com/zh/blog/seven-actions-a-day.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/blog/seven-actions-a-day.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/blog/seven-actions-a-day.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/blog/seven-actions-a-day.html"/>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>

@@ -60,6 +60,24 @@ class NewPostsTest(unittest.TestCase):
             for pat in FORBIDDEN:
                 self.assertIsNone(re.search(pat, text, re.I), (s["slug"], pat))
 
+    def test_voice_rules(self):
+        # Mikael's anti-AI writing rules (Vault/100 Areas/Identity/anti-ai-writing-style.md)
+        banned = ["delve", "harness", "tapestry", "paradigm", "cutting-edge", "revolutioni", "landscape", "synergy",
+                  "leverage", "game-changer", "unlock", "realm", "showcase", "vibrant", "unparalleled",
+                  "groundbreaking", "utiliz", "foster", "pivotal", "testament", "commendable", "meticulous",
+                  "navigat", "empower", "journey", "elevate", "robust", "holistic", "streamline", "spearhead",
+                  "uncover", "ignite", "embark", "underscore", "furthermore", "moreover", "notably",
+                  "it's worth noting", "interestingly", "in today's world", "at the end of the day",
+                  "let's dive", "here's the thing"]
+        for s in sources():
+            en = " ".join(x for b in s["blocks"] for x in ([b[1]] if b[0] != "ul" else [e for e, _ in b[1]]))
+            en += " " + " ".join([s["title_en"], s["excerpt_en"], s["description_en"]])
+            low = en.lower()
+            for w in banned:
+                self.assertNotIn(w, low, (s["slug"], w))
+            self.assertLessEqual(en.count("—"), 2, (s["slug"], "em dashes"))
+            self.assertLessEqual(en.count("..."), 1, (s["slug"], "ellipses"))
+
     def test_chinese_has_no_double_dash(self):
         for s in sources():
             self.assertNotIn("——", read("zh/blog/%s.html" % s["slug"]), s["slug"])
