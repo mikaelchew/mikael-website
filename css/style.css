@@ -5347,6 +5347,20 @@ summary:focus-visible,
 .chapter-body li { margin: 0 0 1em; color: var(--white); }
 .chapter-body b { color: #fff; }
 
+/* Book boxes (quote, 戰略概要, Mikael 的提醒, 本章總結) and figures, generated from the manuscript styles */
+.chapter-box { margin: 2.2em 0; padding: 1.4em 1.6em; border: 1px solid var(--beige-dark); border-radius: 4px; background: var(--black-light); }
+.chapter-box p, .chapter-box li { color: var(--charcoal); text-align: left; }
+.chapter-box p:last-child, .chapter-box ul:last-child, .chapter-box ol:last-child { margin-bottom: 0; }
+.chapter-box h3 { font-size: 0.8em; line-height: 1.6; letter-spacing: 0.08em; margin: 0 0 0.8em; color: var(--red); }
+.chapter-box-quote { border: 0; border-radius: 0; background: none; padding: 0; text-align: center; }
+.chapter-box-quote p { font-size: 1.25em; color: var(--white); margin-bottom: 0.4em; text-align: center; }
+.chapter-box-quote .chapter-box-source { font-size: 0.85em; color: var(--gray); }
+.chapter-box-tip { border-color: var(--red); }
+.chapter-box-tip p { margin-bottom: 0.6em; }
+.chapter-figure { margin: 2.2em 0; }
+.chapter-figure img { display: block; width: 100%; height: auto; border-radius: 4px; background: #fff; }
+.chapter-figure figcaption { margin-top: 0.7em; font-size: 0.85em; color: var(--gray); text-align: center; }
+
 .chapter-cta {
   max-width: 34em;
   margin: 3.5rem auto;

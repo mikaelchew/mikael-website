@@ -13,9 +13,15 @@ import urllib.parse, os, re, zipfile, html
 import xml.etree.ElementTree as ET
 
 W = '{http://schemas.openxmlformats.org/wordprocessingml/2006/main}'
+A = '{http://schemas.openxmlformats.org/drawingml/2006/main}'
+R = '{http://schemas.openxmlformats.org/officeDocument/2006/relationships}'
+FIG_DIR = 'images/chapter-1'   # figures are copied out of the manuscript, never hand-placed
+# book box styles -> the box they belong to (consecutive paragraphs of one box render as one <aside>)
+BOXES = {'BoxQuote': 'quote', 'BoxQuoteSource': 'quote', 'BoxBrief': 'brief',
+         'BoxTipTitle': 'tip', 'BoxTip': 'tip', 'BoxSummaryTitle': 'summary', 'BoxSummary': 'summary'}
 ROOT = os.path.dirname(os.path.abspath(__file__))
 DEFAULT_DOCX = os.path.normpath(os.path.join(
-    ROOT, '..', '..', 'writing', 'Claude_Book_Editing', 'Manuscript_v1.9_TYPESET_READY.docx'))
+    ROOT, '..', '..', 'writing', 'Claude_Book_Editing', 'Manuscript_v2.0_FINAL.docx'))
 
 # --- where the mid-chapter soft CTA goes (before this heading) ---
 MID_CTA_BEFORE = '用Ikigai找到你獨特的切入點'
@@ -28,6 +34,8 @@ def load_chapter(docx):
     z = zipfile.ZipFile(docx)
     root = ET.fromstring(z.read('word/document.xml'))
     numbering = z.read('word/numbering.xml').decode()
+    rels = {m.group(1): m.group(2) for m in re.finditer(
+        r'<Relationship [^>]*?Id="([^"]+)"[^>]*?Target="([^"]+)"', z.read('word/_rels/document.xml.rels').decode())}
     absn = {m.group(1): (re.search(r'w:numFmt w:val="([^"]+)"', m.group(0)).group(1)
                          if re.search(r'w:numFmt w:val="([^"]+)"', m.group(0)) else 'bullet')
             for m in re.finditer(r'<w:abstractNum w:abstractNumId="(\d+)".*?</w:abstractNum>', numbering, re.S)}
@@ -48,6 +56,13 @@ def load_chapter(docx):
     out = []
     for p in ps[starts[0]:end]:
         t = txt(p)
+        if style(p) == 'Figure':
+            blip = next(p.iter(A + 'blip'), None)
+            if blip is not None:
+                target = rels[blip.get(R + 'embed')]
+                out.append({'style': 'Figure', 'text': '', 'runs': [], 'list': None,
+                            'name': os.path.basename(target), 'data': z.read('word/' + target)})
+            continue
         if not t.strip():
             continue
         runs = []
@@ -72,10 +87,38 @@ def inline(runs):
 
 
 def render(blocks):
-    out, open_list, mid_done = [], None, False
+    out, open_list, mid_done, open_box = [], None, False, None
     for b in blocks:
         if b['style'] == 'Heading2':
             continue  # page supplies its own <h1>
+        box = BOXES.get(b['style'])
+        if open_box and box != open_box:
+            if open_list:
+                out.append(f'</{open_list}>'); open_list = None
+            out.append('</aside>'); open_box = None
+        if box and not open_box:
+            if open_list:
+                out.append(f'</{open_list}>'); open_list = None
+            out.append(f'<aside class="chapter-box chapter-box-{box}">'); open_box = box
+        if box and not b['list'] and open_list:
+            out.append(f'</{open_list}>'); open_list = None
+        if box and not b['list']:
+            if b['style'].endswith('Title'):
+                out.append(f'<h3>{inline(b["runs"])}</h3>')
+            elif b['style'] == 'BoxQuoteSource':
+                out.append(f'<p class="chapter-box-source">{inline(b["runs"])}</p>')
+            else:
+                out.append(f'<p>{inline(b["runs"])}</p>')
+            continue
+        if b['style'] == 'Figure':
+            if open_list:
+                out.append(f'</{open_list}>'); open_list = None
+            out.append(f'<figure class="chapter-figure"><img src="{FIG_DIR}/{b["name"]}" alt="" loading="lazy">')
+            continue
+        if b['style'] == 'FigureCaption':
+            e = html.escape(b['text'])
+            out[-1] = out[-1].replace('alt=""', f'alt="{e}"') + f'<figcaption>{e}</figcaption></figure>'
+            continue
         if b['style'] == 'Heading3' and not mid_done and MID_CTA_BEFORE in b['text']:
             if open_list:
                 out.append(f'</{open_list}>'); open_list = None
@@ -95,6 +138,8 @@ def render(blocks):
             out.append(f'<p>{inline(b["runs"])}</p>')
     if open_list:
         out.append(f'</{open_list}>')
+    if open_box:
+        out.append('</aside>')
     if not mid_done:
         print('  ! mid-chapter CTA anchor not found — CTA omitted', file=sys.stderr)
     return '\n'.join(out)
@@ -174,6 +219,10 @@ if __name__ == '__main__':
     if not os.path.exists(docx):
         sys.exit(f'manuscript not found: {docx}')
     blocks = load_chapter(docx)
+    os.makedirs(os.path.join(ROOT, FIG_DIR), exist_ok=True)
+    for b in blocks:
+        if b['style'] == 'Figure':
+            open(os.path.join(ROOT, FIG_DIR, b['name']), 'wb').write(b['data'])
     page = build_page(render(blocks))
     open(os.path.join(ROOT, 'chapter-1.html'), 'w', encoding='utf-8').write(page)
     chars = sum(len(b['text']) for b in blocks)
