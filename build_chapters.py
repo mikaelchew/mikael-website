@@ -61,7 +61,7 @@ def render_map(data):
 
 def render_book(data):
     """The book page's chapter section: briefing cards grouped by part."""
-    out = ['<div class="parts">']
+    out = ['<div class="parts book-parts">']
     for i, part in enumerate(data["parts"]):
         out.append(f'<div class="part">{_part_head(i, part)}')
         for c in (c for c in data["chapters"] if c["part"] == i):
@@ -73,7 +73,7 @@ def render_book(data):
                 f'<article class="brief" id="ch-{c["n"]}"><span class="n num">{c["n"]:02d}</span>'
                 f'{_bi("h3", c["en"], c["zh"])}'
                 f'{_bi("div", c["zh"], c["en"], cls="zh alt cjk-display")}'
-                f'{_bi("p", c["line_en"], c["line_zh"])}{free}</article>')
+                f'{_bi("p", c.get("book_en", c["line_en"]), c.get("book_zh", c["line_zh"]))}{free}</article>')
         out.append("</div>")
     out.append("</div>")
     return "\n".join(out)

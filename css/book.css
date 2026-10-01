@@ -1,0 +1,104 @@
+/* ============================================
+   Book page only: the Dossier (spec §6.1). Shared components are in site.css.
+   ============================================ */
+
+/* ---------- first screen ---------- */
+.dossier-hero { position: relative; overflow: hidden; padding: clamp(110px, 14vw, 150px) 0 clamp(56px, 8vw, 96px); }
+.dossier-hero::before { content: ''; position: absolute; inset: 0; background: url(../images/map/terrain.svg) center / cover no-repeat; opacity: .55; pointer-events: none; }
+.dossier-grid { position: relative; display: grid; grid-template-columns: auto minmax(220px, 380px) minmax(0, 1fr); gap: clamp(24px, 4vw, 64px); align-items: start; }
+.dossier-grid .legend { padding-top: 8px; }
+.cover { position: relative; display: block; }
+.cover .paper { position: relative; display: block; transform: rotate(-2deg); }
+.cover img { box-shadow: 0 2px 3px rgba(0, 0, 0, .35), 0 30px 50px -14px rgba(0, 0, 0, .65); }
+.cover .tape { position: absolute; top: -12px; left: 50%; width: 96px; height: 28px; transform: translateX(-50%) rotate(3deg); background: rgba(242, 242, 238, .55); }
+.cover .seal { position: absolute; left: -26px; top: 6%; width: 96px; }
+.dossier-copy h1 { font-weight: 900; font-size: clamp(2.4rem, 4.6vw, 4.4rem); line-height: .95; letter-spacing: -.025em; text-wrap: balance; }
+.dossier-copy .subtitle { font-family: var(--display-zh); font-weight: 600; font-size: clamp(1.15rem, 1.6vw, 1.4rem); color: var(--red-lit); margin-top: .6em; }
+.dossier-copy .desc { margin-top: 1em; max-width: 44ch; font-size: clamp(1.05rem, 1.2vw, 1.2rem); text-wrap: pretty; }
+.order { margin-top: 1.6em; max-width: 460px; border-top: 1px solid var(--line); padding-top: 14px; }
+.order .date { display: block; font-weight: 900; font-size: clamp(2rem, 3vw, 2.6rem); line-height: 1; letter-spacing: -.01em; }
+.order .date small { display: block; font-weight: 600; font-size: max(.95rem, .4em); letter-spacing: 0; color: var(--mute); margin-bottom: .4em; }
+.order .price { display: flex; justify-content: space-between; gap: 1rem; padding: 8px 0; border-bottom: 1px solid var(--line); font-size: 1.02rem; }
+.order .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 18px; }
+
+/* ---------- chapters (briefing cards by part) ---------- */
+.book-parts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(16px, 2vw, 28px); align-items: start; }
+.book-parts .part h3 { font-weight: 800; font-size: 1rem; color: var(--mute); border-top: 1px solid var(--line); padding-top: 10px; margin-bottom: 12px; }
+.book-parts .part h3 .zh { margin-left: .4em; font-family: var(--display-zh); }
+.book-parts .brief { margin-bottom: 14px; }
+.book-parts .brief .zh { font-size: 1.05rem; }
+.book-parts .free { display: inline-flex; align-items: center; gap: 10px; margin-top: .8em; font-weight: 800; }
+.book-parts .seal-sm { width: 52px; }
+
+/* ---------- quotes ---------- */
+.quotes { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 5vw, 80px); }
+.quotes blockquote .cn { font-family: var(--display-zh); font-weight: 900; font-size: clamp(1.8rem, 3vw, 2.8rem); line-height: 1.3; }
+.quotes blockquote .en { margin-top: .6em; font-size: clamp(1.05rem, 1.3vw, 1.25rem); max-width: 34ch; }
+.quotes cite { display: block; margin-top: .8em; font-style: normal; font-weight: 600; font-size: .95rem; color: var(--mute); }
+
+/* ---------- free chapter ---------- */
+.free-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: clamp(32px, 5vw, 80px); align-items: start; }
+.free-grid ul { list-style: none; margin-top: 1.2em; }
+.free-grid li { padding: 10px 0; border-top: 1px solid var(--line); }
+.free-card { position: relative; background: var(--table-deep); border: 1px solid var(--line); padding: 26px 24px 24px; }
+.free-card .seal { position: absolute; right: -12px; top: -22px; width: 84px; }
+.free-card h3 { font-weight: 900; font-size: 1.6rem; line-height: 1.1; }
+.free-card p { margin-top: .6em; }
+.free-card .btn { margin-top: 1em; }
+.free-card .later { margin-top: 1.4em; padding-top: 1em; border-top: 1px solid var(--line); font-size: 1rem; color: var(--mute); }
+.free-card .field { margin-top: 10px; }
+
+/* ---------- who it's for ---------- */
+.audience { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(20px, 3vw, 40px) clamp(32px, 5vw, 80px); }
+.audience h3 { font-weight: 800; font-size: .95rem; letter-spacing: .28em; text-transform: uppercase; color: var(--contour); }
+.audience p { margin-top: .5em; font-size: 1.1rem; max-width: 40ch; }
+
+/* ---------- author ---------- */
+.author { display: grid; grid-template-columns: minmax(0, 340px) minmax(0, 1fr); gap: clamp(32px, 5vw, 80px); align-items: start; }
+.author img { width: 100%; filter: grayscale(1) contrast(1.05); }
+.author p { max-width: 58ch; margin-bottom: 1em; }
+
+/* ---------- buy, notify, print ---------- */
+.buy-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: clamp(20px, 3vw, 40px); align-items: start; margin-top: 1.4em; }
+.buy-card { background: var(--table-deep); border: 1px solid var(--line); padding: 24px; }
+.buy-card.primary { border-color: var(--acetate); }
+.buy-card h3 { font-weight: 900; font-size: 1.5rem; }
+.buy-card .amount { font-weight: 900; font-size: 2.4rem; line-height: 1; margin: .3em 0 .5em; }
+.buy-card ul { list-style: none; margin-bottom: 1em; }
+.buy-card li { padding: 6px 0; border-bottom: 1px solid var(--line); }
+.book-buy-form { display: grid; gap: 10px; }
+.book-buy-form input { font: inherit; font-size: 1rem; padding: .75em .8em; border: 0; background: #fff; color: var(--ink); }
+.book-buy-form button { justify-content: center; }
+.book-buy-status { min-height: 1.4em; font-weight: 700; color: var(--red-lit); }
+.buy-note { display: block; margin-top: 12px; font-size: .95rem; color: var(--mute); }
+.buy-note a { color: var(--acetate); }
+.team-line { margin-top: 1.4em; color: var(--mute); }
+.team-line a { color: var(--acetate); }
+
+/* ---------- FAQ ---------- */
+.faq { max-width: 860px; }
+.faq details { border-top: 1px solid var(--line); }
+.faq details:last-child { border-bottom: 1px solid var(--line); }
+.faq summary { cursor: pointer; padding: 18px 0; font-weight: 800; font-size: 1.15rem; list-style: none; display: flex; justify-content: space-between; gap: 1rem; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: '+'; font-weight: 400; color: var(--red-lit); }
+.faq details[open] summary::after { content: '−'; }
+.faq details p { padding-bottom: 18px; max-width: 64ch; }
+
+@media (max-width: 1100px) { .book-parts { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 900px) {
+  /* phone first screen: small cover beside the title, then the order box (actions), then the description */
+  .dossier-hero { padding-top: 92px; }
+  .dossier-grid { grid-template-columns: minmax(96px, 30%) minmax(0, 1fr); gap: 16px 18px; align-items: center; }
+  .dossier-grid .legend { display: none; }
+  .dossier-copy { display: contents; }
+  .cover { grid-column: 1; grid-row: 1; }
+  .cover .seal { width: 52px; left: -8px; top: -4%; }
+  .cover .tape { width: 56px; height: 18px; }
+  .dossier-copy h1 { grid-column: 2; grid-row: 1; font-size: clamp(1.7rem, 7.4vw, 2.4rem); }
+  .dossier-copy .subtitle { display: none; }
+  .order { grid-column: 1 / -1; grid-row: 2; margin-top: 4px; }
+  .dossier-copy .desc { grid-column: 1 / -1; grid-row: 3; margin-top: 4px; }
+  .book-parts, .quotes, .free-grid, .audience, .author, .buy-grid { grid-template-columns: minmax(0, 1fr); }
+  .free-card .seal { right: 8px; }
+}

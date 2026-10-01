@@ -6,7 +6,9 @@ import lxml.html
 
 from tests.helpers import ROOT
 
-FORBIDDEN = ["450+", "RM 28 in the bank", "Alex", "most successful partner", "50% stronger", "——", "177 hours", "5% rule"]
+FORBIDDEN = ["450+", "RM 28 in the bank", "Alex", "most successful partner", "50% stronger", "——", "177 hours", "5% rule",
+             # superseded by Manuscript_v2.0_FINAL (44th partner on day 90; 100 'interested' people)
+             "75 days", "75天", "50 interested", "50個「有興趣」"]
 
 
 def data():

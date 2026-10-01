@@ -1,49 +1,179 @@
 {
-  "parts": [
-    {"en": "Foundations", "zh": "基礎"},
-    {"en": "The Battlefield", "zh": "戰場"},
-    {"en": "Building Your Army", "zh": "建軍"},
-    {"en": "The General's Path", "zh": "將道"}
-  ],
-  "chapters": [
-    {"n": 1, "part": 0, "zh": "發起召集", "en": "Finding Your Dao", "x": 230, "y": 1290, "free": true,
-     "line_en": "About 38 rejections and a first commission cheque of RM 28. Finding the why that everything else is built on.",
-     "line_zh": "大約38次拒絕，第一張佣金支票只有RM 28。找到撐起一切的「為什麼」。"},
-    {"n": 2, "part": 0, "zh": "了解自己、了解市場", "en": "Know Yourself, Know the Market", "x": 430, "y": 1170,
-     "line_en": "A RM 13,500 lesson in market research, and why knowing your weaknesses matters more than your strengths.",
-     "line_zh": "一堂學費RM 13,500的市場研究課，以及為什麼認清弱點比認清優勢更重要。"},
-    {"n": 3, "part": 0, "zh": "規劃行動藍圖", "en": "Your Action Blueprint", "x": 620, "y": 1235,
-     "line_en": "Seven specific actions, every day, for 90 days.",
-     "line_zh": "7項具體動作，每天執行，持續90天。"},
-    {"n": 4, "part": 1, "zh": "精準識別目標", "en": "Strategic Prospecting", "x": 810, "y": 1075,
-     "line_en": "From about 5% to about 70% with one framework: FORMHD.",
-     "line_zh": "一個框架，讓成功率從大約5%提升到大約70%：FORMHD。"},
-    {"n": 5, "part": 1, "zh": "邀約的藝術", "en": "The Art of Invitation", "x": 965, "y": 955,
-     "line_en": "One bad invitation nearly cost a friendship of many years.",
-     "line_zh": "一次糟糕的邀約，差點毀了一段多年的友誼。"},
-    {"n": 6, "part": 1, "zh": "呈現你的方案", "en": "Presenting Your Plan", "x": 1100, "y": 1050,
-     "line_en": "60 slides, 2 hours, nothing sold. Then 8 slides, mostly listening, and 2 of 3 bought.",
-     "line_zh": "60張投影片、2小時，沒有人買。後來改用8張、大部分時間在聽，3個人裡2個當場買了。"},
-    {"n": 7, "part": 1, "zh": "關鍵的後續跟進", "en": "The Follow-Up System", "x": 1225, "y": 895,
-     "line_en": "She threw him out of her house. A few visits later, Aunty Lim bought the whole set.",
-     "line_zh": "她把他趕出門。去了幾次之後，Aunty Lim整套產品當場付清。"},
-    {"n": 8, "part": 2, "zh": "喜迎新夥伴", "en": "The Golden 72 Hours", "x": 1365, "y": 790,
-     "line_en": "The first three days decide whether a new partner becomes a diamond or a shooting star.",
-     "line_zh": "前三天，決定新夥伴成為「鑽石」還是「流星」。"},
-    {"n": 9, "part": 2, "zh": "引燃「勢」能", "en": "Building Momentum", "x": 1495, "y": 715,
-     "line_en": "Training is activation, not education.",
-     "line_zh": "培訓是啟動，不是灌輸。"},
-    {"n": 10, "part": 3, "zh": "以「道」御眾", "en": "Leading With Dao", "x": 1645, "y": 610,
-     "line_en": "A 90-day goal of 50. 44 people in 75 days. The Five Virtues of a General.",
-     "line_zh": "90天目標50人，75天約到44位夥伴。將者五德。"},
-    {"n": 11, "part": 3, "zh": "戰略擴張", "en": "Strategic Expansion", "x": 1800, "y": 515,
-     "line_en": "RM 1,600 flight. 50 interested people. Zero results. Then Seremban.",
-     "line_zh": "RM 1,600的機票，50個「有興趣」的人，零結果。直到芙蓉。"},
-    {"n": 12, "part": 3, "zh": "駕馭「九地」之變", "en": "The Nine Terrains", "x": 1935, "y": 405,
-     "line_en": "5 of 7 core leaders left in one month. How Vivian's team came back stronger.",
-     "line_zh": "一個月內7位核心走了5位。Vivian的團隊如何比危機前更強。"},
-    {"n": 13, "part": 3, "zh": "永續經營", "en": "A Sustainable Legacy", "x": 2064, "y": 300,
-     "line_en": "Build a business that runs without you every day, and get your time back.",
-     "line_zh": "建立一個不依賴你日常運作的事業，把時間還給自己。"}
-  ]
+ "parts": [
+  {
+   "en": "Foundations",
+   "zh": "基礎"
+  },
+  {
+   "en": "The Battlefield",
+   "zh": "戰場"
+  },
+  {
+   "en": "Building Your Army",
+   "zh": "建軍"
+  },
+  {
+   "en": "The General's Path",
+   "zh": "將道"
+  }
+ ],
+ "chapters": [
+  {
+   "n": 1,
+   "part": 0,
+   "zh": "發起召集",
+   "en": "Finding Your Dao",
+   "x": 230,
+   "y": 1290,
+   "free": true,
+   "line_en": "About 38 rejections and a first commission cheque of RM 28. Finding the why that everything else is built on.",
+   "line_zh": "大約38次拒絕，第一張佣金支票只有RM 28。找到撐起一切的「為什麼」。",
+   "book_en": "About 38 rejections and a first commission cheque of RM 28. How finding your deepest 'why' through the Ikigai framework becomes the foundation everything else is built on.",
+   "book_zh": "大約38次拒絕，第一張佣金支票只有RM 28。如何透過Ikigai框架找到你最深層的「為什麼」，奠定一切的根基。"
+  },
+  {
+   "n": 2,
+   "part": 0,
+   "zh": "了解自己、了解市場",
+   "en": "Know Yourself, Know the Market",
+   "x": 430,
+   "y": 1170,
+   "line_en": "A RM 13,500 lesson in market research, and why knowing your weaknesses matters more than your strengths.",
+   "line_zh": "一堂學費RM 13,500的市場研究課，以及為什麼認清弱點比認清優勢更重要。",
+   "book_en": "A RM 13,500 lesson in market research. SWOT analysis, the half-face experiment, and why understanding your weaknesses matters more than your strengths.",
+   "book_zh": "一堂花了RM 13,500的市場研究課。SWOT分析、半臉實驗，以及為什麼認清弱點比認清優勢更重要。"
+  },
+  {
+   "n": 3,
+   "part": 0,
+   "zh": "規劃行動藍圖",
+   "en": "Your Action Blueprint",
+   "x": 620,
+   "y": 1235,
+   "line_en": "Seven specific actions, every day, for 90 days.",
+   "line_zh": "7項具體動作，每天執行，持續90天。",
+   "book_en": "The DMO (Daily Method of Operation) — 7 specific actions, done every day for 90 days. Why most new partners stay busy without results, and what changes when the day is built around the actions that count.",
+   "book_zh": "DMO（每日行動模式）：7項具體動作，每天執行，持續90天。為什麼很多新人很忙卻沒有結果，以及把時間花在真正會帶來結果的行動上之後，會有什麼不同。"
+  },
+  {
+   "n": 4,
+   "part": 1,
+   "zh": "精準識別目標",
+   "en": "Strategic Prospecting",
+   "x": 810,
+   "y": 1075,
+   "line_en": "From about 5% to about 70% with one framework: FORMHD.",
+   "line_zh": "一個框架，讓成功率從大約5%提升到大約70%：FORMHD。",
+   "book_en": "From about 5% to about 70% success rate with one framework. How the FORMHD method turns spray-and-pray into precision targeting.",
+   "book_zh": "一個框架讓成功率從大約5%提升到大約70%。FORMHD方法如何把亂槍打鳥變成精準出擊。"
+  },
+  {
+   "n": 5,
+   "part": 1,
+   "zh": "邀約的藝術",
+   "en": "The Art of Invitation",
+   "x": 965,
+   "y": 955,
+   "line_en": "One bad invitation nearly cost a friendship of many years.",
+   "line_zh": "一次糟糕的邀約，差點毀了一段多年的友誼。",
+   "book_en": "How one bad invitation nearly cost me a friendship of many years — and the 'ask for opinion' technique that took my acceptance rate from about 15% to 80%.",
+   "book_zh": "一次糟糕的邀約，差點毀了一段多年的友誼。以及「請教意見」技巧如何把接受率從大約15%拉到80%。"
+  },
+  {
+   "n": 6,
+   "part": 1,
+   "zh": "呈現你的方案",
+   "en": "Presenting Your Plan",
+   "x": 1100,
+   "y": 1050,
+   "line_en": "60 slides, 2 hours, nothing sold. Then 8 slides, mostly listening, and 2 of 3 bought.",
+   "line_zh": "60張投影片、2小時，沒有人買。後來改用8張、大部分時間在聽，3個人裡2個當場買了。",
+   "book_en": "60 slides, 2 hours, nothing sold. Then Irene tried 8 slides and mostly listened, and 2 of 3 bought on the spot. How to replace a lecture with a conversation.",
+   "book_zh": "60張投影片、2小時、沒有人買。後來Irene改用8張投影片，大部分時間在聽，3個人裡2個當場買了。如何用對話取代演講。"
+  },
+  {
+   "n": 7,
+   "part": 1,
+   "zh": "關鍵的後續跟進",
+   "en": "The Follow-Up System",
+   "x": 1225,
+   "y": 895,
+   "line_en": "She threw him out of her house. A few visits later, Aunty Lim bought the whole set.",
+   "line_zh": "她把他趕出門。去了幾次之後，Aunty Lim整套產品當場付清。",
+   "book_en": "She threw me out of her house. A few visits with fruit and nasi lemak later, Aunty Lim asked me in, bought the whole set, and had two friends waiting when I delivered it. The 1-4-7 golden follow-up method.",
+   "book_zh": "她把我趕出門。帶著水果和椰漿飯去了幾次之後，Aunty Lim請我進門，整套產品當場付清，送貨那天還約了兩位朋友在家等我。1-4-7黃金跟進法。"
+  },
+  {
+   "n": 8,
+   "part": 2,
+   "zh": "喜迎新夥伴",
+   "en": "The Golden 72 Hours",
+   "x": 1365,
+   "y": 790,
+   "line_en": "The first three days decide whether a new partner becomes a diamond or a shooting star.",
+   "line_zh": "前三天，決定新夥伴成為「鑽石」還是「流星」。",
+   "book_en": "Chris quit because I said 'good luck.' Sarah thrived because of the 72-hour activation system. Tell-Show-Try-Do — the four-step coaching method.",
+   "book_zh": "Chris放棄了，因為我只說了「祝好運」。Sarah成功了，因為72小時啟動系統。講-做-試-放，四步教練法。"
+  },
+  {
+   "n": 9,
+   "part": 2,
+   "zh": "引燃「勢」能",
+   "en": "Building Momentum",
+   "x": 1495,
+   "y": 715,
+   "line_en": "Training is activation, not education.",
+   "line_zh": "培訓是啟動，不是灌輸。",
+   "book_en": "I taught Kevin everything in 3 hours. He quit. Then I learned: training is activation, not education. The hand-holding system, and why your time belongs with the few who have real potential.",
+   "book_zh": "我花3小時教完Kevin所有東西。他放棄了。後來我才學到：培訓是啟動，不是灌輸。手把手系統，以及為什麼要把時間投資在那少數最有潛力的人身上。"
+  },
+  {
+   "n": 10,
+   "part": 3,
+   "zh": "以「道」御眾",
+   "en": "Leading With Dao",
+   "x": 1645,
+   "y": 610,
+   "line_en": "A 90-day goal of 50. 44 people by day 90. The Five Virtues of a General.",
+   "line_zh": "90天目標50人，第90天招募到第44位夥伴。將者五德。",
+   "book_en": "A 90-day goal of 50. 44 recruits in 90 days. When his team stalled, Leon stopped managing and went back to the front line. The Five Virtues of a General: wisdom, trust, benevolence, courage, discipline.",
+   "book_zh": "90天目標50人，最後親自招募了44位夥伴。當團隊停滯，Leon不再只做管理，重新回到市場一線。將者五德：智、信、仁、勇、嚴。"
+  },
+  {
+   "n": 11,
+   "part": 3,
+   "zh": "戰略擴張",
+   "en": "Strategic Expansion",
+   "x": 1800,
+   "y": 515,
+   "line_en": "RM 1,600 flight. 100 interested people. Zero results. Then Seremban.",
+   "line_zh": "RM 1,600的機票，100個「有興趣」的人，零結果。直到芙蓉。",
+   "book_en": "RM 1,600 flight. 100 'interested' people. Zero results. Then: Samantha in Seremban, whose team's results caught up with Kuala Lumpur's within a year. The 'show me small results first' philosophy.",
+   "book_zh": "RM 1,600的機票。100個「有興趣」的人。零結果。直到芙蓉的Samantha，一年後業績追上了吉隆坡。「先做出小成果給我看」的哲學。"
+  },
+  {
+   "n": 12,
+   "part": 3,
+   "zh": "駕馭「九地」之變",
+   "en": "The Nine Terrains",
+   "x": 1935,
+   "y": 405,
+   "line_en": "5 of 7 core leaders left in one month. How Vivian's team came back stronger.",
+   "line_zh": "一個月內7位核心走了5位。Vivian的團隊如何比危機前更強。",
+   "book_en": "5 of 7 core leaders left in one month. The call Vivian made to me that night, the crisis management 5-step method, and how her team came back stronger than before.",
+   "book_zh": "一個月內7位核心走了5位。Vivian那晚打給我的電話、危機處理五步法，以及她的團隊如何比危機前更強。"
+  },
+  {
+   "n": 13,
+   "part": 3,
+   "zh": "永續經營",
+   "en": "A Sustainable Legacy",
+   "x": 2064,
+   "y": 300,
+   "line_en": "Build a business that runs without you every day, and get your time back.",
+   "line_zh": "建立一個不依賴你日常運作的事業，把時間還給自己。",
+   "book_en": "You built the business, and now you're busier than ever. The art of letting go — overcoming 4 psychological barriers to build a business that runs without you every day, and getting your time back.",
+   "book_zh": "事業建起來了，你卻比以前更忙。學會放手，突破4個心理關卡，建立一個不依賴你日常運作的事業，把時間還給自己。"
+  }
+ ]
 }

@@ -82,6 +82,8 @@ class SiteTest(unittest.TestCase):
             self.assertIsNotNone(h, p)
             for a in h.xpath('.//a[@aria-current]'):
                 del a.attrib["aria-current"]
+            for a in h.xpath('.//a[contains(@class,"lang-link")]'):
+                del a.attrib["href"]  # points at each page's own zh twin by design
             # paths differ by depth; compare with the prefix removed
             headers[p] = lxml.html.tostring(h, encoding="unicode").replace('href="../', 'href="')
         self.assertLessEqual(len(set(headers.values())), 1, list(headers))
