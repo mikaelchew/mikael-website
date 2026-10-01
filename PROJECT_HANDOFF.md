@@ -154,9 +154,9 @@ Searched all tracked file types (`.html .js .css .py .md .json .gs`) — **zero 
    git config --global user.name
    git config --global user.email
    ```
-7. Install `lxml` for system Python (needed by `build_zh.py`):
+7. Install `lxml` for system Python (needed by `build_zh.py`), plus `fonttools` and `brotli` (needed by `build_fonts.py`, added in the 2026-10 redesign):
    ```
-   /usr/bin/python3 -m pip install --user lxml
+   /usr/bin/python3 -m pip install --user lxml fonttools brotli
    ```
    If the new Mac's system Python blocks user-installs (PEP 668, common on newer macOS), add `--break-system-packages`, or install into a venv and update the `build_zh.py` invocation accordingly.
 8. If `.claude/` was carried over, fix the two hardcoded absolute paths to match the new Mac's actual project path (only needed if the username or folder location differs from `/Users/mikael/Work/Projects/zinzino/Mikael Chew Website`):
