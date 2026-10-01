@@ -55,7 +55,7 @@ download, no app:
 **[ Read Chapter 1 → ]** → https://www.mikaelchew.com/chapter-1.html
 
 The chapter opens on the worst night of my direct selling career. Third month in. Product cost
-RM 3,300. Training RM 800. Petrol RM 900. My first commission cheque had been RM 28. The third one
+RM 3,300. Training RM 800. Petrol RM 900. My first commission cheque had been RM 128. The third one
 was zero. And about 38 people had already told me no.
 
 What I got wrong wasn't my technique. It was that I had never answered the one question Sun Tzu
@@ -82,7 +82,7 @@ Mikael
 **［ 閱讀第一章 → ］** → https://www.mikaelchew.com/zh/chapter-1.html
 
 這一章從我直銷生涯最糟的那個晚上開始。入行第三個月。產品成本 RM 3,300，培訓 RM 800，交通油費
-RM 900。第一張佣金支票只有 RM 28，第三張是零。而那之前，已經有大約38個人跟我說「不」。
+RM 900。第一張佣金支票只有 RM 128，第三張是零。而那之前，已經有大約38個人跟我說「不」。
 
 我做錯的不是技巧。是我從來沒有回答孫子擺在所有問題最前面的那一個問題：「道」，你為何而戰。第一章講
 的就是這件事，也是那晚之後我一切的根基。

@@ -176,7 +176,7 @@ MID_CTA_HTML = '''<aside class="chapter-cta chapter-cta-soft" lang="en">
 TITLE = '第一章：發起召集 - 尋找你的「道」'
 DESC_EN = ("Read Chapter 1 of The Art of War for Direct Selling free: about 38 rejections, "
            "a first commission cheque of RM 28, and the idea that changed everything.")
-DESC_ZH = "免費閱讀《直銷孫子兵法之不戰而勝》第一章：大約38次拒絕、只有 RM 28 的第一張佣金支票，以及那晚我找到的「道」。"
+DESC_ZH = "免費閱讀《直銷孫子兵法之不戰而勝》第一章：大約38次拒絕、只有 RM 128 的第一張佣金支票，以及那晚我找到的「道」。"
 
 
 def build_page(chapter_html):
@@ -232,7 +232,7 @@ def build_page(chapter_html):
 <main id="main" class="prose on-paper">
   <div class="measure">
     <h1 class="cjk-display" lang="zh-Hant">{TITLE}</h1>
-    <p class="standfirst" data-en="The whole first chapter, free, no sign-up. It is the night I nearly quit, after about 38 rejections and a first commission cheque of RM 28, and what I worked out instead." data-zh="整個第一章，免費，不用留資料。那是我差點放棄的晚上。大約38次拒絕，第一張佣金支票只有 RM 28，還有我後來想通的事。">The whole first chapter, free, no sign-up. It is the night I nearly quit, after about 38 rejections and a first commission cheque of RM 28, and what I worked out instead.</p>
+    <p class="standfirst" data-en="The whole first chapter, free, no sign-up. It is the night I nearly quit, after about 38 rejections and a first commission cheque of RM 28, and what I worked out instead." data-zh="整個第一章，免費，不用留資料。那是我差點放棄的晚上。大約38次拒絕，第一張佣金支票只有 RM 128，還有我後來想通的事。">The whole first chapter, free, no sign-up. It is the night I nearly quit, after about 38 rejections and a first commission cheque of RM 28, and what I worked out instead.</p>
     <p class="meta" data-en="The book is written in Traditional Chinese. This chapter is presented exactly as written." data-zh="本書以繁體中文寫成，本章依原文呈現。">The book is written in Traditional Chinese. This chapter is presented exactly as written.</p>
 
     <article class="chapter-body" lang="zh-Hant">

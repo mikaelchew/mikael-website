@@ -64,5 +64,24 @@ class RenderTest(unittest.TestCase):
         self.assertEqual(build_chapters.inject(once, "map", "<ol>x</ol>"), once)
 
 
+class FirstChequeTest(unittest.TestCase):
+    """Manuscript_v2.0_FINAL (saved 2026-10-01 22:29) gives the first commission cheque as RM 128."""
+
+    def test_no_page_says_rm_28(self):
+        import glob
+        import re
+        pat = re.compile(r"RM[\s ]?28(?![0-9,]|\.[0-9])")
+        files = []
+        for g in ("*.html", "blog/*.html", "zh/*.html", "zh/blog/*.html", "data/*.json",
+                  "content/posts/*.json", "build_chapter.py"):
+            files += glob.glob(os.path.join(ROOT, g))
+        bad = []
+        for p in files:
+            with open(p, encoding="utf-8") as f:
+                if pat.search(f.read()):
+                    bad.append(os.path.relpath(p, ROOT))
+        self.assertEqual(sorted(bad), [])
+
+
 if __name__ == "__main__":
     unittest.main()

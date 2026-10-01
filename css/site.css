@@ -147,7 +147,7 @@ img { display: block; max-width: 100%; height: auto; }
 .prose a.btn--ghost { color: var(--ink); }
 .prose a.btn--ghost:hover { color: var(--paper); }
 .prose :lang(zh-Hant) { line-height: 1.85; }
-.prose h1:lang(zh-Hant) { line-height: 1.2; word-break: keep-all; }
+.prose h1:lang(zh-Hant) { line-height: 1.2; word-break: keep-all; overflow-wrap: anywhere; }
 .prose .meta { color: var(--ink-2); font-size: 1rem; margin-top: .8em; }
 
 /* ---------- chapter reading (chapter-1.html) ---------- */
