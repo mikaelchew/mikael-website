@@ -107,17 +107,19 @@ function sendBook_(toEmail, toName) {
     '<p>電子書就附在這封信裡，兩種格式都有：</p>' +
     '<ul><li><b>EPUB</b>：在手機和平板上閱讀，建議用這個。它會跟著螢幕自動排版，字可以放大縮小。</li>' +
     '<li><b>PDF</b>：固定版面，適合電腦閱讀或列印。在手機上要一直放大拖動，比較吃力。</li></ul>' +
-    '<p><b>在手機上打開 EPUB：</b></p>' +
-    '<ul><li><b>iPhone／iPad：</b>在「郵件」或 Gmail App 裡點一下 EPUB 附件，再點分享圖示（方框加向上箭頭），選「書籍」。書會放進「書籍」App 的書庫，以後打開「書籍」就能讀。</li>' +
-    '<li><b>Android：</b>把 EPUB 下載到手機，打開「Google Play 圖書」，到「書庫」選「上傳 EPUB 或 PDF」，再選這個檔案。</li>' +
-    '<li><b>Kindle（App 或閱讀器）：</b>到 amazon.com/sendtokindle 上傳 EPUB，幾分鐘後會出現在你的 Kindle 書庫。</li>' +
-    '<li><b>電腦：</b>Mac 用「書籍」App 直接打開 EPUB；Windows 打開 PDF 最簡單。</li></ul>' +
+    '<p><b>怎麼打開 EPUB：</b></p>' +
+    '<ul><li><b>iPhone／iPad：</b>在「郵件」或 Gmail App 裡點一下 EPUB 附件，再點分享圖示（方框加向上箭頭），選「書籍」。如果第一排沒有「書籍」，往右滑到「更多」再找。書會放進「書籍」App 的書庫，以後打開「書籍」就能讀，字體大小、背景顏色都可以自己調。</li>' +
+    '<li><b>Android：</b>點附件把 EPUB 下載到手機，打開「Google Play 圖書」，到「書庫」，從右上角的選單選擇上傳，再選這個檔案。手機沒有 Google Play 圖書（例如部分華為手機），在應用程式商店裝任何一個免費的 EPUB 閱讀 App 就可以打開。</li>' +
+    '<li><b>Kindle（手機 App 或 Kindle 閱讀器）：</b>Kindle 不能直接打開附件。到 amazon.com/sendtokindle，登入你的 Amazon 帳號，上傳 EPUB，幾分鐘後會出現在你所有 Kindle 裝置的書庫。</li>' +
+    '<li><b>Kobo 和其他電子書閱讀器（PocketBook、Boox 等）：</b>用 USB 線把閱讀器接上電腦，把 EPUB 複製進閱讀器，拔掉線就會在書庫裡出現。</li>' +
+    '<li><b>Mac：</b>按兩下 EPUB，會用「書籍」App 打開。</li>' +
+    '<li><b>Windows 電腦：</b>直接打開 PDF 最簡單。想用 EPUB，可以在 Microsoft Store 免費下載「Thorium Reader」。</li></ul>' +
     '<p>打不開或找不到附件，直接回覆這封信，我幫你處理。沒有 DRM 限制，你可以在自己的任何裝置上閱讀。</p>' +
     '<p>書裡每一章都從一次真實的失敗開始。如果你不知道從哪裡讀起，翻到〈如何閱讀這本書〉，照你現在的位置選一條路線。</p>' +
     '<p>讀完之後有任何想法，直接回覆這封信，我會看到。</p>' +
     '<p>我們戰場上見。<br>周俊德（Mikael Chew）</p>' +
     '<hr style="border:none;border-top:1px solid #e5e5e5;margin:24px 0">' +
-    '<p style="font-size:13px;color:#666">Thank you for your purchase. Your copy of <i>直銷孫子兵法之不戰而勝</i> is attached in both EPUB and PDF. On a phone, use the EPUB: it reflows to fit your screen. <b>iPhone/iPad:</b> tap the EPUB attachment, tap Share, choose Books. <b>Android:</b> download it, then in Google Play Books go to Library and upload the file. <b>Kindle:</b> upload it at amazon.com/sendtokindle. No DRM, so you can read it on any device you own. Reply to this email if anything is wrong and I will fix it.</p>' +
+    '<p style="font-size:13px;color:#666">Thank you for your purchase. Your copy of <i>直銷孫子兵法之不戰而勝</i> is attached in both EPUB and PDF. On a phone, use the EPUB: it reflows to fit your screen. <b>iPhone/iPad:</b> tap the EPUB attachment, tap Share, choose Books (swipe to More if you don&#39;t see it). <b>Android:</b> download it, then in Google Play Books go to Library, open the menu and choose Upload; any free EPUB reader app also works. <b>Kindle app or e-reader:</b> upload it at amazon.com/sendtokindle. <b>Kobo and other e-readers:</b> connect by USB and copy the file across. <b>Mac:</b> double-click to open in Books. <b>Windows:</b> open the PDF, or install the free Thorium Reader for the EPUB. No DRM, so you can read it on any device you own. Reply to this email if anything is wrong and I will fix it.</p>' +
     '</div>';
 
   MailApp.sendEmail({
