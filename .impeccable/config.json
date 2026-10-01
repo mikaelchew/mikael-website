@@ -5,5 +5,56 @@
       "maxFindings": 5,
       "maxChars": 8000
     }
+  },
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "redesign/morning-edition/index.html"
+        ],
+        "createdAt": "2026-10-01T03:31:15.915Z",
+        "reason": "Claude verified in browser 2026-10-01: every bordered container (.fold, .inside, .cover-col, .inside .col, .vertical) has 20px padding on the bordered side; detector does not count it"
+      },
+      {
+        "rule": "wide-tracking",
+        "value": "0.18em",
+        "files": [
+          "redesign/morning-edition/index.html"
+        ],
+        "createdAt": "2026-10-01T03:31:15.966Z",
+        "reason": "Claude: 0.18em is on the vertical Traditional Chinese subtitle (.vertical .sub, writing-mode vertical-rl), standard spacing for vertical CJK, not Latin body text"
+      },
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "redesign/morning-edition/index.html"
+        ],
+        "createdAt": "2026-10-01T03:31:16.012Z",
+        "reason": "User chose The Morning Edition direction on the 2026-10-01 decision page, whose card specified the newsprint ground #E3E1DA; the build cooled it to #E4E2DD"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "redesign/campaign-map/index.html"
+        ],
+        "createdAt": "2026-10-01T03:38:37.598Z",
+        "reason": "Claude verified in source 2026-10-01: .standing paints the background and its only child .standing-in carries clamp(48px,7vw,96px) padding; detector does not see the inner padding"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "redesign/strategist-map/index.html"
+        ],
+        "createdAt": "2026-10-01T09:37:20.201Z",
+        "reason": "Claude verified in source 2026-10-01: .quote/.colleagues carry clamp(40-112px) padding below their 1px top rule; .band paints the background and .band-in carries the padding"
+      }
+    ]
   }
 }
