@@ -54,6 +54,21 @@
         ],
         "createdAt": "2026-10-01T09:37:20.201Z",
         "reason": "Claude verified in source 2026-10-01: .quote/.colleagues carry clamp(40-112px) padding below their 1px top rule; .band paints the background and .band-in carries the padding"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "sec",
+        "createdAt": "2026-10-01T13:15:06.051Z"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "band",
+        "createdAt": "2026-10-01T13:15:06.105Z"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "epigraph",
+        "createdAt": "2026-10-01T13:15:06.158Z"
       }
     ]
   }
