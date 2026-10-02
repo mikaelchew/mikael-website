@@ -5,33 +5,36 @@ from tests.helpers import ROOT, doc, read
 
 
 class ChapterOneTest(unittest.TestCase):
+    # chapter-1.html carries the English edition's Chapter 1; zh/chapter-1.html the Chinese original
     def test_chapter1_lang(self):
-        body = doc("chapter-1.html").xpath('//article[contains(@class,"chapter-body")]')
+        body = doc("zh/chapter-1.html").xpath('//article[contains(@class,"chapter-body")]')
         self.assertTrue(body)
         self.assertEqual(body[0].get("lang"), "zh-Hant")
 
     def test_chapter1_title_uses_plain_hyphen(self):
-        h1 = doc("chapter-1.html").xpath("//h1")[0].text_content()
+        h1 = doc("zh/chapter-1.html").xpath("//h1")[0].text_content()
         self.assertIn("第一章：發起召集 - 尋找你的「道」", h1)
-        self.assertNotIn("——", read("chapter-1.html"))
+        self.assertNotIn("——", read("zh/chapter-1.html"))
 
     def test_chapter1_ctas_follow_phase(self):
-        ctas = doc("chapter-1.html").xpath('//aside[contains(@class,"chapter-cta")]')
-        self.assertEqual(len(ctas), 2)
-        for cta in ctas:
-            self.assertTrue(cta.xpath('.//*[contains(@class,"when-prelaunch")]'))
-            self.assertTrue(cta.xpath('.//*[contains(@class,"when-launched")]//a[contains(@class,"btn")] | .//a[contains(@class,"btn")][contains(@class,"when-launched")]'))
+        for page in ("chapter-1.html", "zh/chapter-1.html"):
+            ctas = doc(page).xpath('//aside[contains(@class,"chapter-cta")]')
+            self.assertEqual(len(ctas), 2, page)
+            for cta in ctas:
+                self.assertTrue(cta.xpath('.//*[contains(@class,"when-prelaunch")]'), page)
+                self.assertTrue(cta.xpath('.//*[contains(@class,"when-launched")]//a[contains(@class,"btn")] | .//a[contains(@class,"btn")][contains(@class,"when-launched")]'), page)
 
     def test_chapter1_boxes_rendered(self):
-        root = doc("chapter-1.html")
-        self.assertTrue(root.xpath('//blockquote[contains(@class,"epigraph")]//cite'))
-        figs = root.xpath('//figure[img][figcaption]')
-        self.assertEqual(len(figs), 2)
-        for f in figs:
-            src = f.xpath("./img/@src")[0]
-            self.assertTrue(os.path.exists(os.path.join(ROOT, src)), src)
-        self.assertTrue(root.xpath('//aside[contains(@class,"tip")]//li'))
-        self.assertTrue(root.xpath('//aside[contains(@class,"summary")]'))
+        for page in ("chapter-1.html", "zh/chapter-1.html"):
+            root = doc(page)
+            self.assertTrue(root.xpath('//blockquote[contains(@class,"epigraph")]//cite'), page)
+            figs = root.xpath('//figure[img][figcaption]')
+            self.assertEqual(len(figs), 2, page)
+            for f in figs:
+                src = os.path.normpath(os.path.join(os.path.dirname(page), f.xpath("./img/@src")[0]))
+                self.assertTrue(os.path.exists(os.path.join(ROOT, src)), src)
+            self.assertTrue(root.xpath('//aside[contains(@class,"tip")]//li'), page)
+            self.assertTrue(root.xpath('//aside[contains(@class,"summary")]'), page)
 
     def test_chapter1_uses_shell(self):
         src = read("chapter-1.html")

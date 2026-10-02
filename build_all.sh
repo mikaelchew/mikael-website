@@ -1,6 +1,6 @@
 #!/bin/sh
 # Rebuild every generated part of the site, in dependency order. Stops on the first failure.
-#   1. build_chapter.py  chapter-1.html from the manuscript
+#   1. build_chapter.py  chapter-1.html (English) + content/chapter-1.zh.html from the manuscripts
 #      build_posts.py    blog/<slug>.html from content/posts/*.json
 #      build_blog.py     Writing index (blog.html) from data/posts.json
 #      build_quotes.py   LinkedIn recommendations from data/testimonials.json
@@ -15,8 +15,9 @@ PY=/usr/bin/python3
 # checkout through git so this also works from a worktree under .claude/worktrees/.
 REPO=$(dirname "$(git rev-parse --path-format=absolute --git-common-dir)")
 MANUSCRIPT=${MANUSCRIPT:-"$REPO/../../writing/Claude_Book_Editing/Manuscript_v2.0_FINAL.docx"}
+MANUSCRIPT_EN=${MANUSCRIPT_EN:-"$REPO/../../writing/Claude_Book_Editing/publishing/english/Manuscript_EN.docx"}
 $PY build_chapters.py
-$PY build_chapter.py "$MANUSCRIPT"
+$PY build_chapter.py "$MANUSCRIPT" "$MANUSCRIPT_EN"
 $PY build_posts.py
 $PY build_blog.py
 $PY build_quotes.py

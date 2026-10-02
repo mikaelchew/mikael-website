@@ -40,18 +40,24 @@ def _render(name, page, nav):
     return out
 
 
-def _set_phase(html, phase):
+def _set_attr(html, name, value):
     m = re.search(r"<html\b[^>]*>", html)
     if not m:
         return html
-    tag = re.sub(r'\s+data-phase="[^"]*"', "", m.group(0))
-    tag = tag.replace("<html", f'<html data-phase="{phase}"', 1)
+    tag = re.sub(r'\s+%s="[^"]*"' % name, "", m.group(0))
+    tag = tag.replace("<html", '<html %s="%s"' % (name, value), 1)
     return html[:m.start()] + tag + html[m.end():]
 
 
-def apply(html, page, phase):
-    """Return html with the launch phase set and (if marked) the shell injected."""
+def _set_phase(html, phase):
+    return _set_attr(html, "data-phase", phase)
+
+
+def apply(html, page, phase, english=None):
+    """Return html with the launch phase (and English-edition state) set and, if marked, the shell injected."""
     html = _set_phase(html, phase)
+    if english is not None:
+        html = _set_attr(html, "data-english", english)
     m = re.search(r'<body\b[^>]*\bdata-nav="([^"]*)"', html)
     nav = m.group(1) if m else ""
     for name, (start, end) in MARKERS.items():
@@ -70,20 +76,33 @@ def phase():
     return value
 
 
+ENGLISH_STATES = ("off", "preorder", "live")
+
+
+def english():
+    """English edition state: off (hidden), preorder (Kindle pre-order only), live (direct sale + Kindle).
+    Only set "live" once the delivery script sends English buyers the English files."""
+    with open(os.path.join(ROOT, "data", "site.json"), encoding="utf-8") as f:
+        value = json.load(f).get("english", "off")
+    if value not in ENGLISH_STATES:
+        raise SystemExit(f'data/site.json english must be one of {ENGLISH_STATES}, got {value!r}')
+    return value
+
+
 def main():
-    ph = phase()
+    ph, en = phase(), english()
     pages = sorted(glob.glob(os.path.join(ROOT, "*.html")) + glob.glob(os.path.join(ROOT, "blog", "*.html")))
     written = 0
     for path in pages:
         page = os.path.relpath(path, ROOT)
         with open(path, encoding="utf-8") as f:
             src = f.read()
-        out = apply(src, page, ph)
+        out = apply(src, page, ph, en)
         if out != src:
             with open(path, "w", encoding="utf-8") as f:
                 f.write(out)
             written += 1
-    print(f"build_shell: phase={ph}, {written} pages updated")
+    print(f"build_shell: phase={ph}, english={en}, {written} pages updated")
     return written
 
 

@@ -59,6 +59,17 @@
 .author img { width: 100%; filter: grayscale(1) contrast(1.05); }
 .author p { max-width: 58ch; margin-bottom: 1em; }
 
+/* ---------- editions ---------- */
+.editions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(20px, 3vw, 40px); margin-top: 1.4em; }
+.edition { display: grid; grid-template-columns: minmax(90px, 140px) minmax(0, 1fr); gap: 20px; align-items: start; border-top: 1px solid var(--line); padding-top: 20px; }
+.edition img { width: 100%; height: auto; box-shadow: 0 2px 3px rgba(0, 0, 0, .35), 0 18px 30px -12px rgba(0, 0, 0, .6); }
+.edition h3 { font-weight: 900; font-size: 1.3rem; line-height: 1.25; margin: .2em 0 .4em; }
+.edition p { margin-bottom: .6em; }
+.ed-lang { font-size: .85rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--red-lit); }
+.ed-meta { color: var(--mute); }
+.edition .field { margin-top: 10px; }
+[data-english="off"] .editions { grid-template-columns: minmax(0, 1fr); max-width: 560px; }
+
 /* ---------- buy, notify, print ---------- */
 .buy-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: clamp(20px, 3vw, 40px); align-items: start; margin-top: 1.4em; }
 .buy-card { background: var(--table-deep); border: 1px solid var(--line); padding: 24px; }
@@ -67,6 +78,10 @@
 .buy-card .amount { font-weight: 900; font-size: 2.4rem; line-height: 1; margin: .3em 0 .5em; }
 .buy-card ul { list-style: none; margin-bottom: 1em; }
 .buy-card li { padding: 6px 0; border-bottom: 1px solid var(--line); }
+.buy-edition { border: 0; display: flex; flex-wrap: wrap; gap: 8px 18px; margin-bottom: 4px; }
+.buy-edition legend { font-weight: 800; margin-bottom: 6px; }
+.buy-edition label { display: inline-flex; align-items: center; gap: 8px; cursor: pointer; min-height: 44px; }
+.buy-edition input { accent-color: var(--red-lit); width: 18px; height: 18px; }
 .book-buy-form { display: grid; gap: 10px; }
 .book-buy-form input { font: inherit; font-size: 1rem; padding: .75em .8em; border: 0; background: #fff; color: var(--ink); }
 .book-buy-form button { justify-content: center; }
@@ -100,6 +115,7 @@
   .dossier-copy .subtitle { display: none; }
   .order { grid-column: 1 / -1; grid-row: 2; margin-top: 4px; }
   .dossier-copy .desc { grid-column: 1 / -1; grid-row: 3; margin-top: 4px; }
-  .book-parts, .quotes, .free-grid, .audience, .author, .buy-grid { grid-template-columns: minmax(0, 1fr); }
+  .book-parts, .quotes, .free-grid, .audience, .author, .buy-grid, .editions { grid-template-columns: minmax(0, 1fr); }
+  .edition { grid-template-columns: 96px minmax(0, 1fr); gap: 16px; }
   .free-card .seal { right: 8px; }
 }

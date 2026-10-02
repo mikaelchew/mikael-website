@@ -14,7 +14,7 @@ GA4_EVENTS = [
 ]
 KIT_FORMS = {"9983525", "9983575", "9983582"}
 # Every tag value in use on main as of 2026-10-01.
-KIT_TAGS = {"book-launch", "book-print", "book-chapter", "long-game-launch", "newsletter"}
+KIT_TAGS = {"book-launch", "book-print", "book-chapter", "book-english", "long-game-launch", "newsletter"}
 TOKENS = {
     "--table": "#22303A", "--table-deep": "#19242C", "--acetate": "#F2F2EE", "--mute": "#B9C4C0",
     "--contour": "#B6C4BE", "--red": "#C0392B", "--red-lit": "#F0705F", "--red-text": "#A93226",

@@ -36,7 +36,7 @@ class BookTest(unittest.TestCase):
     def test_buy_form_and_notes_carried_over(self):
         root = doc("book.html")
         form = root.xpath('//form[contains(@class,"book-buy-form")]')[0]
-        self.assertEqual(sorted(form.xpath('.//input/@name')), ["email", "name"])
+        self.assertEqual(sorted(form.xpath('.//input/@name')), ["edition", "edition", "email", "name"])
         self.assertTrue(form.xpath('.//*[contains(@class,"book-buy-status")][@role="status"]'))
         text = root.xpath('//*[@id="buy"]')[0].text_content()
         for must in ("RM 29.90", "USD 9.99", "online banking (FPX)", "Ignite Ventures", "Refund policy"):
@@ -65,7 +65,7 @@ class BookTest(unittest.TestCase):
     def test_kit_forms_and_tags(self):
         root = doc("book.html")
         tags = sorted(root.xpath('//form[@data-ajax]//input[@name="tags"]/@value'))
-        self.assertEqual(tags, ["book-chapter", "book-launch", "book-print"])
+        self.assertEqual(tags, ["book-chapter", "book-english", "book-launch", "book-print"])
 
     def test_no_freedom_promise_or_stat_bar(self):
         text = doc("book.html").text_content()

@@ -48,6 +48,10 @@ img { display: block; max-width: 100%; height: auto; }
 /* ---------- launch phase ---------- */
 [data-phase="prelaunch"] .when-launched { display: none !important; }
 [data-phase="launched"] .when-prelaunch { display: none !important; }
+/* English edition state (data/site.json "english"): .when-en-on = preorder or live */
+[data-english="off"] .when-en-on, [data-english="off"] .when-en-live, [data-english="off"] .when-en-preorder { display: none !important; }
+[data-english="preorder"] .when-en-live, [data-english="preorder"] .when-en-off { display: none !important; }
+[data-english="live"] .when-en-preorder, [data-english="live"] .when-en-off { display: none !important; }
 
 /* ---------- top bar ---------- */
 .bar { position: fixed; inset: 0 0 auto; z-index: 30; display: flex; align-items: center; justify-content: space-between; gap: 1rem;

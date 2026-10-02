@@ -40,6 +40,20 @@ Never hand-edit generated output: `zh/`, `chapter-1.html`, `blog/<new post>.html
 **Launch switch:** `data/site.json` `{"phase": "prelaunch"}` → `"launched"`, then `./build_all.sh`, test, push.
 That shows the buy section and "on sale now" copy everywhere (`.when-launched`) and hides pre-launch copy.
 
+**English edition switch:** `data/site.json` `"english"` is `"off" | "preorder" | "live"`, independent of the
+launch phase. It sets `<html data-english>` and the `.when-en-off` / `.when-en-on` (preorder or live) /
+`.when-en-preorder` / `.when-en-live` classes. `preorder` shows the English edition with a "coming soon" email
+form; `live` adds English to the book page's edition choice and preselects it on English pages. Set `live` only
+once the delivery script sends English buyers the English files, and only after adding the English Kindle link
+in `book.html` (the comment by the Amazon button; `tests/test_english.py` fails without it).
+
+**Checkout contract (for the Apps Script delivery session):** the buy form POSTs, as `text/plain` JSON, to the
+same endpoint as before: `{"action": "buy", "name": …, "email": …, "edition": "zh" | "en"}`. A request with no
+`edition` is a Chinese-edition purchase. The script must carry `edition` through the Billplz bill to delivery.
+
+**Chapter 1:** `build_chapter.py` takes both manuscripts. `chapter-1.html` is the English edition's Chapter 1;
+the Chinese original goes to `content/chapter-1.zh.html`, which `build_zh.py` swaps into `zh/chapter-1.html`.
+
 **New blog post:** add `content/posts/<slug>.json` (see an existing one for the shape: metadata, bilingual
 blocks, CTA, optional `image` or `cover_zh` for a generated map cover via `tools/make_covers.py`), then
 `./build_all.sh`. Posts dated in the future stay hidden on the site until their day (`js/site.js`); the RSS
@@ -93,7 +107,7 @@ The book launch is a 12-week campaign in three phases:
 - `book.html` is the critical page to keep updated throughout the campaign; it starts as "Coming Soon" and goes live on launch day
 - Distribution is primarily via mikaelchew.com direct sales (highest margin, captures customer data); secondary channels are Amazon, Malaysian bookstores (MPH, Kinokuniya, Popular), bulk orders, and speaking events
 - Pricing: **eBook RM 29.90 direct / USD 9.99 Kindle (raised from 7.99 on 2026-09-29 — KDP draft set at 9.99, 70% band now $2.99–$12.99)**; physical RM 79–99 indicative, not yet confirmed
-- Book is in Traditional Chinese; English translation is a post-launch consideration
+- Book is written in Traditional Chinese; the English edition ("The Art of War for Direct Selling: Winning Without Fighting") is targeted for the same 20 Oct launch, RM 29.90 direct for either edition (see "English edition switch")
 - All campaign tracking checklists live in `BOOK_LAUNCH_PLAN.md` — update checkboxes there as tasks complete
 
 ## Open tasks / next steps
@@ -106,8 +120,11 @@ The book launch is a 12-week campaign in three phases:
   Mikael completed two real purchases (2026-10-01). Amazon Kindle link set (B0HLDGD5M3). Kit email capture
   (three forms, double opt-in, `KIT_EMAIL_SETUP.md`).
 - **20 Oct 2026:** flip the launch phase (see "Launch switch" above), rebuild, test, push.
+- **English edition:** go/no-go Mon 12 Oct; English Kindle URL expected ~14 Oct (add it to `book.html`); once the
+  delivery script handles `edition: "en"`, set `"english": "live"`, rebuild, test, push. If the English ebook
+  misses 20 Oct, leave it on `"preorder"`.
 - **After 7 and 14 Oct:** rebuild and push once each, so those scheduled posts reach `feed.xml`.
-- **Mikael:** update the emails already set up in Kit from "RM 28" to "RM 128" (first commission cheque).
+- **Done (2026-10-02):** Kit emails updated from "RM 28" to "RM 128" (another session).
 - **Mikael:** supply 2–3 real (anonymised is fine) mentee cases for a Work With Me case-study section.
 - Review the drafted launch copy in `BOOK_LAUNCH_COPY.md` and fill its `[PLACEHOLDERS]`.
 - Blog posts: keep book stories to roughly one post in four; the rest are essays (Mikael, 2026-10-01).

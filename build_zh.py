@@ -76,6 +76,20 @@ def transform_html(html, relpath):
     # 1. html lang
     doc.set('lang', 'zh-Hant')
 
+    # 1b. Chapter 1: the EN page carries the English edition; the Chinese original comes from
+    # the fragment build_chapter.py writes (before step 2, so its CTA text is swapped too)
+    if relpath == 'chapter-1.html':
+        with open(os.path.join(ROOT, 'content', 'chapter-1.zh.html'), encoding='utf-8') as f:
+            body = lxml.html.fragment_fromstring(f.read(), create_parent='article')
+        article = doc.xpath('//article[contains(@class,"chapter-body")]')[0]
+        body.attrib.update(article.attrib)
+        body.set('lang', 'zh-Hant')
+        article.getparent().replace(article, body)
+        h1 = doc.xpath('//h1')[0]
+        h1.set('class', 'cjk-display'); h1.set('lang', 'zh-Hant')
+    for el in doc.xpath('//*[@data-href-zh]'):
+        el.set('href', el.get('data-href-zh'))
+
     # 2. swap visible text for data-en/data-zh (elements inside data-zh-only stay as authored)
     for el in doc.xpath('//*[@data-zh][not(ancestor-or-self::*[@data-zh-only])]'):
         val = el.get('data-zh')
@@ -195,7 +209,9 @@ def transform_html(html, relpath):
     for s in doc.xpath('//script[@type="application/ld+json"]'):
         t = s.text or ''
         t = t.replace('"'+e_url+'"', '"'+z_url+'"')
-        t = t.replace('"inLanguage":"en"', '"inLanguage":"zh-Hant"')
+        # only the page's own language: an English edition listed inside (workExample) stays "en"
+        t = re.sub(r'^(\s*\{"@context":"https://schema\.org","@type":"[^"]+",[^{]*?)"inLanguage":"en"',
+                   r'\1"inLanguage":"zh-Hant"', t)
         s.text = t
 
     return '<!DOCTYPE html>\n' + tostring(doc, encoding='unicode', method='html')

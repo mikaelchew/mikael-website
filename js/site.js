@@ -136,12 +136,15 @@
         'bad-email': zh ? '電子郵件地址好像不對，請再檢查一次。' : "That email address doesn't look right. Please check it.",
         failed: zh ? '付款無法啟動。請再試一次，或寫信到 hello@mikaelchew.com。' : 'Payment could not be started. Please try again, or email hello@mikaelchew.com.'
       };
+      // English pages preselect the English edition once it is on sale (data/site.json "english": "live")
+      if (form.elements.edition && !zh && html.dataset.english === 'live') form.elements.edition.value = 'en';
       form.addEventListener('submit', function (e) {
         e.preventDefault();
+        var edition = form.elements.edition ? form.elements.edition.value : 'zh';
         trackEvent('begin_checkout', {
           currency: 'MYR',
           value: 29.90,
-          items: [{ item_name: 'Ebook ' + (zh ? 'zh' : 'en') + ' page' }],
+          items: [{ item_name: 'Ebook ' + edition + ' edition', item_variant: (zh ? 'zh' : 'en') + ' page' }],
           source_page: window.location.pathname
         });
         btn.disabled = true;
@@ -150,7 +153,8 @@
         fetch(form.dataset.endpoint, {
           method: 'POST',
           headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-          body: JSON.stringify({ action: 'buy', name: form.elements.name.value, email: form.elements.email.value })
+          // edition 'zh' or 'en' tells the delivery script which files to send
+          body: JSON.stringify({ action: 'buy', name: form.elements.name.value, email: form.elements.email.value, edition: edition })
         })
           .then(function (r) { return r.json(); })
           .then(function (res) {
