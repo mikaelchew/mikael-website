@@ -89,6 +89,14 @@
         "rule": "dark-glow",
         "value": "rgba(240, 112, 95",
         "createdAt": "2026-10-01T16:30:01.087Z"
+      },
+      {
+        "rule": "aphoristic-cadence",
+        "value": "*",
+        "files": [
+          "book.html"
+        ],
+        "createdAt": "2026-10-02T07:29:06.949Z"
       }
     ]
   }
