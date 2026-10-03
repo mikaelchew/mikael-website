@@ -165,7 +165,17 @@ def transform_html(html, relpath):
     # 6b. language link points back to the EN page (set after the asset rewrite above,
     # which would otherwise bump "zh/" on the homepage)
     back = '../' * (relpath.count('/') + 1) + ('' if relpath == 'index.html' else relpath)
-    for a in doc.xpath('//a[contains(concat(" ",normalize-space(@class)," ")," lang-link ")]'):
+    # header switch (EN | 中文): EN becomes the link back, 中文 becomes the lit current language
+    for sw in doc.xpath('//*[contains(concat(" ",normalize-space(@class)," ")," lang-switch ")]'):
+        cur = sw.xpath('./*[contains(@class,"is-current")]')[0]
+        link = sw.xpath('./a[contains(@class,"lang-link")]')[0]
+        en = lxml.html.Element('a', {'href': back, 'class': 'lang-opt lang-link keep', 'lang': 'en', 'hreflang': 'en'})
+        en.text = 'EN'; en.tail = cur.tail
+        zh = lxml.html.Element('span', {'class': 'lang-opt is-current', 'lang': 'zh-Hant', 'aria-current': 'true'})
+        zh.text = '中文'; zh.tail = link.tail
+        sw.replace(cur, en); sw.replace(link, zh)
+    for a in doc.xpath('//a[contains(concat(" ",normalize-space(@class)," ")," lang-link ")]'
+                       '[not(ancestor::*[contains(concat(" ",normalize-space(@class)," ")," lang-switch ")])]'):
         a.set('href', back)
         a.set('lang', 'en'); a.set('hreflang', 'en')
         for c in list(a): a.remove(c)

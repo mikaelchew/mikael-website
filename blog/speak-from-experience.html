@@ -52,16 +52,25 @@
 <!-- shell:header -->
 <a class="skip" href="#main" data-en="Skip to content" data-zh="跳到內容">Skip to content</a>
 <header class="bar">
-  <a class="brand" href="../index.html" data-nav="home"><span class="brand-en">Mikael Chew</span><span class="brand-zh cjk-display" lang="zh-Hant">周俊德</span></a>
-  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav" data-en="Menu" data-zh="選單">Menu</button>
+  <a class="brand" href="../index.html" data-nav="home"><span class="brand-seal cjk-display" lang="zh-Hant" aria-hidden="true">周</span><span class="brand-en">Mikael Chew</span><span class="brand-zh cjk-display" lang="zh-Hant">周俊德</span></a>
   <nav class="nav" id="site-nav" aria-label="Main">
     <a href="../book.html" data-nav="book" class="keep" data-en="The Book" data-zh="著作">The Book<span class="nav-zh cjk-display" lang="zh-Hant">著作</span></a>
     <a href="../about.html" data-nav="about" data-en="About" data-zh="關於">About<span class="nav-zh cjk-display" lang="zh-Hant">關於</span></a>
     <a href="../blog.html" data-nav="writing" aria-current="page" data-en="Writing" data-zh="專欄">Writing<span class="nav-zh cjk-display" lang="zh-Hant">專欄</span></a>
     <a href="../speaking.html" data-nav="speaking" data-en="Speaking" data-zh="演講">Speaking<span class="nav-zh cjk-display" lang="zh-Hant">演講</span></a>
     <a href="../work-with-me.html" data-nav="work" data-en="Work With Me" data-zh="合作">Work With Me<span class="nav-zh cjk-display" lang="zh-Hant">合作</span></a>
-    <a href="../zh/blog/speak-from-experience.html" class="lang-link keep" lang="zh-Hant" hreflang="zh-Hant">中文</a>
   </nav>
+  <div class="bar-actions">
+    <!-- the book's next step follows the launch phase (data/site.json) -->
+    <a class="bar-cta when-prelaunch" href="../chapter-1.html" data-en="Read Chapter 1" data-zh="試讀第一章">Read Chapter 1</a>
+    <a class="bar-cta when-launched" href="../book.html#buy" data-en="Get the book" data-zh="購買本書">Get the book</a>
+    <!-- language switch: the current language is lit; build_zh.py swaps which one is the link -->
+    <div class="lang-switch" role="group" aria-label="Language 語言">
+      <span class="lang-opt is-current" lang="en" aria-current="true">EN</span>
+      <a href="../zh/blog/speak-from-experience.html" class="lang-opt lang-link keep" lang="zh-Hant" hreflang="zh-Hant">中文</a>
+    </div>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span data-en="Menu" data-zh="選單">Menu</span></button>
+  </div>
 </header>
 <!-- /shell:header -->
 

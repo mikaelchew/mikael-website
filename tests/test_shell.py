@@ -92,3 +92,44 @@ class SiteTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class LanguageSwitchTest(unittest.TestCase):
+    """The EN | 中文 switch sits in the bar, outside the collapsible nav, so it is visible on
+    phones without opening the menu. The language being read is lit; the other is the link."""
+
+    def _switch(self, page):
+        root = doc(page)
+        sws = root.xpath('//header[contains(@class,"bar")]//*[contains(@class,"lang-switch")]')
+        self.assertEqual(len(sws), 1, page)
+        self.assertFalse(root.xpath('//header//nav//*[contains(@class,"lang-switch") or contains(@class,"lang-link")]'), page)
+        opts = sws[0].xpath('./*[contains(@class,"lang-opt")]')
+        self.assertEqual([o.text_content() for o in opts], ["EN", "中文"], page)  # same order on both sites
+        cur = [o for o in opts if "is-current" in o.get("class")]
+        links = [o for o in opts if o.tag == "a"]
+        self.assertEqual(len(cur), 1, page)
+        self.assertEqual(cur[0].get("aria-current"), "true", page)
+        self.assertEqual(len(links), 1, page)
+        return cur[0], links[0]
+
+    def test_english_pages_offer_chinese(self):
+        for page in ("index.html", "book.html", "blog/comeback.html"):
+            cur, link = self._switch(page)
+            self.assertEqual(cur.text_content(), "EN", page)
+            self.assertEqual(link.text_content(), "中文", page)
+            self.assertEqual(link.get("lang"), "zh-Hant", page)
+            self.assertTrue(link.get("href").endswith("zh/" + ("" if page == "index.html" else page)), page)
+
+    def test_chinese_pages_offer_english(self):
+        for page in ("zh/index.html", "zh/book.html", "zh/blog/comeback.html"):
+            cur, link = self._switch(page)
+            self.assertEqual(cur.text_content(), "中文", page)
+            self.assertEqual(link.text_content(), "EN", page)
+            self.assertEqual(link.get("lang"), "en", page)
+
+    def test_bar_cta_follows_launch_phase(self):
+        root = doc("index.html")
+        ctas = root.xpath('//header//a[contains(@class,"bar-cta")]')
+        self.assertEqual(sorted(a.get("href") for a in ctas), ["book.html#buy", "chapter-1.html"])
+        pre = [a for a in ctas if "when-prelaunch" in a.get("class")]
+        self.assertEqual(pre[0].get("href"), "chapter-1.html")
