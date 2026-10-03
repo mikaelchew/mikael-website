@@ -103,7 +103,7 @@ The book is deliberately company-agnostic and written in Traditional Chinese, wi
 
 **About the author:** Mikael Chew is a Malaysia-based direct selling strategist, speaker, and mentor. More at www.mikaelchew.com.
 
-**Media contact:** Mikael Chew — mikaelchew@gmail.com
+**Media contact:** Mikael Chew — mikael@mikaelchew.com
 
 ---
 

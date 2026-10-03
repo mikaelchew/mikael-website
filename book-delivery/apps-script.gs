@@ -23,7 +23,10 @@
  *   EPUB_FILE_ID_EN    Drive file id of the English EPUB
  *   PDF_FILE_ID_EN     Drive file id of the English PDF
  *   PRICE_CENTS_EN     English price in cents (defaults to PRICE_CENTS)
- *   REPLY_TO           e.g. hello@mikaelchew.com
+ *   REPLY_TO           e.g. mikael@mikaelchew.com
+ *   FROM_EMAIL         send buyer emails as this address, e.g. mikael@mikaelchew.com. It must be a verified
+ *                      "Send mail as" alias of the Gmail account that runs this script. Unset = send as the
+ *                      account itself (MailApp).
  *   ADMIN_EMAIL        where failure alerts go
  *   RESEND_TOKEN       random string; lets you re-send a copy by hand
  *   BILLPLZ_COLLECTION_ID  the collection bills are created under (e.g. kd1zdpfg)
@@ -142,7 +145,7 @@ function sendBook_(toEmail, toName, lang) {
     '<p style="font-size:13px;color:#666">Thank you for your purchase. Your copy of <i>直銷孫子兵法之不戰而勝</i> is attached in both EPUB and PDF. On a phone, use the EPUB: it reflows to fit your screen. <b>iPhone/iPad:</b> tap the EPUB attachment, tap Share, choose Books (swipe to More if you don&#39;t see it). <b>Android:</b> download it, then in Google Play Books go to Library, open the menu and choose Upload; any free EPUB reader app also works. <b>Kindle app or e-reader:</b> upload it at amazon.com/sendtokindle. <b>Kobo and other e-readers:</b> connect by USB and copy the file across. <b>Mac:</b> double-click to open in Books. <b>Windows:</b> open the PDF, or install the free Thorium Reader for the EPUB. No DRM, so you can read it on any device you own. Reply to this email if anything is wrong and I will fix it.</p>' +
     '</div>';
 
-  MailApp.sendEmail({
+  send_({
     to: toEmail,
     subject: '你的電子書：《直銷孫子兵法之不戰而勝》',
     htmlBody: html,
@@ -176,7 +179,7 @@ function sendBookEn_(toEmail, toName) {
     '<p>See you on the field,<br>Mikael Chew</p>' +
     '</div>';
 
-  MailApp.sendEmail({
+  send_({
     to: toEmail,
     subject: 'Your ebook: The Art of War for Direct Selling',
     htmlBody: html,
@@ -205,6 +208,31 @@ function giftsEn_() {
     (course ? 'starting tomorrow, I&#39;ll send you one email a week for thirteen weeks, one chapter and one action at a time. ' : '') +
     (kit ? 'If you lead a team, the four Leader&#39;s Training Kit decks (slides, speaker notes, exercises) are here: <a href="' + kit + '">Leader&#39;s Training Kit</a>.' : '') +
     '</p>';
+}
+
+/**
+ * Send a buyer email. With FROM_EMAIL set, GmailApp sends it from that alias (MailApp cannot send from an
+ * alias). If that fails, fall back to MailApp so the buyer still gets it, and alert. Both count against the
+ * same daily Gmail recipient quota, which MailApp.getRemainingDailyQuota() reports.
+ */
+function send_(o) {
+  var from = prop_('FROM_EMAIL', '');
+  if (from) {
+    var plain = String(o.htmlBody || '')
+      .replace(/<li>/gi, '- ').replace(/<br\s*\/?>|<\/li>/gi, '\n').replace(/<\/p>|<\/ul>|<\/ol>/gi, '\n\n')
+      .replace(/<a [^>]*href="([^"]+)"[^>]*>([^<]*)<\/a>/gi, '$2 ($1)').replace(/<[^>]+>/g, '')
+      .replace(/&#39;/g, "'").replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').trim();
+    var opts = { from: from, name: o.name, htmlBody: o.htmlBody };
+    if (o.replyTo) opts.replyTo = o.replyTo;
+    if (o.attachments) opts.attachments = o.attachments;
+    try {
+      GmailApp.sendEmail(o.to, o.subject, plain, opts);
+      return;
+    } catch (err) {
+      alertAdmin_('Sending as ' + from + ' failed; sent from the account address instead', String(err));
+    }
+  }
+  MailApp.sendEmail(o);
 }
 
 function alertAdmin_(subject, body) {

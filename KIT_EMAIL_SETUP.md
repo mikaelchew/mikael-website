@@ -1,6 +1,6 @@
 # Kit email setup (replaces the old email platform, 2026-09-30)
 
-**Platform: Kit (kit.com), free Newsletter plan, account mikaelchew@gmail.com.** The previous platform was retired on
+**Platform: Kit (kit.com), free Newsletter plan, account mikaelchew@gmail.com. Sender: Mikael Chew <mikael@mikaelchew.com> (verified sending domain; Kit default since 3 Oct 2026).** The previous platform was retired on
 2026-09-30: its 50 "subscribers" were 49 bot signups plus Mikael, so nothing was migrated.
 
 | Kit form | ID | Used on | After confirming |

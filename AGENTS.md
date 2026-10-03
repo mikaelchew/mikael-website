@@ -139,4 +139,4 @@ The book launch is a 12-week campaign in three phases:
   source of truth for book content; `build_chapter.py` regenerates Chapter 1 from it. Facts on the site must
   match it (e.g. first commission cheque RM 128; 38 rejections; 8 years field + 15 corporate).
 - Campaign plan checklists are in `BOOK_LAUNCH_PLAN.md`; supplementary plans are in `FACEBOOK_GROUP_PLAN.md` and `YOUTUBE_PODCAST_PLAN.md`
-- Owner email: mikaelchew@gmail.com
+- Owner email: mikaelchew@gmail.com (the Google, Apps Script and Kit login). Public address and sender since 3 Oct 2026: mikael@mikaelchew.com (ImprovMX forwards it to Gmail; Gmail "Send mail as" and Kit both send from it). Use mikael@ anywhere an address is shown to readers or buyers.
