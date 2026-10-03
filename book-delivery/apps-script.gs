@@ -29,6 +29,12 @@
  *   BILLPLZ_COLLECTION_ID  the collection bills are created under (e.g. kd1zdpfg)
  *   PRICE_CENTS        price in cents — 2990 for RM 29.90
  *   REDIRECT_URL       https://www.mikaelchew.com/book-thank-you.html
+ *   KIT_URL_ZH         link to the Chinese Leader's Training Kit folder (buyer gift; kept out of this public repo)
+ *   KIT_URL_EN         link to the English Leader's Training Kit folder
+ *
+ * The 13-week buyer email course lives in two more files of the same Apps Script project, course.gs and
+ * course_content.gs. They are kept in the book repo (publishing/email_course/apps_script/), not here,
+ * because this repo is published by GitHub Pages. Without them, the hooks below do nothing.
  *
  * Two editions share one flow. The buy form sends edition ('zh' or 'en'); the bill
  * carries it in reference_1, and the callback reads it back from the re-fetched
@@ -129,6 +135,7 @@ function sendBook_(toEmail, toName, lang) {
     '<li><b>Windows 電腦：</b>直接打開 PDF 最簡單。想用 EPUB，可以在 Microsoft Store 免費下載「Thorium Reader」。</li></ul>' +
     '<p>打不開或找不到附件，直接回覆這封信，我幫你處理。沒有 DRM 限制，你可以在自己的任何裝置上閱讀。</p>' +
     '<p>書裡每一章都從一個真實的一線故事開始。我建議你從第一章讀到最後一章；如果想先知道重點放在哪裡，翻到〈如何閱讀這本書〉，找到你現在的階段。</p>' +
+    giftsZh_() +
     '<p>讀完之後有任何想法，直接回覆這封信，我會看到。</p>' +
     '<p>我們戰場上見。<br>周俊德（Mikael Chew）</p>' +
     '<hr style="border:none;border-top:1px solid #e5e5e5;margin:24px 0">' +
@@ -164,6 +171,7 @@ function sendBookEn_(toEmail, toName) {
     '<li><b>Mac:</b> double-click to open it in Books. <b>Windows:</b> open the PDF, or install the free Thorium Reader for the EPUB.</li></ul>' +
     '<p>There&#39;s no DRM, so you can read it on any device you own. If anything doesn&#39;t open, reply to this email and I&#39;ll sort it out.</p>' +
     '<p>Every chapter starts with a real story from the field. I recommend reading it from start to finish; if you want to know where to focus first, turn to <i>How to Read This Book</i> and find your stage.</p>' +
+    giftsEn_() +
     '<p>When you&#39;ve read it, reply and tell me what stayed with you. I read every reply.</p>' +
     '<p>See you on the field,<br>Mikael Chew</p>' +
     '</div>';
@@ -176,6 +184,27 @@ function sendBookEn_(toEmail, toName) {
     replyTo: prop_('REPLY_TO', ''),
     attachments: [epub, pdf]
   });
+}
+
+/** Buyer-gift paragraph for the delivery emails. Empty until the course and kit links are set up. */
+function giftsZh_() {
+  var kit = prop_('KIT_URL_ZH', '');
+  var course = typeof enrollCourse_ === 'function';
+  if (!kit && !course) return '';
+  return '<p><b>讀者禮物：</b>' +
+    (course ? '從明天開始，接下來十三個星期，我每週寄一封實戰信給你，一章一個行動。' : '') +
+    (kit ? '如果你在帶團隊，四份帶領者教材（投影片、講者備註、現場練習）在這裡：<a href="' + kit + '">帶領者教材</a>。' : '') +
+    '</p>';
+}
+
+function giftsEn_() {
+  var kit = prop_('KIT_URL_EN', '');
+  var course = typeof enrollCourse_ === 'function';
+  if (!kit && !course) return '';
+  return '<p><b>Your reader gifts:</b> ' +
+    (course ? 'starting tomorrow, I&#39;ll send you one email a week for thirteen weeks, one chapter and one action at a time. ' : '') +
+    (kit ? 'If you lead a team, the four Leader&#39;s Training Kit decks (slides, speaker notes, exercises) are here: <a href="' + kit + '">Leader&#39;s Training Kit</a>.' : '') +
+    '</p>';
 }
 
 function alertAdmin_(subject, body) {
@@ -224,6 +253,11 @@ function doPost(e) {
 
     sendBook_(bill.email, bill.name, lang_(bill));
     logOrder_(bill, 'delivered', 'sig=' + sigOk + '; quota_left=' + MailApp.getRemainingDailyQuota());
+    // The book is out; a course problem must not make Billplz retry (that would resend the book).
+    if (typeof enrollCourse_ === 'function') {
+      try { enrollCourse_(bill.email, bill.name, lang_(bill), 'direct'); }
+      catch (err) { alertAdmin_('Course enrolment failed for bill ' + billId, String(err)); }
+    }
     return ContentService.createTextOutput('OK');
 
   } catch (err) {
@@ -288,9 +322,11 @@ function handleBuy_(p) {
  * GET endpoint.
  *   ?ping=1                                  health check
  *   ?resend=<billId>&token=<RESEND_TOKEN>    re-send a paid order by hand
+ *   ?unsub=<id>                              leave the 13-week course (course.gs)
  */
 function doGet(e) {
   var p = (e && e.parameter) ? e.parameter : {};
+  if (p.unsub && typeof courseUnsubscribe_ === 'function') return courseUnsubscribe_(p.unsub);
   if (p.ping) {
     return ContentService.createTextOutput('ok; mail quota left: ' + MailApp.getRemainingDailyQuota());
   }
