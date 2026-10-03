@@ -215,7 +215,7 @@ def build_page(chapter_html, en_title):
   <meta name="author" content="Mikael Chew">
   <meta property="og:title" content="Read Chapter 1 Free: The Art of War for Direct Selling">
   <meta property="og:description" content="{DESC_EN}">
-  <meta property="og:image" content="https://www.mikaelchew.com/images/book-social-card.jpg">
+  <meta property="og:image" content="https://www.mikaelchew.com/images/book-social-card-en.jpg" data-zh="https://www.mikaelchew.com/images/book-social-card.jpg">
   <meta property="og:url" content="https://www.mikaelchew.com/chapter-1.html">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Mikael Chew">
@@ -224,7 +224,7 @@ def build_page(chapter_html, en_title):
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Read Chapter 1 Free: The Art of War for Direct Selling">
   <meta name="twitter:description" content="{DESC_EN}">
-  <meta name="twitter:image" content="https://www.mikaelchew.com/images/book-social-card.jpg">
+  <meta name="twitter:image" content="https://www.mikaelchew.com/images/book-social-card-en.jpg" data-zh="https://www.mikaelchew.com/images/book-social-card.jpg">
   <title>Read Chapter 1 Free: The Art of War for Direct Selling</title>
   <link rel="preload" as="font" type="font/woff2" href="vendor/fonts/overpass-900-latin.woff2" crossorigin>
   <link rel="stylesheet" href="vendor/fonts/site-fonts.css">

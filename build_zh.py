@@ -145,6 +145,10 @@ def transform_html(html, relpath):
         set_meta('//meta[@property="og:title"]', zh_title)
         set_meta('//meta[@name="twitter:title"]', zh_title)
 
+    # 4b. share image: a page can name its zh card in data-zh (chapter-1 has an English card)
+    for m in doc.xpath('//meta[@property="og:image" or @name="twitter:image"][@data-zh]'):
+        m.set('content', m.get('data-zh'))
+
     # 5. og:locale swap
     set_meta('//meta[@property="og:locale"]', 'zh_TW')
     set_meta('//meta[@property="og:locale:alternate"]', 'en_US')
