@@ -18,14 +18,21 @@
  *   BILLPLZ_XSIGN      Billplz X Signature Key (optional but recommended)
  *   BILLPLZ_SANDBOX    "true" while testing, "false" or unset for live
  *   ORDERS_SHEET_ID    Google Sheet that records orders
- *   EPUB_FILE_ID       Drive file id of the EPUB
- *   PDF_FILE_ID        Drive file id of the PDF
+ *   EPUB_FILE_ID       Drive file id of the EPUB (Chinese edition)
+ *   PDF_FILE_ID        Drive file id of the PDF (Chinese edition)
+ *   EPUB_FILE_ID_EN    Drive file id of the English EPUB
+ *   PDF_FILE_ID_EN     Drive file id of the English PDF
+ *   PRICE_CENTS_EN     English price in cents (defaults to PRICE_CENTS)
  *   REPLY_TO           e.g. hello@mikaelchew.com
  *   ADMIN_EMAIL        where failure alerts go
  *   RESEND_TOKEN       random string; lets you re-send a copy by hand
  *   BILLPLZ_COLLECTION_ID  the collection bills are created under (e.g. kd1zdpfg)
  *   PRICE_CENTS        price in cents — 2990 for RM 29.90
  *   REDIRECT_URL       https://www.mikaelchew.com/book-thank-you.html
+ *
+ * Two editions share one flow. The buy form sends edition ('zh' or 'en'); the bill
+ * carries it in reference_1, and the callback reads it back from the re-fetched
+ * bill, so the edition a buyer receives is decided by Billplz's record, not the form.
  */
 
 function prop_(k, dflt) {
@@ -89,14 +96,20 @@ function alreadyDelivered_(billId) {
   return false;
 }
 
+/** Edition of a bill: 'en' only when the bill says so; everything else is the Chinese edition. */
+function lang_(bill) {
+  return String(bill.reference_1 || '').toLowerCase() === 'en' ? 'en' : 'zh';
+}
+
 function logOrder_(bill, status, note) {
   sheet_().appendRow([
     Utilities.formatDate(new Date(), 'Asia/Kuala_Lumpur', 'yyyy-MM-dd HH:mm:ss'), bill.id, bill.name || '', bill.email || '',
-    (Number(bill.amount) / 100).toFixed(2), bill.state || '', status, note || ''
+    (Number(bill.amount) / 100).toFixed(2), bill.state || '', status, note || '', lang_(bill)
   ]);
 }
 
-function sendBook_(toEmail, toName) {
+function sendBook_(toEmail, toName, lang) {
+  if (lang === 'en') return sendBookEn_(toEmail, toName);
   var epub = DriveApp.getFileById(prop_('EPUB_FILE_ID', '')).getBlob();
   var pdf  = DriveApp.getFileById(prop_('PDF_FILE_ID', '')).getBlob();
   var name = toName || '';
@@ -115,7 +128,7 @@ function sendBook_(toEmail, toName) {
     '<li><b>Mac：</b>按兩下 EPUB，會用「書籍」App 打開。</li>' +
     '<li><b>Windows 電腦：</b>直接打開 PDF 最簡單。想用 EPUB，可以在 Microsoft Store 免費下載「Thorium Reader」。</li></ul>' +
     '<p>打不開或找不到附件，直接回覆這封信，我幫你處理。沒有 DRM 限制，你可以在自己的任何裝置上閱讀。</p>' +
-    '<p>書裡每一章都從一次真實的失敗開始。如果你不知道從哪裡讀起，翻到〈如何閱讀這本書〉，照你現在的位置選一條路線。</p>' +
+    '<p>書裡每一章都從一個真實的一線故事開始。我建議你從第一章讀到最後一章；如果想先知道重點放在哪裡，翻到〈如何閱讀這本書〉，找到你現在的階段。</p>' +
     '<p>讀完之後有任何想法，直接回覆這封信，我會看到。</p>' +
     '<p>我們戰場上見。<br>周俊德（Mikael Chew）</p>' +
     '<hr style="border:none;border-top:1px solid #e5e5e5;margin:24px 0">' +
@@ -125,6 +138,39 @@ function sendBook_(toEmail, toName) {
   MailApp.sendEmail({
     to: toEmail,
     subject: '你的電子書：《直銷孫子兵法之不戰而勝》',
+    htmlBody: html,
+    name: 'Mikael Chew',
+    replyTo: prop_('REPLY_TO', ''),
+    attachments: [epub, pdf]
+  });
+}
+
+function sendBookEn_(toEmail, toName) {
+  var epub = DriveApp.getFileById(prop_('EPUB_FILE_ID_EN', '')).getBlob();
+  var pdf  = DriveApp.getFileById(prop_('PDF_FILE_ID_EN', '')).getBlob();
+  var name = toName || '';
+
+  var html =
+    '<div style="font-family:-apple-system,Segoe UI,Helvetica,Arial,sans-serif;font-size:15px;line-height:1.7;color:#1a1a1a;max-width:560px">' +
+    '<p>' + (name ? 'Hi ' + name + ',' : 'Hi,') + '</p>' +
+    '<p>Thank you for buying <i>The Art of War for Direct Selling</i>. Your ebook is attached in two formats:</p>' +
+    '<ul><li><b>EPUB</b>: best on a phone or tablet. It reflows to fit your screen and you can change the text size.</li>' +
+    '<li><b>PDF</b>: a fixed layout, best on a computer or for printing.</li></ul>' +
+    '<p><b>How to open the EPUB:</b></p>' +
+    '<ul><li><b>iPhone/iPad:</b> tap the EPUB attachment, tap the Share icon and choose Books (swipe to More if you don&#39;t see it).</li>' +
+    '<li><b>Android:</b> download the file, open Google Play Books, go to Library, open the menu and choose Upload. Any free EPUB reader app also works.</li>' +
+    '<li><b>Kindle app or e-reader:</b> upload the EPUB at amazon.com/sendtokindle and it appears on all your Kindle devices within minutes.</li>' +
+    '<li><b>Kobo and other e-readers:</b> connect by USB and copy the file across.</li>' +
+    '<li><b>Mac:</b> double-click to open it in Books. <b>Windows:</b> open the PDF, or install the free Thorium Reader for the EPUB.</li></ul>' +
+    '<p>There&#39;s no DRM, so you can read it on any device you own. If anything doesn&#39;t open, reply to this email and I&#39;ll sort it out.</p>' +
+    '<p>Every chapter starts with a real story from the field. I recommend reading it from start to finish; if you want to know where to focus first, turn to <i>How to Read This Book</i> and find your stage.</p>' +
+    '<p>When you&#39;ve read it, reply and tell me what stayed with you. I read every reply.</p>' +
+    '<p>See you on the field,<br>Mikael Chew</p>' +
+    '</div>';
+
+  MailApp.sendEmail({
+    to: toEmail,
+    subject: 'Your ebook: The Art of War for Direct Selling',
     htmlBody: html,
     name: 'Mikael Chew',
     replyTo: prop_('REPLY_TO', ''),
@@ -176,7 +222,7 @@ function doPost(e) {
       return ContentService.createTextOutput('OK');
     }
 
-    sendBook_(bill.email, bill.name);
+    sendBook_(bill.email, bill.name, lang_(bill));
     logOrder_(bill, 'delivered', 'sig=' + sigOk + '; quota_left=' + MailApp.getRemainingDailyQuota());
     return ContentService.createTextOutput('OK');
 
@@ -205,6 +251,7 @@ function json_(obj) {
 function handleBuy_(p) {
   var email = String(p.email || '').trim();
   var name  = String(p.name  || '').trim() || 'Reader';
+  var lang  = (p.edition || p.lang) === 'en' ? 'en' : 'zh';   // the site sends "edition"
   if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
     return json_({ error: 'bad-email' });
   }
@@ -218,10 +265,14 @@ function handleBuy_(p) {
       collection_id: prop_('BILLPLZ_COLLECTION_ID', ''),
       email: email,
       name: name,
-      amount: prop_('PRICE_CENTS', '2990'),
+      amount: lang === 'en' ? prop_('PRICE_CENTS_EN', prop_('PRICE_CENTS', '2990')) : prop_('PRICE_CENTS', '2990'),
       callback_url: exec,
       redirect_url: prop_('REDIRECT_URL', ''),
-      description: '\u76f4\u92b7\u5b6b\u5b50\u5175\u6cd5\u4e4b\u4e0d\u6230\u800c\u52dd\uff08\u96fb\u5b50\u66f8 EPUB + PDF\uff09'
+      reference_1_label: 'Edition',
+      reference_1: lang,
+      description: lang === 'en'
+        ? 'The Art of War for Direct Selling (ebook, EPUB + PDF)'
+        : '\u76f4\u92b7\u5b6b\u5b50\u5175\u6cd5\u4e4b\u4e0d\u6230\u800c\u52dd\uff08\u96fb\u5b50\u66f8 EPUB + PDF\uff09'
     },
     muteHttpExceptions: true
   });
@@ -248,7 +299,7 @@ function doGet(e) {
     if (!expected || p.token !== expected) return ContentService.createTextOutput('denied');
     var bill = fetchBill_(p.resend);
     if (bill.paid !== true) return ContentService.createTextOutput('bill not paid');
-    sendBook_(bill.email, bill.name);
+    sendBook_(bill.email, bill.name, lang_(bill));
     logOrder_(bill, 'delivered', 'manual resend');
     return ContentService.createTextOutput('resent to ' + bill.email);
   }
@@ -257,10 +308,15 @@ function doGet(e) {
 
 /** Run once from the editor to create the Sheet header row. */
 function setupSheet() {
-  sheet_().appendRow(['timestamp', 'bill_id', 'name', 'email', 'amount_rm', 'state', 'status', 'note']);
+  sheet_().appendRow(['timestamp', 'bill_id', 'name', 'email', 'amount_rm', 'state', 'status', 'note', 'lang']);
 }
 
 /** Run from the editor to send yourself a test copy (no payment involved). */
 function testDelivery() {
-  sendBook_(Session.getEffectiveUser().getEmail(), 'Test');
+  sendBook_(Session.getEffectiveUser().getEmail(), 'Test', 'zh');
+}
+
+/** Run from the editor to send yourself the English test copy. */
+function testDeliveryEn() {
+  sendBook_(Session.getEffectiveUser().getEmail(), 'Test', 'en');
 }
