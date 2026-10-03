@@ -66,6 +66,17 @@
       <a href="../../blog/leave-the-door-open.html" class="lang-opt lang-link keep" lang="en" hreflang="en">EN</a>
       <span class="lang-opt is-current" lang="zh-Hant" aria-current="true">中文</span>
     </div>
+    <!-- no JavaScript: Menu can't open, so the nav becomes a scrollable row under the bar instead -->
+    <noscript><style>
+      @media (max-width: 1180px) {
+        .bar { position: sticky; top: 0; flex-wrap: wrap; }
+        .bar .menu-btn { display: none; }
+        .bar .nav { position: static; order: 9; flex: 0 0 100%; flex-direction: row; gap: 18px; margin-left: 0; padding: 2px 0 4px;
+          overflow-x: auto; background: none; font-size: .95rem; opacity: 1; visibility: visible; }
+        .bar .nav a { white-space: nowrap; }
+        .bar .nav .nav-zh { display: none; }
+      }
+    </style></noscript>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav"><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg><span data-en="Menu" data-zh="選單">選單</span></button>
   </div>
 </header>
@@ -93,7 +104,7 @@
         <p data-en="The ones who decline leave with their dignity intact and a good memory of you. That memory is worth a great deal. Circumstances change, and people come back to the person who treated them well." data-zh="拒絕的人，帶著完整的尊嚴和對你的好印象離開。這份印象非常值錢。人的處境會改變，而他們會回頭找那個曾經善待他們的人。">拒絕的人，帶著完整的尊嚴和對你的好印象離開。這份印象非常值錢。人的處境會改變，而他們會回頭找那個曾經善待他們的人。</p>
         <h2 data-en="How to leave the door open" data-zh="怎麼留一道門">怎麼留一道門</h2>
         <ul><li data-en="&lt;strong&gt;Say the exit out loud.&lt;/strong&gt; &quot;If it's not right for you, that's completely fine.&quot; Hearing it said makes people far more willing to stay and listen." data-zh="&lt;strong&gt;把出口說出來。&lt;/strong&gt;「如果不適合你，完全沒關係。」聽到這句話，對方反而更願意留下來聽。"><strong>把出口說出來。</strong>「如果不適合你，完全沒關係。」聽到這句話，對方反而更願意留下來聽。</li><li data-en="&lt;strong&gt;Treat objections as information.&lt;/strong&gt; Ask what's behind the concern before you respond. Often the real worry is different from the first one mentioned." data-zh="&lt;strong&gt;把顧慮當成資訊。&lt;/strong&gt;在回應之前，先問對方擔心背後的原因。真正的顧慮，常常跟他第一個說出口的不一樣。"><strong>把顧慮當成資訊。</strong>在回應之前，先問對方擔心背後的原因。真正的顧慮，常常跟他第一個說出口的不一樣。</li><li data-en="&lt;strong&gt;Agree on time, not pressure.&lt;/strong&gt; If someone needs to think, ask when you may check in, then honour that date." data-zh="&lt;strong&gt;約定時間，而不是施加壓力。&lt;/strong&gt;對方需要想一想，就問他什麼時候方便再聯絡，然後守住那個日子。"><strong>約定時間，而不是施加壓力。</strong>對方需要想一想，就問他什麼時候方便再聯絡，然後守住那個日子。</li><li data-en="&lt;strong&gt;Let a no be a complete sentence.&lt;/strong&gt; Thank them, keep the friendship, and don't reopen the subject unless they do." data-zh="&lt;strong&gt;讓「不」本身就是一個完整的句子。&lt;/strong&gt;謝謝對方，保住友誼，除非他主動提起，否則不再重提。"><strong>讓「不」本身就是一個完整的句子。</strong>謝謝對方，保住友誼，除非他主動提起，否則不再重提。</li></ul>
-        <h2 data-en="Inside your own team" data-zh="在你自己的團隊裡">在你自己的團隊裡</h2>
+        <h2 data-en="Inside your own team" data-zh="在你自己的團隊裡">在你自己的<wbr>團隊裡</h2>
         <p data-en="The principle applies to partners as well. A leader who corners a struggling team member with targets and guilt usually gets either a quiet resignation or a defensive argument." data-zh="這個原則也適用於夥伴。一位用目標和罪惡感把卡關的夥伴逼到牆角的領袖，換來的通常不是默默的退出，就是防衛性的爭辯。">這個原則也適用於夥伴。一位用目標和罪惡感把卡關的夥伴逼到牆角的領袖，換來的通常不是默默的退出，就是防衛性的爭辯。</p>
         <p data-en="Leave the door open there too. Ask what is getting in the way. Offer a smaller next step. Make it safe to admit they're stuck, because people only ask for help where it's safe to." data-zh="在這裡也留一道門。問問是什麼擋住了他。給一個更小的下一步。讓承認卡關變得安全，因為人只會在安全的地方開口求助。">在這裡也留一道門。問問是什麼擋住了他。給一個更小的下一步。讓承認卡關變得安全，因為人只會在安全的地方開口求助。</p>
         <p data-en="So the next time you feel the urge to close every exit, stop for a second and ask: would I want this person's yes if it came from having no way out?" data-zh="所以，下一次當你很想把所有出口都關上的時候，停一秒，問自己：如果這個「好」，是因為對方沒有退路才說的，我真的想要嗎？">所以，下一次當你很想把所有出口都關上的時候，停一秒，問自己：如果這個「好」，是因為對方沒有退路才說的，我真的想要嗎？</p>
@@ -101,7 +112,7 @@
     </article>
       <p class="share"><span data-en="Share this article:" data-zh="分享這篇文章：">分享這篇文章：</span> <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.mikaelchew.com/blog/leave-the-door-open.html" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.mikaelchew.com/blog/leave-the-door-open.html" target="_blank" rel="noopener">Facebook</a> · <a href="https://api.whatsapp.com/send?text=Leave%20the%20Door%20Open%20https://www.mikaelchew.com/blog/leave-the-door-open.html" target="_blank" rel="noopener">WhatsApp</a></p>
       <aside class="chapter-cta">
-        <h2 data-en="Follow-up built on trust" data-zh="建立在信任上的跟進">建立在信任上的跟進</h2>
+        <h2 data-en="Follow-up built on trust" data-zh="建立在信任上的跟進">建立在信任上的<wbr>跟進</h2>
         <p data-en="Chapter 7 of my book opens with this principle from Sun Tzu and builds a full follow-up system around it." data-zh="我新書第七章就以孫子的這句話開篇，並圍繞它建立一套完整的跟進系統。">我新書第七章就以孫子的這句話開篇，並圍繞它建立一套完整的跟進系統。</p>
         <a class="btn" href="../book.html" data-en="See the book" data-zh="看這本書">看這本書</a>
       </aside>

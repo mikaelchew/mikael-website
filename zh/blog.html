@@ -70,6 +70,17 @@
       <a href="../blog.html" class="lang-opt lang-link keep" lang="en" hreflang="en">EN</a>
       <span class="lang-opt is-current" lang="zh-Hant" aria-current="true">中文</span>
     </div>
+    <!-- no JavaScript: Menu can't open, so the nav becomes a scrollable row under the bar instead -->
+    <noscript><style>
+      @media (max-width: 1180px) {
+        .bar { position: sticky; top: 0; flex-wrap: wrap; }
+        .bar .menu-btn { display: none; }
+        .bar .nav { position: static; order: 9; flex: 0 0 100%; flex-direction: row; gap: 18px; margin-left: 0; padding: 2px 0 4px;
+          overflow-x: auto; background: none; font-size: .95rem; opacity: 1; visibility: visible; }
+        .bar .nav a { white-space: nowrap; }
+        .bar .nav .nav-zh { display: none; }
+      }
+    </style></noscript>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav"><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg><span data-en="Menu" data-zh="選單">選單</span></button>
   </div>
 </header>
@@ -83,7 +94,7 @@
       </div>
       <div>
         <span class="kicker" data-en="Writing" data-zh="專欄">專欄</span>
-        <h1 id="wr-h" data-en="Insights &amp; strategy" data-zh="洞見與策略">洞見與策略</h1>
+        <h1 id="wr-h" data-en="Insights &amp; strategy" data-zh="洞見與策略">洞見<wbr>與策略</h1>
         <p class="lead" data-en="Practical wisdom for direct selling leaders who want to think deeper, lead better, and build sustainably." data-zh="寫給想深入思考、帶好團隊、走得長遠的直銷領袖。">寫給想深入思考、帶好團隊、走得長遠的直銷領袖。</p>
         <p class="wr-links"><a href="concepts.html" data-en="Key concepts" data-zh="核心概念">核心概念</a> · <a href="../feed.xml" class="rss-link" target="_blank" rel="noopener" data-en="RSS feed" data-zh="RSS 訂閱">RSS 訂閱</a></p>
       </div>
@@ -106,7 +117,7 @@
     <a class="card" href="blog/outlast-you.html">
       <figure><img src="../images/blog/outlast-you.webp" srcset="../images/blog/outlast-you-600.webp 600w, ../images/blog/outlast-you.webp 1200w" sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 400px" alt="Map cover: Build Something That Outlasts You, with the Chinese keyword 傳承" loading="lazy" width="1200" height="675"></figure>
       <small class="cat" data-en="PERSONAL GROWTH" data-zh="個人成長">個人成長</small>
-      <h2 data-en="Build Something That Outlasts You" data-zh="建立一份比你走得更遠的事業">建立一份比你走得更遠的事業</h2>
+      <h2 data-en="Build Something That Outlasts You" data-zh="建立一份比你走得更遠的事業">建立一份比你走得更遠的<wbr>事業</h2>
       <p data-en="The hardest test of a leader comes when they step back. If the team needs you for everything, you've built a job. If it keeps growing while you rest, you've built something that lasts." data-zh="領袖最難的考驗，出現在他退後一步的時候。如果團隊什麼都需要你，你建立的是一份工作。如果你休息時它仍在成長，你建立的是一份能長久的事業。">領袖最難的考驗，出現在他退後一步的時候。如果團隊什麼都需要你，你建立的是一份工作。如果你休息時它仍在成長，你建立的是一份能長久的事業。</p>
       <span class="meta"><time class="num" datetime="2026-10-14">14.10.2026</time> · <span class="rt" data-en="6 min" data-zh="6 分鐘">6 分鐘</span></span>
     </a>
@@ -115,7 +126,7 @@
     <a class="card" href="blog/expand-or-hold.html">
       <figure><img src="../images/blog/expand-or-hold.webp" srcset="../images/blog/expand-or-hold-600.webp 600w, ../images/blog/expand-or-hold.webp 1200w" sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 400px" alt="An old paper map of Southeast Asia with pins, a compass and a cup of coffee" loading="lazy" width="1200" height="675"></figure>
       <small class="cat" data-en="INDUSTRY &amp; ADAPTATION" data-zh="行業與適應">行業與適應</small>
-      <h2 data-en="Expand or Hold? Five Questions Before You Open a New Market" data-zh="擴張，還是守住？打開新市場之前的五個問題">擴張，還是守住？打開新市場之前的五個問題</h2>
+      <h2 data-en="Expand or Hold? Five Questions Before You Open a New Market" data-zh="擴張，還是守住？打開新市場之前的五個問題">擴張，還是守住？打開新市場之前的<wbr>五個問題</h2>
       <p data-en="A new city, a new country, a new audience. Expansion feels like growth, and sometimes it is. Other times it spreads a team too thin to hold anything. Five questions help you tell the difference." data-zh="一個新城市、一個新國家、一群新受眾。擴張感覺像成長，有時候確實是。但有時候，它把團隊拉得太薄，什麼都守不住。五個問題，幫你分辨。">一個新城市、一個新國家、一群新受眾。擴張感覺像成長，有時候確實是。但有時候，它把團隊拉得太薄，什麼都守不住。五個問題，幫你分辨。</p>
       <span class="meta"><time class="num" datetime="2026-10-07">07.10.2026</time> · <span class="rt" data-en="6 min" data-zh="6 分鐘">6 分鐘</span></span>
     </a>
@@ -124,7 +135,7 @@
     <a class="card" href="blog/teach-one-thing.html">
       <figure><img src="../images/blog/teach-one-thing.webp" srcset="../images/blog/teach-one-thing-600.webp 600w, ../images/blog/teach-one-thing.webp 1200w" sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 400px" alt="Adults practising in pairs in a small training room" loading="lazy" width="1200" height="675"></figure>
       <small class="cat" data-en="TEAM BUILDING" data-zh="團隊建設">團隊建設</small>
-      <h2 data-en="Teach One Thing at a Time: Why Your Best Training Is Your Shortest" data-zh="一次只教一件事：為什麼你最好的培訓，往往是最短的那一場">一次只教一件事：為什麼你最好的培訓，往往是最短的那一場</h2>
+      <h2 data-en="Teach One Thing at a Time: Why Your Best Training Is Your Shortest" data-zh="一次只教一件事：為什麼你最好的培訓，往往是最短的那一場">一次只教一件事：為什麼你最好的<wbr>培訓，往往是最短的<wbr>那一場</h2>
       <p data-en="Long trainings feel generous and change very little. People leave inspired, remember almost nothing, and do what they did before. Teach one skill, practise it on the spot, and check it next week." data-zh="很長的培訓感覺很慷慨，卻改變很少。大家帶著熱血離開，幾乎什麼都記不住，然後繼續做以前做的事。一次教一個技能，當場練習，下週檢查。">很長的培訓感覺很慷慨，卻改變很少。大家帶著熱血離開，幾乎什麼都記不住，然後繼續做以前做的事。一次教一個技能，當場練習，下週檢查。</p>
       <span class="meta"><time class="num" datetime="2026-09-30">30.09.2026</time> · <span class="rt" data-en="6 min" data-zh="6 分鐘">6 分鐘</span></span>
     </a>
@@ -133,7 +144,7 @@
     <a class="card" href="blog/five-virtues-of-a-general.html">
       <figure><img src="../images/blog/five-virtues-of-a-general.webp" srcset="../images/blog/five-virtues-of-a-general-600.webp 600w, ../images/blog/five-virtues-of-a-general.webp 1200w" sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 400px" alt="Map cover: The Five Virtues of a General, with the Chinese keyword 五德" loading="lazy" width="1200" height="675"></figure>
       <small class="cat" data-en="STRATEGIC LEADERSHIP" data-zh="策略領導力">策略領導力</small>
-      <h2 data-en="The Five Virtues of a General: Sun Tzu's Leadership Test for Direct Selling" data-zh="將者五德：孫子給直銷領袖的領導力檢測">將者五德：孫子給直銷領袖的領導力檢測</h2>
+      <h2 data-en="The Five Virtues of a General: Sun Tzu's Leadership Test for Direct Selling" data-zh="將者五德：孫子給直銷領袖的領導力檢測">將者五德：孫子給直銷領袖的<wbr>領導力檢測</h2>
       <p data-en="Wisdom, credibility, benevolence, courage, discipline. Sun Tzu listed five qualities of a general 2,500 years ago, and they still make the best check-up I know for anyone leading a team." data-zh="智、信、仁、勇、嚴。孫子在兩千五百年前列出將領的五種特質，到今天，它們仍是我知道最好的領袖自我檢測。">智、信、仁、勇、嚴。孫子在兩千五百年前列出將領的五種特質，到今天，它們仍是我知道最好的領袖自我檢測。</p>
       <span class="meta"><time class="num" datetime="2026-09-23">23.09.2026</time> · <span class="rt" data-en="7 min" data-zh="7 分鐘">7 分鐘</span></span>
     </a>
@@ -142,7 +153,7 @@
     <a class="card" href="blog/who-to-invest-in.html">
       <figure><img src="../images/blog/who-to-invest-in.webp" srcset="../images/blog/who-to-invest-in-600.webp 600w, ../images/blog/who-to-invest-in.webp 1200w" sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 400px" alt="A leader in a one-to-one meeting with a team member over a notebook" loading="lazy" width="1200" height="675"></figure>
       <small class="cat" data-en="STRATEGIC LEADERSHIP" data-zh="策略領導力">策略領導力</small>
-      <h2 data-en="Choosing Who to Invest In: Why Your Time Should Follow Action, Not Hope" data-zh="選擇把時間投資在誰身上：你的時間應該跟著行動走，而不是跟著希望走">選擇把時間投資在誰身上：你的時間應該跟著行動走，而不是跟著希望走</h2>
+      <h2 data-en="Choosing Who to Invest In: Why Your Time Should Follow Action, Not Hope" data-zh="選擇把時間投資在誰身上：你的時間應該跟著行動走，而不是跟著希望走">選擇把時間投資在誰身上：你的<wbr>時間應該跟著行動走，而不是跟著希望走</h2>
       <p data-en="A leader's time is the scarcest thing in the team. Spend it on the people you hope will start, and you'll run out. Spend it on the people already moving, and the whole team speeds up." data-zh="領袖的時間，是團隊裡最稀缺的資源。把它花在你希望會開始的人身上，你很快就會用光。把它花在已經在動的人身上，整個團隊都會加速。">領袖的時間，是團隊裡最稀缺的資源。把它花在你希望會開始的人身上，你很快就會用光。把它花在已經在動的人身上，整個團隊都會加速。</p>
       <span class="meta"><time class="num" datetime="2026-09-16">16.09.2026</time> · <span class="rt" data-en="6 min" data-zh="6 分鐘">6 分鐘</span></span>
     </a>
@@ -169,7 +180,7 @@
     <a class="card" href="blog/follow-up-without-chasing.html">
       <figure><img src="../images/blog/follow-up-without-chasing.webp" srcset="../images/blog/follow-up-without-chasing-600.webp 600w, ../images/blog/follow-up-without-chasing.webp 1200w" sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 400px" alt="A desk calendar, a phone and a hand writing a note card" loading="lazy" width="1200" height="675"></figure>
       <small class="cat" data-en="RELATIONSHIP &amp; COMMUNICATION" data-zh="關係與溝通">關係與溝通</small>
-      <h2 data-en="Following Up Without Chasing: How to Stay in Touch So People Are Glad to Hear From You" data-zh="跟進，而不是追著跑：怎麼保持聯絡，讓對方樂於收到你的訊息">跟進，而不是追著跑：怎麼保持聯絡，讓對方樂於收到你的訊息</h2>
+      <h2 data-en="Following Up Without Chasing: How to Stay in Touch So People Are Glad to Hear From You" data-zh="跟進，而不是追著跑：怎麼保持聯絡，讓對方樂於收到你的訊息">跟進，而不是追著跑：怎麼保持聯絡，讓對方樂於收到你的<wbr>訊息</h2>
       <p data-en="Most opportunities are lost to silence rather than rejection. The fix is following up properly: often enough to be remembered, kindly enough to be welcome, and always with something worth reading." data-zh="大多數機會不是被拒絕，而是在沉默中流失。解法是好好跟進：頻繁到對方記得你，溫和到對方歡迎你，而且每次都帶著值得一讀的東西。">大多數機會不是被拒絕，而是在沉默中流失。解法是好好跟進：頻繁到對方記得你，溫和到對方歡迎你，而且每次都帶著值得一讀的東西。</p>
       <span class="meta"><time class="num" datetime="2026-08-26">26.08.2026</time> · <span class="rt" data-en="6 min" data-zh="6 分鐘">6 分鐘</span></span>
     </a>
@@ -178,7 +189,7 @@
     <a class="card" href="blog/third-voice.html">
       <figure><img src="../images/blog/third-voice.webp" srcset="../images/blog/third-voice-600.webp 600w, ../images/blog/third-voice.webp 1200w" sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 400px" alt="An experienced mentor explaining something to two listeners at a café table" loading="lazy" width="1200" height="675"></figure>
       <small class="cat" data-en="TEAM BUILDING" data-zh="團隊建設">團隊建設</small>
-      <h2 data-en="You Don't Need Every Answer: The Power of a Third Voice" data-zh="你不需要知道所有答案：第三個聲音的力量">你不需要知道所有答案：第三個聲音的力量</h2>
+      <h2 data-en="You Don't Need Every Answer: The Power of a Third Voice" data-zh="你不需要知道所有答案：第三個聲音的力量">你不需要知道所有答案：第三個聲音的<wbr>力量</h2>
       <p data-en="New builders often think they must be the expert before they can share anything. You don't. Your job is to connect people with the right voice, and that voice doesn't have to be yours." data-zh="很多新人以為，自己要先成為專家，才能分享任何東西。其實不必。你的工作是把人跟對的聲音連起來，而那個聲音不一定是你。">很多新人以為，自己要先成為專家，才能分享任何東西。其實不必。你的工作是把人跟對的聲音連起來，而那個聲音不一定是你。</p>
       <span class="meta"><time class="num" datetime="2026-08-19">19.08.2026</time> · <span class="rt" data-en="6 min" data-zh="6 分鐘">6 分鐘</span></span>
     </a>
@@ -187,7 +198,7 @@
     <a class="card" href="blog/fear-of-inviting.html">
       <figure><img src="../images/blog/fear-of-inviting.webp" srcset="../images/blog/fear-of-inviting-600.webp 600w, ../images/blog/fear-of-inviting.webp 1200w" sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 400px" alt="A man by a window at dusk, hesitating with his phone in hand" loading="lazy" width="1200" height="675"></figure>
       <small class="cat" data-en="MINDSET &amp; ETHICS" data-zh="心態與道德">心態與道德</small>
-      <h2 data-en="The Real Reason You Avoid Inviting, and How to Stop Avoiding It" data-zh="你一直逃避邀約的真正原因，以及怎麼停止逃避">你一直逃避邀約的真正原因，以及怎麼停止逃避</h2>
+      <h2 data-en="The Real Reason You Avoid Inviting, and How to Stop Avoiding It" data-zh="你一直逃避邀約的真正原因，以及怎麼停止逃避">你一直逃避邀約的<wbr>真正原因，以<wbr>及怎麼停止逃避</h2>
       <p data-en="Most people who stop inviting don't lack skill. They are protecting themselves from a feeling. Name the feeling, shrink the stakes, and the phone gets lighter." data-zh="大多數不再邀約的人，缺的不是技巧。他們是在保護自己，躲開某一種感覺。說出那種感覺、降低賭注，手機就會變輕。">大多數不再邀約的人，缺的不是技巧。他們是在保護自己，躲開某一種感覺。說出那種感覺、降低賭注，手機就會變輕。</p>
       <span class="meta"><time class="num" datetime="2026-08-12">12.08.2026</time> · <span class="rt" data-en="6 min" data-zh="6 分鐘">6 分鐘</span></span>
     </a>
@@ -205,7 +216,7 @@
     <a class="card" href="blog/beyond-the-warm-list.html">
       <figure><img src="../images/blog/beyond-the-warm-list.webp" srcset="../images/blog/beyond-the-warm-list-600.webp 600w, ../images/blog/beyond-the-warm-list.webp 1200w" sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 400px" alt="A community running club chatting at dawn in a Kuala Lumpur park" loading="lazy" width="1200" height="675"></figure>
       <small class="cat" data-en="RELATIONSHIP &amp; COMMUNICATION" data-zh="關係與溝通">關係與溝通</small>
-      <h2 data-en="Your Best Prospects Probably Aren't on Your Warm List" data-zh="你最好的潛在客戶，多半不在你的熟人名單上">你最好的潛在客戶，多半不在你的熟人名單上</h2>
+      <h2 data-en="Your Best Prospects Probably Aren't on Your Warm List" data-zh="你最好的潛在客戶，多半不在你的熟人名單上">你最好的<wbr>潛在客戶，多半不在你的<wbr>熟人名單上</h2>
       <p data-en="Every new builder is told to start with friends and family. It's a fine place to start and a poor place to stay. The people most likely to value what you offer are usually people you haven't met yet." data-zh="每個新人都被教導從親朋好友開始。這是不錯的起點，卻不是久留的地方。最可能珍惜你所提供的東西的人，通常是你還沒認識的人。">每個新人都被教導從親朋好友開始。這是不錯的起點，卻不是久留的地方。最可能珍惜你所提供的東西的人，通常是你還沒認識的人。</p>
       <span class="meta"><time class="num" datetime="2026-07-29">29.07.2026</time> · <span class="rt" data-en="6 min" data-zh="6 分鐘">6 分鐘</span></span>
     </a>
@@ -214,7 +225,7 @@
     <a class="card" href="blog/seven-actions-a-day.html">
       <figure><img src="../images/blog/seven-actions-a-day.webp" srcset="../images/blog/seven-actions-a-day-600.webp 600w, ../images/blog/seven-actions-a-day.webp 1200w" sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 400px" alt="Map cover: Seven Actions a Day, with the Chinese keyword 日課" loading="lazy" width="1200" height="675"></figure>
       <small class="cat" data-en="STRATEGIC LEADERSHIP" data-zh="策略領導力">策略領導力</small>
-      <h2 data-en="Busy for 60 Days, Zero Customers: The Seven Daily Actions That Fixed It" data-zh="忙了60天，客戶是零：改變局面的每日七項行動">忙了60天，客戶是零：改變局面的每日七項行動</h2>
+      <h2 data-en="Busy for 60 Days, Zero Customers: The Seven Daily Actions That Fixed It" data-zh="忙了60天，客戶是零：改變局面的每日七項行動">忙了60天，客戶是零：改變局面的<wbr>每日七項行動</h2>
       <p data-en="He posted every day, attended every training and read every brochure. Sixty days in, he had no customers. The problem was where his hours went, and the fix was seven simple actions a day for 90 days." data-zh="他每天發文、參加每一場培訓、讀完所有產品手冊。60天後，客戶還是零。問題出在他的時間花在哪裡，解法是每天七個簡單的動作，持續90天。">他每天發文、參加每一場培訓、讀完所有產品手冊。60天後，客戶還是零。問題出在他的時間花在哪裡，解法是每天七個簡單的動作，持續90天。</p>
       <span class="meta"><time class="num" datetime="2026-07-22">22.07.2026</time> · <span class="rt" data-en="8 min" data-zh="8 分鐘">8 分鐘</span></span>
     </a>
@@ -223,7 +234,7 @@
     <a class="card" href="blog/speak-from-experience.html">
       <figure><img src="../images/blog/speak-from-experience.webp" srcset="../images/blog/speak-from-experience-600.webp 600w, ../images/blog/speak-from-experience.webp 1200w" sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 400px" alt="A hand writing a daily entry in a notebook beside a cup of tea" loading="lazy" width="1200" height="675"></figure>
       <small class="cat" data-en="MINDSET &amp; ETHICS" data-zh="心態與道德">心態與道德</small>
-      <h2 data-en="Speak From Experience, Not From the Brochure" data-zh="用你的經驗說話，而不是用產品手冊">用你的經驗說話，而不是用產品手冊</h2>
+      <h2 data-en="Speak From Experience, Not From the Brochure" data-zh="用你的經驗說話，而不是用產品手冊">用你的<wbr>經驗說話，而不是用產品手冊</h2>
       <p data-en="People can tell within seconds whether you are repeating a brochure or describing your own life. Before you share any product, live with it long enough to talk about it honestly, including what didn't change for you." data-zh="對方幾秒鐘內就分辨得出，你是在背產品手冊，還是在講自己的生活。分享任何產品之前，先跟它一起生活夠久，久到你能誠實地談它，包括在你身上沒有改變的地方。">對方幾秒鐘內就分辨得出，你是在背產品手冊，還是在講自己的生活。分享任何產品之前，先跟它一起生活夠久，久到你能誠實地談它，包括在你身上沒有改變的地方。</p>
       <span class="meta"><time class="num" datetime="2026-07-15">15.07.2026</time> · <span class="rt" data-en="6 min" data-zh="6 分鐘">6 分鐘</span></span>
     </a>
@@ -232,7 +243,7 @@
     <a class="card" href="blog/team-copies-all-of-you.html">
       <figure><img src="../images/blog/team-copies-all-of-you.webp" srcset="../images/blog/team-copies-all-of-you-600.webp 600w, ../images/blog/team-copies-all-of-you.webp 1200w" sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 400px" alt="A leader training a room while a team member follows up on the phone" loading="lazy" width="1200" height="675"></figure>
       <small class="cat" data-en="STRATEGIC LEADERSHIP" data-zh="策略領導力">策略領導力</small>
-      <h2 data-en="Your Team Copies All of You, Including the Parts You'd Rather It Didn't" data-zh="你的團隊會複製完整的你，包括你不希望他們學的那部分">你的團隊會複製完整的你，包括你不希望他們學的那部分</h2>
+      <h2 data-en="Your Team Copies All of You, Including the Parts You'd Rather It Didn't" data-zh="你的團隊會複製完整的你，包括你不希望他們學的那部分">你的<wbr>團隊會複製完整的<wbr>你，包括你不希望他們學的<wbr>那部分</h2>
       <p data-en="Duplication is the whole point of this business, and it doesn't stop at your strengths. If your team keeps attracting people and losing them, look at what you are modelling when you are not on stage." data-zh="複製是這個事業的核心，而它不會只複製你的優勢。如果你的團隊一直吸引人、又一直留不住人，看看你不在台上的時候，示範的是什麼。">複製是這個事業的核心，而它不會只複製你的優勢。如果你的團隊一直吸引人、又一直留不住人，看看你不在台上的時候，示範的是什麼。</p>
       <span class="meta"><time class="num" datetime="2026-07-08">08.07.2026</time> · <span class="rt" data-en="6 min" data-zh="6 分鐘">6 分鐘</span></span>
     </a>
@@ -241,7 +252,7 @@
     <a class="card" href="blog/ask-before-you-sell.html">
       <figure><img src="../images/blog/ask-before-you-sell.webp" srcset="../images/blog/ask-before-you-sell-600.webp 600w, ../images/blog/ask-before-you-sell.webp 1200w" sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 400px" alt="Two people talking over coffee in a Kuala Lumpur café, one listening closely" loading="lazy" width="1200" height="675"></figure>
       <small class="cat" data-en="RELATIONSHIP &amp; COMMUNICATION" data-zh="關係與溝通">關係與溝通</small>
-      <h2 data-en="Ask Before You Sell: Your Customers Already Know Your Market" data-zh="先問再賣：你的客戶，早就知道你的市場在哪裡">先問再賣：你的客戶，早就知道你的市場在哪裡</h2>
+      <h2 data-en="Ask Before You Sell: Your Customers Already Know Your Market" data-zh="先問再賣：你的客戶，早就知道你的市場在哪裡">先問再賣：你的<wbr>客戶，早就知道你的<wbr>市場在哪裡</h2>
       <p data-en="Most of us guess who our customers are and why they buy. The people who already bought from you can tell you, in their own words, if you ask the right questions and then stop talking." data-zh="我們大多是用猜的：猜客戶是誰、猜他們為什麼買。其實已經跟你買過的人，可以用他們自己的話告訴你，前提是你問對問題，然後閉上嘴。">我們大多是用猜的：猜客戶是誰、猜他們為什麼買。其實已經跟你買過的人，可以用他們自己的話告訴你，前提是你問對問題，然後閉上嘴。</p>
       <span class="meta"><time class="num" datetime="2026-07-01">01.07.2026</time> · <span class="rt" data-en="6 min" data-zh="6 分鐘">6 分鐘</span></span>
     </a>
@@ -250,7 +261,7 @@
     <a class="card" href="blog/winning-gen-z.html">
       <figure><img src="../images/blog/winning-gen-z.jpg" srcset="../images/blog/winning-gen-z-600.jpg 600w, ../images/blog/winning-gen-z.jpg 1200w" sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 400px" alt="Selling to a generation that hates being sold to" loading="lazy" width="1200" height="675"></figure>
       <small class="cat" data-en="RELATIONSHIP &amp; COMMUNICATION" data-zh="關係與溝通">關係與溝通</small>
-      <h2 data-en="Selling to a Generation That Hates Being Sold To: Winning Gen Z Without the Hype" data-zh="向討厭被推銷的世代銷售：不靠炒作贏得 Z 世代">向討厭被推銷的世代銷售：不靠炒作贏得 Z 世代</h2>
+      <h2 data-en="Selling to a Generation That Hates Being Sold To: Winning Gen Z Without the Hype" data-zh="向討厭被推銷的世代銷售：不靠炒作贏得 Z 世代">向討厭被推銷的<wbr>世代銷售：不靠炒作贏得 Z 世代</h2>
       <p data-en="Gen Z has a finely-tuned radar for everything direct selling traditionally does — hype, urgency, fake scarcity. The old playbook doesn't just fail with them; it repels them. Here's the new approach." data-zh="Z 世代對直銷的老套路有著極其敏銳的雷達：炒作、緊迫感、假稀缺。舊劇本對他們不只是失效，而是直接把他們推開。這篇談的是新做法。">Z 世代對直銷的老套路有著極其敏銳的雷達：炒作、緊迫感、假稀缺。舊劇本對他們不只是失效，而是直接把他們推開。這篇談的是新做法。</p>
       <span class="meta"><time class="num" datetime="2026-06-24">24.06.2026</time> · <span class="rt" data-en="7 min" data-zh="7分鐘">7分鐘</span></span>
     </a>
@@ -259,7 +270,7 @@
     <a class="card" href="blog/recognition-that-works.html">
       <figure><img src="../images/blog/recognition-that-works.jpg" srcset="../images/blog/recognition-that-works-600.jpg 600w, ../images/blog/recognition-that-works.jpg 1200w" sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 400px" alt="Recognition That Actually Works" loading="lazy" width="1200" height="675"></figure>
       <small class="cat" data-en="TEAM BUILDING" data-zh="團隊建設">團隊建設</small>
-      <h2 data-en="Recognition That Actually Works: Beyond Pins, Trips, and Stage Walks" data-zh="真正有效的肯定：超越別針、旅遊和台上亮相">真正有效的肯定：超越別針、旅遊和台上亮相</h2>
+      <h2 data-en="Recognition That Actually Works: Beyond Pins, Trips, and Stage Walks" data-zh="真正有效的肯定：超越別針、旅遊和台上亮相">真正有效的<wbr>肯定：超越別針、旅遊<wbr>和台上亮相</h2>
       <p data-en="The industry loves pins, trips, and stage walks — but most recognition doesn't actually drive behavior. Here's what makes recognition work, drawn from years watching it from the corporate side." data-zh="業界熱愛別針、旅遊和台上亮相，但大多數的肯定其實無法真正驅動行為。從企業端觀察多年後，我看懂了什麼樣的肯定才有效。">業界熱愛別針、旅遊和台上亮相，但大多數的肯定其實無法真正驅動行為。從企業端觀察多年後，我看懂了什麼樣的肯定才有效。</p>
       <span class="meta"><time class="num" datetime="2026-06-17">17.06.2026</time> · <span class="rt" data-en="6 min" data-zh="6分鐘">6分鐘</span></span>
     </a>
@@ -268,7 +279,7 @@
     <a class="card" href="blog/income-plateau.html">
       <figure><img src="../images/blog/income-plateau.jpg" srcset="../images/blog/income-plateau-600.jpg 600w, ../images/blog/income-plateau.jpg 1200w" sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 400px" alt="The Plateau: Why Your Income Stopped Growing" loading="lazy" width="1200" height="675"></figure>
       <small class="cat" data-en="STRATEGIC LEADERSHIP" data-zh="策略領導力">策略領導力</small>
-      <h2 data-en="The Plateau: Why Your Income Stopped Growing — and the 3 Levers That Restart It" data-zh="高原期：為什麼你的收入停止成長，以及重啟成長的三個槓桿">高原期：為什麼你的收入停止成長，以及重啟成長的三個槓桿</h2>
+      <h2 data-en="The Plateau: Why Your Income Stopped Growing — and the 3 Levers That Restart It" data-zh="高原期：為什麼你的收入停止成長，以及重啟成長的三個槓桿">高原期：為什麼你的<wbr>收入停止成長，以<wbr>及重啟成長的<wbr>三個槓桿</h2>
       <p data-en="You climb and climb, then flat. Same income, month after month. The plateau is the most misunderstood phase of a direct selling career — and three structural levers that restart the growth." data-zh="你一路往上爬，然後，停了。收入月復一月停在原地。高原期是直銷生涯中最被誤解的階段，以及三個能重啟成長的結構性槓桿。">你一路往上爬，然後，停了。收入月復一月停在原地。高原期是直銷生涯中最被誤解的階段，以及三個能重啟成長的結構性槓桿。</p>
       <span class="meta"><time class="num" datetime="2026-06-10">10.06.2026</time> · <span class="rt" data-en="7 min" data-zh="7分鐘">7分鐘</span></span>
     </a>
@@ -277,7 +288,7 @@
     <a class="card" href="blog/ai-disruption.html">
       <figure><img src="../images/blog/ai-disruption.jpg" srcset="../images/blog/ai-disruption-600.jpg 600w, ../images/blog/ai-disruption.jpg 1200w" sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 400px" alt="The AI Disruption for direct selling leaders" loading="lazy" width="1200" height="675"></figure>
       <small class="cat" data-en="INDUSTRY &amp; ADAPTATION" data-zh="行業與適應">行業與適應</small>
-      <h2 data-en="The AI Disruption: What Artificial Intelligence Really Means for Direct Selling Leaders" data-zh="AI 衝擊：人工智慧對直銷領袖的真正意義">AI 衝擊：人工智慧對直銷領袖的真正意義</h2>
+      <h2 data-en="The AI Disruption: What Artificial Intelligence Really Means for Direct Selling Leaders" data-zh="AI 衝擊：人工智慧對直銷領袖的真正意義">AI 衝擊：人工智慧對直銷領袖的<wbr>真正意義</h2>
       <p data-en="Social media was going to 'kill' direct selling. It didn't. Now it's AI. This time the panic is half-right and half-dangerously-wrong — here's what AI actually changes, and what it never will." data-zh="當年大家說社群媒體會「殺死」直銷，結果沒有。現在輪到 AI。這一次的恐慌一半對、一半危險地錯，AI 究竟改變了什麼，又有什麼是它永遠無法取代的。">當年大家說社群媒體會「殺死」直銷，結果沒有。現在輪到 AI。這一次的恐慌一半對、一半危險地錯，AI 究竟改變了什麼，又有什麼是它永遠無法取代的。</p>
       <span class="meta"><time class="num" datetime="2026-06-03">03.06.2026</time> · <span class="rt" data-en="7 min" data-zh="7分鐘">7分鐘</span></span>
     </a>
@@ -304,7 +315,7 @@
     <a class="card" href="blog/two-year-wall.html">
       <figure><img src="../images/blog/two-year-wall.jpg" srcset="../images/blog/two-year-wall-600.jpg 600w, ../images/blog/two-year-wall.jpg 1200w" sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 400px" alt="The Two-Year Wall: Why Half Your Team Quits in Year Two" loading="lazy" width="1200" height="675"></figure>
       <small class="cat" data-en="TEAM BUILDING" data-zh="團隊建設">團隊建設</small>
-      <h2 data-en="The Two-Year Wall: Why Half Your Team Quits in Year Two" data-zh="兩年之牆：為什麼一半的團隊會在第二年放棄">兩年之牆：為什麼一半的團隊會在第二年放棄</h2>
+      <h2 data-en="The Two-Year Wall: Why Half Your Team Quits in Year Two" data-zh="兩年之牆：為什麼一半的團隊會在第二年放棄">兩年之牆：為什麼一半的<wbr>團隊會在第二年放棄</h2>
       <p data-en="Year 1 is excitement. Year 3 is momentum. Year 2 is the wall. Why this specific year tests retention, what corporate data shows, and how to coach your team through it." data-zh="第一年靠熱情。第三年靠慣性。第二年，是一道牆。為什麼這一年最考驗留存率，企業端的數據說了什麼，以及該怎麼帶你的人走過去。">第一年靠熱情。第三年靠慣性。第二年，是一道牆。為什麼這一年最考驗留存率，企業端的數據說了什麼，以及該怎麼帶你的人走過去。</p>
       <span class="meta"><time class="num" datetime="2026-05-13">13.05.2026</time> · <span class="rt" data-en="6 min" data-zh="6分鐘">6分鐘</span></span>
     </a>
@@ -313,7 +324,7 @@
     <a class="card" href="blog/leadership-transitions.html">
       <figure><img src="../images/blog/leadership-transitions.jpg" srcset="../images/blog/leadership-transitions-600.jpg 600w, ../images/blog/leadership-transitions.jpg 1200w" sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 400px" alt="Leadership During Company Transitions" loading="lazy" width="1200" height="675"></figure>
       <small class="cat" data-en="STRATEGIC LEADERSHIP" data-zh="策略領導力">策略領導力</small>
-      <h2 data-en="Leadership During Company Transitions: How to Move Without Losing Your Tribe" data-zh="公司轉換期的領導：如何不失去你一手帶起的團隊">公司轉換期的領導：如何不失去你一手帶起的團隊</h2>
+      <h2 data-en="Leadership During Company Transitions: How to Move Without Losing Your Tribe" data-zh="公司轉換期的領導：如何不失去你一手帶起的團隊">公司轉換期的<wbr>領導：如何不失去你一手帶起的<wbr>團隊</h2>
       <p data-en="Changing companies in direct selling is a leadership stress test. Strategic principles for moving without compromising integrity, breaking trust, or losing the tribe you've built." data-zh="在直銷裡換公司，是一場領導力的壓力測試。如何在不犧牲誠信、不破壞信任、不失去你帶出來的人之下完成轉換。">在直銷裡換公司，是一場領導力的壓力測試。如何在不犧牲誠信、不破壞信任、不失去你帶出來的人之下完成轉換。</p>
       <span class="meta"><time class="num" datetime="2026-05-06">06.05.2026</time> · <span class="rt" data-en="7 min" data-zh="7分鐘">7分鐘</span></span>
     </a>
@@ -322,7 +333,7 @@
     <a class="card" href="blog/mentor-trap.html">
       <figure><img src="../images/blog/mentor-trap.jpg" srcset="../images/blog/mentor-trap-600.jpg 600w, ../images/blog/mentor-trap.jpg 1200w" sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 400px" alt="The Mentor Trap: When Helping Too Much Hurts Your Team" loading="lazy" width="1200" height="675"></figure>
       <small class="cat" data-en="TEAM BUILDING" data-zh="團隊建設">團隊建設</small>
-      <h2 data-en="The Mentor Trap: When Helping Too Much Hurts Your Team" data-zh="導師陷阱：當過度幫助反而傷害你的團隊">導師陷阱：當過度幫助反而傷害你的團隊</h2>
+      <h2 data-en="The Mentor Trap: When Helping Too Much Hurts Your Team" data-zh="導師陷阱：當過度幫助反而傷害你的團隊">導師陷阱：當過度幫助反而傷害你的<wbr>團隊</h2>
       <p data-en="The most loyal mentors often build the most dependent teams. Why over-helping is a leadership failure disguised as generosity — and how to build true independence." data-zh="最用心的導師，往往養出最依賴的團隊。過度幫忙其實是披著善意外衣的領導失敗，以及如何培養真正的獨立性。">最用心的導師，往往養出最依賴的團隊。過度幫忙其實是披著善意外衣的領導失敗，以及如何培養真正的獨立性。</p>
       <span class="meta"><time class="num" datetime="2026-04-29">29.04.2026</time> · <span class="rt" data-en="7 min" data-zh="7分鐘">7分鐘</span></span>
     </a>
@@ -331,7 +342,7 @@
     <a class="card" href="blog/saying-no-prospect.html">
       <figure><img src="../images/blog/saying-no-prospect.jpg" srcset="../images/blog/saying-no-prospect-600.jpg 600w, ../images/blog/saying-no-prospect.jpg 1200w" sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 400px" alt="When to Say No to a Prospect" loading="lazy" width="1200" height="675"></figure>
       <small class="cat" data-en="RELATIONSHIP &amp; COMMUNICATION" data-zh="關係與溝通">關係與溝通</small>
-      <h2 data-en="When to Say No to a Prospect: The Hidden Cost of the Wrong Recruit" data-zh="何時對準客戶說不：招錯人的隱性代價">何時對準客戶說不：招錯人的隱性代價</h2>
+      <h2 data-en="When to Say No to a Prospect: The Hidden Cost of the Wrong Recruit" data-zh="何時對準客戶說不：招錯人的隱性代價">何時對準客戶說不：招錯人的<wbr>隱性代價</h2>
       <p data-en="Not every lead is worth pursuing. The hidden costs of recruiting the wrong person — and when saying no is the most ethical, strategic move you can make." data-zh="不是每個準客戶都值得追。招錯人的隱性代價，以及為什麼說「不」才是你最有策略的選擇。">不是每個準客戶都值得追。招錯人的隱性代價，以及為什麼說「不」才是你最有策略的選擇。</p>
       <span class="meta"><time class="num" datetime="2026-04-22">22.04.2026</time> · <span class="rt" data-en="7 min" data-zh="7分鐘">7分鐘</span></span>
     </a>
@@ -340,7 +351,7 @@
     <a class="card" href="blog/smaller-market-advantage.html">
       <figure><img src="../images/blog/smaller-market-advantage.jpg" srcset="../images/blog/smaller-market-advantage-600.jpg 600w, ../images/blog/smaller-market-advantage.jpg 1200w" sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 400px" alt="The Smaller Market Advantage" loading="lazy" width="1200" height="675"></figure>
       <small class="cat" data-en="INDUSTRY &amp; ADAPTATION" data-zh="行業與適應">行業與適應</small>
-      <h2 data-en="The Smaller Market Advantage: Why 'Second-Tier' Cities Often Win Bigger" data-zh="小市場的優勢：為什麼「二線」城市往往贏得更多">小市場的優勢：為什麼「二線」城市往往贏得更多</h2>
+      <h2 data-en="The Smaller Market Advantage: Why 'Second-Tier' Cities Often Win Bigger" data-zh="小市場的優勢：為什麼「二線」城市往往贏得更多">小市場的<wbr>優勢：為什麼「二線」城市往往贏得更多</h2>
       <p data-en="Everyone chases Kuala Lumpur, Bangkok, Jakarta. But the smartest leaders are building in Ipoh, Kota Kinabalu, Surabaya. Here's why 'second-tier' cities quietly win." data-zh="人人搶攻吉隆坡、曼谷、雅加達。但最聰明的領袖正在怡保、亞庇、泗水默默耕耘。這就是「二線」城市悄悄勝出的原因。">人人搶攻吉隆坡、曼谷、雅加達。但最聰明的領袖正在怡保、亞庇、泗水默默耕耘。這就是「二線」城市悄悄勝出的原因。</p>
       <span class="meta"><time class="num" datetime="2026-04-15">15.04.2026</time> · <span class="rt" data-en="7 min" data-zh="7分鐘">7分鐘</span></span>
     </a>
@@ -349,7 +360,7 @@
     <a class="card" href="blog/not-a-salesman.html">
       <figure><img src="../images/classroom-teaching.jpg" srcset="../images/classroom-teaching-600.jpg 600w, ../images/classroom-teaching.jpg 1200w" sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 400px" alt="Mikael Chew teaching in classroom about finding your unique path" loading="lazy" width="1200" height="675"></figure>
       <small class="cat" data-en="PERSONAL GROWTH" data-zh="個人成長">個人成長</small>
-      <h2 data-en="You Don't Need to Be a Salesman: Finding Your Ikigai in Direct Selling" data-zh="你不需要當銷售員：在直銷中找到你的使命感">你不需要當銷售員：在直銷中找到你的使命感</h2>
+      <h2 data-en="You Don't Need to Be a Salesman: Finding Your Ikigai in Direct Selling" data-zh="你不需要當銷售員：在直銷中找到你的使命感">你不需要當銷售員：在直銷中找到你的<wbr>使命感</h2>
       <p data-en="The biggest myth in direct selling is that you need to be a natural salesperson. The truth is the opposite — the most successful people found their own unique path using the Ikigai framework." data-zh="直銷最大的迷思就是你得天生會賣東西。事實正好相反，最成功的人透過Ikigai框架找到了屬於自己的獨特路徑。">直銷最大的迷思就是你得天生會賣東西。事實正好相反，最成功的人透過Ikigai框架找到了屬於自己的獨特路徑。</p>
       <span class="meta"><time class="num" datetime="2026-04-13">13.04.2026</time> · <span class="rt" data-en="7 min" data-zh="7分鐘">7分鐘</span></span>
     </a>
@@ -358,7 +369,7 @@
     <a class="card" href="blog/stop-pitching.html">
       <figure><img src="../images/blog/stop-pitching.jpg" srcset="../images/blog/stop-pitching-600.jpg 600w, ../images/blog/stop-pitching.jpg 1200w" sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 400px" alt="Stop Pitching, Start Listening" loading="lazy" width="1200" height="675"></figure>
       <small class="cat" data-en="RELATIONSHIP &amp; COMMUNICATION" data-zh="關係與溝通">關係與溝通</small>
-      <h2 data-en="Stop Pitching, Start Listening: The Art of the Follow-Up" data-zh="停止推銷，開始傾聽：跟進的藝術">停止推銷，開始傾聽：跟進的藝術</h2>
+      <h2 data-en="Stop Pitching, Start Listening: The Art of the Follow-Up" data-zh="停止推銷，開始傾聽：跟進的藝術">停止推銷，開始傾聽：跟進的<wbr>藝術</h2>
       <p data-en="Most leaders follow up by pitching again. The real art is listening — understanding what your prospect is actually thinking, and what they need to hear versus what you want to say." data-zh="多數領袖的跟進就是再推銷一次。真正的藝術在於傾聽，理解準客戶心裡在想什麼，以及他們真正需要聽到什麼。">多數領袖的跟進就是再推銷一次。真正的藝術在於傾聽，理解準客戶心裡在想什麼，以及他們真正需要聽到什麼。</p>
       <span class="meta"><time class="num" datetime="2026-04-13">13.04.2026</time> · <span class="rt" data-en="7 min" data-zh="7分鐘">7分鐘</span></span>
     </a>
@@ -376,7 +387,7 @@
     <a class="card" href="blog/alliance-problem.html">
       <figure><img src="../images/blog/alliance-problem.jpg" srcset="../images/blog/alliance-problem-600.jpg 600w, ../images/blog/alliance-problem.jpg 1200w" sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 400px" alt="The Alliance Problem: building with other leaders" loading="lazy" width="1200" height="675"></figure>
       <small class="cat" data-en="RELATIONSHIP &amp; COLLABORATION" data-zh="關係與合作">關係與合作</small>
-      <h2 data-en="The Alliance Problem: How to Build With Other Leaders Without Destroying Each Other" data-zh="聯盟問題：如何與其他領袖共建而不互相拆台">聯盟問題：如何與其他領袖共建而不互相拆台</h2>
+      <h2 data-en="The Alliance Problem: How to Build With Other Leaders Without Destroying Each Other" data-zh="聯盟問題：如何與其他領袖共建而不互相拆台">聯盟問題：如何<wbr>與其他領袖共建而不互相拆台</h2>
       <p data-en="Crossline and peer-leader relationships are the most underestimated factor in long-term success. Learn the three toxic patterns — and how cooperative competition builds empires." data-zh="旁線和同級領袖的關係是長期成功中最被低估的因素。認識三種有毒模式，以及良性競爭如何打造帝國。">旁線和同級領袖的關係是長期成功中最被低估的因素。認識三種有毒模式，以及良性競爭如何打造帝國。</p>
       <span class="meta"><time class="num" datetime="2026-04-08">08.04.2026</time> · <span class="rt" data-en="7 min" data-zh="7分鐘">7分鐘</span></span>
     </a>
@@ -385,7 +396,7 @@
     <a class="card" href="blog/terrain-has-changed.html">
       <figure><img src="../images/blog/terrain-has-changed.jpg" srcset="../images/blog/terrain-has-changed-600.jpg 600w, ../images/blog/terrain-has-changed.jpg 1200w" sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 400px" alt="The Terrain Has Changed" loading="lazy" width="1200" height="675"></figure>
       <small class="cat" data-en="INDUSTRY &amp; ADAPTATION" data-zh="行業與適應">行業與適應</small>
-      <h2 data-en="The Terrain Has Changed: Why Yesterday's Playbook Is Losing You Tomorrow's Leaders" data-zh="戰場已變：為什麼昨天的打法正在讓你失去明天的領袖">戰場已變：為什麼昨天的打法正在讓你失去明天的領袖</h2>
+      <h2 data-en="The Terrain Has Changed: Why Yesterday's Playbook Is Losing You Tomorrow's Leaders" data-zh="戰場已變：為什麼昨天的打法正在讓你失去明天的領袖">戰場已變：為什麼昨天的<wbr>打法正在讓你失去明天的<wbr>領袖</h2>
       <p data-en="The direct selling landscape has fundamentally shifted. Learn why yesterday's methods are losing you tomorrow's best leaders — and how to adapt without abandoning your principles." data-zh="直銷的格局已經根本性地改變。看懂為什麼昨天的做法正在流失明天最優秀的人才，以及如何在不丟掉原則的前提下轉型。">直銷的格局已經根本性地改變。看懂為什麼昨天的做法正在流失明天最優秀的人才，以及如何在不丟掉原則的前提下轉型。</p>
       <span class="meta"><time class="num" datetime="2026-04-08">08.04.2026</time> · <span class="rt" data-en="7 min" data-zh="7分鐘">7分鐘</span></span>
     </a>
@@ -394,7 +405,7 @@
     <a class="card" href="blog/passive-income-myth.html">
       <figure><img src="../images/blog/passive-income-myth.jpg" srcset="../images/blog/passive-income-myth-600.jpg 600w, ../images/blog/passive-income-myth.jpg 1200w" sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 400px" alt="The Passive Income Myth" loading="lazy" width="1200" height="675"></figure>
       <small class="cat" data-en="MINDSET &amp; ETHICS" data-zh="心態與道德">心態與道德</small>
-      <h2 data-en="The Passive Income Myth: What Direct Selling Really Pays You For" data-zh="被動收入的迷思：直銷真正付你薪水的理由">被動收入的迷思：直銷真正付你薪水的理由</h2>
+      <h2 data-en="The Passive Income Myth: What Direct Selling Really Pays You For" data-zh="被動收入的迷思：直銷真正付你薪水的理由">被動收入的<wbr>迷思：直銷真正付你薪水的<wbr>理由</h2>
       <p data-en="Passive income is the most overused promise in direct selling. Here is what the income actually pays you for — and why understanding this changes everything." data-zh="被動收入是直銷中最被濫用的承諾。真正的收入到底在獎勵什麼？搞懂這件事，一切都會不同。">被動收入是直銷中最被濫用的承諾。真正的收入到底在獎勵什麼？搞懂這件事，一切都會不同。</p>
       <span class="meta"><time class="num" datetime="2026-04-08">08.04.2026</time> · <span class="rt" data-en="6 min" data-zh="6分鐘">6分鐘</span></span>
     </a>
@@ -403,7 +414,7 @@
     <a class="card" href="blog/ten-year-test.html">
       <figure><img src="../images/blog/ten-year-test.jpg" srcset="../images/blog/ten-year-test-600.jpg 600w, ../images/blog/ten-year-test.jpg 1200w" sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 400px" alt="The 10-Year Test" loading="lazy" width="1200" height="675"></figure>
       <small class="cat" data-en="MINDSET &amp; ETHICS" data-zh="心態與道德">心態與道德</small>
-      <h2 data-en="The 10-Year Test: How to Know If Your Direct Selling Career Will Last" data-zh="十年大考：如何判斷你的直銷事業能不能走得長">十年大考：如何判斷你的直銷事業能不能走得長</h2>
+      <h2 data-en="The 10-Year Test: How to Know If Your Direct Selling Career Will Last" data-zh="十年大考：如何判斷你的直銷事業能不能走得長">十年大考：如何判斷你的<wbr>直銷事業能不能走得長</h2>
       <p data-en="Most people think about their first 90 days in direct selling. Here is a framework of five questions to evaluate whether your approach will still be working a decade from now." data-zh="多數人只想到直銷的頭90天。這裡有五個問題，幫你檢視自己的做法十年後還能不能站得住。">多數人只想到直銷的頭90天。這裡有五個問題，幫你檢視自己的做法十年後還能不能站得住。</p>
       <span class="meta"><time class="num" datetime="2026-04-01">01.04.2026</time> · <span class="rt" data-en="6 min" data-zh="6分鐘">6分鐘</span></span>
     </a>
@@ -412,7 +423,7 @@
     <a class="card" href="blog/stop-copying-upline.html">
       <figure><img src="../images/blog/stop-copying-upline.jpg" srcset="../images/blog/stop-copying-upline-600.jpg 600w, ../images/blog/stop-copying-upline.jpg 1200w" sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 400px" alt="Stop Copying Your Upline" loading="lazy" width="1200" height="675"></figure>
       <small class="cat" data-en="TEAM BUILDING" data-zh="團隊建設">團隊建設</small>
-      <h2 data-en="Stop Copying Your Upline: Why Duplication Is Killing Your Team" data-zh="別再複製你的上線：為什麼複製正在扼殺你的團隊">別再複製你的上線：為什麼複製正在扼殺你的團隊</h2>
+      <h2 data-en="Stop Copying Your Upline: Why Duplication Is Killing Your Team" data-zh="別再複製你的上線：為什麼複製正在扼殺你的團隊">別再複製你的<wbr>上線：為什麼複製正在扼殺你的<wbr>團隊</h2>
       <p data-en="The industry loves the word 'duplication.' But blind copying is why most teams plateau. Learn the difference between duplicating principles and duplicating methods." data-zh="這個行業最愛講「複製」。但盲目複製正是多數團隊卡住的原因。搞清楚複製「原則」和複製「方法」的差別。">這個行業最愛講「複製」。但盲目複製正是多數團隊卡住的原因。搞清楚複製「原則」和複製「方法」的差別。</p>
       <span class="meta"><time class="num" datetime="2026-03-25">25.03.2026</time> · <span class="rt" data-en="6 min" data-zh="6分鐘">6分鐘</span></span>
     </a>
@@ -421,7 +432,7 @@
     <a class="card" href="blog/five-battles.html">
       <figure><img src="../images/blog/five-battles.jpg" srcset="../images/blog/five-battles-600.jpg 600w, ../images/blog/five-battles.jpg 1200w" sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 400px" alt="The 5 Battles Every New Direct Selling Leader Must Win" loading="lazy" width="1200" height="675"></figure>
       <small class="cat" data-en="STRATEGIC LEADERSHIP" data-zh="策略領導力">策略領導力</small>
-      <h2 data-en="The 5 Battles Every New Direct Selling Leader Must Win" data-zh="新直銷領袖必打的五場仗">新直銷領袖必打的五場仗</h2>
+      <h2 data-en="The 5 Battles Every New Direct Selling Leader Must Win" data-zh="新直銷領袖必打的五場仗">新直銷領袖必打的<wbr>五場仗</h2>
       <p data-en="The first two years are a battlefield. Most people who quit do so because they did not know which battles to fight. Here are the five that matter most." data-zh="頭兩年就是戰場。多數人放棄是因為不知道該打哪些仗。以下是最關鍵的五場。">頭兩年就是戰場。多數人放棄是因為不知道該打哪些仗。以下是最關鍵的五場。</p>
       <span class="meta"><time class="num" datetime="2026-03-18">18.03.2026</time> · <span class="rt" data-en="6 min" data-zh="6分鐘">6分鐘</span></span>
     </a>
@@ -430,7 +441,7 @@
     <a class="card" href="blog/team-keeps-quitting.html">
       <figure><img src="../images/training-presenting.jpg" srcset="../images/training-presenting-600.jpg 600w, ../images/training-presenting.jpg 1200w" sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 400px" alt="Team training and presenting" loading="lazy" width="1200" height="675"></figure>
       <small class="cat" data-en="TEAM BUILDING" data-zh="團隊建設">團隊建設</small>
-      <h2 data-en="Why Your Team Keeps Quitting (And What You're Not Seeing)" data-zh="為什麼你的團隊不斷離開（以及你沒看到的）">為什麼你的團隊不斷離開（以及你沒看到的）</h2>
+      <h2 data-en="Why Your Team Keeps Quitting (And What You're Not Seeing)" data-zh="為什麼你的團隊不斷離開（以及你沒看到的）">為什麼你的<wbr>團隊不斷離開（以<wbr>及你沒看到的）</h2>
       <p data-en="If your team keeps leaving, the problem might not be them. Here are the three silent killers of retention that most leaders never see coming." data-zh="如果你的團隊一直在流失，問題可能不在他們身上。這是多數領袖從未察覺的三大隱形殺手。">如果你的團隊一直在流失，問題可能不在他們身上。這是多數領袖從未察覺的三大隱形殺手。</p>
       <span class="meta"><time class="num" datetime="2026-03-11">11.03.2026</time> · <span class="rt" data-en="7 min" data-zh="7分鐘">7分鐘</span></span>
     </a>
@@ -439,7 +450,7 @@
     <a class="card" href="blog/generals-dilemma.html">
       <figure><img src="../images/speaking-gesture.jpg" srcset="../images/speaking-gesture-600.jpg 600w, ../images/speaking-gesture.jpg 1200w" sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 400px" alt="Mikael Chew making a leadership gesture" loading="lazy" width="1200" height="675"></figure>
       <small class="cat" data-en="STRATEGIC LEADERSHIP" data-zh="策略領導力">策略領導力</small>
-      <h2 data-en="The General's Dilemma: When to Lead From the Front vs. From Behind" data-zh="將軍的困境：何時衝前線 vs. 何時坐鎮後方">將軍的困境：何時衝前線 vs. 何時坐鎮後方</h2>
+      <h2 data-en="The General's Dilemma: When to Lead From the Front vs. From Behind" data-zh="將軍的困境：何時衝前線 vs. 何時坐鎮後方">將軍的<wbr>困境：何時衝前線 vs. 何時坐鎮後方</h2>
       <p data-en="When should you personally prospect, and when should you step back to develop others? The answer is a sliding scale, not a switch." data-zh="什麼時候該親自上陣開發，什麼時候該退一步培養人？答案不是非黑即白，而是一把滑尺。">什麼時候該親自上陣開發，什麼時候該退一步培養人？答案不是非黑即白，而是一把滑尺。</p>
       <span class="meta"><time class="num" datetime="2026-03-04">04.03.2026</time> · <span class="rt" data-en="7 min" data-zh="7分鐘">7分鐘</span></span>
     </a>
@@ -448,7 +459,7 @@
     <a class="card" href="blog/dual-perspective.html">
       <figure><img src="../images/blog/bridge-dual-perspective.jpg" srcset="../images/blog/bridge-dual-perspective-600.jpg 600w, ../images/blog/bridge-dual-perspective.jpg 1200w" sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 400px" alt="Bridge disappearing into fog symbolizing dual perspective" loading="lazy" width="1200" height="675"></figure>
       <small class="cat" data-en="STRATEGIC LEADERSHIP" data-zh="策略領導力">策略領導力</small>
-      <h2 data-en="The Dual Perspective: What I Learned Moving From the Field to Management" data-zh="雙重視角：從前線走到管理層的領悟">雙重視角：從前線走到管理層的領悟</h2>
+      <h2 data-en="The Dual Perspective: What I Learned Moving From the Field to Management" data-zh="雙重視角：從前線走到管理層的領悟">雙重視角：從前線走到管理層的<wbr>領悟</h2>
       <p data-en="Most direct selling trainers have only seen one side of the business. After 8 years in the field and 15 in corporate management, here is what both sides get wrong — and right." data-zh="多數直銷培訓師只看過一面。走過8年前線和15年管理，以下是雙方各自的對與錯。">多數直銷培訓師只看過一面。走過8年前線和15年管理，以下是雙方各自的對與錯。</p>
       <span class="meta"><time class="num" datetime="2026-02-25">25.02.2026</time> · <span class="rt" data-en="7 min" data-zh="7分鐘">7分鐘</span></span>
     </a>
@@ -466,7 +477,7 @@
     <a class="card" href="blog/win-the-right-way.html">
       <figure><img src="../images/blog/compass-integrity.jpg" srcset="../images/blog/compass-integrity-600.jpg 600w, ../images/blog/compass-integrity.jpg 1200w" sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 400px" alt="Vintage compass symbolizing ethical direction" loading="lazy" width="1200" height="675"></figure>
       <small class="cat" data-en="MINDSET &amp; ETHICS" data-zh="心態與道德">心態與道德</small>
-      <h2 data-en="Win the Right Way: Why Ethics Is Your Greatest Competitive Advantage" data-zh="贏在正道：為什麼道德是你最大的競爭優勢">贏在正道：為什麼道德是你最大的競爭優勢</h2>
+      <h2 data-en="Win the Right Way: Why Ethics Is Your Greatest Competitive Advantage" data-zh="贏在正道：為什麼道德是你最大的競爭優勢">贏在正道：為什麼道德是你最大的<wbr>競爭優勢</h2>
       <p data-en="In an industry where hype and shortcuts are common, ethical leadership is not just moral — it is the most powerful long-term strategy you can adopt." data-zh="在一個充斥炒作和捷徑的行業裡，堅守道德不只是品格，更是你最強大的長期策略。">在一個充斥炒作和捷徑的行業裡，堅守道德不只是品格，更是你最強大的長期策略。</p>
       <span class="meta"><time class="num" datetime="2026-02-11">11.02.2026</time> · <span class="rt" data-en="7 min" data-zh="7分鐘">7分鐘</span></span>
     </a>

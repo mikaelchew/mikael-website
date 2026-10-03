@@ -66,6 +66,40 @@ def transform(relpath):
     open(out_path, 'w', encoding='utf-8').write(out_html)
     return out_path
 
+# Where a Chinese heading may wrap besides punctuation: after 的, before 與/和/及, and at the
+# "|" in PHRASE_HINTS (headings with no natural break point). Never inside Latin-script words.
+PHRASE_HINTS = ['直銷孫子兵法之|不戰而勝', '勝兵先勝|而後求戰', '準備好|踏出']
+PHRASE_BREAK = re.compile('|'.join(
+    [r'(?<=[㐀-鿿]的)(?=[㐀-鿿])', r'(?<=[㐀-鿿])(?=[與和及][㐀-鿿])']
+    + ['(?<=%s)(?=%s)' % tuple(map(re.escape, h.split('|'))) for h in PHRASE_HINTS]))
+
+def _wbr_split(text):
+    """Split text at PHRASE_BREAK into pieces (a <wbr> goes between consecutive pieces)."""
+    pieces, last = [], 0
+    for m in PHRASE_BREAK.finditer(text or ''):
+        pieces.append(text[last:m.start()]); last = m.start()
+    pieces.append((text or '')[last:])
+    return pieces
+
+def mark_phrase_breaks(el):
+    """Insert <wbr> at phrase boundaries in el's own text and its children's tails."""
+    def wbr(tail):
+        w = lxml.html.Element('wbr'); w.tail = tail; return w
+    for child in list(el):
+        if isinstance(child.tag, str) and child.tag not in ('script', 'style'):
+            mark_phrase_breaks(child)
+        if child.tail:
+            pieces = _wbr_split(child.tail)
+            child.tail = pieces[0]
+            idx = el.index(child)
+            for k, p in enumerate(pieces[1:], 1):
+                el.insert(idx + k, wbr(p))
+    if el.text:
+        pieces = _wbr_split(el.text)
+        el.text = pieces[0]
+        for k, p in enumerate(pieces[1:]):
+            el.insert(k, wbr(p))
+
 def transform_html(html, relpath):
     """Return the zh-Hant page for one EN page's HTML (relpath is its repo-relative path)."""
     doc = lxml.html.fromstring(html)
@@ -108,6 +142,11 @@ def transform_html(html, relpath):
                 for c in list(frag): el.append(c)
             else:
                 el.text = val
+
+    # 2b. Chinese headings: css/site.css sets word-break: keep-all on them, so they wrap only at
+    # punctuation and at the <wbr> phrase boundaries marked here (never mid-word, e.g. 智/慧)
+    for h in doc.xpath('//h1|//h2|//h3'):
+        mark_phrase_breaks(h)
 
     # 3. img alt
     for el in doc.xpath('//*[@data-alt-zh]'):
@@ -228,7 +267,8 @@ def transform_html(html, relpath):
                    r'\1"inLanguage":"zh-Hant"', t)
         s.text = t
 
-    return '<!DOCTYPE html>\n' + tostring(doc, encoding='unicode', method='html')
+    # libxml2 doesn't know <wbr> is a void element and writes a closing tag for it
+    return '<!DOCTYPE html>\n' + tostring(doc, encoding='unicode', method='html').replace('</wbr>', '')
 
 def main():
     # scorecard.html has no data-zh translations yet — skip it so we don't

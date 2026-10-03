@@ -72,6 +72,17 @@
       <a href="../work-with-me.html" class="lang-opt lang-link keep" lang="en" hreflang="en">EN</a>
       <span class="lang-opt is-current" lang="zh-Hant" aria-current="true">中文</span>
     </div>
+    <!-- no JavaScript: Menu can't open, so the nav becomes a scrollable row under the bar instead -->
+    <noscript><style>
+      @media (max-width: 1180px) {
+        .bar { position: sticky; top: 0; flex-wrap: wrap; }
+        .bar .menu-btn { display: none; }
+        .bar .nav { position: static; order: 9; flex: 0 0 100%; flex-direction: row; gap: 18px; margin-left: 0; padding: 2px 0 4px;
+          overflow-x: auto; background: none; font-size: .95rem; opacity: 1; visibility: visible; }
+        .bar .nav a { white-space: nowrap; }
+        .bar .nav .nav-zh { display: none; }
+      }
+    </style></noscript>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav"><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg><span data-en="Menu" data-zh="選單">選單</span></button>
   </div>
 </header>
@@ -162,7 +173,7 @@
   <section class="band" aria-labelledby="next-h">
     <div class="wrap band-in">
       <div>
-        <h2 id="next-h" data-en="Ready to take the next step?" data-zh="準備好踏出下一步了嗎？">準備好踏出下一步了嗎？</h2>
+        <h2 id="next-h" data-en="Ready to take the next step?" data-zh="準備好踏出下一步了嗎？">準備好<wbr>踏出下一步了嗎？</h2>
         <p data-en="If this resonates, I'd like to hear your story. Tell me about your biggest challenge right now. I personally read every message." data-zh="如果你看到這裡有感觸，歡迎跟我聊聊你的故事。告訴我你現在最大的挑戰是什麼。每則訊息我都會親自看。">如果你看到這裡有感觸，歡迎跟我聊聊你的故事。告訴我你現在最大的挑戰是什麼。每則訊息我都會親自看。</p>
       </div>
       <div>

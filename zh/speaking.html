@@ -76,6 +76,17 @@
       <a href="../speaking.html" class="lang-opt lang-link keep" lang="en" hreflang="en">EN</a>
       <span class="lang-opt is-current" lang="zh-Hant" aria-current="true">中文</span>
     </div>
+    <!-- no JavaScript: Menu can't open, so the nav becomes a scrollable row under the bar instead -->
+    <noscript><style>
+      @media (max-width: 1180px) {
+        .bar { position: sticky; top: 0; flex-wrap: wrap; }
+        .bar .menu-btn { display: none; }
+        .bar .nav { position: static; order: 9; flex: 0 0 100%; flex-direction: row; gap: 18px; margin-left: 0; padding: 2px 0 4px;
+          overflow-x: auto; background: none; font-size: .95rem; opacity: 1; visibility: visible; }
+        .bar .nav a { white-space: nowrap; }
+        .bar .nav .nav-zh { display: none; }
+      }
+    </style></noscript>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav"><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg><span data-en="Menu" data-zh="選單">選單</span></button>
   </div>
 </header>
@@ -89,7 +100,7 @@
       </div>
       <div>
         <span class="kicker" data-en="Speaking" data-zh="演講">演講</span>
-        <h1 id="sp-h" data-en="Bring 23 years of strategy to your stage" data-zh="把 23 年的策略智慧帶上你的舞台">把 23 年的策略智慧帶上你的舞台</h1>
+        <h1 id="sp-h" data-en="Bring 23 years of strategy to your stage" data-zh="把 23 年的策略智慧帶上你的舞台">把 23 年的<wbr>策略智慧帶上你的<wbr>舞台</h1>
         <p class="lead" data-en="Keynotes, workshops, and fireside chats on strategy, leadership, and the long arc of building something that lasts in direct selling." data-zh="關於策略、領導力、以及在直銷中打造長久事業的主題演講、工作坊與爐邊談話。">關於策略、領導力、以及在直銷中打造長久事業的主題演講、工作坊與爐邊談話。</p>
         <p style="margin-top: 1.4em"><a class="btn" href="#book-sp" data-en="Enquire about a date" data-zh="詢問檔期">詢問檔期</a></p>
       </div>
@@ -115,14 +126,14 @@
     <p class="lead" style="max-width: 56ch; margin-bottom: 1.6em" data-en="Each talk pairs an original framework with real stories from 23 years on both sides of the table. Customisable for your audience and length." data-zh="每場演講都結合原創框架與來自 23 年雙重視角的真實故事。可根據你的觀眾與時長調整。">每場演講都結合原創框架與來自 23 年雙重視角的真實故事。可根據你的觀眾與時長調整。</p>
     <div class="cards two">
       <article class="brief"><span class="part" data-en="Keynote · 45–60 min" data-zh="主題演講 · 45–60 分鐘">主題演講 · 45–60 分鐘</span><span class="n num">01</span><h3 data-en="The Long Game" data-zh="長線思維">長線思維</h3><p data-en="Why the leaders who last in direct selling aren't the loudest, the fastest, or the most charismatic: they think in decades, not quarters. A flagship keynote on building organisations that survive market shifts, leadership transitions, and time itself." data-zh="為什麼真正能在直銷中走遠的領袖，不是嗓門最大、跑得最快、或最有魅力的人，而是那些以「十年」而非「季度」為單位思考的人。一場關於打造能熬過市場變遷、領導交替、與時間考驗之組織的旗艦級主題演講。">為什麼真正能在直銷中走遠的領袖，不是嗓門最大、跑得最快、或最有魅力的人，而是那些以「十年」而非「季度」為單位思考的人。一場關於打造能熬過市場變遷、領導交替、與時間考驗之組織的旗艦級主題演講。</p></article>
-      <article class="brief"><span class="part" data-en="Keynote · 30–45 min" data-zh="主題演講 · 30–45 分鐘">主題演講 · 30–45 分鐘</span><span class="n num">02</span><h3 data-en="The Field–Management Bridge" data-zh="前線與管理層的橋樑">前線與管理層的橋樑</h3><p data-en="What field leaders don't see about strategy. What corporate leaders don't feel about the field. A keynote drawn from 23 years on both sides of the table, with practical frameworks for closing the gap between head office and the field." data-zh="前線領袖看不到的策略邏輯。企業端感受不到的前線溫度。一場源自桌子兩端 23 年經驗的主題演講，提供實用框架，彌合總部與前線之間的鴻溝。">前線領袖看不到的策略邏輯。企業端感受不到的前線溫度。一場源自桌子兩端 23 年經驗的主題演講，提供實用框架，彌合總部與前線之間的鴻溝。</p></article>
+      <article class="brief"><span class="part" data-en="Keynote · 30–45 min" data-zh="主題演講 · 30–45 分鐘">主題演講 · 30–45 分鐘</span><span class="n num">02</span><h3 data-en="The Field–Management Bridge" data-zh="前線與管理層的橋樑">前線<wbr>與管理層的<wbr>橋樑</h3><p data-en="What field leaders don't see about strategy. What corporate leaders don't feel about the field. A keynote drawn from 23 years on both sides of the table, with practical frameworks for closing the gap between head office and the field." data-zh="前線領袖看不到的策略邏輯。企業端感受不到的前線溫度。一場源自桌子兩端 23 年經驗的主題演講，提供實用框架，彌合總部與前線之間的鴻溝。">前線領袖看不到的策略邏輯。企業端感受不到的前線溫度。一場源自桌子兩端 23 年經驗的主題演講，提供實用框架，彌合總部與前線之間的鴻溝。</p></article>
       <article class="brief"><span class="part" data-en="Workshop · 90 min" data-zh="工作坊 · 90 分鐘">工作坊 · 90 分鐘</span><span class="n num">03</span><h3 data-en="The Sun Tzu Playbook" data-zh="孫子兵法手冊">孫子兵法手冊</h3><p data-en="An interactive workshop based on Mikael's book. Apply 2,500 years of strategic wisdom to the modern direct selling battlefield: knowing your terrain, choosing your battles, and winning without fighting." data-zh="一場以 Mikael 著作為基礎的互動工作坊。把 2500 年戰場淬煉的策略智慧，運用到現代直銷的戰場上：認清地形、慎選戰場、不戰而勝。">一場以 Mikael 著作為基礎的互動工作坊。把 2500 年戰場淬煉的策略智慧，運用到現代直銷的戰場上：認清地形、慎選戰場、不戰而勝。</p></article>
-      <article class="brief"><span class="part" data-en="Training · 60 min" data-zh="培訓 · 60 分鐘">培訓 · 60 分鐘</span><span class="n num">04</span><h3 data-en="The 5 Battles for New Leaders" data-zh="新領袖必打的五場仗">新領袖必打的五場仗</h3><p data-en="The first two years are a battlefield. Most leaders who quit do so because they didn't know which battles to fight. A practical session that equips emerging leaders with the five strategic priorities that decide long-term success." data-zh="頭兩年就是一個戰場。多數退出的領袖，是因為不知道該打哪幾仗。這場實戰訓練專為新興領袖設計，幫他們掌握決定長期成敗的五大策略優先順序。">頭兩年就是一個戰場。多數退出的領袖，是因為不知道該打哪幾仗。這場實戰訓練專為新興領袖設計，幫他們掌握決定長期成敗的五大策略優先順序。</p></article>
+      <article class="brief"><span class="part" data-en="Training · 60 min" data-zh="培訓 · 60 分鐘">培訓 · 60 分鐘</span><span class="n num">04</span><h3 data-en="The 5 Battles for New Leaders" data-zh="新領袖必打的五場仗">新領袖必打的<wbr>五場仗</h3><p data-en="The first two years are a battlefield. Most leaders who quit do so because they didn't know which battles to fight. A practical session that equips emerging leaders with the five strategic priorities that decide long-term success." data-zh="頭兩年就是一個戰場。多數退出的領袖，是因為不知道該打哪幾仗。這場實戰訓練專為新興領袖設計，幫他們掌握決定長期成敗的五大策略優先順序。">頭兩年就是一個戰場。多數退出的領袖，是因為不知道該打哪幾仗。這場實戰訓練專為新興領袖設計，幫他們掌握決定長期成敗的五大策略優先順序。</p></article>
     </div>
   </section>
 
   <section class="sec wrap" aria-labelledby="fmt-h">
-    <h2 class="sec-h" id="fmt-h"><span data-en="Built around your audience" data-zh="圍繞你的觀眾打造">圍繞你的觀眾打造</span></h2>
+    <h2 class="sec-h" id="fmt-h"><span data-en="Built around your audience" data-zh="圍繞你的觀眾打造">圍繞你的<wbr>觀眾打造</span></h2>
     <div class="cards">
       <div><h3 style="font-weight: 800; font-size: 1.25rem" data-en="Customised to your theme" data-zh="量身打造主題">量身打造主題</h3><p style="margin-top: .5em" data-en="Every talk is tailored to your event's theme, your audience's experience level, and the outcomes you want them to leave with. No copy-paste keynotes." data-zh="每場演講都會根據你活動的主題、觀眾的經驗程度，以及你希望他們帶走的成果來量身設計。絕無套用版本。">每場演講都會根據你活動的主題、觀眾的經驗程度，以及你希望他們帶走的成果來量身設計。絕無套用版本。</p></div>
       <div><h3 style="font-weight: 800; font-size: 1.25rem" data-en="Flexible formats" data-zh="彈性形式">彈性形式</h3><p style="margin-top: .5em" data-en="Keynote (30–60 min). Workshop (90 min). Fireside chat (30 min). Panel facilitation. Multi-day intensive. Whatever your event needs, the content adapts." data-zh="主題演講（30–60 分鐘）。工作坊（90 分鐘）。爐邊談話（30 分鐘）。座談主持。多日深度培訓。無論你的活動需要什麼形式，內容都能彈性調整。">主題演講（30–60 分鐘）。工作坊（90 分鐘）。爐邊談話（30 分鐘）。座談主持。多日深度培訓。無論你的活動需要什麼形式，內容都能彈性調整。</p></div>
@@ -138,7 +149,7 @@
   </section>
 
   <section class="sec wrap" aria-labelledby="say-h">
-    <h2 class="sec-h" id="say-h"><span data-en="Audiences and peers" data-zh="觀眾與同行怎麼說">觀眾與同行怎麼說</span><span class="zh" data-en="via LinkedIn" data-zh="來自 LinkedIn">來自 LinkedIn</span></h2>
+    <h2 class="sec-h" id="say-h"><span data-en="Audiences and peers" data-zh="觀眾與同行怎麼說">觀眾<wbr>與同行怎麼說</span><span class="zh" data-en="via LinkedIn" data-zh="來自 LinkedIn">來自 LinkedIn</span></h2>
     <div class="c-grid">
       <article class="c"><blockquote data-en='As a speaker, Mikael shines. He articulates complex ideas clearly and engages his audience effectively. When Mikael speaks, people "tabik"!' data-zh="作為演講者，Mikael 真的閃耀。他能把複雜的概念講得清楚，讓觀眾全程投入。Mikael 一開口，大家都「tabik」！">作為演講者，Mikael 真的閃耀。他能把複雜的概念講得清楚，讓觀眾全程投入。Mikael 一開口，大家都「tabik」！</blockquote>
         <footer><b>Dyi Wong</b><span data-en="Marketing Manager · Ngai Seik Leatherwaren" data-zh="行銷經理 · Ngai Seik Leatherwaren">行銷經理 · Ngai Seik Leatherwaren</span></footer></article>
@@ -165,7 +176,7 @@
   <section class="band" id="book-sp" aria-labelledby="bk-h">
     <div class="wrap band-in">
       <div>
-        <h2 id="bk-h" data-en="Have Mikael speak at your next event" data-zh="邀請 Mikael 出席你的下一場活動">邀請 Mikael 出席你的下一場活動</h2>
+        <h2 id="bk-h" data-en="Have Mikael speak at your next event" data-zh="邀請 Mikael 出席你的下一場活動">邀請 Mikael 出席你的<wbr>下一場活動</h2>
         <p data-en="Tell me about your event: date, audience, theme, format. I respond to every speaking enquiry personally." data-zh="告訴我你活動的細節：日期、觀眾、主題、形式。每一封演講邀約，我都會親自回覆。">告訴我你活動的細節：日期、觀眾、主題、形式。每一封演講邀約，我都會親自回覆。</p>
       </div>
       <div>

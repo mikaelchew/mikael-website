@@ -133,3 +133,17 @@ class LanguageSwitchTest(unittest.TestCase):
         self.assertEqual(sorted(a.get("href") for a in ctas), ["book.html#buy", "chapter-1.html"])
         pre = [a for a in ctas if "when-prelaunch" in a.get("class")]
         self.assertEqual(pre[0].get("href"), "chapter-1.html")
+
+
+class NoScriptMenuTest(unittest.TestCase):
+    """Without JavaScript the Menu button can't open anything, so the header carries a
+    <noscript> style that hides it and shows the nav as a row instead."""
+
+    def test_header_has_noscript_nav_fallback(self):
+        for page in ("index.html", "zh/book.html"):
+            root = doc(page)
+            styles = root.xpath('//header[contains(@class,"bar")]//noscript//style/text()') or \
+                     [t for n in root.xpath('//header[contains(@class,"bar")]//noscript') for t in [lxml.html.tostring(n, encoding="unicode")]]
+            css = " ".join(styles)
+            self.assertIn(".menu-btn", css, page)
+            self.assertIn("visibility: visible", css, page)

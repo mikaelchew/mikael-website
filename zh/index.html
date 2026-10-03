@@ -92,6 +92,17 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       <a href="../" class="lang-opt lang-link keep" lang="en" hreflang="en">EN</a>
       <span class="lang-opt is-current" lang="zh-Hant" aria-current="true">中文</span>
     </div>
+    <!-- no JavaScript: Menu can't open, so the nav becomes a scrollable row under the bar instead -->
+    <noscript><style>
+      @media (max-width: 1180px) {
+        .bar { position: sticky; top: 0; flex-wrap: wrap; }
+        .bar .menu-btn { display: none; }
+        .bar .nav { position: static; order: 9; flex: 0 0 100%; flex-direction: row; gap: 18px; margin-left: 0; padding: 2px 0 4px;
+          overflow-x: auto; background: none; font-size: .95rem; opacity: 1; visibility: visible; }
+        .bar .nav a { white-space: nowrap; }
+        .bar .nav .nav-zh { display: none; }
+      }
+    </style></noscript>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav"><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg><span data-en="Menu" data-zh="選單">選單</span></button>
   </div>
 </header>
@@ -124,7 +135,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 
       <div class="intro panel" id="intro">
         <span class="zh-title cjk-display" lang="zh-Hant" data-zh-only>不戰而勝</span>
-        <h1 data-en="Win before the battle." data-zh="勝兵先勝而後求戰。">勝兵先勝而後求戰。</h1>
+        <h1 data-en="Win before the battle." data-zh="勝兵先勝而後求戰。">勝兵先勝<wbr>而後求戰。</h1>
         <p class="facts" data-en="38 people turned him down in his first three months. His first commission cheque was RM 128. This is the strategy he worked out after that." data-zh="入行頭三個月，38個人拒絕了他。第一張佣金支票只有RM 128。這本書，是他後來想通的策略。">入行頭三個月，38個人拒絕了他。第一張佣金支票只有RM 128。這本書，是他後來想通的策略。</p>
         <div class="orders">
           <a class="btn" href="chapter-1.html"><span data-en="Read Chapter 1 free" data-zh="免費試讀第一章">免費試讀第一章</span>
@@ -149,7 +160,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 
       <div class="finale panel off" id="finale">
         <div class="when-prelaunch">
-          <h2 data-en="The route ends on 20 October." data-zh="路線的終點：10月20日。">路線的終點：10月20日。</h2>
+          <h2 data-en="The route ends on 20 October." data-zh="路線的終點：10月20日。">路線的<wbr>終點：10月20日。</h2>
           <p data-en="The ebook goes on sale that day: RM 29.90 direct, USD 9.99 on Kindle. Chapter 1 is free to read now." data-zh="電子書當天上市：官網直購 RM 29.90，Kindle USD 9.99。第一章現在就能免費讀。">電子書當天上市：官網直購 RM 29.90，Kindle USD 9.99。第一章現在就能免費讀。</p>
           <div class="orders"><a class="btn" href="chapter-1.html" data-en="Read Chapter 1 free" data-zh="免費試讀第一章">免費試讀第一章</a></div>
           <form class="field" action="https://app.kit.com/forms/9983525/subscriptions" method="post" data-ajax>

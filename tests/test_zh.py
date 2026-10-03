@@ -49,3 +49,26 @@ class ZhTransformTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class ZhHeadingBreaksTest(unittest.TestCase):
+    """Chinese headings wrap only at punctuation and marked phrase boundaries, never mid-word."""
+
+    def test_css_keeps_words_whole(self):
+        from tests.helpers import read
+        css = read("css/site.css")
+        self.assertIn("html:lang(zh-Hant) :is(h1, h2, h3)", css)
+        self.assertIn("word-break: keep-all", css)
+
+    def test_build_marks_phrase_boundaries(self):
+        import build_zh
+        page = ('<!DOCTYPE html><html lang="en"><head><title>t</title></head><body>'
+                '<h1 data-en="x" data-zh="把實戰淬煉的策略智慧帶上你的舞台">x</h1>'
+                '<h2 data-en="y" data-zh="願景、使命與價值觀">y</h2>'
+                '<h2 data-en="z" data-zh="直銷孫子兵法之不戰而勝">z</h2>'
+                '<p data-en="p" data-zh="這是內文的段落">p</p></body></html>')
+        out = build_zh.transform_html(page, "x.html")
+        self.assertIn("實戰淬煉的<wbr>策略智慧帶上你的<wbr>舞台", out)
+        self.assertIn("願景、使命<wbr>與價值觀", out)
+        self.assertIn("直銷孫子兵法之<wbr>不戰而勝", out)
+        self.assertIn("這是內文的段落", out)  # body text is left alone

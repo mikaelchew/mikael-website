@@ -1,3 +1,4 @@
+import json
 import os
 import re
 import unittest
@@ -80,3 +81,13 @@ class InnerPagesTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class ConceptsDashTest(unittest.TestCase):
+    def test_no_long_dashes_in_definitions(self):
+        root = doc("concepts.html")
+        for el in root.xpath('//body//*[@data-en]'):
+            self.assertNotIn("—", el.get("data-en"), el.get("data-en")[:60])
+        for s in root.xpath('//script[@type="application/ld+json"]'):
+            data = json.loads(s.text)  # still valid JSON after the edit
+            self.assertNotIn("—", json.dumps(data, ensure_ascii=False).replace("Key Concepts — Mikael Chew", ""))

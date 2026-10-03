@@ -62,6 +62,17 @@
       <a href="../about.html" class="lang-opt lang-link keep" lang="en" hreflang="en">EN</a>
       <span class="lang-opt is-current" lang="zh-Hant" aria-current="true">中文</span>
     </div>
+    <!-- no JavaScript: Menu can't open, so the nav becomes a scrollable row under the bar instead -->
+    <noscript><style>
+      @media (max-width: 1180px) {
+        .bar { position: sticky; top: 0; flex-wrap: wrap; }
+        .bar .menu-btn { display: none; }
+        .bar .nav { position: static; order: 9; flex: 0 0 100%; flex-direction: row; gap: 18px; margin-left: 0; padding: 2px 0 4px;
+          overflow-x: auto; background: none; font-size: .95rem; opacity: 1; visibility: visible; }
+        .bar .nav a { white-space: nowrap; }
+        .bar .nav .nav-zh { display: none; }
+      }
+    </style></noscript>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav"><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg><span data-en="Menu" data-zh="選單">選單</span></button>
   </div>
 </header>
@@ -75,7 +86,7 @@
       </div>
       <div>
         <span class="kicker" data-en="About" data-zh="關於">關於</span>
-        <h1 id="about-h" data-en="The story behind the strategy" data-zh="策略背後的故事">策略背後的故事</h1>
+        <h1 id="about-h" data-en="The story behind the strategy" data-zh="策略背後的故事">策略背後的<wbr>故事</h1>
         <p class="lead" data-en="23 years. Two perspectives. One mission: to help direct selling leaders win the right way." data-zh="23年。兩種視角。一個使命：助直銷領袖以正道致勝。">23年。兩種視角。一個使命：助直銷領袖以正道致勝。</p>
       </div>
     </div>
@@ -101,7 +112,7 @@
     <ol class="route">
       <li><span class="when num">2003</span><h3 data-en="The beginning" data-zh="起步">起步</h3><p data-en="Entered direct selling. 38 rejections, a first cheque of RM 128, and every reason to quit. Chose to stay and learn." data-zh="踏入直銷世界。38次被拒、第一張支票只有RM 128，每個理由都叫我放棄。我選擇留下來學。">踏入直銷世界。38次被拒、第一張支票只有RM 128，每個理由都叫我放棄。我選擇留下來學。</p></li>
       <li><span class="when num">2009</span><h3 data-en="Into management" data-zh="走進管理層">走進管理層</h3><p data-en="After six years building in the field, made the rare move to corporate management: market strategy, training systems, and the bridge between head office and the field." data-zh="在前線打拼六年之後，完成罕見的跨界，進入企業管理層：市場策略、培訓系統，串連總部與前線。">在前線打拼六年之後，完成罕見的跨界，進入企業管理層：市場策略、培訓系統，串連總部與前線。</p></li>
-      <li><span class="when num" data-en="8 + 15 years" data-zh="8 + 15年">8 + 15年</span><h3 data-en="Both sides of the table" data-zh="桌子的兩邊">桌子的兩邊</h3><p data-en="8 years in the field in all, including one later spell, and 15 years in senior management across three multinational companies." data-zh="前線經驗合計8年（包括後來的一段），以及在三家跨國公司擔任高階管理職15年。">前線經驗合計8年（包括後來的一段），以及在三家跨國公司擔任高階管理職15年。</p></li>
+      <li><span class="when num" data-en="8 + 15 years" data-zh="8 + 15年">8 + 15年</span><h3 data-en="Both sides of the table" data-zh="桌子的兩邊">桌子的<wbr>兩邊</h3><p data-en="8 years in the field in all, including one later spell, and 15 years in senior management across three multinational companies." data-zh="前線經驗合計8年（包括後來的一段），以及在三家跨國公司擔任高階管理職15年。">前線經驗合計8年（包括後來的一段），以及在三家跨國公司擔任高階管理職15年。</p></li>
       <li><span class="when num">2026</span><h3 data-en="Author" data-zh="作者">作者</h3><p data-en="Wrote 直銷孫子兵法之不戰而勝, putting 23 years from both sides of the table into one strategic playbook." data-zh="寫成《直銷孫子兵法之不戰而勝》，把桌子兩側的23年經驗，整理成一本策略手冊。">寫成《直銷孫子兵法之不戰而勝》，把桌子兩側的23年經驗，整理成一本策略手冊。</p></li>
     </ol>
     <div class="sides-grid" style="margin-top: clamp(40px, 6vw, 80px)">
@@ -113,7 +124,7 @@
   </section>
 
   <section class="sec wrap" aria-labelledby="values-h">
-    <h2 class="sec-h" id="values-h"><span data-en="What I stand for" data-zh="我的信念">我的信念</span><span class="zh cjk-display" lang="zh-Hant" data-en="信念" data-zh=""></span></h2>
+    <h2 class="sec-h" id="values-h"><span data-en="What I stand for" data-zh="我的信念">我的<wbr>信念</span><span class="zh cjk-display" lang="zh-Hant" data-en="信念" data-zh=""></span></h2>
     <div class="cards">
       <article class="brief"><span class="n num">01</span><h3 data-en="Win the right way" data-zh="贏在正道">贏在正道</h3><div class="zh cjk-display" lang="zh-Hant" data-zh-only>正道</div><p data-en="Real success in direct selling is built on integrity, value and respect, not hype, pressure or shortcuts. The right way isn't just moral. It's strategic." data-zh="直銷的真正成功建立在誠信、價值和尊重之上，而不是靠炒作、施壓或走捷徑。「正道」不只是道德，更是策略。">直銷的真正成功建立在誠信、價值和尊重之上，而不是靠炒作、施壓或走捷徑。「正道」不只是道德，更是策略。</p></article>
       <article class="brief"><span class="n num">02</span><h3 data-en="Strategy over hustle" data-zh="策略勝於蠻幹">策略勝於蠻幹</h3><div class="zh cjk-display" lang="zh-Hant" data-zh-only>謀定後動</div><p data-en="Hard work without direction is just exhaustion. I teach leaders to think like generals: plan, assess, adapt, and execute with precision." data-zh="沒有方向的努力只是疲於奔命。我教導領袖像將軍一樣思考：規劃、評估、適應並精準執行。">沒有方向的努力只是疲於奔命。我教導領袖像將軍一樣思考：規劃、評估、適應並精準執行。</p></article>

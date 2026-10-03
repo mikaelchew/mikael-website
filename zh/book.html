@@ -79,6 +79,17 @@
       <a href="../book.html" class="lang-opt lang-link keep" lang="en" hreflang="en">EN</a>
       <span class="lang-opt is-current" lang="zh-Hant" aria-current="true">中文</span>
     </div>
+    <!-- no JavaScript: Menu can't open, so the nav becomes a scrollable row under the bar instead -->
+    <noscript><style>
+      @media (max-width: 1180px) {
+        .bar { position: sticky; top: 0; flex-wrap: wrap; }
+        .bar .menu-btn { display: none; }
+        .bar .nav { position: static; order: 9; flex: 0 0 100%; flex-direction: row; gap: 18px; margin-left: 0; padding: 2px 0 4px;
+          overflow-x: auto; background: none; font-size: .95rem; opacity: 1; visibility: visible; }
+        .bar .nav a { white-space: nowrap; }
+        .bar .nav .nav-zh { display: none; }
+      }
+    </style></noscript>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav"><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg><span data-en="Menu" data-zh="選單">選單</span></button>
   </div>
 </header>
@@ -99,7 +110,7 @@
         </span>
       </div>
       <div class="dossier-copy">
-        <h1 id="book-h" data-en="The Art of War for Direct Selling" data-zh="直銷孫子兵法之不戰而勝">直銷孫子兵法之不戰而勝</h1>
+        <h1 id="book-h" data-en="The Art of War for Direct Selling" data-zh="直銷孫子兵法之不戰而勝">直銷孫子兵法之<wbr>不戰而勝</h1>
         <p class="subtitle cjk-display" lang="zh-Hant" data-zh-only>打造不靠你也能成長的直銷團隊</p>
         <p class="desc" data-en="What happens when you apply 2,500 years of battle-tested wisdom to modern direct selling? 13 chapters. 23 years of real experience. Zero hype. Written from the rare dual perspective of 8 years in the field and 15 in corporate management." data-zh="把2500年實戰淬煉的智慧用在現代直銷會怎樣？13章。23年真實經歷。零炒作。從罕見的雙重視角出發：8年前線與15年管理經驗。">把2500年實戰淬煉的智慧用在現代直銷會怎樣？13章。23年真實經歷。零炒作。從罕見的雙重視角出發：8年前線與15年管理經驗。</p>
         <div class="order num">
@@ -125,7 +136,7 @@
         <img src="../images/book-cover.jpg" width="700" height="1120" loading="lazy" alt="繁體中文版書封" data-alt-zh="繁體中文版書封">
         <div>
           <p class="ed-lang" data-en="Traditional Chinese" data-zh="繁體中文版">繁體中文版</p>
-          <h3 class="cjk-display" lang="zh-Hant" data-zh-only>直銷孫子兵法之不戰而勝</h3>
+          <h3 class="cjk-display" lang="zh-Hant" data-zh-only>直銷孫子兵法之<wbr>不戰而勝</h3>
           <p data-en="The original. Written by Mikael in Traditional Chinese." data-zh="原著。周俊德以繁體中文寫成。">原著。周俊德以繁體中文寫成。</p>
           <p class="ed-meta num"><span data-en="Ebook: EPUB + PDF direct, or Kindle" data-zh="電子書：官網直購 EPUB + PDF，或 Kindle">電子書：官網直購 EPUB + PDF，或 Kindle</span></p>
         </div>
@@ -165,9 +176,9 @@
 </div>
 <div class="part"><h3><span data-en="Part II · The Battlefield" data-zh="第二部 · 戰場">第二部 · 戰場</span><span class="zh cjk-display" lang="zh-Hant" data-zh-only>戰場</span></h3>
 <article class="brief" id="ch-4"><span class="n num">04</span><h3 data-en="Find the Right People" data-zh="精準識別目標">精準識別目標</h3><div class="zh alt cjk-display" data-en="精準識別目標" data-zh="Find the Right People">Find the Right People</div><p data-en="From about 5% to about 70% success rate with one framework. How the FORMHD method turns spray-and-pray into precision targeting." data-zh="一個框架讓成功率從大約5%提升到大約70%。FORMHD方法如何把亂槍打鳥變成精準出擊。">一個框架讓成功率從大約5%提升到大約70%。FORMHD方法如何把亂槍打鳥變成精準出擊。</p></article>
-<article class="brief" id="ch-5"><span class="n num">05</span><h3 data-en="The Art of the Invitation" data-zh="邀約的藝術">邀約的藝術</h3><div class="zh alt cjk-display" data-en="邀約的藝術" data-zh="The Art of the Invitation">The Art of the Invitation</div><p data-en="How one bad invitation nearly cost me a friendship of many years — and the 'ask for opinion' technique that took my acceptance rate from about 15% to 80%." data-zh="一次糟糕的邀約，差點毀了一段多年的友誼。以及「請教意見」技巧如何把接受率從大約15%拉到80%。">一次糟糕的邀約，差點毀了一段多年的友誼。以及「請教意見」技巧如何把接受率從大約15%拉到80%。</p></article>
-<article class="brief" id="ch-6"><span class="n num">06</span><h3 data-en="Present Your Offer" data-zh="呈現你的方案">呈現你的方案</h3><div class="zh alt cjk-display" data-en="呈現你的方案" data-zh="Present Your Offer">Present Your Offer</div><p data-en="60 slides, 2 hours, nothing sold. Then Irene tried 8 slides and mostly listened, and 2 of 3 bought on the spot. How to replace a lecture with a conversation." data-zh="60張投影片、2小時、沒有人買。後來Irene改用8張投影片，大部分時間在聽，3個人裡2個當場買了。如何用對話取代演講。">60張投影片、2小時、沒有人買。後來Irene改用8張投影片，大部分時間在聽，3個人裡2個當場買了。如何用對話取代演講。</p></article>
-<article class="brief" id="ch-7"><span class="n num">07</span><h3 data-en="The Follow-Up That Counts" data-zh="關鍵的後續跟進">關鍵的後續跟進</h3><div class="zh alt cjk-display" data-en="關鍵的後續跟進" data-zh="The Follow-Up That Counts">The Follow-Up That Counts</div><p data-en="She threw me out of her house. A few visits with fruit and nasi lemak later, Aunty Lim asked me in, bought the whole set, and had two friends waiting when I delivered it. The 1-4-7 golden follow-up method." data-zh="她把我趕出門。帶著水果和椰漿飯去了幾次之後，Aunty Lim請我進門，整套產品當場付清，送貨那天還約了兩位朋友在家等我。1-4-7黃金跟進法。">她把我趕出門。帶著水果和椰漿飯去了幾次之後，Aunty Lim請我進門，整套產品當場付清，送貨那天還約了兩位朋友在家等我。1-4-7黃金跟進法。</p></article>
+<article class="brief" id="ch-5"><span class="n num">05</span><h3 data-en="The Art of the Invitation" data-zh="邀約的藝術">邀約的<wbr>藝術</h3><div class="zh alt cjk-display" data-en="邀約的藝術" data-zh="The Art of the Invitation">The Art of the Invitation</div><p data-en="How one bad invitation nearly cost me a friendship of many years — and the 'ask for opinion' technique that took my acceptance rate from about 15% to 80%." data-zh="一次糟糕的邀約，差點毀了一段多年的友誼。以及「請教意見」技巧如何把接受率從大約15%拉到80%。">一次糟糕的邀約，差點毀了一段多年的友誼。以及「請教意見」技巧如何把接受率從大約15%拉到80%。</p></article>
+<article class="brief" id="ch-6"><span class="n num">06</span><h3 data-en="Present Your Offer" data-zh="呈現你的方案">呈現你的<wbr>方案</h3><div class="zh alt cjk-display" data-en="呈現你的方案" data-zh="Present Your Offer">Present Your Offer</div><p data-en="60 slides, 2 hours, nothing sold. Then Irene tried 8 slides and mostly listened, and 2 of 3 bought on the spot. How to replace a lecture with a conversation." data-zh="60張投影片、2小時、沒有人買。後來Irene改用8張投影片，大部分時間在聽，3個人裡2個當場買了。如何用對話取代演講。">60張投影片、2小時、沒有人買。後來Irene改用8張投影片，大部分時間在聽，3個人裡2個當場買了。如何用對話取代演講。</p></article>
+<article class="brief" id="ch-7"><span class="n num">07</span><h3 data-en="The Follow-Up That Counts" data-zh="關鍵的後續跟進">關鍵的<wbr>後續跟進</h3><div class="zh alt cjk-display" data-en="關鍵的後續跟進" data-zh="The Follow-Up That Counts">The Follow-Up That Counts</div><p data-en="She threw me out of her house. A few visits with fruit and nasi lemak later, Aunty Lim asked me in, bought the whole set, and had two friends waiting when I delivered it. The 1-4-7 golden follow-up method." data-zh="她把我趕出門。帶著水果和椰漿飯去了幾次之後，Aunty Lim請我進門，整套產品當場付清，送貨那天還約了兩位朋友在家等我。1-4-7黃金跟進法。">她把我趕出門。帶著水果和椰漿飯去了幾次之後，Aunty Lim請我進門，整套產品當場付清，送貨那天還約了兩位朋友在家等我。1-4-7黃金跟進法。</p></article>
 </div>
 <div class="part"><h3><span data-en="Part III · Building Your Army" data-zh="第三部 · 建軍">第三部 · 建軍</span><span class="zh cjk-display" lang="zh-Hant" data-zh-only>建軍</span></h3>
 <article class="brief" id="ch-8"><span class="n num">08</span><h3 data-en="Welcome Your New Partner" data-zh="喜迎新夥伴">喜迎新夥伴</h3><div class="zh alt cjk-display" data-en="喜迎新夥伴" data-zh="Welcome Your New Partner">Welcome Your New Partner</div><p data-en="Chris quit because I said 'good luck.' Sarah thrived because of the 72-hour activation system. Tell-Show-Try-Do — the four-step coaching method." data-zh="Chris放棄了，因為我只說了「祝好運」。Sarah成功了，因為72小時啟動系統。講-做-試-放，四步教練法。">Chris放棄了，因為我只說了「祝好運」。Sarah成功了，因為72小時啟動系統。講-做-試-放，四步教練法。</p></article>
@@ -231,7 +242,7 @@
     <h2 class="sec-h" id="for-h" data-en="Who this book is for" data-zh="這本書為誰而寫">這本書為誰而寫</h2>
     <div class="audience">
       <div><h3 data-en="New builders" data-zh="新手起步者">新手起步者</h3><p data-en="Just starting out and want to avoid the costly mistakes that take most people 2-3 years to figure out on their own." data-zh="剛起步的你，想少走彎路，避免大多數人要花2-3年才會領悟的代價。">剛起步的你，想少走彎路，避免大多數人要花2-3年才會領悟的代價。</p></div>
-      <div><h3 data-en="Stuck leaders" data-zh="遇到瓶頸的領袖">遇到瓶頸的領袖</h3><p data-en="You've hit a plateau: your team is stalling, recruitment is harder, and the old playbook isn't working anymore." data-zh="你卡住了：團隊停滯、招募越來越難，舊方法已經不管用。">你卡住了：團隊停滯、招募越來越難，舊方法已經不管用。</p></div>
+      <div><h3 data-en="Stuck leaders" data-zh="遇到瓶頸的領袖">遇到瓶頸的<wbr>領袖</h3><p data-en="You've hit a plateau: your team is stalling, recruitment is harder, and the old playbook isn't working anymore." data-zh="你卡住了：團隊停滯、招募越來越難，舊方法已經不管用。">你卡住了：團隊停滯、招募越來越難，舊方法已經不管用。</p></div>
       <div><h3 data-en="Senior leaders" data-zh="資深領袖">資深領袖</h3><p data-en="Leading a large team but working harder than ever. Ready to build systems that run without you, and get your time back." data-zh="帶著大團隊卻比以前更忙。是時候建立一套不靠你也能運轉的系統，把時間還給自己。">帶著大團隊卻比以前更忙。是時候建立一套不靠你也能運轉的系統，把時間還給自己。</p></div>
       <div><h3 data-en="Corporate managers" data-zh="企業管理者">企業管理者</h3><p data-en="Seeking to understand the field perspective and bridge the gap between corporate strategy and distributor reality." data-zh="想真正理解前線的視角，拉近企業策略與經銷商現實之間的距離。">想真正理解前線的視角，拉近企業策略與經銷商現實之間的距離。</p></div>
     </div>
@@ -318,7 +329,7 @@
 
   <!-- PRINT WAITLIST: stays visible after launch. No date or price here until the printer confirms one. -->
   <section class="sec wrap" id="print" aria-labelledby="pr-h">
-    <h2 class="sec-h" id="pr-h" data-en="Rather hold it in your hands?" data-zh="想要一本拿在手上的書？">想要一本拿在手上的書？</h2>
+    <h2 class="sec-h" id="pr-h" data-en="Rather hold it in your hands?" data-zh="想要一本拿在手上的書？">想要一本拿在手上的<wbr>書？</h2>
     <p class="lead" data-en="A printed edition is in the works. Join the print list and I'll email you when copies can be ordered, with the date and the price." data-zh="紙本版正在籌備中。加入紙本通知名單，可以訂購時我會寫信告訴你，附上日期與價格。">紙本版正在籌備中。加入紙本通知名單，可以訂購時我會寫信告訴你，附上日期與價格。</p>
     <form class="field" action="https://app.kit.com/forms/9983525/subscriptions" method="post" data-ajax style="margin-top:18px">
       <label class="sr" for="pr-em" data-en="Email address" data-zh="電子郵件">電子郵件</label>
@@ -331,7 +342,7 @@
   </section>
 
   <section class="sec wrap" aria-labelledby="faq-h">
-    <h2 class="sec-h" id="faq-h" data-en="Questions about the book" data-zh="關於本書的常見問題">關於本書的常見問題</h2>
+    <h2 class="sec-h" id="faq-h" data-en="Questions about the book" data-zh="關於本書的常見問題">關於本書的<wbr>常見問題</h2>
     <div class="faq">
       <details><summary data-en="Is this book for beginners or experienced leaders?" data-zh="這本書適合新手還是資深領袖？">這本書適合新手還是資深領袖？</summary>
         <p data-en="Both. The 13 chapters move from foundations (finding your 'why', prospecting, inviting) to advanced leadership and duplication systems. New builders avoid years of costly mistakes; senior leaders get frameworks to build organizations that run without them." data-zh="兩者都適合。13 章從基礎（找到你的「為什麼」、開發、邀約）一路走到進階的領導與複製系統。新手能少走好幾年的彎路；資深領袖能拿到一套讓組織不靠你也能運轉的框架。">兩者都適合。13 章從基礎（找到你的「為什麼」、開發、邀約）一路走到進階的領導與複製系統。新手能少走好幾年的彎路；資深領袖能拿到一套讓組織不靠你也能運轉的框架。</p></details>

@@ -66,6 +66,17 @@
       <a href="../../blog/five-virtues-of-a-general.html" class="lang-opt lang-link keep" lang="en" hreflang="en">EN</a>
       <span class="lang-opt is-current" lang="zh-Hant" aria-current="true">中文</span>
     </div>
+    <!-- no JavaScript: Menu can't open, so the nav becomes a scrollable row under the bar instead -->
+    <noscript><style>
+      @media (max-width: 1180px) {
+        .bar { position: sticky; top: 0; flex-wrap: wrap; }
+        .bar .menu-btn { display: none; }
+        .bar .nav { position: static; order: 9; flex: 0 0 100%; flex-direction: row; gap: 18px; margin-left: 0; padding: 2px 0 4px;
+          overflow-x: auto; background: none; font-size: .95rem; opacity: 1; visibility: visible; }
+        .bar .nav a { white-space: nowrap; }
+        .bar .nav .nav-zh { display: none; }
+      }
+    </style></noscript>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav"><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg><span data-en="Menu" data-zh="選單">選單</span></button>
   </div>
 </header>
@@ -76,7 +87,7 @@
     <article class="post">
       <header class="post-head">
         <p class="kicker" data-en="STRATEGIC LEADERSHIP" data-zh="策略領導力">策略領導力</p>
-        <h1 data-en="The Five Virtues of a General: Sun Tzu's Leadership Test for Direct Selling" data-zh="將者五德：孫子給直銷領袖的領導力檢測">將者五德：孫子給直銷領袖的領導力檢測</h1>
+        <h1 data-en="The Five Virtues of a General: Sun Tzu's Leadership Test for Direct Selling" data-zh="將者五德：孫子給直銷領袖的領導力檢測">將者五德：孫子給直銷領袖的<wbr>領導力檢測</h1>
         <p class="meta"><span data-en="Mikael Chew" data-zh="Mikael Chew">Mikael Chew</span> · <span data-en="September 23, 2026" data-zh="2026年9月23日">2026年9月23日</span> · <span data-en="7 min read" data-zh="7 分鐘閱讀">7 分鐘閱讀</span></p>
       </header>
       <div class="post-body">
