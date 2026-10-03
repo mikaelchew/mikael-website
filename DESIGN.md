@@ -30,8 +30,15 @@ display subset only contains characters used in `.cjk-display` text; `build_font
 
 ## Components
 
-- **Bar:** brand 周俊德 / MIKAEL CHEW and six bilingual nav items from `partials/header.html` (never hand-edit
-  per page; `build_shell.py` injects it). Current page = red underline.
+- **Bar (the command bar, Oct 2026):** from `partials/header.html` (never hand-edit per page; `build_shell.py`
+  injects it). Solid `--table-deep` strip on a 2px red rule: red 周 seal + MIKAEL CHEW 周俊德, the nav (current
+  page = red underline), then a red book button and the **EN | 中文** switch. The switch shows both languages in
+  the same order on both sites; the language being read is filled red and the other is the link (`build_zh.py`
+  swaps which side is which). The book button follows the launch phase: "Read Chapter 1" before launch, "Get the
+  book" after; hidden on Chapter 1 itself. Reading progress on posts and Chapter 1 fills the red rule in
+  `--red-lit`. Breakpoints: below 1400px the nav's Chinese sub-labels drop; below 1180px the nav folds into
+  Menu (the switch stays in the bar); below 820px the book button hides; below 440px 周俊德 hides (the seal
+  keeps 周) and Menu shows only its icon.
 - **Buttons:** `.btn` red fill; `.btn--ghost` acetate outline (ink on paper). Press = `scale(.97)`.
 - **Seals:** red chop SVG symbols in the footer sprite (`#seal-launch`, `#seal-live`, `#seal-free`,
   `#seal-sent`). Status only; they stamp once when 60% in view.
