@@ -46,7 +46,7 @@ class RenderTest(unittest.TestCase):
         self.assertEqual(len(items), 13)
         first = items[0]
         self.assertEqual((first.get("data-x"), first.get("data-y"), first.get("data-part")), ("230", "1290", "0"))
-        self.assertTrue(first.xpath('.//*[@data-en="Finding Your Dao"][@data-zh="發起召集"]'))
+        self.assertTrue(first.xpath('.//*[@data-en="Sound the Call"][@data-zh="發起召集"]'))
         self.assertTrue(first.xpath('.//a[@href="chapter-1.html"]'))
         self.assertEqual(len(root.xpath('//*[contains(@class,"part")]/h3')), 4)
 
