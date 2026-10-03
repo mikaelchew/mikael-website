@@ -97,6 +97,14 @@
           "book.html"
         ],
         "createdAt": "2026-10-02T07:29:06.949Z"
+      },
+      {
+        "rule": "flat-type-hierarchy",
+        "value": "*",
+        "files": [
+          "book-thank-you.html"
+        ],
+        "createdAt": "2026-10-03T03:54:30.707Z"
       }
     ]
   }
