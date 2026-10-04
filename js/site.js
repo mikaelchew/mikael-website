@@ -202,6 +202,11 @@
         el.hidden = true;
       }
     });
+    // ...and anything with data-until (a time-limited offer) hides the day after that date
+    document.querySelectorAll('[data-until]').forEach(function (el) {
+      var s = el.getAttribute('data-until');
+      if (s && new Date(s + 'T00:00:00').getTime() < today.getTime()) el.hidden = true;
+    });
 
     var items = Array.prototype.slice.call(document.querySelectorAll('.dispatch:not(.post-scheduled)'));
     if (!items.length) return;

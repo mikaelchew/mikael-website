@@ -98,3 +98,26 @@ class LaunchReadyTest(unittest.TestCase):
     def test_home_dossier_label_has_no_date(self):
         label = doc("index.html").xpath('//a[contains(@class,"dossier")]/@aria-label')[0]
         self.assertNotIn("20 October", label)
+
+
+class LaunchWeekWorkbookTest(unittest.TestCase):
+    """Launch-week buyers (20 to 26 Oct 2026) get the 90-Day Workbook; the offer hides itself
+    from 27 Oct (js/site.js data-until), when the free email sign-up takes over."""
+
+    def test_offer_shown_until_26_october(self):
+        root = doc("book.html")
+        offers = root.xpath('//*[@data-until="2026-10-26"]')
+        self.assertGreaterEqual(len(offers), 3)  # hero, buy section, FAQ
+        text = " ".join(o.text_content() for o in offers)
+        self.assertIn("90\u2011Day Workbook", text)
+        self.assertIn("20", text)
+        self.assertIn("26", text)
+        self.assertTrue(root.xpath('//details[@data-until="2026-10-26"]/summary'))
+
+    def test_offer_has_chinese_copy(self):
+        for o in doc("zh/book.html").xpath('//*[@data-until="2026-10-26"]'):
+            self.assertIn("工作簿", o.text_content())
+
+    def test_script_hides_expired_offers(self):
+        js = read("js/site.js")
+        self.assertIn("data-until", js)

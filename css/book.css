@@ -88,6 +88,9 @@
 .book-buy-status { min-height: 1.4em; font-weight: 700; color: var(--red-lit); }
 .buy-note { display: block; margin-top: 12px; font-size: .95rem; color: var(--mute); }
 .buy-note a { color: var(--acetate); }
+/* launch-week workbook offer (hero order box and buy section) */
+.offer-note { margin: 14px 0 0; padding: .7em .9em; border: 1px solid rgba(240, 112, 95, .6); background: rgba(192, 57, 43, .14);
+  color: var(--acetate); font-weight: 700; font-size: .98rem; line-height: 1.45; }
 .team-line { margin-top: 1.4em; color: var(--mute); }
 .team-line a { color: var(--acetate); }
 
