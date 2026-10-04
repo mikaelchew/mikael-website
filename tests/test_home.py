@@ -65,3 +65,30 @@ class HomeTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class PhoneMapTest(unittest.TestCase):
+    """On phones (<= 900px) the map doesn't pin the page through 13 scroll stops: the head
+    script picks 'swipe' mode, and js/map.js builds a swipeable row of chapter cards that
+    moves the route on the map."""
+
+    def test_head_script_picks_swipe_on_phones(self):
+        head = read("index.html").split("</script>")[0]
+        self.assertIn("(max-width: 900px)", head)
+        self.assertIn("'swipe'", head)
+        self.assertIn("'motion'", head)
+
+    def test_page_has_strip_and_swipe_cue(self):
+        for page in ("index.html", "zh/index.html"):
+            root = doc(page)
+            self.assertTrue(root.xpath('//*[@id="strip"]'), page)
+            cue = root.xpath('//*[contains(@class,"follow-swipe")]')
+            self.assertTrue(cue and cue[0].text_content().strip(), page)
+
+    def test_map_script_builds_swipe_cards(self):
+        js = read("js/map.js")
+        self.assertIn("contains('swipe')", js)
+        self.assertIn("scrollIntoView", js)
+        css = read("css/map.css")
+        self.assertIn(".swipe .strip", css)
+        self.assertIn("scroll-snap-type: x mandatory", css)

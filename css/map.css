@@ -99,6 +99,35 @@ html:not(.motion) .briefing, html:not(.motion) .rail, html:not(.motion) .cue .fo
 html:not(.motion) .finale { grid-column: 1 / -1; grid-row: 4; }
 html:not(.motion) .route { stroke-dasharray: none !important; stroke-dashoffset: 0 !important; }
 
+/* ---------- phones: swipe mode (html.swipe, see js/map.js) ----------
+   Builds on the static layout: intro, then a framed map that pans to the current chapter,
+   then the swipeable chapter cards and their dots. The page itself never pins. */
+.strip, .strip-dots, .cue .follow-swipe { display: none; }
+html.swipe .cue .follow-swipe { display: inline; }
+html.swipe .cue a { display: none; } /* nothing to skip: the page never pins */
+html.swipe .intro { grid-row: 1; }
+html.swipe .cam { grid-column: 1 / -1; grid-row: 2; position: relative; overflow: hidden; height: clamp(240px, 70vw, 440px);
+  margin-inline: calc(var(--gut) * -1); border-block: 1px solid var(--line); }
+html.swipe #map { position: absolute; left: 0; top: 0; width: 2400px; height: 1500px; max-width: none; transform-origin: 0 0; }
+html.swipe .strip { display: flex; grid-column: 1 / -1; grid-row: 3; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory;
+  scroll-padding-inline: var(--gut); margin-inline: calc(var(--gut) * -1); padding: 2px var(--gut) 4px; scrollbar-width: none; overscroll-behavior-x: contain; }
+html.swipe .strip::-webkit-scrollbar { display: none; }
+.strip .card { flex: 0 0 84%; scroll-snap-align: start; background: var(--table-deep); border: 1px solid var(--line); padding: 16px 18px 18px;
+  transition: border-color 200ms ease; }
+.strip .card.now { border-color: rgba(240, 112, 95, .7); }
+.strip .part { font-weight: 600; font-size: .92rem; color: var(--mute); }
+.strip .n { font-weight: 900; font-size: 2.4rem; line-height: 1; color: var(--red-lit); margin-top: .15em; }
+.strip h3 { font-weight: 800; font-size: 1.3rem; line-height: 1.2; margin-top: .2em; }
+.strip .alt { display: block; font-family: var(--display-zh); font-weight: 900; font-size: 1.1rem; color: var(--mute); margin-top: .15em; }
+.strip p { margin-top: .6em; font-size: 1rem; line-height: 1.5; }
+.strip a { display: inline-block; margin-top: .7em; font-weight: 800; }
+html.swipe .strip-dots { display: flex; grid-column: 1 / -1; grid-row: 4; justify-content: center; gap: 7px; }
+.strip-dots span { width: 7px; height: 7px; border-radius: 50%; background: rgba(182, 196, 190, .35); transition: background-color 200ms ease, transform 200ms var(--ease-out); }
+.strip-dots span.done { background: rgba(240, 112, 95, .55); }
+.strip-dots span.now { background: var(--red-lit); transform: scale(1.45); }
+html.swipe .dossier { grid-row: 5; }
+html.swipe .finale { grid-row: 6; }
+
 /* ---------- after the map ---------- */
 .parts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(20px, 2.4vw, 36px); }
 .part h3 { font-weight: 800; font-size: 1rem; color: var(--mute); border-top: 1px solid var(--line); padding-top: 10px; margin-bottom: 6px; }

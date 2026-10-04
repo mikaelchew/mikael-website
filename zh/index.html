@@ -7,7 +7,8 @@
   <script>
     // Decided before first paint: the scroll-driven map runs only with motion allowed and a
     // device that can carry it. js/map.js may still drop to the static map after 30 slow frames.
-    if (!matchMedia('(prefers-reduced-motion: reduce)').matches && !(navigator.deviceMemory && navigator.deviceMemory <= 2)) document.documentElement.classList.add('motion');
+    // Phones get 'swipe' instead: the page scrolls freely and the chapters are a swipeable row.
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches && !(navigator.deviceMemory && navigator.deviceMemory <= 2)) document.documentElement.classList.add(matchMedia('(max-width: 900px)').matches ? 'swipe' : 'motion');
   </script>
 
   <meta name="description" content="Mikael Chew：作家、導師、播客《The Long Game》主持人。23 年直銷資歷，從前線走到企業管理，幫助領袖以正道致勝。">
@@ -144,7 +145,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
           <span class="sub num when-prelaunch" data-en="Ebook RM 29.90 · on sale 20 October" data-zh="電子書 RM 29.90・10月20日上市">電子書 RM 29.90・10月20日上市</span>
           <span class="sub num when-launched" data-en="Ebook RM 29.90 · on sale now" data-zh="電子書 RM 29.90・現已上市">電子書 RM 29.90・現已上市</span>
         </div>
-        <p class="cue"><span class="follow" data-en="Scroll to follow the route through 13 chapters." data-zh="往下捲動，沿著路線走過13章。">往下捲動，沿著路線走過13章。</span><a href="#chapters" data-en="Skip the map" data-zh="跳過地圖">跳過地圖</a></p>
+        <p class="cue"><span class="follow" data-en="Scroll to follow the route through 13 chapters." data-zh="往下捲動，沿著路線走過13章。">往下捲動，沿著路線走過13章。</span><span class="follow-swipe" data-en="Swipe the chapter cards below the map to follow the route." data-zh="左右滑動地圖下方的章節卡，沿著路線走過13章。">左右滑動地圖下方的章節卡，沿著路線走過13章。</span><a href="#chapters" data-en="Skip the map" data-zh="跳過地圖">跳過地圖</a></p>
       </div>
 
       <div class="briefing panel off" id="briefing" role="region" aria-label="Current chapter">
@@ -196,6 +197,10 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       </a>
 
       <nav class="rail" id="rail" aria-label="Jump to a chapter"></nav>
+
+      <!-- phones (html.swipe): js/map.js fills this with one card per chapter; swiping moves the route -->
+      <div class="strip" id="strip" role="region" aria-label="十三章" data-aria-zh="十三章" tabindex="0"></div>
+      <div class="strip-dots" id="strip-dots" aria-hidden="true"></div>
     </div>
   </section>
 
@@ -263,6 +268,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   <section class="sec wrap" aria-labelledby="co-h">
     <h2 class="sec-h" id="co-h"><span data-en="Colleagues on Mikael" data-zh="同業怎麼說">同業怎麼說</span><span class="zh" data-en="via LinkedIn" data-zh="來自 LinkedIn">來自 LinkedIn</span></h2>
     <!-- quotes:all -->
+    <div class="c-rail" tabindex="0" role="region" aria-label="來自 LinkedIn 的推薦" data-aria-zh="來自 LinkedIn 的推薦">
     <div class="c-grid all">
       <article class="c"><blockquote data-en="A tower of strength and leadership. He has mentored the entire Asia Pacific group of sales. His skill set is nothing short of extraordinary — organised, talented, multi-lingual, and an overall coordinator of organising a team." data-zh="他是團隊的中流砥柱。他帶領了整個亞太區的銷售團隊。他的能力非凡：高效有序、多才多藝、精通多語，是團隊的全方位核心人物。">他是團隊的中流砥柱。他帶領了整個亞太區的銷售團隊。他的能力非凡：高效有序、多才多藝、精通多語，是團隊的全方位核心人物。</blockquote>
         <footer><b>Tessa Tremain</b><span data-en="Senior Presidential Director, Direct Selling (APAC)" data-zh="資深總裁級總監，直銷業（亞太）">資深總裁級總監，直銷業（亞太）</span></footer></article>
@@ -280,6 +286,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
         <footer><b>James Loh</b><span data-en="Independent Industry Professional" data-zh="獨立行業專業人士">獨立行業專業人士</span></footer></article>
       <article class="c"><blockquote data-en="A standout professional in MLM. Mikael's dedication and passion are unparalleled. As a speaker, he captivates everyone — when he speaks, people ‘tabik’! A top-notch professional and natural leader. No bluff one!" data-zh="MLM 行業中的傑出專業人士。Mikael 的投入和熱情無可比擬。作為演講者，他總能抓住全場，他一開口，大家都「tabik」！絕對的頂尖專業，貨真價實。">MLM 行業中的傑出專業人士。Mikael 的投入和熱情無可比擬。作為演講者，他總能抓住全場，他一開口，大家都「tabik」！絕對的頂尖專業，貨真價實。</blockquote>
         <footer><b>Dyi Wong</b><span data-en="Marketing Manager · Ngai Seik Leatherwaren" data-zh="行銷經理 · Ngai Seik Leatherwaren">行銷經理 · Ngai Seik Leatherwaren</span></footer></article>
+    </div>
     </div>
     <!-- /quotes:all -->
   </section>

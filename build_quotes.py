@@ -30,7 +30,9 @@ def render(quotes):
             '        <footer><b>%s</b><span data-en="%s" data-zh="%s">%s</span></footer></article>'
             % (attr(q["en"]), attr(q["zh"]), esc(q["en"]), esc(q["name"]),
                attr(q["role_en"]), attr(q["role_zh"]), esc(q["role_en"])))
-    return '    <div class="c-grid all">\n%s\n    </div>' % "\n".join(items)
+    # one row: js/site.js moves it right-to-left as the page scrolls; swipe or arrow keys to browse
+    return ('    <div class="c-rail" tabindex="0" role="region" aria-label="Recommendations from LinkedIn" '
+            'data-aria-zh="來自 LinkedIn 的推薦">\n    <div class="c-grid all">\n%s\n    </div>\n    </div>' % "\n".join(items))
 
 
 def main():

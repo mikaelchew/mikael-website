@@ -151,6 +151,8 @@ def transform_html(html, relpath):
     # 3. img alt
     for el in doc.xpath('//*[@data-alt-zh]'):
         el.set('alt', el.get('data-alt-zh') or '')
+    for el in doc.xpath('//*[@data-aria-zh]'):
+        el.set('aria-label', el.get('data-aria-zh'))
 
     # 4. title + description
     if relpath in OVERRIDES:

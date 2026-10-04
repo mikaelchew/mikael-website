@@ -188,6 +188,36 @@
     seals.forEach(function (s) { io.observe(s); });
   }
 
+  // ---------- Recommendations: one row that moves right-to-left as the page scrolls ----------
+  // While .linked, the row's horizontal position follows how far the section has travelled
+  // through the viewport (snapping off so it glides). Touching, dragging, sideways wheel or a
+  // key hands it back to the reader until it leaves the screen. Reduced motion: a still row.
+  function initQuoteRail() {
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    document.querySelectorAll('.c-rail').forEach(function (rail) {
+      var linked = true, onScreen = false, raf = 0;
+      rail.classList.add('linked');
+      function release() { if (linked) { linked = false; rail.classList.remove('linked'); } }
+      ['pointerdown', 'touchstart', 'keydown'].forEach(function (t) { rail.addEventListener(t, release, { passive: true }); });
+      rail.addEventListener('wheel', function (e) { if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) release(); }, { passive: true });
+      function frame() {
+        raf = 0;
+        if (!linked) return;
+        var r = rail.getBoundingClientRect(), vh = window.innerHeight;
+        var p = Math.min(1, Math.max(0, (vh * 0.9 - r.top) / (vh * 0.8 + r.height)));
+        rail.scrollLeft = p * (rail.scrollWidth - rail.clientWidth);
+      }
+      function kick() { if (onScreen && linked && !raf) raf = requestAnimationFrame(frame); }
+      new IntersectionObserver(function (e) {
+        onScreen = e[0].isIntersecting;
+        if (!onScreen && !linked) { linked = true; rail.classList.add('linked'); }
+        kick();
+      }).observe(rail);
+      window.addEventListener('scroll', kick, { passive: true });
+      window.addEventListener('resize', kick);
+    });
+  }
+
   // ---------- Writing: scheduled posts, topic filter, show more ----------
   // Anything with a future data-pubdate (index entries, next/previous links) stays hidden
   // until that local date, so a post can be published ahead and appear on its day.
@@ -238,7 +268,7 @@
   // ---------- Motion: scroll reveals, the About timeline, count-up figures ----------
   // Only below-the-fold elements are hidden, so nothing on the first screen waits for JS
   // (no effect on LCP). Without IntersectionObserver or with reduced motion, nothing hides.
-  var REVEAL = '.sec-h, .cards > *, .c-grid .c, .dispatch, .legend-group, .lines li, .faq details, ' +
+  var REVEAL = '.sec-h, .cards > *, .c-grid:not(.all) .c, .dispatch, .legend-group, .lines li, .faq details, ' +
     '.side, .print, .band-in > *, .glance > *, .quote, .free-card, .audience > div, .author, .buy-card, ' +
     '.chapter-cta, .post-nav, .related li, .story .copy > *';
   function countUp(el) {
@@ -297,5 +327,6 @@
   initBuyForm();
   initSeals();
   initWriting();
+  initQuoteRail();
   initMotion();
 })();

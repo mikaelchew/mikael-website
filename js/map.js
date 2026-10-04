@@ -79,7 +79,74 @@
     [intro, briefing, finale].forEach(function (p) { p.classList.remove('off'); p.removeAttribute('inert'); });
   }
 
+  if (html.classList.contains('swipe')) { initSwipe(); return; }
   if (!html.classList.contains('motion')) { toStatic(); return; }
+
+  // ---------- phones: swipe mode ----------
+  // The page scrolls freely. A framed, zoomed map sits under the intro, and the chapters are a
+  // row of cards (#strip) you swipe; the route draws to the card in view and the map pans to it.
+  function initSwipe() {
+    var strip = $('strip'), dots = $('strip-dots'), link = $('b-link');
+    var cards = CH.map(function (c, i) {
+      var a = document.createElement('article');
+      a.className = 'card'; a.dataset.i = i;
+      a.setAttribute('aria-label', (zh ? '第' + (i + 1) + '章：' : 'Chapter ' + (i + 1) + ': ') + c.title);
+      a.innerHTML = '<div class="part"></div><div class="n num"></div><h3></h3><p></p>';
+      a.querySelector('.part').textContent = parts[c.part] || '';
+      a.querySelector('.n').textContent = pad(i);
+      a.querySelector('h3').textContent = c.title;
+      a.querySelector('p').textContent = c.line;
+      var alt = items[i].querySelector('.alt').cloneNode(true); // keeps its own lang
+      alt.className = 'alt'; a.insertBefore(alt, a.querySelector('p'));
+      if (c.free && link) { var l = link.cloneNode(true); l.removeAttribute('id'); l.hidden = false; a.appendChild(l); }
+      strip.appendChild(a);
+      dots.appendChild(document.createElement('span'));
+      return a;
+    });
+    var dotEls = [].slice.call(dots.children);
+    route.style.strokeDasharray = L;
+    var len = at[0], anim = 0, cur = -1;
+    function place(l) {
+      route.style.strokeDashoffset = L - l;
+      var q = route.getPointAtLength(l);
+      nib.setAttribute('transform', 'translate(' + q.x.toFixed(1) + ',' + q.y.toFixed(1) + ')');
+      var w = cam.clientWidth, h = cam.clientHeight, s = w / 700;
+      var tx = Math.min(0, Math.max(w - 2400 * s, w / 2 - q.x * s));
+      var ty = Math.min(0, Math.max(h - 1500 * s, h / 2 - q.y * s));
+      map.style.transform = 'translate(' + tx.toFixed(1) + 'px,' + ty.toFixed(1) + 'px) scale(' + s.toFixed(4) + ')';
+    }
+    function go(i, now) {
+      if (i === cur) return;
+      cur = i;
+      wps.forEach(function (w, j) { w.classList.toggle('done', j < i); w.classList.toggle('now', j === i); });
+      cards.forEach(function (c, j) { c.classList.toggle('now', j === i); });
+      dotEls.forEach(function (d, j) { d.classList.toggle('done', j < i); d.classList.toggle('now', j === i); });
+      cancelAnimationFrame(anim);
+      if (now) { len = at[i]; place(len); return; }
+      var from = len, to = at[i], t0 = 0;
+      anim = requestAnimationFrame(function step(t) {
+        t0 = t0 || t;
+        var u = Math.min(1, (t - t0) / 650), e = 1 - Math.pow(1 - u, 3); // ease-out
+        len = from + (to - from) * e; place(len);
+        if (u < 1) anim = requestAnimationFrame(step);
+      });
+    }
+    // the card most in view (within the strip) is the current chapter
+    var seen = {};
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { seen[e.target.dataset.i] = e.intersectionRatio; });
+      var best = cur, top = 0;
+      Object.keys(seen).forEach(function (k) { if (seen[k] > top) { top = seen[k]; best = +k; } });
+      if (top >= 0.55) go(best);
+    }, { root: strip, threshold: [0.25, 0.55, 0.8, 1] });
+    cards.forEach(function (c) { io.observe(c); });
+    // tapping a waypoint on the map brings its card into view
+    wps.forEach(function (w) {
+      w.addEventListener('click', function () { cards[+w.dataset.i].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' }); });
+    });
+    go(0, true);
+    addEventListener('resize', function () { place(len); });
+  }
 
   // ---------- motion mode ----------
   // Panels start hidden in motion mode only; without JS they stay usable (no inert in the HTML).
