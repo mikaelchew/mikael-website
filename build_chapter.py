@@ -27,8 +27,8 @@ ZH_FRAGMENT = os.path.join(ROOT, 'content', 'chapter-1.zh.html')
 # --- per edition: chapter boundaries, where the mid-chapter soft CTA goes (before this
 # heading), the tip bullet the manuscript uses, and the figure file suffix ---
 EDITIONS = {
-    'zh': {'start': '第一章：', 'end': '第二章：', 'mid': '用Ikigai找到你獨特的切入點', 'bullet': '・', 'suffix': ''},
-    'en': {'start': 'Chapter 1:', 'end': 'Chapter 2:', 'mid': 'Ikigai: finding the angle', 'bullet': '·', 'suffix': '-en'},
+    'zh': {'start': '第一章：', 'end': '第二章：', 'mid': '找到你獨特的切入點', 'bullet': '・', 'suffix': ''},
+    'en': {'start': 'Chapter 1:', 'end': 'Chapter 2:', 'mid': 'the angle that', 'bullet': '·', 'suffix': '-en'},
 }
 CJK = re.compile(r'[㐀-鿿]')
 # --- WhatsApp: Mikael's number, international format, no + and no spaces ---

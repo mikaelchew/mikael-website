@@ -104,3 +104,29 @@
 .blog-show-more { margin-top: 36px; }
 @media (max-width: 1100px) { .dispatches { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 700px) { .dispatches { grid-template-columns: minmax(0, 1fr); } .dispatch.top { grid-column: auto; } }
+
+/* ---------- connect: a business card for people Mikael meets (connect.html, QR at #qr) ---------- */
+.connect { position: relative; padding: clamp(100px, 12vw, 150px) var(--gut) clamp(48px, 7vw, 96px); }
+.connect::before { content: ''; position: absolute; inset: 0; background: url(../images/map/terrain.svg) center / cover no-repeat; opacity: .35; pointer-events: none; }
+.connect-card { position: relative; display: grid; grid-template-columns: minmax(150px, 260px) minmax(0, 1fr); gap: clamp(24px, 4vw, 56px); align-items: center; max-width: 920px; margin: 0 auto; }
+.connect-photo { position: relative; margin: 0; transform: rotate(-2deg); }
+.connect-photo img { display: block; width: 100%; height: auto; box-shadow: 0 2px 3px rgba(0, 0, 0, .35), 0 24px 40px -12px rgba(0, 0, 0, .6); }
+.connect-photo .tape { position: absolute; top: -12px; left: 50%; z-index: 1; width: 84px; height: 26px; transform: translateX(-50%) rotate(3deg); background: rgba(242, 242, 238, .55); }
+.connect h1 { font-weight: 900; font-size: clamp(2.4rem, 5.4vw, 4rem); line-height: .95; letter-spacing: -.02em; }
+.connect h1 .zh { display: block; margin-top: .25em; font-family: var(--display-zh); font-size: .62em; letter-spacing: .14em; color: var(--red-lit); }
+.connect-line { margin-top: .9em; max-width: 44ch; font-size: 1.1rem; line-height: 1.5; }
+.connect-actions { display: grid; gap: 12px; margin-top: 1.4em; max-width: 380px; }
+.connect-actions .btn { justify-content: center; min-height: 52px; }
+.connect-wa { gap: .55em; font-size: 1.1rem; }
+.connect-wa svg { width: 1.3em; height: 1.3em; flex: none; }
+.connect-qr { position: relative; max-width: 920px; margin: clamp(56px, 8vw, 96px) auto 0; padding-top: clamp(32px, 5vw, 56px); border-top: 1px solid var(--line); text-align: center; scroll-margin-top: 72px; }
+.connect-qr h2 { font-weight: 900; font-size: clamp(1.6rem, 3vw, 2.2rem); line-height: 1.1; }
+.qr-paper { display: inline-block; margin-top: 18px; padding: 14px; background: #fff; box-shadow: 0 2px 3px rgba(0, 0, 0, .35), 0 24px 40px -14px rgba(0, 0, 0, .6); }
+.qr-paper img { display: block; width: min(300px, 70vw); height: auto; }
+.qr-url { margin-top: 14px; font-weight: 800; color: var(--mute); }
+@media (max-width: 700px) {
+  .connect-card { grid-template-columns: minmax(0, 1fr); justify-items: center; text-align: center; }
+  .connect-photo { width: 58%; max-width: 230px; }
+  .connect-line { margin-inline: auto; }
+  .connect-actions { width: 100%; margin-inline: auto; }
+}
