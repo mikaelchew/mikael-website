@@ -124,6 +124,7 @@ class ChapterOneEnglishTest(unittest.TestCase):
 class StoreLinksTest(unittest.TestCase):
     """Each edition card links to its live store pages so readers can pre-order now (8 Oct 2026)."""
     ZH_KINDLE = "https://www.amazon.com/dp/B0HLDGD5M3"
+    ZH_KOBO = "https://www.kobo.com/my/en/ebook/vjsqCIRFwD6M-4tR5sDABQ"
     EN_KINDLE = "https://www.amazon.com/dp/B0HMBV8RJ3"
     EN_PLAY = "https://play.google.com/store/books/details?id=8tsWEgAAQBAJ"
 
@@ -133,7 +134,7 @@ class StoreLinksTest(unittest.TestCase):
     def test_edition_cards_link_to_stores(self):
         zh = self.card("images/book-cover.jpg").xpath('.//*[contains(@class,"ed-stores")]//a/@href')
         en = self.card("images/book-cover-en.jpg").xpath('.//*[contains(@class,"ed-stores")]//a/@href')
-        self.assertEqual(zh, [self.ZH_KINDLE])
+        self.assertEqual(zh, [self.ZH_KINDLE, self.ZH_KOBO])
         self.assertEqual(en, [self.EN_KINDLE, self.EN_PLAY])
         for a in doc("book.html").xpath('//*[contains(@class,"ed-stores")]//a'):
             self.assertEqual(a.get("target"), "_blank")
