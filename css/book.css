@@ -67,6 +67,7 @@
 .edition p { margin-bottom: .6em; }
 .ed-lang { font-size: .85rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--red-lit); }
 .ed-meta { color: var(--mute); }
+.ed-isbn { font-size: .92rem; font-weight: 600; letter-spacing: .02em; color: var(--mute); }
 .edition .field { margin-top: 10px; }
 [data-english="off"] .editions { grid-template-columns: minmax(0, 1fr); max-width: 560px; }
 

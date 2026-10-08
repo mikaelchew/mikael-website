@@ -121,3 +121,22 @@ class LaunchWeekWorkbookTest(unittest.TestCase):
     def test_script_hides_expired_offers(self):
         js = read("js/site.js")
         self.assertIn("data-until", js)
+
+
+class IsbnTest(unittest.TestCase):
+    """eISBNs from PNM: Chinese 978-629-93072-0-4 (30 Sep 2026), English 978-629-93072-1-1 (7 Oct 2026)."""
+    ZH, EN = "978-629-93072-0-4", "978-629-93072-1-1"
+
+    def test_each_edition_shows_its_eisbn(self):
+        root = doc("book.html")
+        cards = root.xpath('//*[contains(@class,"edition")][.//img]')
+        text = {c.xpath('string(.//img/@src)'): c.text_content() for c in cards}
+        self.assertIn(self.ZH, text["images/book-cover.jpg"])
+        self.assertIn(self.EN, text["images/book-cover-en.jpg"])
+
+    def test_structured_data_carries_the_isbns(self):
+        root = doc("book.html")
+        book = next(b for b in (json.loads(s.text) for s in root.xpath('//script[@type="application/ld+json"]'))
+                    if b.get("@type") == "Book")
+        isbns = {e["inLanguage"]: e.get("isbn") for e in book["workExample"]}
+        self.assertEqual(isbns, {"zh-Hant": "9786299307204", "en": "9786299307211"})
