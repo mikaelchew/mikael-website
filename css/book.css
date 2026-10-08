@@ -68,6 +68,13 @@
 .ed-lang { font-size: .85rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--red-lit); }
 .ed-meta { color: var(--mute); }
 .ed-isbn { font-size: .92rem; font-weight: 600; letter-spacing: .02em; color: var(--mute); }
+/* store links on each edition card: tappable outlined buttons */
+.ed-stores { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; margin: .9em 0 .7em; }
+.ed-stores-label { flex-basis: 100%; font-size: .9rem; font-weight: 800; color: var(--red-lit); }
+.ed-stores a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 1em; border: 1.5px solid rgba(242, 242, 238, .6);
+  color: var(--acetate); font-weight: 800; text-decoration: none; transition: border-color 150ms ease, background-color 150ms ease; }
+.ed-stores a::after { content: '\2197'; margin-left: .45em; font-weight: 600; color: var(--mute); }
+.ed-stores a:hover { border-color: var(--red-lit); background: rgba(240, 112, 95, .12); }
 .edition .field { margin-top: 10px; }
 [data-english="off"] .editions { grid-template-columns: minmax(0, 1fr); max-width: 560px; }
 

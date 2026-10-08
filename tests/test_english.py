@@ -121,6 +121,30 @@ class ChapterOneEnglishTest(unittest.TestCase):
             self.assertTrue(os.path.exists(os.path.join(ROOT, s)), s)
 
 
+class StoreLinksTest(unittest.TestCase):
+    """Each edition card links to its live store pages so readers can pre-order now (8 Oct 2026)."""
+    ZH_KINDLE = "https://www.amazon.com/dp/B0HLDGD5M3"
+    EN_KINDLE = "https://www.amazon.com/dp/B0HMBV8RJ3"
+    EN_PLAY = "https://play.google.com/store/books/details?id=8tsWEgAAQBAJ"
+
+    def card(self, cover):
+        return doc("book.html").xpath('//*[contains(concat(" ", normalize-space(@class), " "), " edition ")][.//img[@src="%s"]]' % cover)[0]
+
+    def test_edition_cards_link_to_stores(self):
+        zh = self.card("images/book-cover.jpg").xpath('.//*[contains(@class,"ed-stores")]//a/@href')
+        en = self.card("images/book-cover-en.jpg").xpath('.//*[contains(@class,"ed-stores")]//a/@href')
+        self.assertEqual(zh, [self.ZH_KINDLE])
+        self.assertEqual(en, [self.EN_KINDLE, self.EN_PLAY])
+        for a in doc("book.html").xpath('//*[contains(@class,"ed-stores")]//a'):
+            self.assertEqual(a.get("target"), "_blank")
+            self.assertIn("noopener", a.get("rel"))
+
+    def test_buy_section_has_english_kindle(self):
+        a = doc("book.html").xpath('//*[@id="buy"]//a[@href="%s"]' % self.EN_KINDLE)
+        self.assertTrue(a)
+        self.assertEqual(a[0].get("data-edition"), "en")
+
+
 class SiteCopyTest(unittest.TestCase):
     def test_no_chinese_only_claims(self):
         for page in ("book.html", "chapter-1.html", "llms.txt"):

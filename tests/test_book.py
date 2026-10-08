@@ -24,7 +24,8 @@ class BookTest(unittest.TestCase):
             src = read(page)
             self.assertNotIn("AMAZON_URL_PENDING", src, page)
             hrefs = doc(page).xpath('//a[contains(@href,"amazon.")]/@href')
-            self.assertEqual(hrefs, ["https://www.amazon.com/dp/B0HLDGD5M3"], page)
+            # the two Kindle editions only: Chinese B0HLDGD5M3, English B0HMBV8RJ3 (8 Oct 2026)
+            self.assertEqual(sorted(set(hrefs)), ["https://www.amazon.com/dp/B0HLDGD5M3", "https://www.amazon.com/dp/B0HMBV8RJ3"], page)
 
     def test_buy_shown_by_phase_not_hidden_attr(self):
         buy = doc("book.html").xpath('//*[@id="buy"]')[0]
