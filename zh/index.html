@@ -35,6 +35,8 @@
 
   <!-- Fonts (self-hosted) and styles -->
   <link rel="preload" as="font" type="font/woff2" href="../vendor/fonts/overpass-900-latin.woff2" crossorigin>
+  <!-- the map terrain is the largest thing on a phone screen (swipe mode): fetch it early -->
+  <link rel="preload" as="image" href="../images/map/terrain.svg" fetchpriority="high">
   <link rel="stylesheet" href="../vendor/fonts/site-fonts.css">
   <link rel="stylesheet" href="../css/site.css">
   <link rel="stylesheet" href="../css/map.css">
@@ -186,7 +188,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
         <span class="vs cjk-display" lang="zh-Hant">直銷孫子兵法之</span><span class="v cjk-display" lang="zh-Hant">不戰而勝</span>
       </div>
 
-      <a class="dossier" href="book.html" aria-label="The book: 直銷孫子兵法之不戰而勝">
+      <a class="dossier" href="book.html" aria-label="本書：《直銷孫子兵法之不戰而勝》，20.10.2026 上市" data-aria-zh="本書：《直銷孫子兵法之不戰而勝》，20.10.2026 上市">
         <span class="paper">
           <span class="tape" aria-hidden="true"></span>
           <img src="../images/book-cover.jpg" width="700" height="1120" alt="書封：《直銷孫子兵法之不戰而勝》，周俊德 著" data-alt-zh="書封：《直銷孫子兵法之不戰而勝》，周俊德 著">

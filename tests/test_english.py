@@ -55,13 +55,28 @@ class BookPageTest(unittest.TestCase):
         self.assertEqual(len(forms), 1)
         radios = forms[0].xpath('.//input[@type="radio"][@name="edition"]')
         self.assertEqual(sorted(r.get("value") for r in radios), ["en", "zh"])
-        zh = [r for r in radios if r.get("value") == "zh"][0]
         en = [r for r in radios if r.get("value") == "en"][0]
-        self.assertIsNotNone(zh.get("checked"))  # the edition that is always on sale is the default
         # the English choice only shows when the delivery script sends English files
         self.assertTrue(en.xpath('ancestor::*[contains(@class,"when-en-live")]'))
         js = read("js/site.js")
         self.assertIn("edition: edition", js)
+
+    def test_buyer_picks_the_edition_explicitly(self):
+        """Most readers read Chinese but land on the English-first site: no edition is preselected
+        (a default sent English buyers' money to the wrong book), and the form won't submit without
+        a choice. When English isn't on sale the hidden choice falls back to Chinese in js/site.js."""
+        for page in ("book.html", "early-readers.html", "zh/book.html", "zh/early-readers.html"):
+            radios = doc(page).xpath('//form[contains(@class,"book-buy-form")]//input[@name="edition"]')
+            self.assertEqual(len(radios), 2, page)
+            for r in radios:
+                self.assertIsNone(r.get("checked"), page)
+                self.assertIsNotNone(r.get("required"), page)
+        js = read("js/site.js")
+        self.assertNotIn("edition.value = 'en'", js)
+        # a choice the buyer can't see (English not on sale, or a page that hides it, such as
+        # early-readers.html) never sends English: it falls back to Chinese and stops being required
+        self.assertIn("getComputedStyle(choice).display === 'none'", js)
+        self.assertIn("form.elements.edition.value = 'zh'", js)
 
     def test_live_english_needs_its_kindle_link(self):
         root = doc("book.html")

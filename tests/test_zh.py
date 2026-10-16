@@ -72,3 +72,23 @@ class ZhHeadingBreaksTest(unittest.TestCase):
         self.assertIn("願景、使命<wbr>與價值觀", out)
         self.assertIn("直銷孫子兵法之<wbr>不戰而勝", out)
         self.assertIn("這是內文的段落", out)  # body text is left alone
+
+
+class ZhDescriptionTest(unittest.TestCase):
+    """The fallback zh description is the first real paragraph, not a short label such as a
+    post's category (25 older posts shared 「團隊建設」 as their whole description)."""
+
+    def test_skips_short_labels(self):
+        import build_zh
+        page = ('<!DOCTYPE html><html lang="en"><head><title>t</title><meta name="description" content="d"></head><body>'
+                '<h1 data-en="x" data-zh="標題">x</h1><p data-en="Team" data-zh="團隊建設">Team</p>'
+                '<p data-en="Long" data-zh="有人加入團隊後的頭72小時，決定他會成為長期夥伴，還是90天內就離開的人。">Long</p></body></html>')
+        root = lxml.html.fromstring(build_zh.transform_html(page, "blog/x.html"))
+        self.assertTrue(root.xpath('string(//meta[@name="description"]/@content)').startswith("有人加入團隊後"))
+
+    def test_built_posts_have_real_descriptions(self):
+        import glob
+        from tests.helpers import doc
+        for p in glob.glob("zh/blog/*.html"):
+            desc = doc(p).xpath('string(//meta[@name="description"]/@content)')
+            self.assertGreaterEqual(len(desc), 20, (p, desc))

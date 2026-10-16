@@ -161,8 +161,10 @@ def transform_html(html, relpath):
         h1 = doc.xpath('//h1[@data-zh]')
         zh_title = (h1[0].get('data-zh') + " — Mikael Chew") if h1 else None
         # description: first <p data-zh>
-        ps = doc.xpath('//p[@data-zh]')
-        zh_desc = ps[0].get('data-zh') if ps else (h1[0].get('data-zh') if h1 else None)
+        # the first real paragraph: skip short labels such as a post's category kicker
+        ps = [re.sub(r'<[^>]+>', '', p.get('data-zh')) for p in doc.xpath('//p[@data-zh]')]
+        real = [t for t in ps if len(t) >= 20]
+        zh_desc = (real or ps)[0] if ps else (h1[0].get('data-zh') if h1 else None)
         if zh_desc and len(zh_desc) > 160:
             zh_desc = zh_desc[:157].rstrip() + "…"
     # An explicit data-zh on the description meta always wins. Without this the

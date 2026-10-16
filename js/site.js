@@ -134,10 +134,16 @@
       var msg = {
         busy: zh ? '正在前往安全付款頁面…' : 'Opening secure payment…',
         'bad-email': zh ? '電子郵件地址好像不對，請再檢查一次。' : "That email address doesn't look right. Please check it.",
-        failed: zh ? '付款無法啟動。請再試一次，或寫信到 hello@mikaelchew.com。' : 'Payment could not be started. Please try again, or email hello@mikaelchew.com.'
+        failed: zh ? '付款無法啟動。請再試一次，或寫信到 mikael@mikaelchew.com。' : 'Payment could not be started. Please try again, or email mikael@mikaelchew.com.'
       };
-      // English pages preselect the English edition once it is on sale (data/site.json "english": "live")
-      if (form.elements.edition && !zh && html.dataset.english === 'live') form.elements.edition.value = 'en';
+      // The buyer picks the edition (no default: most readers read Chinese but land on English pages).
+      // A choice the buyer can't see (English not on sale, or a page that hides it) never sends
+      // English: it falls back to Chinese and stops being required.
+      var choice = form.querySelector('.buy-edition');
+      if (form.elements.edition && (!choice || choice.hidden || getComputedStyle(choice).display === 'none')) {
+        form.querySelectorAll('input[name="edition"]').forEach(function (r) { r.required = false; });
+        form.elements.edition.value = 'zh';
+      }
       form.addEventListener('submit', function (e) {
         e.preventDefault();
         var edition = form.elements.edition ? form.elements.edition.value : 'zh';
