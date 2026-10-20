@@ -210,6 +210,8 @@ html:lang(zh-Hant) :is(h1, h2, h3) { word-break: keep-all; overflow-wrap: anywhe
 .ty { text-align: center; }
 .ty .seal { display: block; width: 120px; margin: 0 auto 1.2em; }
 .ty .btn { margin-top: 1em; }
+/* where the email went if it isn't in the inbox (Outlook/Hotmail file it under Junk) */
+.ty .ty-junk { max-width: 34em; margin: 1.2em auto 0; padding: .8em 1em; border: 1.5px solid var(--red-text); font-weight: 700; }
 
 /* ---------- footer ---------- */
 .foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; padding: 22px var(--gut); font-size: .95rem; color: var(--mute); background: var(--table); }

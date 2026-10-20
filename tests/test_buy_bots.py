@@ -51,5 +51,25 @@ class DeliveryScriptBotCheckTest(unittest.TestCase):
         self.assertRegex(self.gs, r"alertAdmin_\('Buy form rate limit")
 
 
+
+class DeliveryEmailTest(unittest.TestCase):
+    """20 Oct 2026: delivery emails with ~12 MB attachments landed in Hotmail's Junk folder.
+    The email now carries download links; the thank-you page says where the email comes from."""
+
+    def test_emails_use_download_links_with_attachment_fallback(self):
+        gs = read("book-delivery/apps-script.gs")
+        self.assertNotIn("attachments: [epub, pdf]", gs)
+        self.assertEqual(gs.count("bookFiles_(prop_("), 2)                  # zh and en
+        self.assertIn("DriveApp.Access.ANYONE_WITH_LINK", gs)                # never a dead link
+        self.assertIn("function shareBuyerFiles()", gs)
+
+    def test_thank_you_page_names_the_sender_and_junk_folder(self):
+        for page in ("book-thank-you.html", "zh/book-thank-you.html"):
+            notes = doc(page).xpath('//*[contains(@class,"ty-junk")]')
+            self.assertEqual(len(notes), 2, page)                           # paid and generic states
+            for n in notes:
+                self.assertIn("mikael@mikaelchew.com", n.text_content(), page)
+
+
 if __name__ == "__main__":
     unittest.main()
