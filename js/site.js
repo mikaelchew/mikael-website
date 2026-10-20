@@ -160,7 +160,9 @@
           method: 'POST',
           headers: { 'Content-Type': 'text/plain;charset=utf-8' },
           // edition 'zh' or 'en' tells the delivery script which files to send
-          body: JSON.stringify({ action: 'buy', name: form.elements.name.value, email: form.elements.email.value, edition: edition })
+          // hp (honeypot) and t (ms since the page started loading) let the delivery script refuse bots
+          body: JSON.stringify({ action: 'buy', name: form.elements.name.value, email: form.elements.email.value, edition: edition,
+            hp: form.elements.website ? form.elements.website.value : '', t: Math.round(performance.now()) })
         })
           .then(function (r) { return r.json(); })
           .then(function (res) {

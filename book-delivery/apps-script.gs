@@ -305,6 +305,49 @@ function json_(obj) {
 }
 
 /**
+ * Bot checks for the buy form (20 Oct 2026: card payments are on, so scripted submissions could
+ * use the form to test stolen cards). The site sends hp (a honeypot people never see) and t
+ * (ms since the page started loading). Returns a reason to refuse, or '' to allow.
+ * Requests without t (posted straight to this endpoint, or from a page cached before the site
+ * change) are refused, so deploy this at least 15 minutes after the site change goes live.
+ */
+var MIN_FORM_MS = 3000;          // a person scrolls, picks an edition and types; a bot posts at once
+var PER_EMAIL_PER_HOUR = 3;      // bills per email address per hour
+var ALL_PER_10_MIN = 30;         // bills across the whole site per 10 minutes
+
+function botCheck_(p, email) {
+  if (String(p.hp || '') !== '') return 'honeypot';
+  var t = Number(p.t);
+  if (!(t >= MIN_FORM_MS)) return 'too-fast';
+  var cache = CacheService.getScriptCache();
+  if (!countUnder_(cache, 'buy-em:' + email.toLowerCase(), PER_EMAIL_PER_HOUR, 3600)) return 'email-limit';
+  if (!countUnder_(cache, 'buy-all', ALL_PER_10_MIN, 600)) {
+    if (!cache.get('buy-all-alerted')) {
+      cache.put('buy-all-alerted', '1', 600);
+      alertAdmin_('Buy form rate limit hit',
+        'More than ' + ALL_PER_10_MIN + ' purchase attempts in 10 minutes. New bills are refused until the window passes. ' +
+        'If this is a real rush of buyers, raise ALL_PER_10_MIN in the script; if not, check the Billplz collection for junk bills.');
+    }
+    return 'site-limit';
+  }
+  return '';
+}
+
+/** Increment a cache counter; false once it has reached `max` within `seconds`. */
+function countUnder_(cache, key, max, seconds) {
+  var lock = LockService.getScriptLock();
+  lock.waitLock(5000);
+  try {
+    var n = Number(cache.get(key) || 0);
+    if (n >= max) return false;
+    cache.put(key, String(n + 1), seconds);   // the window restarts on each counted bill
+    return true;
+  } finally {
+    lock.releaseLock();
+  }
+}
+
+/**
  * Create a Billplz bill for one purchase and return its payment URL.
  * callback_url is REQUIRED by the Billplz API and cannot be set on a collection,
  * which is why every purchase gets its own bill created here rather than using a
@@ -316,6 +359,11 @@ function handleBuy_(p) {
   var lang  = (p.edition || p.lang) === 'en' ? 'en' : 'zh';   // the site sends "edition"
   if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
     return json_({ error: 'bad-email' });
+  }
+  var refused = botCheck_(p, email);
+  if (refused) {
+    console.warn('Buy refused (' + refused + '): ' + email);
+    return json_({ error: 'failed' });   // same reply as any failure: nothing for a bot to learn
   }
   var exec = ScriptApp.getService().getUrl();
   var res = UrlFetchApp.fetch(apiBase_() + '/bills', {

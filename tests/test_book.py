@@ -37,7 +37,7 @@ class BookTest(unittest.TestCase):
     def test_buy_form_and_notes_carried_over(self):
         root = doc("book.html")
         form = root.xpath('//form[contains(@class,"book-buy-form")]')[0]
-        self.assertEqual(sorted(form.xpath('.//input/@name')), ["edition", "edition", "email", "name"])
+        self.assertEqual(sorted(form.xpath('.//input/@name')), ["edition", "edition", "email", "name", "website"])
         self.assertTrue(form.xpath('.//*[contains(@class,"book-buy-status")][@role="status"]'))
         text = root.xpath('//*[@id="buy"]')[0].text_content()
         for must in ("RM 29.90", "USD 9.99", "online banking (FPX)", "Ignite Ventures", "Refund policy"):
