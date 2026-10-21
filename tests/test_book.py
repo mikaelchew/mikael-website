@@ -66,7 +66,8 @@ class BookTest(unittest.TestCase):
     def test_kit_forms_and_tags(self):
         root = doc("book.html")
         tags = sorted(root.xpath('//form[@data-ajax]//input[@name="tags"]/@value'))
-        self.assertEqual(tags, ["book-chapter", "book-english", "book-launch", "book-print"])
+        # book-english (the English pre-order list) went with the pre-order copy on 21 Oct 2026
+        self.assertEqual(tags, ["book-chapter", "book-launch", "book-print"])
 
     def test_no_freedom_promise_or_stat_bar(self):
         text = doc("book.html").text_content()

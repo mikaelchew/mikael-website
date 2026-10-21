@@ -86,9 +86,11 @@ class BookPageTest(unittest.TestCase):
         for a in en_kindle:
             self.assertTrue(a.xpath('ancestor-or-self::*[contains(@class,"when-en-live")]'))
 
-    def test_english_preorder_fallback_present(self):
-        root = doc("book.html")
-        self.assertTrue(root.xpath('//*[contains(@class,"when-en-preorder")]'))
+    def test_no_leftover_coming_soon_copy(self):
+        # the English edition went on sale 20 Oct 2026; its pre-order copy was removed on 21 Oct
+        self.assertEqual(site().get("english"), "live")
+        self.assertNotIn("coming soon", read("book.html").lower())
+        self.assertFalse(doc("book.html").xpath('//*[contains(@class,"when-en-preorder")]'))
 
     def test_faq_says_english_edition_exists(self):
         root = doc("book.html")

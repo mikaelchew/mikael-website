@@ -51,6 +51,16 @@ in `book.html` (the comment by the Amazon button; `tests/test_english.py` fails 
 same endpoint as before: `{"action": "buy", "name": …, "email": …, "edition": "zh" | "en"}`. A request with no
 `edition` is a Chinese-edition purchase. The script must carry `edition` through the Billplz bill to delivery.
 
+**Delivery guarantee (V11, 21 Oct 2026):** `book-delivery/apps-script.gs` is the source of truth for the live
+`Code.gs` (paste it, then Deploy → Manage deployments → edit → New version; never a new deployment). Every
+delivery email links to `download.html?t=<signed token>&f=epub|pdf` (built by `dlPage_(billId, lang, f)`), which
+asks the script (`?dl=`) to log the download in the orders sheet's "events" tab and returns the Drive file. The
+thank-you page asks `?verify=<bill id>` and shows download buttons once Billplz confirms payment. `resend.html`
+POSTs `{action: 'resend'}`; a new address needs the purchase's Bill ID. `dailyDownloadCheck` (10:00 MYT trigger)
+reminds buyers with no download after 24 h, once, and emails Mikael a summary. The link-signing key `DL_SECRET`
+lives in Script Properties and is created automatically. The book repo's `course.gs` uses `dlPage_` too.
+The English pre-order copy on `book.html` was removed on 21 Oct, after the English edition went on sale.
+
 **Chapter 1:** `build_chapter.py` takes both manuscripts. `chapter-1.html` is the English edition's Chapter 1;
 the Chinese original goes to `content/chapter-1.zh.html`, which `build_zh.py` swaps into `zh/chapter-1.html`.
 
