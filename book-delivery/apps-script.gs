@@ -123,7 +123,7 @@ function logOrder_(bill, status, note) {
  * "anyone with the link can view" (run shareBuyerFiles() once). If a file isn't shared, the
  * email falls back to attachments and you get an alert, so a buyer is never sent a dead link.
  */
-function bookFiles_(epubId, pdfId) {
+function bookFiles_(epubId, pdfId, billId, lang) {
   var epub = DriveApp.getFileById(epubId), pdf = DriveApp.getFileById(pdfId);
   var shared = [epub, pdf].every(function (f) {
     return f.getSharingAccess() === DriveApp.Access.ANYONE_WITH_LINK;
@@ -134,6 +134,8 @@ function bookFiles_(epubId, pdfId) {
     return { links: false, attachments: [epub.getBlob(), pdf.getBlob()] };
   }
   var url = function (id) { return 'https://drive.google.com/uc?export=download&id=' + id; };
+  // a paid order gets its personal, tracked links; manual sends and tests get the plain Drive links
+  if (billId) return { links: true, epub: dlPage_(billId, lang, 'epub'), pdf: dlPage_(billId, lang, 'pdf') };
   return { links: true, epub: url(epubId), pdf: url(pdfId) };
 }
 
@@ -154,9 +156,10 @@ function fileButton_(href, label) {
     'text-decoration:none;font-weight:700;border-radius:3px">' + label + '</a>';
 }
 
-function sendBook_(toEmail, toName, lang) {
-  if (lang === 'en') return sendBookEn_(toEmail, toName);
-  var files = bookFiles_(prop_('EPUB_FILE_ID', ''), prop_('PDF_FILE_ID', ''));
+/** billId (optional) makes the download links personal and tracked; manual.gs calls it without one. */
+function sendBook_(toEmail, toName, lang, billId) {
+  if (lang === 'en') return sendBookEn_(toEmail, toName, billId);
+  var files = bookFiles_(prop_('EPUB_FILE_ID', ''), prop_('PDF_FILE_ID', ''), billId, 'zh');
   var name = toName || '';
   var get = files.links
     ? '<p>電子書請用下面兩個按鈕下載，兩種格式都有：</p>' +
@@ -197,8 +200,8 @@ function sendBook_(toEmail, toName, lang) {
   });
 }
 
-function sendBookEn_(toEmail, toName) {
-  var files = bookFiles_(prop_('EPUB_FILE_ID_EN', ''), prop_('PDF_FILE_ID_EN', ''));
+function sendBookEn_(toEmail, toName, billId) {
+  var files = bookFiles_(prop_('EPUB_FILE_ID_EN', ''), prop_('PDF_FILE_ID_EN', ''), billId, 'en');
   var name = toName || '';
   var get = files.links
     ? '<p>Thank you for buying <i>The Art of War for Direct Selling</i>. Download your ebook in either format:</p>' +
@@ -297,6 +300,7 @@ function doPost(e) {
     var body = {};
     try { body = JSON.parse(e.postData.contents); } catch (err) {}
     if (body.action === 'buy') return handleBuy_(body);
+    if (body.action === 'resend') return handleResend_(body);
   }
   var lock = LockService.getScriptLock();
   lock.waitLock(30000);
@@ -325,7 +329,7 @@ function doPost(e) {
       return ContentService.createTextOutput('OK');
     }
 
-    sendBook_(bill.email, bill.name, lang_(bill));
+    sendBook_(bill.email, bill.name, lang_(bill), bill.id);
     logOrder_(bill, 'delivered', 'sig=' + sigOk + '; quota_left=' + MailApp.getRemainingDailyQuota());
     // The book is out; a course problem must not make Billplz retry (that would resend the book).
     if (typeof enrollCourse_ === 'function') {
@@ -449,6 +453,8 @@ function handleBuy_(p) {
 function doGet(e) {
   var p = (e && e.parameter) ? e.parameter : {};
   if (p.unsub && typeof courseUnsubscribe_ === 'function') return courseUnsubscribe_(p.unsub);
+  if (p.verify) return handleVerify_(String(p.verify));
+  if (p.dl) return handleDownload_(String(p.dl), String(p.f || ''));
   if (p.ping) {
     return ContentService.createTextOutput('ok; mail quota left: ' + MailApp.getRemainingDailyQuota());
   }
@@ -457,11 +463,201 @@ function doGet(e) {
     if (!expected || p.token !== expected) return ContentService.createTextOutput('denied');
     var bill = fetchBill_(p.resend);
     if (bill.paid !== true) return ContentService.createTextOutput('bill not paid');
-    sendBook_(bill.email, bill.name, lang_(bill));
+    sendBook_(bill.email, bill.name, lang_(bill), bill.id);
     logOrder_(bill, 'delivered', 'manual resend');
     return ContentService.createTextOutput('resent to ' + bill.email);
   }
   return ContentService.createTextOutput('book-delivery');
+}
+
+/* ==========================================================================================
+ * Delivery guarantee (21 Oct 2026). Some delivery emails never reached buyers (Junk, or nothing
+ * at all), so the ebook no longer depends on email:
+ *  - the thank-you page asks ?verify=<bill id>; once Billplz says the bill is paid it shows
+ *    the download buttons on the page;
+ *  - every download link is personal: <site>/download.html?t=<token>&f=epub|pdf, where the
+ *    token is the bill id plus an HMAC (DL_SECRET, created on first use). The page calls
+ *    ?dl=<token>&f=..., which logs the download in the "events" tab and returns the Drive URL;
+ *  - dailyDownloadCheck() (daily trigger, installDailyTrigger()) emails anyone paid more than
+ *    24 h ago with no download one reminder, and sends the admin one summary;
+ *  - resend.html POSTs {action:'resend'}: resend to the paid address, or to a new address only
+ *    with the matching bill id. Logged and rate-limited.
+ * The four book files must be shared "anyone with the link can view" (shareBuyerFiles()).
+ * ========================================================================================== */
+var SITE = 'https://www.mikaelchew.com';
+var GUARANTEE_FROM = '2026-10-19';   // the daily check ignores orders before launch day
+
+function dlSecret_() {
+  var props = PropertiesService.getScriptProperties();
+  var s = props.getProperty('DL_SECRET');
+  if (!s) { s = Utilities.getUuid() + Utilities.getUuid(); props.setProperty('DL_SECRET', s); }
+  return s;
+}
+
+function hex_(bytes) {
+  return bytes.map(function (b) { return ('0' + (b & 0xff).toString(16)).slice(-2); }).join('');
+}
+
+/** "<bill id>.<24 hex chars>": proves the link was made by this script for that bill. */
+function dlToken_(billId) {
+  return billId + '.' + hex_(Utilities.computeHmacSha256Signature(String(billId), dlSecret_())).slice(0, 24);
+}
+
+/** The bill id a token belongs to, or null if the token is forged. */
+function dlBill_(token) {
+  token = String(token || '');
+  var i = token.lastIndexOf('.');
+  if (i < 1) return null;
+  var id = token.slice(0, i);
+  return dlToken_(id) === token ? id : null;
+}
+
+/** The buyer-facing download page for one file of one order. */
+function dlPage_(billId, lang, f) {
+  return SITE + (lang === 'en' ? '' : '/zh') + '/download.html?t=' + encodeURIComponent(dlToken_(billId)) + '&f=' + f;
+}
+
+function fileId_(lang, f) {
+  return prop_((f === 'pdf' ? 'PDF_FILE_ID' : 'EPUB_FILE_ID') + (lang === 'en' ? '_EN' : ''), '');
+}
+
+/** Sheet timestamp (Date, or "yyyy-MM-dd HH:mm:ss" in Kuala Lumpur time) -> ms. */
+function rowTime_(v) {
+  if (v instanceof Date) return v.getTime();
+  return new Date(String(v).replace(' ', 'T') + '+08:00').getTime();
+}
+
+/** Delivered orders, one per bill id (the latest row wins). */
+function deliveredOrders_() {
+  var values = sheet_().getDataRange().getValues(), byId = {};
+  for (var i = 1; i < values.length; i++) {
+    var r = values[i];
+    if (String(r[6]) !== 'delivered' || !r[1]) continue;
+    byId[String(r[1])] = { id: String(r[1]), time: rowTime_(r[0]), name: String(r[2] || ''),
+      email: String(r[3] || '').trim(), lang: String(r[8] || '') === 'en' ? 'en' : 'zh' };
+  }
+  return Object.keys(byId).map(function (k) { return byId[k]; });
+}
+
+function events_() {
+  var ss = SpreadsheetApp.openById(prop_('ORDERS_SHEET_ID', ''));
+  var sh = ss.getSheetByName('events');
+  if (!sh) { sh = ss.insertSheet('events'); sh.appendRow(['timestamp', 'bill_id', 'event', 'detail']); }
+  return sh;
+}
+
+function logEvent_(billId, event, detail) {
+  events_().appendRow([Utilities.formatDate(new Date(), 'Asia/Kuala_Lumpur', 'yyyy-MM-dd HH:mm:ss'),
+    String(billId), event, detail || '']);
+}
+
+/** GET ?verify=<bill id>: the thank-you page's check. Download links only for a paid bill. */
+function handleVerify_(billId) {
+  var bill;
+  try { bill = fetchBill_(billId); } catch (err) { return json_({ paid: false }); }
+  if (bill.paid !== true) return json_({ paid: false });
+  var lang = lang_(bill);
+  return json_({ paid: true, lang: lang, epub: dlPage_(bill.id, lang, 'epub'), pdf: dlPage_(bill.id, lang, 'pdf') });
+}
+
+/** GET ?dl=<token>&f=epub|pdf from download.html: log it, return the Drive download URL. */
+function handleDownload_(token, f) {
+  var id = dlBill_(token);
+  if (!id) return json_({ error: 'bad-link' });
+  f = f === 'pdf' ? 'pdf' : 'epub';
+  var order = deliveredOrders_().filter(function (o) { return o.id === id; })[0];
+  var lang = order ? order.lang : null;
+  if (!lang) {   // paid but not logged yet (the thank-you page can be faster than the callback)
+    try {
+      var bill = fetchBill_(id);
+      if (bill.paid !== true) return json_({ error: 'not-paid' });
+      lang = lang_(bill);
+    } catch (err) { return json_({ error: 'bad-link' }); }
+  }
+  var fileId = fileId_(lang, f);
+  if (DriveApp.getFileById(fileId).getSharingAccess() !== DriveApp.Access.ANYONE_WITH_LINK) {
+    alertAdmin_('Download failed: file not shared by link', 'Run shareBuyerFiles(). Bill ' + id + ', ' + lang + ' ' + f);
+    return json_({ error: 'unavailable' });
+  }
+  logEvent_(id, 'download-' + f, lang);
+  return json_({ url: 'https://drive.google.com/uc?export=download&id=' + fileId });
+}
+
+/** POST {action:'resend', email, newEmail?, billId?, hp, t} from resend.html. */
+function handleResend_(p) {
+  var email = String(p.email || '').trim().toLowerCase();
+  var to = String(p.newEmail || '').trim().toLowerCase() || email;
+  var billId = String(p.billId || '').trim();
+  var valid = function (e) { return /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(e); };
+  if (!valid(email) || !valid(to)) return json_({ error: 'bad-email' });
+  if (String(p.hp || '') !== '' || !(Number(p.t) >= MIN_FORM_MS)) return json_({ error: 'failed' });
+  var cache = CacheService.getScriptCache();
+  if (!countUnder_(cache, 'resend-em:' + email, 3, 86400) || !countUnder_(cache, 'resend-all', 30, 3600)) {
+    return json_({ error: 'limit' });
+  }
+  var orders = deliveredOrders_().filter(function (o) { return o.email.toLowerCase() === email; });
+  if (!orders.length) { logEvent_('-', 'resend-not-found', email); return json_({ error: 'not-found' }); }
+  orders.sort(function (a, b) { return b.time - a.time; });
+  var order = orders[0];
+  if (to !== email) {   // a new address only with the bill id of that purchase
+    order = orders.filter(function (o) { return o.id === billId; })[0];
+    if (!order) { logEvent_(billId || '-', 'resend-bill-mismatch', email + ' -> ' + to); return json_({ error: 'bill-mismatch' }); }
+  }
+  sendBook_(to, order.name, order.lang, order.id);
+  logEvent_(order.id, 'resend', to === email ? 'same address' : 'new address ' + to);
+  if (to !== email) alertAdmin_('Ebook resent to a new address', order.name + ' (' + email + ', bill ' + order.id + ') -> ' + to);
+  return json_({ ok: true, to: to });
+}
+
+/** The short "your download links" reminder. */
+function sendReminder_(o) {
+  var zh = o.lang !== 'en';
+  var html = '<div style="font-family:-apple-system,Segoe UI,Helvetica,Arial,sans-serif;font-size:15px;line-height:1.7;color:#1a1a1a;max-width:560px">' +
+    (zh
+      ? '<p>' + (o.name ? o.name + '，' : '') + '你好。</p><p>你買了《直銷孫子兵法之不戰而勝》，但我看到電子書還沒有下載。如果之前的信跑到垃圾郵件匣，這裡是你的下載按鈕：</p>'
+      : '<p>' + (o.name ? 'Hi ' + o.name + ',' : 'Hi,') + '</p><p>You bought <i>The Art of War for Direct Selling</i>, but the ebook hasn&#39;t been downloaded yet. In case the first email went to Junk, here are your download buttons:</p>') +
+    '<p>' + fileButton_(dlPage_(o.id, o.lang, 'epub'), zh ? '下載 EPUB（手機、平板）' : 'Download EPUB (phone, tablet)') + '<br>' +
+    fileButton_(dlPage_(o.id, o.lang, 'pdf'), zh ? '下載 PDF（電腦、列印）' : 'Download PDF (computer, print)') + '</p>' +
+    (zh ? '<p>有任何問題，直接回覆這封信，我會親自處理。<br>周俊德（Mikael Chew）</p>'
+        : '<p>If anything doesn&#39;t work, reply to this email and I&#39;ll sort it out myself.<br>Mikael Chew</p>') +
+    '</div>';
+  send_({ to: o.email, name: 'Mikael Chew', replyTo: prop_('REPLY_TO', ''), htmlBody: html,
+    subject: zh ? '你的電子書下載連結：《直銷孫子兵法之不戰而勝》' : 'Your download links: The Art of War for Direct Selling' });
+}
+
+/** Daily: remind anyone paid more than 24 h ago with no download (once), then one summary to the admin. */
+function dailyDownloadCheck() {
+  var now = Date.now(), from = new Date(GUARANTEE_FROM + 'T00:00:00+08:00').getTime();
+  var ev = events_().getDataRange().getValues(), downloaded = {}, reminded = {};
+  for (var i = 1; i < ev.length; i++) {
+    var e = String(ev[i][2]);
+    if (e.indexOf('download-') === 0) downloaded[String(ev[i][1])] = true;
+    if (e === 'reminder') reminded[String(ev[i][1])] = true;
+  }
+  var late = deliveredOrders_().filter(function (o) {
+    return o.time >= from && o.time < now - 24 * 3600 * 1000 && !downloaded[o.id] && o.email;
+  });
+  var lines = late.map(function (o) {
+    var note = 'reminded earlier';
+    if (!reminded[o.id]) {
+      try { sendReminder_(o); logEvent_(o.id, 'reminder', o.email); note = 'reminder sent today'; }
+      catch (err) { note = 'reminder FAILED: ' + err; }
+    }
+    return '- ' + (o.name || '(no name)') + ', ' + o.email + ', ' + o.lang + ', paid ' +
+      Utilities.formatDate(new Date(o.time), 'Asia/Kuala_Lumpur', 'd MMM HH:mm') + ': ' + note;
+  });
+  if (lines.length) {
+    alertAdmin_('Daily: ' + lines.length + ' buyer(s) have not downloaded the ebook',
+      'Paid more than 24 hours ago, no download yet. A WhatsApp may help:\n\n' + lines.join('\n'));
+  }
+}
+
+/** Run once from the editor: run dailyDownloadCheck every day at about 10:00 Kuala Lumpur time. */
+function installDailyTrigger() {
+  ScriptApp.getProjectTriggers().forEach(function (t) {
+    if (t.getHandlerFunction() === 'dailyDownloadCheck') ScriptApp.deleteTrigger(t);
+  });
+  ScriptApp.newTrigger('dailyDownloadCheck').timeBased().everyDays(1).atHour(10).inTimezone('Asia/Kuala_Lumpur').create();
 }
 
 /** Run once from the editor to create the Sheet header row. */

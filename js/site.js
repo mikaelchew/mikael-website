@@ -196,6 +196,72 @@
     seals.forEach(function (s) { io.observe(s); });
   }
 
+  // ---------- download.html: personal download links from the delivery emails and the thank-you page ----------
+  // ?t=<token>&f=epub|pdf. The delivery script checks the token, logs the download and returns the
+  // Drive URL; the page then starts it (and keeps a button in case the browser blocks that).
+  function initDownloadPage() {
+    var box = document.getElementById('dl');
+    if (!box || !window.fetch) return;
+    var q = new URLSearchParams(window.location.search);
+    var show = function (id) {
+      ['dl-working', 'dl-ready', 'dl-error'].forEach(function (k) { document.getElementById(k).hidden = k !== id; });
+    };
+    if (!q.get('t')) { show('dl-error'); return; }
+    var f = q.get('f') === 'pdf' ? 'pdf' : 'epub';
+    fetch(box.dataset.endpoint + '?dl=' + encodeURIComponent(q.get('t')) + '&f=' + f)
+      .then(function (r) { return r.json(); })
+      .then(function (res) {
+        if (!res.url) throw new Error(res.error || 'failed');
+        document.getElementById('dl-btn').href = res.url;
+        show('dl-ready');
+        trackEvent('file_download', { file_name: 'ebook.' + f, source_page: window.location.pathname });
+        window.location.href = res.url;
+      })
+      .catch(function () { show('dl-error'); });
+  }
+
+  // ---------- resend.html: "Didn't get your ebook?" ----------
+  function initResendForm() {
+    var form = document.querySelector('.resend-form[data-endpoint]');
+    if (!form) return;
+    var status = form.querySelector('.rs-status');
+    var ok = form.parentNode.querySelector('.rs-ok');
+    var btn = form.querySelector('button[type="submit"]');
+    var label = btn.textContent;
+    var msg = {
+      busy: zh ? '正在寄出…' : 'Sending…',
+      'bad-email': zh ? '電子郵件地址好像不對，請再檢查一次。' : "That email address doesn't look right. Please check it.",
+      'not-found': zh ? '找不到這個電子郵件的購買記錄。請確認是付款時用的地址，或 WhatsApp 我。' : "I couldn't find a purchase for that email. Check it's the address you paid with, or WhatsApp me.",
+      'bill-mismatch': zh ? '這個 Bill ID 和這筆購買對不上。請看 Billplz 收據上的 Bill ID，或 WhatsApp 我。' : "That Bill ID doesn't match the purchase. Check the Bill ID on your Billplz receipt, or WhatsApp me.",
+      limit: zh ? '這個地址今天已經重寄過幾次了。請先查看垃圾郵件匣，或 WhatsApp 我。' : 'This address has been resent a few times today. Check Junk first, or WhatsApp me.',
+      failed: zh ? '沒有寄出。請再試一次，或 WhatsApp 我。' : "That didn't go through. Please try again, or WhatsApp me."
+    };
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      btn.disabled = true;
+      btn.textContent = msg.busy;
+      status.textContent = '';
+      fetch(form.dataset.endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify({ action: 'resend', email: form.elements.email.value, newEmail: form.elements.newEmail.value,
+          billId: form.elements.billId.value, hp: form.elements.website.value, t: Math.round(performance.now()) })
+      })
+        .then(function (r) { return r.json(); })
+        .then(function (res) {
+          if (!res.ok) throw new Error(res.error || 'failed');
+          trackEvent('ebook_resend', { source_page: window.location.pathname });
+          form.hidden = true;
+          if (ok) { ok.hidden = false; ok.focus(); }
+        })
+        .catch(function (err) {
+          status.textContent = msg[err.message] || msg.failed;
+          btn.disabled = false;
+          btn.textContent = label;
+        });
+    });
+  }
+
   // ---------- Recommendations: one row that moves right-to-left as the page scrolls ----------
   // While .linked, the row's horizontal position follows how far the section has travelled
   // through the viewport (snapping off so it glides). Touching, dragging, sideways wheel or a
@@ -336,5 +402,7 @@
   initSeals();
   initWriting();
   initQuoteRail();
+  initDownloadPage();
+  initResendForm();
   initMotion();
 })();

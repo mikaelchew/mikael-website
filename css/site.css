@@ -210,6 +210,15 @@ html:lang(zh-Hant) :is(h1, h2, h3) { word-break: keep-all; overflow-wrap: anywhe
 .ty { text-align: center; }
 .ty .seal { display: block; width: 120px; margin: 0 auto 1.2em; }
 .ty .btn { margin-top: 1em; }
+/* thank-you page: the files themselves, once the bill is confirmed paid */
+.ty .ty-dl { display: grid; gap: 10px; justify-items: center; margin: 1.4em 0; }
+.ty .ty-dl .btn { width: min(100%, 22em); justify-content: center; margin-top: 0; }
+.ty .ty-dl-lead { font-weight: 800; }
+/* resend.html: the optional "different address" fields */
+.resend-form details { display: grid; gap: 10px; }
+.resend-form details[open] { padding: 12px 0 4px; }
+.resend-form summary { cursor: pointer; font-weight: 700; }
+.rs-status { min-height: 1.4em; font-weight: 700; color: var(--red-lit); }
 /* where the email went if it isn't in the inbox (Outlook/Hotmail file it under Junk) */
 .ty .ty-junk { max-width: 34em; margin: 1.2em auto 0; padding: .8em 1em; border: 1.5px solid var(--red-text); font-weight: 700; }
 

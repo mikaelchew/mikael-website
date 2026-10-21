@@ -64,14 +64,21 @@
 <!-- /shell:header -->
 
 <main id="main" class="prose on-paper">
-  <div class="measure ty">
+  <div class="measure ty" data-endpoint="https://script.google.com/macros/s/AKfycbzKakMN9ShFaqKmWRPheQBYLdvWBPTh-ZaHjMnC7xa-nlDhERL0Pn54QlwXytkOM-LM_Q/exec">
     <svg class="seal" viewBox="0 0 100 100" aria-hidden="true" data-stamp><use href="#seal-sent"/></svg>
 
     <div id="ty-paid" hidden>
       <p class="meta" data-en="Payment received" data-zh="付款已完成">Payment received</p>
       <h1 data-en="Thank you. Your book is on its way." data-zh="謝謝你，你的書正在寄出">Thank you. Your book is on its way.</h1>
+      <!-- filled in by the script below once the delivery script confirms the bill is paid -->
+      <div id="ty-dl" class="ty-dl" hidden>
+        <p class="ty-dl-lead" data-en="Download it now:" data-zh="現在就下載：">Download it now:</p>
+        <a id="ty-epub" class="btn" href="#" data-en="Download EPUB (phone, tablet)" data-zh="下載 EPUB（手機、平板）">Download EPUB (phone, tablet)</a>
+        <a id="ty-pdf" class="btn btn--ghost" href="#" data-en="Download PDF (computer, print)" data-zh="下載 PDF（電腦、列印）">Download PDF (computer, print)</a>
+        <p class="meta" data-en="We have also emailed it to you, as a backup." data-zh="我們也把它寄到你的信箱，作為備份。">We have also emailed it to you, as a backup.</p>
+      </div>
       <p data-en="Your ebook (EPUB + PDF) is being emailed from mikael@mikaelchew.com to the address you entered at checkout. It usually arrives within a few minutes." data-zh="電子書（EPUB + PDF）正由 mikael@mikaelchew.com 寄往你結帳時填寫的信箱，通常幾分鐘內就會收到。">Your ebook (EPUB + PDF) is being emailed from mikael@mikaelchew.com to the address you entered at checkout. It usually arrives within a few minutes.</p>
-      <p class="ty-junk" data-en="Not in your inbox within 5 minutes? Check Junk, Spam or the Other tab, and add mikael@mikaelchew.com to your contacts. Still nothing after 15 minutes? Email me and I'll send it by hand." data-zh="5 分鐘內沒收到？請查看垃圾郵件匣或「其他」分頁，並把 mikael@mikaelchew.com 加入聯絡人。15 分鐘後還是沒有，寫信給我，我會親自寄給你。">Not in your inbox within 5 minutes? Check Junk, Spam or the Other tab, and add mikael@mikaelchew.com to your contacts. Still nothing after 15 minutes? Email me and I'll send it by hand.</p>
+      <p class="ty-junk" data-en="Not in your inbox within 5 minutes? Check Junk, Spam or the Other tab, and add mikael@mikaelchew.com to your contacts. Still nothing? &lt;a href=&quot;resend.html&quot;&gt;Get it sent again&lt;/a&gt;." data-zh="5 分鐘內沒收到？請查看垃圾郵件匣或「其他」分頁，並把 mikael@mikaelchew.com 加入聯絡人。還是沒有？&lt;a href=&quot;resend.html&quot;&gt;重新寄送&lt;/a&gt;。">Not in your inbox within 5 minutes? Check Junk, Spam or the Other tab, and add mikael@mikaelchew.com to your contacts. Still nothing? <a href="resend.html">Get it sent again</a>.</p>
     </div>
 
     <div id="ty-pending" hidden>
@@ -102,6 +109,19 @@
     if (paid === null) return;
     document.getElementById('ty-generic').hidden = true;
     document.getElementById(paid === 'true' ? 'ty-paid' : 'ty-pending').hidden = false;
+    // Paid: ask the delivery script to confirm with Billplz, then offer the files on this page.
+    var bill = q.get('billplz[id]');
+    var ep = document.querySelector('.ty[data-endpoint]');
+    if (paid !== 'true' || !bill || !ep || !window.fetch) return;
+    fetch(ep.dataset.endpoint + '?verify=' + encodeURIComponent(bill))
+      .then(function (r) { return r.json(); })
+      .then(function (res) {
+        if (!res.paid) return;
+        document.getElementById('ty-epub').href = res.epub;
+        document.getElementById('ty-pdf').href = res.pdf;
+        document.getElementById('ty-dl').hidden = false;
+      })
+      .catch(function () { /* the email is still on its way */ });
   })();
 </script>
 
