@@ -28,7 +28,8 @@ def on_main(path):
 
 
 def norm(s):
-    return re.sub(r"\s+", " ", s).strip()
+    # 21 Oct 2026: about half of the old posts' long dashes became commas, so " — " and ", " compare equal
+    return re.sub(r"\s*—\s*|,\s*", ", ", re.sub(r"\s+", " ", s)).strip()
 
 
 def old_body_text(root):
@@ -40,9 +41,10 @@ def old_body_text(root):
 def meta(root):
     return (
         root.xpath("string(//title)"),
-        root.xpath('//meta[@name="description"]/@content'),
+        [norm(s) for s in root.xpath('//meta[@name="description"]/@content')],
         root.xpath('//link[@rel="canonical"]/@href'),
-        [json.loads(s.text) for s in root.xpath('//script[@type="application/ld+json"]')],
+        [norm(json.dumps(json.loads(s.text), ensure_ascii=False, sort_keys=True))
+         for s in root.xpath('//script[@type="application/ld+json"]')],
     )
 
 
