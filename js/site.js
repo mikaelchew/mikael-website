@@ -230,6 +230,10 @@
     var label = btn.textContent;
     var msg = {
       busy: zh ? '正在寄出…' : 'Sending…',
+      sent: function (to) {
+        return zh ? '已寄到 ' + to + '。幾分鐘內會由 mikael@mikaelchew.com 寄到。收件匣沒有的話，請查看垃圾郵件匣或「其他」分頁。'
+                  : 'Sent to ' + to + '. It comes from mikael@mikaelchew.com within a few minutes. Not in your inbox? Check Junk, Spam or the Other tab.';
+      },
       'bad-email': zh ? '電子郵件地址好像不對，請再檢查一次。' : "That email address doesn't look right. Please check it.",
       'not-found': zh ? '找不到這個電子郵件的購買記錄。請確認是付款時用的地址，或 WhatsApp 我。' : "I couldn't find a purchase for that email. Check it's the address you paid with, or WhatsApp me.",
       'bill-mismatch': zh ? '這個 Bill ID 和這筆購買對不上。請看 Billplz 收據上的 Bill ID，或 WhatsApp 我。' : "That Bill ID doesn't match the purchase. Check the Bill ID on your Billplz receipt, or WhatsApp me.",
@@ -252,7 +256,11 @@
           if (!res.ok) throw new Error(res.error || 'failed');
           trackEvent('ebook_resend', { source_page: window.location.pathname });
           form.hidden = true;
-          if (ok) { ok.hidden = false; ok.focus(); }
+          if (ok) {
+            if (res.to) ok.textContent = msg.sent(res.to);
+            ok.hidden = false;
+            ok.focus();
+          }
         })
         .catch(function (err) {
           status.textContent = msg[err.message] || msg.failed;

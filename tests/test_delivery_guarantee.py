@@ -62,6 +62,8 @@ class DownloadAndResendPagesTest(unittest.TestCase):
         self.assertIn("action: 'resend'", js)
         self.assertIn("initResendForm();", js)
         self.assertIn("initDownloadPage();", js)
+        # the success message names the address it went to, so a wrong address is visible at once
+        self.assertIn("msg.sent(res.to)", js)
 
     def test_thank_you_offers_downloads_after_verify(self):
         for page in ("book-thank-you.html", "zh/book-thank-you.html"):
