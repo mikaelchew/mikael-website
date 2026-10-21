@@ -94,6 +94,8 @@
 .book-buy-form input { font: inherit; font-size: 1rem; padding: .75em .8em; border: 0; background: #fff; color: var(--ink); }
 .book-buy-form button { justify-content: center; }
 .book-buy-status { min-height: 1.4em; font-weight: 700; color: var(--red-lit); }
+.pay-help { margin: 0; font-size: .95rem; color: var(--mute); }
+.pay-help a { color: var(--acetate); font-weight: 700; }
 .buy-note { display: block; margin-top: 12px; font-size: .95rem; color: var(--mute); }
 .buy-note a { color: var(--acetate); }
 /* launch-week workbook offer (hero order box and buy section) */
