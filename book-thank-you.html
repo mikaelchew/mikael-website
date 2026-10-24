@@ -100,17 +100,19 @@
 </main>
 
 <script>
-  // Billplz appends billplz[paid], billplz[id] etc. to the redirect URL.
+  // Billplz appends billplz[paid], billplz[id] etc. to the redirect URL; Stripe appends session_id.
   // This only changes what the page SAYS. Delivery is handled server-side
   // by the Apps Script callback, which is the authoritative check.
   (function () {
     var q = new URLSearchParams(window.location.search);
-    var paid = q.get('billplz[paid]');
+    // Stripe only sends buyers back here after a successful payment; the verify call below confirms it.
+    var session = q.get('session_id');
+    var paid = session ? 'true' : q.get('billplz[paid]');
     if (paid === null) return;
     document.getElementById('ty-generic').hidden = true;
     document.getElementById(paid === 'true' ? 'ty-paid' : 'ty-pending').hidden = false;
     // Paid: ask the delivery script to confirm with Billplz, then offer the files on this page.
-    var bill = q.get('billplz[id]');
+    var bill = session ? 'STRIPE-' + session : q.get('billplz[id]');
     var ep = document.querySelector('.ty[data-endpoint]');
     if (paid !== 'true' || !bill || !ep || !window.fetch) return;
     fetch(ep.dataset.endpoint + '?verify=' + encodeURIComponent(bill))

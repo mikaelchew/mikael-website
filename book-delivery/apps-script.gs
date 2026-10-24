@@ -77,8 +77,11 @@ function signatureValid_(params) {
   return hex === given;
 }
 
-/** Authoritative: ask Billplz what it thinks of this bill. */
+/** Authoritative: ask Billplz (or Stripe, for a STRIPE- id) what it thinks of this bill. */
 function fetchBill_(billId) {
+  if (String(billId).indexOf(STRIPE_PREFIX) === 0) {
+    return stripeBill_(stripe_('get', '/checkout/sessions/' + encodeURIComponent(String(billId).slice(STRIPE_PREFIX.length))));
+  }
   var res = UrlFetchApp.fetch(apiBase_() + '/bills/' + encodeURIComponent(billId), {
     method: 'get',
     headers: {
@@ -415,6 +418,7 @@ function handleBuy_(p) {
     console.warn('Buy refused (' + refused + '): ' + email);
     return json_({ error: 'failed' });   // same reply as any failure: nothing for a bot to learn
   }
+  if (p.gateway === 'stripe') return stripeCheckout_(email, name, lang);
   var exec = ScriptApp.getService().getUrl();
   var res = UrlFetchApp.fetch(apiBase_() + '/bills', {
     method: 'post',
@@ -556,6 +560,9 @@ function handleVerify_(billId) {
   var bill;
   try { bill = fetchBill_(billId); } catch (err) { return json_({ paid: false }); }
   if (bill.paid !== true) return json_({ paid: false });
+  if (bill.id.indexOf(STRIPE_PREFIX) === 0) {   // Stripe has no callback: the thank-you page delivers
+    try { deliverStripe_(bill); } catch (err) { alertAdmin_('Stripe delivery FAILED', bill.id + ': ' + err); }
+  }
   var lang = lang_(bill);
   return json_({ paid: true, lang: lang, epub: dlPage_(bill.id, lang, 'epub'), pdf: dlPage_(bill.id, lang, 'pdf') });
 }
@@ -658,6 +665,109 @@ function installDailyTrigger() {
     if (t.getHandlerFunction() === 'dailyDownloadCheck') ScriptApp.deleteTrigger(t);
   });
   ScriptApp.newTrigger('dailyDownloadCheck').timeBased().everyDays(1).atHour(10).inTimezone('Asia/Kuala_Lumpur').create();
+}
+
+/* ==========================================================================================
+ * Stripe checkout (24 Oct 2026), for cards issued outside Malaysia, which Billplz declines.
+ * Billplz stays the main way to pay; the buy form's second button sends gateway:'stripe'.
+ *  - handleBuy_ creates a Checkout Session (card only, MYR) and the page navigates to it;
+ *  - Apps Script can't read Stripe's signature header, so there is no webhook. Payment is
+ *    always read back from the Stripe API with our key: by the thank-you page (?verify=
+ *    STRIPE-<session id>) and by pollStripe() every 5 minutes (installStripePoller(), once),
+ *    for buyers who close the tab first. deliverStripe_ delivers each session once, under the lock;
+ *  - the order id is STRIPE-<session id>, so fetchBill_, download links, the events tab, the
+ *    daily check, resend and the course treat it like a Billplz bill.
+ * Script Properties: STRIPE_SECRET_KEY (sk_test_... while testing), STRIPE_ENABLED=false to
+ * turn the button off without a deploy. Stripe bans MLM services: keep everything Stripe sees
+ * about the book. Sessions are tagged metadata[product]=ebook, so the account's other sales are ignored.
+ * ========================================================================================== */
+var STRIPE_PREFIX = 'STRIPE-';
+
+function stripe_(method, path, payload) {
+  var opts = { method: method, headers: { Authorization: 'Bearer ' + prop_('STRIPE_SECRET_KEY', '') },
+    muteHttpExceptions: true };
+  if (payload) opts.payload = payload;
+  var res = UrlFetchApp.fetch('https://api.stripe.com/v1' + path, opts);
+  var body = JSON.parse(res.getContentText());
+  if (res.getResponseCode() !== 200) {
+    throw new Error('Stripe API ' + res.getResponseCode() + ': ' + (body.error ? body.error.message : res.getContentText()));
+  }
+  return body;
+}
+
+/** A Checkout Session in the shape the Billplz code expects (lang_, logOrder_, sendBook_). */
+function stripeBill_(s) {
+  var md = s.metadata || {}, cd = s.customer_details || {};
+  return { id: STRIPE_PREFIX + s.id, paid: s.payment_status === 'paid' && md.product === 'ebook',
+    state: s.payment_status, name: md.name || cd.name || '', email: cd.email || s.customer_email || '',
+    amount: s.amount_total, reference_1: md.edition || 'zh' };
+}
+
+function stripeCheckout_(email, name, lang) {
+  if (!prop_('STRIPE_SECRET_KEY', '') || prop_('STRIPE_ENABLED', 'true') === 'false') return json_({ error: 'stripe-off' });
+  var en = lang === 'en';
+  try {
+    var s = stripe_('post', '/checkout/sessions', {
+      mode: 'payment',
+      'payment_method_types[0]': 'card',
+      'line_items[0][quantity]': '1',
+      'line_items[0][price_data][currency]': 'myr',
+      'line_items[0][price_data][unit_amount]': en ? prop_('PRICE_CENTS_EN', prop_('PRICE_CENTS', '2990')) : prop_('PRICE_CENTS', '2990'),
+      'line_items[0][price_data][product_data][name]': en
+        ? 'The Art of War for Direct Selling (ebook, EPUB + PDF)'
+        : '直銷孫子兵法之不戰而勝（電子書 EPUB + PDF）',
+      customer_email: email,
+      locale: en ? 'en' : 'zh-TW',
+      'metadata[product]': 'ebook',
+      'metadata[edition]': lang,
+      'metadata[name]': name,
+      success_url: prop_('REDIRECT_URL', SITE + '/book-thank-you.html') + '?gw=stripe&session_id={CHECKOUT_SESSION_ID}',
+      cancel_url: SITE + '/book.html#buy'
+    });
+    return json_({ url: s.url });
+  } catch (err) {
+    console.error(err);
+    alertAdmin_('Stripe checkout FAILED', String(err));
+    return json_({ error: 'failed' });
+  }
+}
+
+/** Deliver a paid Stripe order once: the thank-you page and the poller can both get here. */
+function deliverStripe_(bill) {
+  if (bill.paid !== true) return;
+  var lock = LockService.getScriptLock(), sent = false;
+  lock.waitLock(30000);
+  try {
+    if (alreadyDelivered_(bill.id)) return;
+    sendBook_(bill.email, bill.name, lang_(bill), bill.id);
+    logOrder_(bill, 'delivered', 'stripe; quota_left=' + MailApp.getRemainingDailyQuota());
+    sent = true;
+  } finally {
+    lock.releaseLock();
+  }
+  if (sent && typeof enrollCourse_ === 'function') {
+    try { enrollCourse_(bill.email, bill.name, lang_(bill), 'direct'); }
+    catch (err) { alertAdmin_('Course enrolment failed for ' + bill.id, String(err)); }
+  }
+}
+
+/** Every 5 minutes: deliver paid sessions from the last 24 h (sessions expire after 24 h). */
+function pollStripe() {
+  if (!prop_('STRIPE_SECRET_KEY', '')) return;
+  var since = Math.floor(Date.now() / 1000) - 24 * 3600;
+  stripe_('get', '/checkout/sessions?limit=100&created%5Bgte%5D=' + since).data.forEach(function (s) {
+    var bill = stripeBill_(s);
+    if (bill.paid !== true) return;
+    try { deliverStripe_(bill); } catch (err) { alertAdmin_('Stripe delivery FAILED', bill.id + ': ' + err); }
+  });
+}
+
+/** Run once from the editor: run pollStripe every 5 minutes. */
+function installStripePoller() {
+  ScriptApp.getProjectTriggers().forEach(function (t) {
+    if (t.getHandlerFunction() === 'pollStripe') ScriptApp.deleteTrigger(t);
+  });
+  ScriptApp.newTrigger('pollStripe').timeBased().everyMinutes(5).create();
 }
 
 /** Run once from the editor to create the Sheet header row. */

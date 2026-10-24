@@ -134,7 +134,8 @@
       var msg = {
         busy: zh ? '正在前往安全付款頁面…' : 'Opening secure payment…',
         'bad-email': zh ? '電子郵件地址好像不對，請再檢查一次。' : "That email address doesn't look right. Please check it.",
-        failed: zh ? '付款無法啟動。請再試一次，或寫信到 mikael@mikaelchew.com。' : 'Payment could not be started. Please try again, or email mikael@mikaelchew.com.'
+        failed: zh ? '付款無法啟動。請再試一次，或寫信到 mikael@mikaelchew.com。' : 'Payment could not be started. Please try again, or email mikael@mikaelchew.com.',
+        'stripe-off': zh ? '海外信用卡付款暫時無法使用。請寫信到 mikael@mikaelchew.com，我會協助你付款。' : "Paying by Stripe isn't available right now. Email mikael@mikaelchew.com and I'll help you pay another way."
       };
       // The buyer picks the edition (no default: most readers read Chinese but land on English pages).
       // A choice the buyer can't see (English not on sale, or a page that hides it) never sends
@@ -147,6 +148,8 @@
       form.addEventListener('submit', function (e) {
         e.preventDefault();
         var edition = form.elements.edition ? form.elements.edition.value : 'zh';
+        // the "Pay with Stripe" button (cards from outside Malaysia) sends gateway 'stripe'; the main one, Billplz
+        var stripe = !!(e.submitter && e.submitter.value === 'stripe');
         trackEvent('begin_checkout', {
           currency: 'MYR',
           value: 29.90,
@@ -162,6 +165,7 @@
           // edition 'zh' or 'en' tells the delivery script which files to send
           // hp (honeypot) and t (ms since the page started loading) let the delivery script refuse bots
           body: JSON.stringify({ action: 'buy', name: form.elements.name.value, email: form.elements.email.value, edition: edition,
+            gateway: stripe ? 'stripe' : undefined,
             hp: form.elements.website ? form.elements.website.value : '', t: Math.round(performance.now()) })
         })
           .then(function (r) { return r.json(); })
