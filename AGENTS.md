@@ -58,7 +58,18 @@ asks the script (`?dl=`) to log the download in the orders sheet's "events" tab 
 thank-you page asks `?verify=<bill id>` and shows download buttons once Billplz confirms payment. `resend.html`
 POSTs `{action: 'resend'}`; a new address needs the purchase's Bill ID. `dailyDownloadCheck` (10:00 MYT trigger)
 reminds buyers with no download after 24 h, once, and emails Mikael a summary. The link-signing key `DL_SECRET`
-lives in Script Properties and is created automatically. The book repo's `course.gs` uses `dlPage_` too.
+lives in Script Properties and is created automatically. The book repo's `course.gs` uses `dlPage_` too, and its
+`workbook_mail.gs` (same Apps Script project) calls `sheet_()`, `send_()`, `prop_()`, `events_()`, `logEvent_()` and
+`alertAdmin_()`: keep those names and signatures.
+
+**Stripe (V12, 24 Oct 2026):** cards issued outside Malaysia fail on Billplz, so the buy form has a second, quiet
+"Pay with Stripe" button (`gateway: 'stripe'`). The script creates a card-only MYR Checkout Session tagged
+`metadata[product]=ebook`; there is no webhook. Payment is read back from the Stripe API by the thank-you page
+(`?verify=STRIPE-<session id>`) and by `pollStripe` (5-minute trigger, `installStripePoller()`), and each session is
+delivered once. Order ids are `STRIPE-<session id>`, so everything downstream treats them like Billplz bills. Script
+Properties: `STRIPE_SECRET_KEY` (a live key in production; a test key sends buyers to Stripe's sandbox) and
+`STRIPE_ENABLED=false` to switch the button off without a deploy. Stripe bans MLM services: keep everything Stripe
+sees about the book.
 The English pre-order copy on `book.html` was removed on 21 Oct, after the English edition went on sale.
 
 **Chapter 1:** `build_chapter.py` takes both manuscripts. `chapter-1.html` is the English edition's Chapter 1;
