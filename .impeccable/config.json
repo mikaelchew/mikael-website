@@ -105,6 +105,16 @@
           "book-thank-you.html"
         ],
         "createdAt": "2026-10-03T03:54:30.707Z"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "sec wrap when-launched",
+        "createdAt": "2026-10-24T16:03:47.986Z"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "band when-prelaunch",
+        "createdAt": "2026-10-24T16:03:48.037Z"
       }
     ]
   }
