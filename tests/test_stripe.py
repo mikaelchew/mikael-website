@@ -16,7 +16,10 @@ class StripeSiteTest(unittest.TestCase):
             b = form.xpath('.//button[@type="submit"][@name="gateway"][@value="stripe"]')
             self.assertTrue(b, page)
             self.assertIn("Stripe", b[0].text_content(), page)
-        self.assertIn("外", doc("zh/book.html").xpath('string(//*[contains(@class,"pay-alt")])'))
+            # 24 Oct: a real (outlined) button, not a text link, so overseas buyers see it
+            self.assertIn("btn--ghost", b[0].get("class"), page)
+            self.assertIn("Mastercard", form.xpath('string(.//*[contains(@class,"pay-alt")])'), page)
+        self.assertIn("海外", doc("zh/book.html").xpath('string(//button[@value="stripe"])'))
 
     def test_buy_form_sends_the_gateway(self):
         js = read("js/site.js")

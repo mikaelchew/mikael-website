@@ -96,12 +96,9 @@
 .book-buy-status { min-height: 1.4em; font-weight: 700; color: var(--red-lit); }
 .pay-help { margin: 0; font-size: .95rem; color: var(--mute); }
 .pay-help a { color: var(--acetate); font-weight: 700; }
-/* the quiet second way to pay (Stripe, cards from outside Malaysia): a text button, not a second CTA */
-.pay-alt { margin: 0; font-size: .95rem; color: var(--mute); }
-.book-buy-form .link-btn { font: inherit; font-weight: 700; color: var(--acetate); background: none; border: 0;
-  padding: .6em 0; min-height: 44px; text-decoration: underline; text-underline-offset: .2em; cursor: pointer; }
-.book-buy-form .link-btn:hover { color: #fff; }
-.book-buy-form .link-btn:disabled { opacity: .6; cursor: default; }
+/* the second way to pay (Stripe, cards from outside Malaysia): outlined, so it is seen but the red button leads */
+.book-buy-form .buy-stripe { margin-top: 4px; }
+.pay-alt { margin: -4px 0 0; font-size: .9rem; color: var(--mute); text-align: center; }
 .buy-note { display: block; margin-top: 12px; font-size: .95rem; color: var(--mute); }
 .buy-note a { color: var(--acetate); }
 /* launch-week workbook offer (hero order box and buy section) */
