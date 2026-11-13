@@ -161,3 +161,8 @@ The book launch is a 12-week campaign in three phases:
   match it (e.g. first commission cheque RM 128; 38 rejections; 8 years field + 15 corporate).
 - Campaign plan checklists are in `BOOK_LAUNCH_PLAN.md`; supplementary plans are in `FACEBOOK_GROUP_PLAN.md` and `YOUTUBE_PODCAST_PLAN.md`
 - Owner email: mikaelchew@gmail.com (the Google, Apps Script and Kit login). Public address and sender since 3 Oct 2026: mikael@mikaelchew.com (ImprovMX forwards it to Gmail; Gmail "Send mail as" and Kit both send from it). Use mikael@ anywhere an address is shown to readers or buyers.
+
+
+## Marketing intent standard
+
+For every marketing asset, including social posts, brochures, buntings, posters and campaigns, design with a clear sales and marketing purpose. Define the audience and desired action; use a strong, attention-grabbing hook; deliver a clear benefit or useful value; and include a specific call to action that advances the audience toward the relevant product or business. Education should support that purpose rather than stand alone without intent. Review the visual and copy together before calling the asset complete, and ensure any promised resource exists. Keep claims accurate and supported.
