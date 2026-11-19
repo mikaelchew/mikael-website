@@ -6,3 +6,6 @@ Content: Mikael's BNI one-to-one planning sheet (Drive file 1_X3RJQL6lyi_brOa_ek
 Images: lifestyle portrait generated from owner-supplied photographs at the owner's request; product PNGs from official Zinzino blob storage, /productimages/large/: 309000.png, 300000-008.png, 400000-002.png, 301390-008.png, 301700.png. Do not distort package artwork or add medical claims.
 
 Validation: unittest suite plus desktop 1440px and mobile 390px Chrome rendering, all images, anchor targets, no horizontal overflow. WhatsApp links only open a prepared chat; no messages sent. Contact links checked against approved values, no calls/emails made.
+
+## Poster-aligned refresh
+Owner approved matching the final slate-blue B networking poster. Scoped violet/lavender/slate-blue design overrides the old red/paper palette on this route only. Uses owner-approved AI-generated basketball portrait, official partner logo, and composed genuine product packshots. Contact destinations unchanged; no added medical claims. Reduced-motion disables hover transitions. Group-product source prepared from final editable poster with restrained contact shadows.

@@ -11,7 +11,7 @@ class OmegaBalance(unittest.TestCase):
    if not urlparse(path).scheme: self.assertTrue((page.parent/path).exists(),path)
   for a in doc.xpath('//a[starts-with(@href,"#")]'):
    self.assertTrue(doc.xpath('//*[@id=$id]',id=a.get('href')[1:]))
-  self.assertEqual(len(doc.xpath('//img')),6)
+  self.assertEqual(len(doc.xpath('//img')),3)
   self.assertIn('tel:+60195513038',doc.xpath('//a/@href'))
   self.assertIn('mailto:mikael@mikaelchew.com',doc.xpath('//a/@href'))
   self.assertNotIn('stripe',page.read_text().lower())
