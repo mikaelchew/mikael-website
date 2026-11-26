@@ -29,6 +29,9 @@
     };
     btn.addEventListener('click', function () { setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
+    document.querySelectorAll('#site-nav a[href^="#"]').forEach(function (link) {
+      link.addEventListener('click', function () { setOpen(false); });
+    });
   }
 
   // ---------- Click tracking (ported unchanged from js/main.js) ----------

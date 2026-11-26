@@ -35,6 +35,15 @@ def _render(name, page, nav):
         # not depend on the folder. build_zh.py maps them to /zh/ for the Chinese 404.
         prefix, lang_href = "/", "/zh/404.html"
     out = _partial(name).replace("{{R}}", prefix).replace("{{LANG_HREF}}", lang_href)
+    if page == "index.html" and name == "header":
+        out = out.replace('<header class="bar">', '<header class="bar ph-bar">', 1)
+        nav_links = """  <a href="#what-i-do" data-en="What I Do" data-zh="我的工作">What I Do</a>
+    <a href="about.html" data-nav="about" data-en="About" data-zh="關於">About</a>
+    <a href="speaking.html" data-nav="speaking" data-en="Speaking" data-zh="演講">Speaking</a>
+    <a href="blog.html" data-nav="writing" data-en="Books &amp; Writing" data-zh="著作與專欄">Books &amp; Writing</a>"""
+        out = re.sub(r'(<nav class="nav"[^>]*>).*?(</nav>)', lambda m: m[1] + '\n  ' + nav_links + '\n  ' + m[2], out, count=1, flags=re.S)
+        out = out.replace('    <!-- language switch:', '''    <a class="ph-bar-contact" href="contact.html" data-en="Contact" data-zh="聯繫">Contact</a>
+    <!-- language switch:''', 1)
     if nav and name == "header":
         out = out.replace(f'data-nav="{nav}"', f'data-nav="{nav}" aria-current="page"', 1)
     return out

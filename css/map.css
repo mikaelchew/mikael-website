@@ -25,7 +25,7 @@
 
 /* ---------- panels on the table ---------- */
 .intro .zh-title { display: none; font-family: var(--display-zh); font-weight: 900; color: var(--red-lit); font-size: clamp(2.2rem, 9vw, 3rem); letter-spacing: .12em; line-height: 1; margin-bottom: .3em; }
-.intro h1 { font-weight: 900; font-size: clamp(3rem, 6vw, 5.8rem); line-height: .92; letter-spacing: -.03em; text-wrap: balance; }
+.intro :is(h1,h2) { font-weight: 900; font-size: clamp(3rem, 6vw, 5.8rem); line-height: .92; letter-spacing: -.03em; text-wrap: balance; }
 .intro .facts { font-size: clamp(1.12rem, 1.3vw, 1.3rem); line-height: 1.45; max-width: 30ch; margin-top: .8em; text-wrap: pretty; }
 .orders { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; margin-top: 1.2em; }
 .orders .sub { font-weight: 600; color: var(--mute); font-size: 1rem; }

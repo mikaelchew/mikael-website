@@ -9,8 +9,8 @@ DOMAIN = "https://www.mikaelchew.com"
 
 # Curated zh title/description for pages without a clean H1 source
 OVERRIDES = {
- "index.html": ("Mikael Chew — 作家 · 導師 · The Long Game 主持人",
-                "Mikael Chew：作家、導師、播客《The Long Game》主持人。23 年直銷資歷，從前線走到企業管理，幫助領袖以正道致勝。"),
+ "index.html": ("Mikael Chew｜直銷策略、演講與營養健康",
+                "周俊德（Mikael Chew）是馬來西亞的直銷策略導師、Zinzino 獨立事業夥伴、講者及作家。了解檢測營養、輔導合作與他的著作。"),
  "404.html": ("找不到頁面 — Mikael Chew",
               "抱歉，這個頁面不存在。回到首頁繼續瀏覽 Mikael Chew 的內容。"),
  "refund-policy.html": ("退款政策 — Mikael Chew",

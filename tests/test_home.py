@@ -15,6 +15,25 @@ class HomeTest(unittest.TestCase):
         self.assertTrue(any(f.xpath('.//input[@name="tags"][@value="book-launch"]') for f in kit))
         self.assertEqual(root.xpath('//h1'), root.xpath('//h1')[:1], "exactly one h1")
 
+    def test_personal_hub_routes_preserve_books_and_direct_contact(self):
+        for page, canonical in (("index.html", "https://www.mikaelchew.com/"),
+                                ("zh/index.html", "https://www.mikaelchew.com/zh/")):
+            root = doc(page)
+            self.assertEqual(root.xpath('//link[@rel="canonical"]/@href'), [canonical])
+            self.assertTrue(root.xpath('//main/*[1][contains(@class,"personal-home")]'))
+            self.assertEqual(len(root.xpath('//div[contains(@class,"ph-grid")]/article')), 3)
+            self.assertTrue(root.xpath('//header//a[@class="ph-bar-contact"][@href="contact.html"]'))
+            self.assertTrue(root.xpath('//header//a[@href="#what-i-do"]'))
+            self.assertTrue(root.xpath('//section[@id="what-i-do"]//a[@href="/omega-balance/"]'))
+            self.assertTrue(root.xpath('//section[@id="what-i-do"]//a[@href="speaking.html"]'))
+            self.assertTrue(root.xpath('//section[@id="what-i-do"]//a[@href="blog.html"]'))
+            self.assertTrue(root.xpath('//div[@class="ph-book"]//a[@href="#ops"]'))
+            self.assertTrue(root.xpath('//div[@class="ph-book"]//a[@href="book.html#buy"]'))
+            self.assertTrue(root.xpath('//a[@href="mailto:mikael@mikaelchew.com"]'))
+            self.assertTrue(root.xpath('//a[starts-with(@href,"https://wa.me/60195513038")]'))
+            self.assertTrue(root.xpath('//section[@id="ops"]'))
+            self.assertTrue(root.xpath('//section[contains(@class,"band")]//form[@data-ajax]'))
+
     def test_home_uses_redesign_assets_only(self):
         src = read("index.html")
         for old in ("css/style.css", "js/main.js", "fontawesome", "vendor/fonts/fonts.css", "fonts.googleapis.com"):

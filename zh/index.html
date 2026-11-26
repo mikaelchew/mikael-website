@@ -11,13 +11,13 @@
     if (!matchMedia('(prefers-reduced-motion: reduce)').matches && !(navigator.deviceMemory && navigator.deviceMemory <= 2)) document.documentElement.classList.add(matchMedia('(max-width: 900px)').matches ? 'swipe' : 'motion');
   </script>
 
-  <meta name="description" content="Mikael Chew：作家、導師、播客《The Long Game》主持人。23 年直銷資歷，從前線走到企業管理，幫助領袖以正道致勝。">
+  <meta name="description" content="周俊德（Mikael Chew）是馬來西亞的直銷策略導師、Zinzino 獨立事業夥伴、講者及作家。了解檢測營養、輔導合作與他的著作。">
   <meta name="keywords" content="Mikael Chew, author, mentor, The Long Game, direct selling, network marketing, leadership">
   <meta name="author" content="Mikael Chew">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Mikael Chew — 作家 · 導師 · The Long Game 主持人">
-  <meta property="og:description" content="Mikael Chew：作家、導師、播客《The Long Game》主持人。23 年直銷資歷，從前線走到企業管理，幫助領袖以正道致勝。">
+  <meta property="og:title" content="Mikael Chew｜直銷策略、演講與營養健康">
+  <meta property="og:description" content="周俊德（Mikael Chew）是馬來西亞的直銷策略導師、Zinzino 獨立事業夥伴、講者及作家。了解檢測營養、輔導合作與他的著作。">
   <meta property="og:image" content="https://www.mikaelchew.com/images/mikael-chew.jpg">
   <meta property="og:url" content="https://www.mikaelchew.com/zh/">
   <meta property="og:type" content="website">
@@ -27,19 +27,18 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Mikael Chew — 作家 · 導師 · The Long Game 主持人">
-  <meta name="twitter:description" content="Mikael Chew：作家、導師、播客《The Long Game》主持人。23 年直銷資歷，從前線走到企業管理，幫助領袖以正道致勝。">
+  <meta name="twitter:title" content="Mikael Chew｜直銷策略、演講與營養健康">
+  <meta name="twitter:description" content="周俊德（Mikael Chew）是馬來西亞的直銷策略導師、Zinzino 獨立事業夥伴、講者及作家。了解檢測營養、輔導合作與他的著作。">
   <meta name="twitter:image" content="https://www.mikaelchew.com/images/mikael-chew.jpg">
 
-  <title>Mikael Chew — 作家 · 導師 · The Long Game 主持人</title>
+  <title>Mikael Chew｜直銷策略、演講與營養健康</title>
 
   <!-- Fonts (self-hosted) and styles -->
   <link rel="preload" as="font" type="font/woff2" href="../vendor/fonts/overpass-900-latin.woff2" crossorigin>
-  <!-- the map terrain is the largest thing on a phone screen (swipe mode): fetch it early -->
-  <link rel="preload" as="image" href="../images/map/terrain.svg" fetchpriority="high">
   <link rel="stylesheet" href="../vendor/fonts/site-fonts.css">
   <link rel="stylesheet" href="../css/site.css">
   <link rel="stylesheet" href="../css/map.css">
+  <link rel="stylesheet" href="../css/home.css">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
@@ -67,29 +66,22 @@
   <script src="../js/map.js" defer></script>
 <link rel="alternate" hreflang="en" href="https://www.mikaelchew.com/"><link rel="alternate" hreflang="zh-Hant" href="https://www.mikaelchew.com/zh/"><link rel="alternate" hreflang="x-default" href="https://www.mikaelchew.com/"></head>
 <body data-nav="home">
-<!--
-THESIS: The book as the strategist's campaign: 13 verified stories are positions on a terrain map, and the reader advances halt by halt to a launch date; refuses the coach-site headshot hero, stats bar and icon cards, and the war-room HUD.
-OWN-WORLD: A lifted slate table with vector contour terrain, acetate-white lettering, one red ink for the route, seals and the order; vertical Ming-set 不戰而勝 as the legend; light-on-dark halftone recon prints; the brand-beige back of the map closes the page.
-STORY: The visitor reads the hard facts (38 rejections, a first cheque of RM 128) and the first order, follows the route through 13 halts or jumps to any chapter, and arrives at 20.10.2026: read Chapter 1, or join the launch list.
-FIRST VIEWPORT: Left, "Win before the battle." over the facts and the red Read Chapter 1 free; right, vertical red 不戰而勝; bottom right the taped book; the route's lead-in drawn to position 01; the 13-stop rail at the bottom.
-FORM: The Strategist's Map, a synthesis of my #1 (Campaign Map) raised by the Morning Edition's seals, vertical type and facts; seed key c411a6f9.
-FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
--->
+<!-- Personal hub first; the complete original book campaign remains below. -->
 <!-- shell:header -->
 <a class="skip" href="#main" data-en="Skip to content" data-zh="跳到內容">跳到內容</a>
-<header class="bar">
+<header class="bar ph-bar">
   <a class="brand" href="index.html" data-nav="home" aria-current="page"><span class="brand-seal cjk-display" lang="zh-Hant" aria-hidden="true">周</span><span class="brand-en">Mikael Chew</span><span class="brand-zh cjk-display" lang="zh-Hant">周俊德</span></a>
   <nav class="nav" id="site-nav" aria-label="Main">
-    <a href="book.html" data-nav="book" class="keep" data-en="The Book" data-zh="著作">著作</a>
+    <a href="#what-i-do" data-en="What I Do" data-zh="我的工作">我的工作</a>
     <a href="about.html" data-nav="about" data-en="About" data-zh="關於">關於</a>
-    <a href="blog.html" data-nav="writing" data-en="Writing" data-zh="專欄">專欄</a>
     <a href="speaking.html" data-nav="speaking" data-en="Speaking" data-zh="演講">演講</a>
-    <a href="work-with-me.html" data-nav="work" data-en="Work With Me" data-zh="合作">合作</a>
+    <a href="blog.html" data-nav="writing" data-en="Books &amp; Writing" data-zh="著作與專欄">著作與專欄</a>
   </nav>
   <div class="bar-actions">
     <!-- the book's next step follows the launch phase (data/site.json) -->
     <a class="bar-cta when-prelaunch" href="chapter-1.html" data-en="Read Chapter 1" data-zh="試讀第一章">試讀第一章</a>
     <a class="bar-cta when-launched" href="book.html#buy" data-en="Get the book" data-zh="購買本書">購買本書</a>
+    <a class="ph-bar-contact" href="contact.html" data-en="Contact" data-zh="聯繫">聯繫</a>
     <!-- language switch: the current language is lit; build_zh.py swaps which one is the link -->
     <div class="lang-switch" role="group" aria-label="Language 語言">
       <a href="../" class="lang-opt lang-link keep" lang="en" hreflang="en">EN</a>
@@ -112,6 +104,93 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 <!-- /shell:header -->
 
 <main id="main">
+  <div class="personal-home">
+    <section class="ph-shell ph-hero" aria-labelledby="ph-title">
+      <div class="ph-hero-copy">
+        <p class="ph-kicker" data-en="Malaysia / Direct selling &amp; wellness" data-zh="馬來西亞／直銷與營養健康">馬來西亞／直銷與營養健康</p>
+        <h1 id="ph-title"><span data-en="Strategy from" data-zh="從經營團隊">從經營團隊</span> <span data-en="both sides of" data-zh="到企業管理，">到企業管理，</span> <em data-en="the table." data-zh="用實戰談策略。">用實戰談策略。</em></h1>
+        <p class="ph-lede" data-en="I’m Mikael Chew, a direct-selling strategist, independent Zinzino partner and author. I help leaders build stronger teams and people make informed choices about omega-3 through testing." data-zh="我是周俊德（Mikael Chew），直銷策略導師、Zinzino 獨立事業夥伴，也是一名作家。我協助領袖建立更強的團隊，也用檢測幫助大家更了解自己的 Omega-3 狀況，作出合適的選擇。">我是周俊德（Mikael Chew），直銷策略導師、Zinzino 獨立事業夥伴，也是一名作家。我協助領袖建立更強的團隊，也用檢測幫助大家更了解自己的 Omega-3 狀況，作出合適的選擇。</p>
+        <div class="ph-actions">
+          <a class="ph-button ph-button-primary" href="#what-i-do" data-en="See what I do" data-zh="了解我的工作">了解我的工作</a>
+          <a class="ph-button" href="contact.html" data-en="Contact Mikael" data-zh="聯繫 Mikael">聯繫 Mikael</a>
+        </div>
+      </div>
+      <figure class="ph-portrait">
+        <img src="../images/mikael-chew.jpg" srcset="../images/mikael-chew-600.jpg 600w, ../images/mikael-chew.jpg 798w" sizes="(max-width: 760px) 92vw, 450px" width="798" height="1200" alt="Mikael Chew" fetchpriority="high">
+      </figure>
+    </section>
+
+    <section class="ph-shell ph-paths" id="what-i-do" aria-labelledby="ph-paths-title">
+      <p class="ph-kicker" data-en="01 / What I do" data-zh="01／我的工作">01／我的工作</p>
+      <h2 id="ph-paths-title" data-en="Find your starting point." data-zh="找到適合你的方向。">找到適合你的<wbr>方向。</h2>
+      <div class="ph-grid">
+        <article>
+          <svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M1 12h5l4-8 4 16 4-8h5"></path></svg>
+          <h3 data-en="Zinzino &amp; Team Zynergy" data-zh="Zinzino 與 Team Zynergy">Zinzino 與 Team Zynergy</h3>
+          <p data-en="Test-based nutrition and practical tools for independent partners." data-zh="以檢測為基礎的營養方案，以及獨立事業夥伴可實際運用的工具。">以檢測為基礎的營養方案，以及獨立事業夥伴可實際運用的工具。</p>
+          <div class="ph-links">
+            <a href="/omega-balance/" data-en="Explore Omega Balance" data-zh="了解 Omega 平衡">了解 Omega 平衡</a>
+            <a href="https://teamzynergy.com/" data-en="Visit Team Zynergy" data-zh="瀏覽 Team Zynergy">瀏覽 Team Zynergy</a>
+          </div>
+        </article>
+        <article>
+          <svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="8" y="2" width="8" height="13" rx="4"></rect><path d="M5 10v2a7 7 0 0 0 14 0v-2m-7 9v3m-4 0h8"></path></svg>
+          <h3 data-en="Speaking &amp; Mentoring" data-zh="演講與輔導">演講<wbr>與輔導</h3>
+          <p data-en="Keynotes, workshops and one-to-one strategy for direct-selling leaders." data-zh="為直銷領袖提供主題演講、工作坊與一對一策略輔導。">為直銷領袖提供主題演講、工作坊與一對一策略輔導。</p>
+          <div class="ph-links">
+            <a href="speaking.html" data-en="Explore speaking topics" data-zh="瀏覽演講主題">瀏覽演講主題</a>
+            <a href="work-with-me.html" data-en="Explore mentoring" data-zh="了解輔導合作">了解輔導合作</a>
+          </div>
+        </article>
+        <article>
+          <svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 5C8 2 4 2 1 3v16c4-1 7 0 11 2 4-2 7-3 11-2V3c-3-1-7-1-11 2Zm0 0v16"></path></svg>
+          <h3 data-en="Books &amp; Writing" data-zh="著作與專欄">著作<wbr>與專欄</h3>
+          <p data-en="The Art of War for Direct Selling, a free first chapter and The Long Game." data-zh="《直銷孫子兵法之不戰而勝》、免費第一章與 The Long Game。">《直銷孫子兵法之不戰而勝》、免費第一章與 The Long Game。</p>
+          <div class="ph-links">
+            <a href="book.html" data-en="Explore the book" data-zh="了解本書">了解本書</a>
+            <a href="blog.html" data-en="Browse the writing" data-zh="瀏覽專欄">瀏覽專欄</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="ph-shell" aria-labelledby="ph-about-title">
+      <div class="ph-about">
+        <img src="../images/mikael-chew-2-600.jpg" width="600" height="1163" alt="Mikael Chew" loading="lazy">
+        <div>
+          <p class="ph-kicker" data-en="02 / About Mikael" data-zh="02／關於 Mikael">02／關於 Mikael</p>
+          <h2 id="ph-about-title" data-en="From building teams to leading strategy." data-zh="從建立團隊到制定策略。">從建立團隊到制定策略。</h2>
+          <p data-en="I’ve built teams in the field and led strategy in corporate management. I bring both perspectives to my work with partners and leaders today." data-zh="我曾在直銷前線建立團隊，也曾在企業管理崗位制定策略。現在，我把這兩種經驗帶進與夥伴及領袖的合作。">我曾在直銷前線建立團隊，也曾在企業管理崗位制定策略。現在，我把這兩種經驗帶進與夥伴及領袖的合作。</p>
+          <a class="ph-text-link" href="about.html" data-en="Read my story" data-zh="閱讀我的故事">閱讀我的故事</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="ph-shell" aria-labelledby="ph-book-title">
+      <div class="ph-book">
+          <img src="../images/book-cover-en.jpg" width="700" height="1120" alt="" loading="lazy">
+        <div>
+          <p class="ph-kicker" data-en="03 / Featured book" data-zh="03／推薦著作">03／推薦著作</p>
+          <h2 id="ph-book-title" data-en="The Art of War for Direct Selling" data-zh="《直銷孫子兵法之不戰而勝》">《直銷孫子兵法之<wbr>不戰而勝》</h2>
+          <p data-en="A practical take on Sun Tzu for direct selling. Read the first chapter or follow the original 13-stop strategy map." data-zh="把孫子的策略運用在直銷實戰。免費試讀第一章，或沿策略地圖探索十三章。">把孫子的策略運用在直銷實戰。免費試讀第一章，或沿策略地圖探索十三章。</p>
+          <div class="ph-links">
+            <a class="ph-text-link" href="chapter-1.html" data-en="Read Chapter 1 free" data-zh="免費試讀第一章">免費試讀第一章</a>
+            <a class="ph-text-link when-launched" href="book.html#buy" data-en="Get the book" data-zh="購買本書">購買本書</a>
+            <a class="ph-text-link" href="#ops" data-en="Explore the strategy map" data-zh="探索策略地圖">探索策略地圖</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ph-shell ph-contact" aria-labelledby="ph-contact-title">
+      <h2 id="ph-contact-title" data-en="Let’s talk." data-zh="歡迎聯繫。">歡迎聯繫。</h2>
+      <div class="ph-links">
+        <a href="https://wa.me/60195513038?text=Hi%20Mikael%2C%20I%27m%20reaching%20out%20via%20your%20contact%20page.%20Looking%20forward%20to%20connecting." target="_blank" rel="noopener">WhatsApp · +60 19 551 3038</a>
+        <a href="mailto:mikael@mikaelchew.com">mikael@mikaelchew.com</a>
+      </div>
+    </section>
+  </div>
+
   <section class="ops" id="ops" aria-label="The book as a campaign map">
     <div class="table" id="table">
       <div class="cam" id="cam">
@@ -138,7 +217,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 
       <div class="intro panel" id="intro">
         <span class="zh-title cjk-display" lang="zh-Hant" data-zh-only>不戰而勝</span>
-        <h1 data-en="Win before the battle." data-zh="勝兵先勝而後求戰。">勝兵先勝<wbr>而後求戰。</h1>
+        <h2 data-en="Win before the battle." data-zh="勝兵先勝而後求戰。">勝兵先勝<wbr>而後求戰。</h2>
         <p class="facts" data-en="38 people turned him down in his first three months. His first commission cheque was RM 128. This is the strategy he worked out after that." data-zh="入行頭三個月，38個人拒絕了他。第一張佣金支票只有RM 128。這本書，是他後來想通的策略。">入行頭三個月，38個人拒絕了他。第一張佣金支票只有RM 128。這本書，是他後來想通的策略。</p>
         <div class="orders">
           <a class="btn" href="chapter-1.html"><span data-en="Read Chapter 1 free" data-zh="免費試讀第一章">免費試讀第一章</span>

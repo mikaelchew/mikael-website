@@ -73,10 +73,10 @@ class SiteTest(unittest.TestCase):
         for p in en_pages() + zh_pages():
             self.assertEqual(doc(p).get("data-phase"), want, p)
 
-    def test_header_identical_except_current(self):
+    def test_inner_page_header_identical_except_current(self):
         headers = {}
         for p in en_pages():
-            if "<!-- shell:header -->" not in read(p):
+            if p == "index.html" or "<!-- shell:header -->" not in read(p):
                 continue
             h = header_of(doc(p))
             self.assertIsNotNone(h, p)
